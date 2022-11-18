@@ -4,6 +4,6 @@
 
 ## Getting Started
 
-Go to [Klar](https://klar.io):
+Go to [Klar](https://klar.website):
 * Create an account
 * Create a site with this template
