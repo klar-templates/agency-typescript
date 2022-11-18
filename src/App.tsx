@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import IData from './service/interface/IData';
 import Page from './components/Page';
-import Page1 from './components/Page1';
 import './App.css'
 
 function App() {
@@ -51,7 +49,6 @@ function App() {
           {(data as IData).pages.map(page => {
             return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
           })}
-            <Route path="/sida-1" element={<Page1 />} />
           </Routes>
         </Router>
       </div>
