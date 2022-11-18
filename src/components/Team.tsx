@@ -1,4 +1,4 @@
-export default function Team({_id, _type, heading, subHeading, team, text, style }) {
+export default function Team({_id, _type, heading, subHeading, team, text, style }: any) {
   return (
     <Block style={style} blockId={_id} templateId={_type}>
       <Intro heading={heading} subHeading={subHeading} />
@@ -7,7 +7,7 @@ export default function Team({_id, _type, heading, subHeading, team, text, style
     </Block>
   );
   
-  function Block({style, blockId, templateId, children}) {
+  function Block({style, blockId, templateId, children}: any) {
     // Hydration check
     // if (!window.page) {
     //   return <div>Client</div>
@@ -21,7 +21,7 @@ export default function Team({_id, _type, heading, subHeading, team, text, style
       </section>
     );
   }
-  function Intro({heading, subHeading}) {
+  function Intro({heading, subHeading}: any) {
     return (
       <div className="row">
         <div className="col-lg-12 text-center">
@@ -31,14 +31,14 @@ export default function Team({_id, _type, heading, subHeading, team, text, style
       </div>
     );
   }
-  function Members({team}) {
+  function Members({team}: any) {
     if (!team) {
-      return false;
+      return null;
     }
   
     return (
       <div className="row clearfix" data-field-array="team">
-      { team.map((member, i) => {
+      { team.map((member: any, i: any) => {
         return <TeamMember
             image={member.image}
             name={member.heading}
@@ -50,7 +50,7 @@ export default function Team({_id, _type, heading, subHeading, team, text, style
       </div>
     );
   }
-  function TeamMember({name, position, image, socialLinks}) {
+  function TeamMember({name, position, image, socialLinks}: any) {
     return (
       <div className="col-sm-4">
         <div className="team-member" data-field-array-item="">
@@ -73,7 +73,7 @@ export default function Team({_id, _type, heading, subHeading, team, text, style
       </div>
     );
   }
-  function Description({text}) {
+  function Description({text}: any) {
     return (
       <div className="row">
         <div className="col-lg-8 col-lg-offset-2 text-center">
@@ -82,7 +82,7 @@ export default function Team({_id, _type, heading, subHeading, team, text, style
       </div>
     );
   }
-  function Style({blockId, templateId, style}) {
+  function Style({blockId, templateId, style}: any) {
     const themeStyle = `
     <!-- Theme CSS -->
     <style>

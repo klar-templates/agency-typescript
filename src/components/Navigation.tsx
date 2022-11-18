@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 
-export default function Navigation({_id, _type, show_button, show_subtitle, logo_text, navigation, show_title, title, subtitle, link, link_text, item, style, image }) {
+export default function Navigation({_id, _type, logo_text, style }: any) {
+  if (!style) {
+    return null;
+  }
   return (
     <nav id="main-nav" className={`navbar navbar-default navbar-custom navbar-fixed-top ${_type}`}>
       <div className="container">
@@ -29,7 +32,7 @@ export default function Navigation({_id, _type, show_button, show_subtitle, logo
             <li className="page-scroll">
               <Link to="/users">Users</Link>
             </li> */}
-            {klarContext.data.pages.map((page, i) => 
+            {window.klarContext.data.pages.map((page: any, i: any) => 
               <li key={i}>
                 <Link
                   className="page-scroll"
@@ -55,12 +58,12 @@ export default function Navigation({_id, _type, show_button, show_subtitle, logo
       {style.navbar.show_overlay &&
       <div className="overlay"></div>
       }
-      <Style id={_id} style={style} image={image} />
+      <Style id={_id} style={style} />
     </nav>
     
   );
  
-  function Style({id, style}) {
+  function Style({id, style}: any) {
     const themeStyle = `
     <!-- Theme CSS -->
     <style>

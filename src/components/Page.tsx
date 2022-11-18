@@ -21,10 +21,10 @@ export default function Page(data: IData) {
     componentName = componentName.charAt(0).toUpperCase() + componentName.slice(1);
     const DynamicComponent = Components[componentName];
     if (DynamicComponent) {
-      blockArray.push(<DynamicComponent key={block._id} {...block} />)
+      blockArray.push(<DynamicComponent key={block._id} {...block} />);
     }
   };
-  
+
   return (
     <div className="container">
       <div className="content">
