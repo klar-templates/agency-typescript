@@ -6,7 +6,6 @@ export default function Layout(data) {
   let headerBlock;
   let footerBlock;
   const blocksToRender = [];
-  console.log('data', data)
   data.children.forEach(block => {
     if (block.type.name === 'Navigation') {
       headerBlock = block.props;

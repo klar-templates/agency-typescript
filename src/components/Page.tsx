@@ -28,7 +28,6 @@ export default function Page(data: IData) {
   return (
     <div className="container">
       <div className="content">
-        <h1>En förstasida</h1>
         <Layout {...data}>{blockArray}</Layout>
       </div>
     </div>
