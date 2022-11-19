@@ -12,8 +12,15 @@ function App() {
   const [data, setData] = useState(undefined);
 
   useEffect(() => {
-    // Param: Site name in Klar
-    getData('agency');
+    // window.klar = {};
+    // window.klar['setData'] = setData;
+    if (window.klarContext.isInKlar) {
+      window.klar['setData'] = setData;
+      setData(window.klar.data)
+    } else {
+      // Param: Site name in Klar
+      getData('agency');
+    }
     // return () => clearInterval(id);
   }, []);
 
