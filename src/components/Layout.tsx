@@ -1,5 +1,6 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import PageStyle from './PageStyle';
+import PageScript from './PageScript';
 
 export default function Layout(data: any) {
   let headerBlock;
@@ -19,8 +20,7 @@ export default function Layout(data: any) {
     // }
     blocksToRender.push(block);
   });
-  console.log(window.klarContext.data.theme)
-
+  
   return (<>
     <PageStyle theme={window.klarContext.data.theme} />
     <Helmet>
@@ -30,6 +30,7 @@ export default function Layout(data: any) {
     {/* <Navigation {...headerBlock as any} /> */}
     {blocksToRender}
     {/* <FooterReact {...footerBlock} /> */}
+    <PageScript />
   </>);
 }
 
