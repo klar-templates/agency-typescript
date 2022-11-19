@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 import IData from './service/interface/IData';
 import Page from './components/Page';
-import './App.css'
 
 function App() {
   window.klarContext = {
@@ -53,16 +52,13 @@ function App() {
 
   return (
     <HelmetProvider>
-      <div className="App">
-        <header className="App-header"></header>
-        <Router>
-          <Routes>
-          {(data as IData).pages.map(page => {
-            return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
-          })}
-          </Routes>
-        </Router>
-      </div>
+      <Router>
+        <Routes>
+        {(data as IData).pages.map(page => {
+          return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
+        })}
+        </Routes>
+      </Router>
     </HelmetProvider>
   )
 }

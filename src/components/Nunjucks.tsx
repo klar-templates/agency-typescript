@@ -27,7 +27,7 @@ export default function Nunjucks(data: any) {
       }
       requestData()
         .then((responseData) => {
-          // localStorage.setItem(cacheKey, JSON.stringify(responseData));
+          localStorage.setItem(cacheKey, JSON.stringify(responseData));
           data = responseData;
           setTemplate(data);
         });
@@ -42,13 +42,8 @@ export default function Nunjucks(data: any) {
   }
   const renderedTemplate = window.nunjucks.renderString(template, data);
   return (
-    <div className="container">
-      <div className="content">
-        <h1>Nunjucks</h1>
-        <div
-          dangerouslySetInnerHTML={{__html: renderedTemplate}}
-        />
-      </div>
-    </div>
+    <div
+      dangerouslySetInnerHTML={{__html: renderedTemplate}}
+    />
   );
 }
