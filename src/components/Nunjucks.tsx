@@ -26,13 +26,12 @@ export default function Nunjucks(data: any) {
         return response.text();
       }
       requestData()
-        .then((responseData) => {
-          localStorage.setItem(cacheKey, JSON.stringify(responseData));
-          data = responseData;
+        .then((data) => {
+          // localStorage.setItem(cacheKey, data);
           setTemplate(data);
         });
       } else {
-        const data = JSON.parse(localStorage.getItem(cacheKey) as string);
+        const data = localStorage.getItem(cacheKey) as string;
         setTemplate(data);
       }
   }
