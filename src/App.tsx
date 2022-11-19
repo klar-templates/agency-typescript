@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import IData from './service/interface/IData';
 import Page from './components/Page';
 import './App.css'
 
 function App() {
+  window.klarContext = {
+    isInKlar: parent.frames.length > 0
+  };
   const [data, setData] = useState(undefined);
 
   useEffect(() => {
-    // This is for one page website
     // Param: Site name in Klar
     getData('agency');
     // return () => clearInterval(id);
@@ -16,21 +19,23 @@ function App() {
 
   function getData(siteName: string) {
     const cacheKey = 'klar-data';
+    let parsedData;
     if (!localStorage.getItem(cacheKey)) {
-      async function data() {
+      async function requestData() {
         const response = await fetch(
           `https://raw.githubusercontent.com/klar-sites/${siteName}/master/data.json`);
         return response.json();
       }
-      data()
+      requestData()
         .then((data) => {
           localStorage.setItem(cacheKey, JSON.stringify(data));
-          setData(data);
+          parsedData = data;
         });
       } else {
         const data = JSON.parse(localStorage.getItem(cacheKey) as string);
-        setData(data);
+        parsedData = data;
       }
+    setData(parsedData);
   }
 
   if (!data) {
@@ -41,7 +46,7 @@ function App() {
   startpage._path = '/';
 
   return (
-    <>
+    <HelmetProvider>
       <div className="App">
         <header className="App-header"></header>
         <Router>
@@ -52,7 +57,7 @@ function App() {
           </Routes>
         </Router>
       </div>
-    </>
+      </HelmetProvider>
   )
 }
 

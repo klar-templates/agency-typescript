@@ -1,6 +1,4 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import IData from "../service/interface/IData";
-import Navigation from './Navigation';
 
 export default function Layout(data: any) {
   let headerBlock;
@@ -21,16 +19,11 @@ export default function Layout(data: any) {
     blocksToRender.push(block);
   });
 
-  const helmetContext = {
-    title: window.klarContext.pageSettings.title,
-    // description: data.context.pageSettings.description
-  };
-
   return (<>
-    <HelmetProvider context={helmetContext}>
-      <title>{window.klarContext.pageSettings.title}</title>
-      <meta name="description" content={window.klarContext.pageSettings.description} />
-    </HelmetProvider>
+    <Helmet>
+      <title>{window.klarContext.currentPage.settings.title}</title>
+      <meta name="description" content={window.klarContext.currentPage.settings.description} />
+    </Helmet>
     {/* <Navigation {...headerBlock as any} /> */}
     {blocksToRender}
     {/* <FooterReact {...footerBlock} /> */}

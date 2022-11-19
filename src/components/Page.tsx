@@ -4,6 +4,7 @@ import Layout from './Layout';
 import Navigation from './Navigation';
 import Team from './Team';
 import Nunjucks from './Nunjucks';
+import KlarEditBlock from './KlarEditBlock';
 
 const Components: any = {
   Navigation: Navigation,
@@ -21,9 +22,9 @@ export default function Page(data: IData) {
     componentName = componentName.charAt(0).toUpperCase() + componentName.slice(1);
     const DynamicComponent = Components[componentName];
     if (DynamicComponent) {
-      blockArray.push(<DynamicComponent key={block._id} {...block} />);
+      blockArray.push(<KlarEditBlock key={block._id} id={block._id} type={block._type}><DynamicComponent {...block} /></KlarEditBlock>);
     } else if (block._type === 'services') {
-      blockArray.push(<Nunjucks key={block._id} {...block} />);
+      blockArray.push(<KlarEditBlock key={block._id} id={block._id} type={block._type}><Nunjucks {...block} /></KlarEditBlock>);
     }
   };
 
@@ -37,9 +38,7 @@ export default function Page(data: IData) {
 }
 
 function createContext(data: IData) {
-  // console.log(data)
   const routeLocation = useLocation();
-  // console.log(routeLocation);
   const pathname = routeLocation.pathname;
   let currentPage;
   if (pathname === '/templates/page-react.html' || pathname === '/' || pathname === '/startsida') {
@@ -51,10 +50,9 @@ function createContext(data: IData) {
   const blocks = data.pages[0].blocks;
   window.klarContext = {
     location: routeLocation,
-    data,
     pathname,
+    data,
     currentPage,
-    pageSettings,
-    blocks
+    isInKlar: parent.frames.length > 0
   };
 }
