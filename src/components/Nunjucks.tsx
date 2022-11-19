@@ -7,22 +7,29 @@ export default function Nunjucks(data: any) {
   console.log(data)
   useEffect(() => {
     // Get Nunjucks template
-    getTemplate(data._type);
+    if (window.klarContext.isInKlar) {
+      const templateStr = window.klar.templates.blocks[data._type].content
+      setTemplate(templateStr);
+    } else {
+      getTemplate(data._type);
+    }
     // return () => clearInterval(id);
   }, []);
 
   // This is when you're in this application, when in Klar get the template file from the Klar application.
   function getTemplate(templateName: string) {
     const cacheKey = 'klar-nunjucks-template';
+    let data = '';
     if (!localStorage.getItem(cacheKey)) {
-      async function data() {
+      async function requestData() {
         const response = await fetch(
           `/nunjucks/${templateName}.html`);
         return response.text();
       }
-      data()
-        .then((data) => {
-          // localStorage.setItem(cacheKey, JSON.stringify(data));
+      requestData()
+        .then((responseData) => {
+          // localStorage.setItem(cacheKey, JSON.stringify(responseData));
+          data = responseData;
           setTemplate(data);
         });
       } else {

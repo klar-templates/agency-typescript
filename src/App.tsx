@@ -36,13 +36,12 @@ function App() {
       requestData()
         .then((data) => {
           localStorage.setItem(cacheKey, JSON.stringify(data));
-          parsedData = data;
+          setData(data);
         });
       } else {
         const data = JSON.parse(localStorage.getItem(cacheKey) as string);
-        parsedData = data;
+        setData(data);
       }
-    setData(parsedData);
   }
 
   if (!data) {
@@ -64,7 +63,7 @@ function App() {
           </Routes>
         </Router>
       </div>
-      </HelmetProvider>
+    </HelmetProvider>
   )
 }
 
