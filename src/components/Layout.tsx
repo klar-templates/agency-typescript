@@ -1,4 +1,5 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import PageStyle from './PageStyle';
 
 export default function Layout(data: any) {
   let headerBlock;
@@ -18,8 +19,10 @@ export default function Layout(data: any) {
     // }
     blocksToRender.push(block);
   });
+  console.log(window.klarContext.data.theme)
 
   return (<>
+    <PageStyle theme={window.klarContext.data.theme} />
     <Helmet>
       <title>{window.klarContext.currentPage.settings.title}</title>
       <meta name="description" content={window.klarContext.currentPage.settings.description} />
