@@ -3,6 +3,7 @@ import IData from '../service/interface/IData';
 import Layout from './Layout';
 import Navigation from './Navigation';
 import Team from './Team';
+import Nunjucks from './Nunjucks';
 
 const Components: any = {
   Navigation: Navigation,
@@ -10,7 +11,6 @@ const Components: any = {
   Team: Team,
   // Footer: FooterReact
 }
-
 
 export default function Page(data: IData) {
   createContext(data);
@@ -22,6 +22,8 @@ export default function Page(data: IData) {
     const DynamicComponent = Components[componentName];
     if (DynamicComponent) {
       blockArray.push(<DynamicComponent key={block._id} {...block} />);
+    } else if (block._type === 'services') {
+      blockArray.push(<Nunjucks key={block._id} {...block} />);
     }
   };
 
@@ -35,9 +37,9 @@ export default function Page(data: IData) {
 }
 
 function createContext(data: IData) {
-  console.log(data)
+  // console.log(data)
   const routeLocation = useLocation();
-  console.log(routeLocation);
+  // console.log(routeLocation);
   const pathname = routeLocation.pathname;
   let currentPage;
   if (pathname === '/templates/page-react.html' || pathname === '/' || pathname === '/startsida') {
