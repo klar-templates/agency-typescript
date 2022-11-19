@@ -18,13 +18,16 @@ export default function Page(data: IData) {
   const blockArray = [];
   for (const [key, value] of Object.entries(window.klarContext.currentPage.blocks)) {
     const block: any = value;
+    const blockData = {
+      block
+    };
     let componentName = block.template_id;
     componentName = componentName.charAt(0).toUpperCase() + componentName.slice(1);
     const DynamicComponent = Components[componentName];
     if (DynamicComponent) {
-      blockArray.push(<KlarEditBlock key={block._id} id={block._id} type={block._type}><DynamicComponent {...block} /></KlarEditBlock>);
+      blockArray.push(<KlarEditBlock key={block._id} id={block._id} type={block._type}><DynamicComponent {...blockData} /></KlarEditBlock>);
     } else if (block._type === 'services') {
-      blockArray.push(<KlarEditBlock key={block._id} id={block._id} type={block._type}><Nunjucks {...block} /></KlarEditBlock>);
+      blockArray.push(<KlarEditBlock key={block._id} id={block._id} type={block._type}><Nunjucks {...blockData} /></KlarEditBlock>);
     }
   };
 

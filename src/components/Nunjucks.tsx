@@ -4,14 +4,13 @@ import { useEffect, useState } from 'react';
 export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState('');
   
-  console.log(data)
   useEffect(() => {
     // Get Nunjucks template
     if (window.klarContext.isInKlar) {
       const templateStr = window.klar.templates.blocks[data._type].content
       setTemplate(templateStr);
     } else {
-      getTemplate(data._type);
+      getTemplate(data.block._type);
     }
     // return () => clearInterval(id);
   }, []);
@@ -38,13 +37,10 @@ export default function Nunjucks(data: any) {
       }
   }
 
-  const renderedTemplate = window.nunjucks.renderString(template, data);
-  // console.log(renderedTemplate)
-
   if (!template) {
     return null;
   }
-
+  const renderedTemplate = window.nunjucks.renderString(template, data);
   return (
     <div className="container">
       <div className="content">

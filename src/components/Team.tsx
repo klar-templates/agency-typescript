@@ -1,4 +1,5 @@
-export default function Team({_id, _type, heading, subHeading, team, text, style }: any) {
+export default function Team(data: any) {
+  const {_id, _type, heading, subHeading, team, text, style } = data.block;
   return (
     <Block style={style} blockId={_id} templateId={_type}>
       <Intro heading={heading} subHeading={subHeading} />
@@ -6,7 +7,7 @@ export default function Team({_id, _type, heading, subHeading, team, text, style
       <Description text={text} />
     </Block>
   );
-  
+    
   function Block({style, blockId, templateId, children}: any) {
     // Hydration check
     // if (!window.page) {

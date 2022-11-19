@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
-export default function Navigation({_id, _type, logo_text, style }: any) {
+export default function Navigation(data: any) {
+  const {_id, _type, logo_text, style } = data.block;
   if (!style) {
     return null;
   }
