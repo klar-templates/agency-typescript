@@ -49,6 +49,9 @@ function createContext(data: IData) {
   } else {
     currentPage = data.pages.find(page => page._path === pathname);
   }
+  if (window.klarContext.isInKlar) {
+    parent.frames.window.klar['navigate'] = routeNavigate;
+  }
   window.klarContext = {
     location: routeLocation,
     navigate: routeNavigate,
