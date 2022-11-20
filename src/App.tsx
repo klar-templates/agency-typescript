@@ -16,6 +16,8 @@ function App() {
     if (window.klarContext.isInKlar) {
       parent.frames.window.klar['setData'] = setData;
       setData(parent.frames.window.klar.data);
+      const currentPage = parent.frames.window.klar.sdk.currentPage.get();
+      window.location.href = currentPage._path;
     } else {
       // Param: Site name in Klar
       getData('agency');
@@ -49,12 +51,6 @@ function App() {
 
   const startpage = (data as IData).pages.find(p => p.startpage)
   startpage._path = '/';
-
-  // if (window.klarContext.isInKlar) {
-  //   const routeNavigate = useNavigate();
-  //   const currentPage = parent.frames.window.klar.sdk.currentPage.get();
-  //   routeNavigate('/sida-1');
-  // }
 
   return (
     <HelmetProvider>
