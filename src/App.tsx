@@ -15,8 +15,8 @@ function App() {
     // window.klar['setData'] = setData;
     if (window.klarContext.isInKlar) {
       parent.frames.window.klar['setData'] = setData;
-      // setData(parent.frames.window.klar.data);
-      parent.frames.window.reactPageIsLoaded();
+      setData(parent.frames.window.klar.data);
+      // parent.frames.window.reactPageIsLoaded();
       // const currentPage = parent.frames.window.klar.sdk.currentPage.get();
       // window.location.href = currentPage._path;
     } else {
