@@ -14,7 +14,6 @@ function App() {
     // window.klar = {};
     // window.klar['setData'] = setData;
     if (window.klarContext.isInKlar) {
-      console.log('asdf')
       // console.log(typeof window.klar !== 'undefined')
       parent.frames.window.klar['setData'] = setData;
       setData(parent.frames.window.klar.data);
