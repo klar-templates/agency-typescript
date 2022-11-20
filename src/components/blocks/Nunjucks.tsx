@@ -39,7 +39,9 @@ export default function Nunjucks(data: any) {
   if (!template) {
     return null;
   }
+  
   const renderedTemplate = window.nunjucks.renderString(template, data);
+  
   return (
     <div
       dangerouslySetInnerHTML={{__html: renderedTemplate}}
