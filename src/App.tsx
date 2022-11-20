@@ -60,7 +60,7 @@ function App() {
         {(data as IData).pages.map(page => {
           return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
         })}
-        <Route path="/" element={<Navigate replace to="/sida-1" />} />
+          <Route path="/" element={<Navigate replace to="/sida-1" />} />
         </Routes>
       </Router>
     </HelmetProvider>
