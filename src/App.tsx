@@ -6,7 +6,7 @@ import Page from './components/Page';
 
 function App() {
   window.klarContext = {
-    isInKlar: typeof window.klar !== 'undefined'
+    isInKlar: typeof parent.frames.window.klar !== 'undefined'
   };
   const [data, setData] = useState(undefined);
 
