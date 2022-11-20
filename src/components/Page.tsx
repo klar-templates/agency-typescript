@@ -58,6 +58,6 @@ function createContext(data: IData) {
     pathname,
     data,
     currentPage,
-    isInKlar: window.klar !== 'undefined'
+    isInKlar: typeof window.klar !== 'undefined'
   };
 }

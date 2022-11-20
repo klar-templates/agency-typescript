@@ -6,7 +6,7 @@ import Page from './components/Page';
 
 function App() {
   window.klarContext = {
-    isInKlar: window.klar !== 'undefined'
+    isInKlar: typeof window.klar !== 'undefined'
   };
   const [data, setData] = useState(undefined);
 
@@ -14,6 +14,8 @@ function App() {
     // window.klar = {};
     // window.klar['setData'] = setData;
     if (window.klarContext.isInKlar) {
+      console.log('asdf')
+      // console.log(typeof window.klar !== 'undefined')
       parent.frames.window.klar['setData'] = setData;
       setData(parent.frames.window.klar.data);
       // parent.frames.window.reactPageIsLoaded();
@@ -51,7 +53,16 @@ function App() {
   }
 
   const startpage = (data as IData).pages.find(p => p.startpage)
-  startpage._path = '/';
+  
+  let currentPageInKlar;
+  if (window.klarContext.isInKlar) {
+    const currentPage = parent.frames.window.klar.sdk.currentPage.get();
+    currentPageInKlar = currentPage._path;
+  } else {
+    startpage._path = '/';
+    currentPageInKlar = '/';
+  }
+  
 
   return (
     <HelmetProvider>
@@ -60,7 +71,7 @@ function App() {
         {(data as IData).pages.map(page => {
           return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
         })}
-          <Route path="/" element={<Navigate replace to="/sida-1" />} />
+        <Route path="/" element={<Navigate to={currentPageInKlar} />} />
         </Routes>
       </Router>
     </HelmetProvider>
