@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { HelmetProvider } from "react-helmet-async";
 import IData from './service/interface/IData';
 import Page from './components/Page';
@@ -49,6 +49,12 @@ function App() {
 
   const startpage = (data as IData).pages.find(p => p.startpage)
   startpage._path = '/';
+
+  if (window.klarContext.isInKlar) {
+    const routeNavigate = useNavigate();
+    const currentPage = parent.frames.window.klar.sdk.currentPage.get();
+    parent.frames.window.klar.navigate(currentPage._path);
+  }
 
   return (
     <HelmetProvider>
