@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Vite + React + TS</title> -->
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Oswald|Raleway|Roboto|Source+Sans+Pro" rel="stylesheet">
+    <!-- Klar Style -->
+    <!-- style -->
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
+    <![endif]-->
+    <script type="module" crossorigin src="/assets/index.c2778367.js"></script>
+  </head>
+  <body id="page-top" class="index">
+    <div id="root"></div>
+    <div class="full"><!-- klar-content --></div>
+    
+    <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script>
+      // Agency Theme JavaScript
+      (function($) {
+        "use strict"; // Start of use strict
+        
+        // jQuery for page scrolling feature - requires jQuery Easing plugin
+        $('a.page-scroll').bind('click', function(event) {
+            var $anchor = $(this);
+            if (!$anchor.attr('href')) return;
+            if (!$anchor.attr('href').startsWith('#')) return;
+            if (!$($anchor.attr('href')).length) return;
+            $('html, body').stop().animate({
+              scrollTop: ($($anchor.attr('href')).offset().top - 50)
+              // scrollTop: ($($anchor.attr('href')).offset().top)
+            }, 1250, 'easeInOutExpo');
+            event.preventDefault();
+        });
+        
+        // Highlight the top nav as scrolling occurs
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 51
+        });
+        
+        // Closes the Responsive Menu on Menu Item Click
+        $('.navbar-collapse ul li a').click(function(){ 
+          $('.navbar-toggle:visible').click();
+        });
+        
+        // Offset for Main Navigation
+        $('#main-nav').affix({
+          offset: {
+            top: 100
+          }
+        });
+      })(jQuery);
+    </script>
+
+    <!-- Klarscript, executes when page is loaded. -->
+    <script>
+      function klarScript() {
+        // Add 'klar-modal-open' CSS class, when modal is opened
+        $('.modal').on('show.bs.modal', function (event) {
+          var modal = this;
+          modal.classList.add('klar-modal-open');
+        });
+        $('.modal').on('hide.bs.modal', function (event) {
+          var modal = this;
+          modal.classList.remove('klar-modal-open');
+        });
+      }
+      klarScript();
+    </script>
+
+    <!-- Klar Script -->
+    <!-- script -->
+  </body>
+</html>

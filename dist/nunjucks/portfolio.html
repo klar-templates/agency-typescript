@@ -1,0 +1,308 @@
+<!-- Portfolio Grid Section -->
+<section id="{{block._id}}" class="{{blocl._type}} block">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2
+          class="section-heading"
+          data-field-string="heading"
+        >{{block.heading}}</h2>
+        <h3
+          class="section-subheading text-muted"
+          data-field-string="sub_heading"
+        >{{block.sub_heading}}</h3>
+      </div>
+    </div>
+    <div class="row" data-field-array="items">
+      {% for item in block.items %}
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <div data-field-array-item>
+            <a href="#{{block._id}}-modal-{{loop.index}}" class="portfolio-link" data-toggle="modal" nclick="getElementById('{{block._id}}-modal-{{loop.index}}').classList.add('klar-modal-open')">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img
+                src="{{ item.image }}"
+                class="img-responsive"
+                alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <h4
+                data-field-string="items[{{loop.index0}}].client"
+              >{{ item.client }}</h4>
+              <p
+                data-field-string="items[{{loop.index0}}].category"
+                data-toolbar-buttons="['bold']"
+              >{{ item.category }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <!-- Portfolio Modals -->
+  <!-- Use the modals below to showcase details about your portfolio projects! -->
+  {% for item in block.items %}
+  <!-- Portfolio Modal {{loop.index}} -->
+  <div class="{{block._id}}-modal portfolio-modal modal fade" id="{{block._id}}-modal-{{loop.index}}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="text-align: left">
+        <div class="close-modal" data-dismiss="modal" nclick="getElementById('{{block._id}}-modal-{{loop.index}}').classList.remove('klar-modal-open')">
+          <div class="lr">
+              <div class="rl">
+              </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="modal-body">
+            <!-- Project Details Go Here -->
+            <h2
+              data-field-string="items[{{loop.index0}}].title"
+            >{{ item.title }}</h2>
+            <p
+              class="item-intro text-muted"
+              data-field-string="items[{{loop.index0}}].summary"
+            >{{ item.summary }}</p>
+            <div class="row">
+              <div class="col-md-8 col-lg-6">
+                <div
+                  data-field-text="items[{{loop.index0}}].body"
+                >{{ item.body | safe }}</div>
+                <ul class="list-inline">
+                  <li><strong>Date</strong>: {{ item.date }}</li>
+                  <li><strong>Client</strong>: {{ item.client }}</li>
+                  <li><strong>Category</strong>: {{ item.category }}</li>
+                </ul>  
+              </div>
+              <div class="col-md-4 col-lg-6">
+                <img
+                  class="img-responsive mg-centered"
+                  data-field-string-file="items[{{loop.index0}}].image"
+                  src="{{ item.image }}"
+                  alt="" />
+              </div>
+            </div>  
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="getElementById('{{block._id}}-modal-{{loop.index}}').classList.remove('klar-modal-open')"><i class="fa fa-times"></i> Close Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<!-- Theme CSS -->
+<style>
+  #{{block._id}} .portfolio-item {
+    margin: 0 0 15px;
+    right: 0;
+  }
+  #{{block._id}} .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  #{{block._id}} .portfolio-item .portfolio-link .portfolio-hover {
+    background: rgba(254, 209, 54, 0.9);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+  }
+  #{{block._id}} .portfolio-item .portfolio-link .portfolio-hover:hover {
+    opacity: 1;
+  }
+  #{{block._id}} .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    color: white;
+  }
+  #{{block._id}} .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+    margin-top: -12px;
+  }
+  #{{block._id}} .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+  #{{block._id}} .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+    margin: 0;
+  }
+  #{{block._id}} .portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+  }
+  #{{block._id}} .portfolio-item .portfolio-caption h4 {
+    text-transform: none;
+    margin: 0;
+  }
+  #{{block._id}} .portfolio-item .portfolio-caption p {
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    margin: 0;
+  }
+  @media (min-width: 767px) {
+    #{{block._id}} .portfolio-item {
+      margin: 0 0 30px;
+    }
+  }
+  .portfolio-modal {
+    padding: 0 !important;
+    z-index: 1030;
+  }
+  .portfolio-modal .modal-dialog {
+    margin: 0;
+    height: 100%;
+    width: auto;
+  }
+  .portfolio-modal .modal-content {
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    min-height: 100%;
+    padding: 100px 0;
+    text-align: center;
+  }
+  .portfolio-modal .modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 3em;
+  }
+  .portfolio-modal .modal-content p {
+    margin-bottom: 30px;
+  }
+  .portfolio-modal .modal-content p.item-intro {
+    margin: 20px 0 30px;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 16px;
+  }
+  .portfolio-modal .modal-content ul.list-inline {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  .portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+  }
+  .portfolio-modal .close-modal {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+  }
+  .portfolio-modal .close-modal:hover {
+    opacity: 0.3;
+  }
+  .portfolio-modal .close-modal .lr {
+    height: 75px;
+    width: 1px;
+    margin-left: 35px;
+    background-color: #222222;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Safari and Chrome */
+    z-index: 1051;
+  }
+  .portfolio-modal .close-modal .lr .rl {
+    height: 75px;
+    width: 1px;
+    background-color: #222222;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Safari and Chrome */
+    z-index: 1052;
+  }
+  .modal-backdrop {
+    display: none;
+    opacity: 0;
+  }
+</style>
+
+<!-- Style CSS -->
+<style>
+/* Block */
+#{{block._id}} {
+  background-color: {{ block.style.block.bg_color }};
+  color: {{ block.style.block.text_color }};
+  padding-top: {{ block.style.block.padding_top }}px;
+  padding-bottom: {{ block.style.block.padding_bottom }}px;
+}
+#{{block._id}} .portfolio-item .portfolio-link .portfolio-hover {
+  background-color: {{ block.style.block.hover_content_bg_color }};
+}
+#{{block._id}} .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+  color: {{ block.style.block.hover_content_icon_color }};
+}
+#{{block._id}} .portfolio-item .portfolio-caption {
+  background-color: {{ block.style.block.caption_bg_color }};
+}
+#{{block._id}} .portfolio-item .portfolio-caption h4 {
+  color: {{ block.style.block.caption_title_text_color }};
+}
+#{{block._id}} .portfolio-item .portfolio-caption p {
+  color: {{ block.style.block.caption_text_text_color }};
+}
+.{{block._id}}-modal .modal-content {
+  background-color: {{ block.style.block.item_bg_color }};
+}
+.{{block._id}}-modal .close-modal .lr,
+.{{block._id}}-modal .close-modal .lr .rl {
+  background-color: {{ block.style.block.item_close_btn_color }};
+}
+
+/* Base */
+#{{block._id}} {
+  color: {{ block.style.base.text_color }};
+}
+#{{block._id}} h1, #{{block._id}} h2, #{{block._id}} h3, #{{block._id}} h4, #{{block._id}} h5, #{{block._id}} h6 {
+  color: {{ block.style.base.title_text_color }};
+}
+#{{block._id}} h3.section-subheading {
+  color: {{ block.style.base.subtitle_text_color }};
+}
+#{{block._id}} p {
+  color: {{ block.style.base.text_color }};
+}
+#{{block._id}} a {
+  color: {{ block.style.base.link_text_color }};
+}
+#{{block._id}} a:hover,
+#{{block._id}} a:focus,
+#{{block._id}} a:active {
+  color: {{ block.style.base.link_hover_text_color }};
+}
+#{{block._id}} .btn-primary,
+#{{block._id}} .btn-primary:hover,
+#{{block._id}} .btn-primary:focus,
+#{{block._id}} .btn-primary:active {
+  background-color: {{ block.style.base.primary_color }};
+  border-color: {{ block.style.base.primary_color }};
+}
+#{{block._id}} .text-primary {
+  color: {{ block.style.base.primary_color }};
+}
+#{{block._id}} ::selection {
+  color: {{ block.style.base.selection_text_color }};
+  background: {{ block.style.base.selection_bg_color }};
+}
+</style>
