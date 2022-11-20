@@ -70,7 +70,7 @@
               <div class="col-md-8 col-lg-6">
                 <div
                   data-field-text="items[{{loop.index0}}].body"
-                >{{ item.body }}</div>
+                >{{ item.body | safe }}</div>
                 <ul class="list-inline">
                   <li><strong>Date</strong>: {{ item.date }}</li>
                   <li><strong>Client</strong>: {{ item.client }}</li>
