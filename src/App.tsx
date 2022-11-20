@@ -14,8 +14,8 @@ function App() {
     // window.klar = {};
     // window.klar['setData'] = setData;
     if (window.klarContext.isInKlar) {
-      window.klar['setData'] = setData;
-      setData(window.klar.data)
+      parent.frames.window.klar['setData'] = setData;
+      setData(parent.frames.window.klar.data)
     } else {
       // Param: Site name in Klar
       getData('agency');
