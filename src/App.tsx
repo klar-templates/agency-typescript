@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from "react-helmet-async";
 import IData from './service/interface/IData';
 import Page from './components/Page';
@@ -60,6 +60,7 @@ function App() {
         {(data as IData).pages.map(page => {
           return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
         })}
+        <Route path="/" element={<Navigate replace to="/sida-1" />} />
         </Routes>
       </Router>
     </HelmetProvider>
