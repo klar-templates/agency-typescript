@@ -53,6 +53,6 @@ function createContext(data: IData) {
     pathname,
     data,
     currentPage,
-    isInKlar: parent.frames.length > 0
+    isInKlar: window.klar !== 'undefined'
   };
 }
