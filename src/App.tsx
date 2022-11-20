@@ -53,7 +53,7 @@ function App() {
   if (window.klarContext.isInKlar) {
     const routeNavigate = useNavigate();
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
-    parent.frames.window.klar.navigate(currentPage._path);
+    routeNavigate(currentPage._path);
   }
 
   return (
