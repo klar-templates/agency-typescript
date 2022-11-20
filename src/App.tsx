@@ -53,7 +53,7 @@ function App() {
   if (window.klarContext.isInKlar) {
     const routeNavigate = useNavigate();
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
-    routeNavigate(currentPage._path);
+    routeNavigate('/sida-1');
   }
 
   return (
