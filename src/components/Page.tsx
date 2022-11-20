@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import IData from '../service/interface/IData';
 import Layout from './Layout';
 import Navigation from './blocks/Navigation';
@@ -41,6 +41,7 @@ export default function Page(data: IData) {
 
 function createContext(data: IData) {
   const routeLocation = useLocation();
+  const routeNavigate = useNavigate();
   const pathname = routeLocation.pathname;
   let currentPage;
   if (pathname === '/templates/page-react.html' || pathname === '/' || pathname === '/startsida') {
@@ -50,6 +51,7 @@ function createContext(data: IData) {
   }
   window.klarContext = {
     location: routeLocation,
+    navigate: routeNavigate,
     pathname,
     data,
     currentPage,
