@@ -51,29 +51,27 @@ function App() {
     return null;
   }
 
-  // const startpage = (data as IData).pages.find(p => p.startpage)
+  const startpage = (data as IData).pages.find(p => p.startpage)
   
   let currentPageInKlar;
   if (window.klarContext.isInKlar) {
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
     currentPageInKlar = currentPage._path;
-    // currentPageInKlar = '/sida-2';
   } else {
-    // startpage._path = '/';
-    currentPageInKlar = '/sida-1';
+    startpage._path = '/';
   }
   
-  console.log('currentPageInKlar', currentPageInKlar)
-  console.log(location.pathname);
-
   return (
     <HelmetProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
-        {(data as IData).pages.map(page => {
-          return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
-        })}
+          <>
+            { window.klarContext.isInKlar &&
+              <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />}
+            {(data as IData).pages.map(page => {
+              return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
+            })}
+          </>
         </Routes>
       </Router>
     </HelmetProvider>
