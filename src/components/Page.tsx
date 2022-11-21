@@ -44,7 +44,7 @@ function createContext(data: IData) {
   const routeNavigate = useNavigate();
   const pathname = routeLocation.pathname;
   let currentPage;
-  if (pathname === '/templates/page-react.html' || pathname === '/' || pathname === '/startsida') {
+  if (pathname === '/startsida') {
     currentPage = data.pages.find(page => page.startpage === true);
   } else {
     currentPage = data.pages.find(page => page._path === pathname);
