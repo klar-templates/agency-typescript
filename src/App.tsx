@@ -56,8 +56,8 @@ function App() {
   let currentPageInKlar;
   if (window.klarContext.isInKlar) {
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
-    // currentPageInKlar = currentPage._path;
-    currentPageInKlar = '/sida-2';
+    currentPageInKlar = currentPage._path;
+    // currentPageInKlar = '/sida-2';
   } else {
     // startpage._path = '/';
     currentPageInKlar = '/sida-1';
