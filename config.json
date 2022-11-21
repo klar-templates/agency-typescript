@@ -1501,9 +1501,9 @@
           }
         }
       },
-      "contact": {
+      "Contact": {
         "title": "Contact",
-        "name": "contact",
+        "name": "Contact",
         "icon": "address-card-o",
         "properties": {
           "heading": {
@@ -1606,9 +1606,9 @@
           }
         }
       },
-      "Footer": {
+      "footer": {
         "title": "Sidfot",
-        "name": "Footer",
+        "name": "footer",
         "icon": "address-card-o",
         "lobal": true,
         "tatic": true,
