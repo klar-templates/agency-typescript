@@ -875,7 +875,7 @@
           }
         }
       },
-      "Services": {
+      "services": {
         "title": "Services",
         "name": "services",
         "icon": "file-text-o",
