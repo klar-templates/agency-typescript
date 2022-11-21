@@ -73,7 +73,7 @@ function App() {
         {(data as IData).pages.map(page => {
           return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
         })}
-        <Route path="about:blank" element={<Navigate replace to={currentPageInKlar} />} />
+        <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
         </Routes>
       </Router>
     </HelmetProvider>
