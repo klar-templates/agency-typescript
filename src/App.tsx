@@ -70,10 +70,10 @@ function App() {
     <HelmetProvider>
       <Router>
         <Routes>
+          <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
         {(data as IData).pages.map(page => {
           return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
         })}
-        <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
         </Routes>
       </Router>
     </HelmetProvider>
