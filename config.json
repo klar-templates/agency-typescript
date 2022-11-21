@@ -94,7 +94,7 @@
     "blocks": {
       "navigation": {
         "title": "Navigation",
-        "name": "navigation",
+        "name": "Navigation",
         "icon": "navicon",
         "lobal": true,
         "tatic": true,
@@ -602,7 +602,7 @@
       },
       "header": {
         "title": "Header",
-        "name": "header",
+        "name": "Header",
         "icon": "image",
         "properties": {
           "subtitle": {
@@ -1223,7 +1223,7 @@
       },
       "team": {
         "title": "Team",
-        "name": "team",
+        "name": "Team",
         "icon": "group",
         "properties": {
           "heading": {
@@ -1608,7 +1608,7 @@
       },
       "footer": {
         "title": "Sidfot",
-        "name": "footer",
+        "name": "Footer",
         "icon": "address-card-o",
         "lobal": true,
         "tatic": true,
