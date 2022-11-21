@@ -51,7 +51,7 @@ function App() {
     return null;
   }
 
-  const startpage = (data as IData).pages.find(p => p.startpage)
+  // const startpage = (data as IData).pages.find(p => p.startpage)
   
   let currentPageInKlar;
   if (window.klarContext.isInKlar) {
