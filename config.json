@@ -92,9 +92,9 @@
       }
     },
     "blocks": {
-      "Navigation": {
+      "navigation": {
         "title": "Navigation",
-        "name": "Navigation",
+        "name": "navigation",
         "icon": "navicon",
         "lobal": true,
         "tatic": true,
@@ -600,9 +600,9 @@
           }
         }
       },
-      "Header": {
+      "header": {
         "title": "Header",
-        "name": "Header",
+        "name": "header",
         "icon": "image",
         "properties": {
           "subtitle": {
@@ -1221,9 +1221,9 @@
           }
         }
       },
-      "Team": {
+      "team": {
         "title": "Team",
-        "name": "Team",
+        "name": "team",
         "icon": "group",
         "properties": {
           "heading": {
@@ -1501,9 +1501,9 @@
           }
         }
       },
-      "Contact": {
+      "contact": {
         "title": "Contact",
-        "name": "Contact",
+        "name": "contact",
         "icon": "address-card-o",
         "properties": {
           "heading": {
@@ -2520,22 +2520,22 @@
     {
       "title": "Startsida",
       "name": "startpage",
-      "default_blocks": ["Navigation", "Header", "Footer"]
+      "default_blocks": ["navigation", "header", "footer"]
     },
     {
       "title": "Undersida",
       "name": "subpage",
-      "default_blocks": ["Navigation", "Header", "Team", "Footer"]
+      "default_blocks": ["navigation", "header", "team", "footer"]
     },
     {
       "title": "Blogg",
       "name": "blog-page",
-      "default_blocks": ["Navigation", "Header", "Footer"]
+      "default_blocks": ["navigation", "header", "footer"]
     },
     {
       "title": "Kontaktsida",
       "name": "contact-page",
-      "default_blocks": ["Navigation", "Header", "Contact", "Footer"]
+      "default_blocks": ["navigation", "header", "contact", "footer"]
     }
   ],
   "blocks_default": [],
