@@ -38,7 +38,7 @@ function App() {
       }
       requestData()
         .then((data) => {
-          localStorage.setItem(cacheKey, JSON.stringify(data));
+          // localStorage.setItem(cacheKey, JSON.stringify(data));
           setData(data);
         });
       } else {
@@ -57,7 +57,7 @@ function App() {
   if (window.klarContext.isInKlar) {
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
     // currentPageInKlar = currentPage._path;
-    currentPageInKlar = 'sida-2';
+    currentPageInKlar = '/sida-2';
   } else {
     // startpage._path = '/';
     currentPageInKlar = '/sida-1';

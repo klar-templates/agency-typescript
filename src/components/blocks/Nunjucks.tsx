@@ -22,7 +22,7 @@ export default function Nunjucks(data: any) {
     if (!localStorage.getItem(cacheKey)) {
       async function requestData() {
         const response = await fetch(
-          `/nunjucks/${templateName}.html`);
+          `/blocks/${templateName}.html`);
         return response.text();
       }
       requestData()
