@@ -53,7 +53,7 @@ function App() {
 
   const startpage = (data as IData).pages.find(p => p.startpage)
   
-  let currentPageInKlar;
+  let currentPageInKlar: any;
   if (window.klarContext.isInKlar) {
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
     currentPageInKlar = currentPage._path;
@@ -67,10 +67,15 @@ function App() {
         <Routes>
           <>
             {(data as IData).pages.map(page => {
-              return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
+              if (window.klarContext.isInKlar && page._path !== currentPageInKlar) {
+                return <>
+                  <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
+                  <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
+                </>
+              } else {
+                return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
+              }             
             })}
-            { window.klarContext.isInKlar &&
-              <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />}
           </>
         </Routes>
       </Router>
