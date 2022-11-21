@@ -64,6 +64,7 @@ function App() {
   }
   
   console.log('currentPageInKlar', currentPageInKlar)
+  console.log(location.pathname);
 
   return (
     <HelmetProvider>
