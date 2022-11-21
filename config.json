@@ -92,7 +92,7 @@
       }
     },
     "blocks": {
-      "navigation": {
+      "Navigation": {
         "title": "Navigation",
         "name": "Navigation",
         "icon": "navicon",
@@ -600,7 +600,7 @@
           }
         }
       },
-      "header": {
+      "Header": {
         "title": "Header",
         "name": "Header",
         "icon": "image",
@@ -875,7 +875,7 @@
           }
         }
       },
-      "services": {
+      "Services": {
         "title": "Services",
         "name": "services",
         "icon": "file-text-o",
@@ -1221,7 +1221,7 @@
           }
         }
       },
-      "team": {
+      "Team": {
         "title": "Team",
         "name": "Team",
         "icon": "group",
@@ -1606,7 +1606,7 @@
           }
         }
       },
-      "footer": {
+      "Footer": {
         "title": "Sidfot",
         "name": "Footer",
         "icon": "address-card-o",
