@@ -16,7 +16,7 @@ function App() {
     if (window.klarContext.isInKlar) {
       // console.log(typeof window.klar !== 'undefined')
       parent.frames.window.klar['setData'] = setData;
-      setTimeout(() => setData(parent.frames.window.klar.data), 1000);
+      setData(parent.frames.window.klar.data);
       // parent.frames.window.reactPageIsLoaded();
       // const currentPage = parent.frames.window.klar.sdk.currentPage.get();
       // window.location.href = currentPage._path;
