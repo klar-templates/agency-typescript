@@ -60,7 +60,7 @@ function App() {
     currentPageInKlar = 'sida-2';
   } else {
     // startpage._path = '/';
-    currentPageInKlar = '/';
+    currentPageInKlar = '/sida-1';
   }
   
   console.log('currentPageInKlar', currentPageInKlar)
@@ -72,7 +72,7 @@ function App() {
         {(data as IData).pages.map(page => {
           return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
         })}
-        <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
+        <Route path="about:blank" element={<Navigate replace to={currentPageInKlar} />} />
         </Routes>
       </Router>
     </HelmetProvider>
