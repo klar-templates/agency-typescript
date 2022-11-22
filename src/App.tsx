@@ -56,9 +56,7 @@ function App() {
   let currentPageInKlar: any;
   if (window.klarContext.isInKlar) {
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
-    console.log('react currentpage', currentPage)
     if (currentPage) {
-      console.log('react currentpage', currentPage)
       currentPageInKlar = currentPage._path;
     }
   } else {
