@@ -56,7 +56,6 @@ function App() {
   let currentPageInKlar: any;
   if (window.klarContext.isInKlar) {
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
-    console.log('asdf', data.pages.length)
     if (currentPage) {
       currentPageInKlar = currentPage._path;
     }
@@ -69,7 +68,7 @@ function App() {
       <Router>
         <Routes>
           <>
-            {data.pages.length > 0 && (data as IData).pages.map(page => {
+            {(data as IData).pages.map(page => {
               if (window.klarContext.isInKlar && page._path !== currentPageInKlar) {
                 return <>
                   <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
