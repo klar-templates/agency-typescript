@@ -17,7 +17,7 @@ const Components: any = {
 
 export default function Page(data: IData) {
   createContext(data);
-  if (!window.klarContext.data.pages.length) {
+  if (window.klarContext.data.pages.length === 0) {
     // Tell the user that there are no pages yet.
     return null;
   }
@@ -48,7 +48,7 @@ function createContext(data: IData) {
   const routeNavigate = useNavigate();
   const pathname = routeLocation.pathname;
   let currentPage;
-  if (data.pages.length) {
+  if (data.pages.length !== 0) {
     if (pathname === '/') {
       // currentPage = data.pages.find(page => page.startpage === true);
       currentPage = data.pages[0];
