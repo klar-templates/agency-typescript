@@ -74,6 +74,7 @@ function App() {
               <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
             }
             {(data as IData).pages.map(page => {
+              console.log('new routes where created')
               return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
             })}
             {window.klarContext.isInKlar && data.pages.length === 0 && 
