@@ -34,7 +34,7 @@ export default function Navigation(data: any) {
               <Link to="/users">Users</Link>
             </li> */}
             {window.klarContext.data.pages.map((page: any, i: any) => 
-              <li key={i}>
+              <li key={i} className={page._id === window.klarContext.currentPage._id ? 'page-scroll active' : 'page-scroll'}>
                 <Link
                   className="page-scroll"
                   to={page._path}
