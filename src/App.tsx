@@ -56,6 +56,7 @@ function App() {
   let currentPageInKlar: any;
   if (window.klarContext.isInKlar) {
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
+    console.log('asdf', data.pages.length)
     if (currentPage) {
       currentPageInKlar = currentPage._path;
     }
