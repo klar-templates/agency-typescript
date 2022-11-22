@@ -66,7 +66,7 @@ function App() {
       <Router>
         <Routes>
           <>
-            {(data as IData).pages.map(page => {
+            {data.pages.length && (data as IData).pages.map(page => {
               if (window.klarContext.isInKlar && page._path !== currentPageInKlar) {
                 return <>
                   <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
@@ -76,6 +76,9 @@ function App() {
                 return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
               }             
             })}
+            {!data.pages.length && 
+              <Route path="/" element={<Page {...(data as IData)} />} key="no-pages"/>
+            }
           </>
         </Routes>
       </Router>
