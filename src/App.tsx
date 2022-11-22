@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { HelmetProvider } from "react-helmet-async";
 import IData from './service/interface/IData';
 import Page from './components/Page';
 
 function App() {
+  const routeNavigate = useNavigate();
   window.klarContext = {
-    isInKlar: typeof parent.frames.window.klar !== 'undefined'
+    isInKlar: typeof parent.frames.window.klar !== 'undefined',
+    navigate: routeNavigate
   };
   const [data, setData] = useState(window.klarContext.isInKlar ? parent.frames.window.klar.data : undefined);
 
