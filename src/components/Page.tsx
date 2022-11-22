@@ -16,13 +16,11 @@ const Components: any = {
 }
 
 export default function Page(data: IData) {
-  console.log('trueasdf again fdfasdfasdfasdf')
   createContext(data);
   if (window.klarContext.data.pages.length === 0) {
     // Tell the user that there are no pages yet.
     return null;
   }
-  console.log('trueasdf again', data)
   const blockArray = [];
   for (const [key, value] of Object.entries(window.klarContext.currentPage.blocks)) {
     const block: any = value;
@@ -51,7 +49,6 @@ function createContext(data: IData) {
   const pathname = routeLocation.pathname;
   let currentPage;
   if (data.pages.length > 0) {
-    console.log('trueasdf')
     if (pathname === '/') {
       // currentPage = data.pages.find(page => page.startpage === true);
       currentPage = data.pages[0];

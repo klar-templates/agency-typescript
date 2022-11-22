@@ -59,8 +59,6 @@ function App() {
     if (currentPage) {
       currentPageInKlar = currentPage._path;
     }
-    console.log('datasadf: ', data)
-    console.log('currentPageInKlar: ', currentPageInKlar)
   } else {
     startpage._path = '/';
   }
@@ -74,7 +72,7 @@ function App() {
               <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
             }
             {(data as IData).pages.map(page => {
-              console.log('new routes where created')
+              console.log('Route was added: ', page._path);
               return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
             })}
             {window.klarContext.isInKlar && data.pages.length === 0 && 
