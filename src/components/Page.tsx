@@ -16,6 +16,7 @@ const Components: any = {
 }
 
 export default function Page(data: IData) {
+  console.log('trueasdf again fdfasdfasdfasdf')
   createContext(data);
   if (window.klarContext.data.pages.length === 0) {
     // Tell the user that there are no pages yet.
