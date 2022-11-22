@@ -60,6 +60,7 @@ function App() {
       currentPageInKlar = currentPage._path;
     }
     console.log('datasadf: ', data)
+    console.log('currentPageInKlar: ', currentPageInKlar)
   } else {
     startpage._path = '/';
   }
