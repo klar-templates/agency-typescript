@@ -17,6 +17,10 @@ const Components: any = {
 
 export default function Page(data: IData) {
   createContext(data);
+  if (!window.klarContext.data.pages.length) {
+    // Tell the user that there are no pages yet.
+    return null;
+  }
   const blockArray = [];
   for (const [key, value] of Object.entries(window.klarContext.currentPage.blocks)) {
     const block: any = value;
@@ -44,11 +48,13 @@ function createContext(data: IData) {
   const routeNavigate = useNavigate();
   const pathname = routeLocation.pathname;
   let currentPage;
-  if (pathname === '/') {
-    // currentPage = data.pages.find(page => page.startpage === true);
-    currentPage = data.pages[0];
-  } else {
-    currentPage = data.pages.find(page => page._path === pathname);
+  if (data.pages.length) {
+    if (pathname === '/') {
+      // currentPage = data.pages.find(page => page.startpage === true);
+      currentPage = data.pages[0];
+    } else {
+      currentPage = data.pages.find(page => page._path === pathname);
+    }
   }
   if (window.klarContext.isInKlar) {
     parent.frames.window.klar['navigate'] = routeNavigate;
