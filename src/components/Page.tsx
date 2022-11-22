@@ -49,7 +49,7 @@ function createContext(data: IData) {
   const routeNavigate = useNavigate();
   const pathname = routeLocation.pathname;
   let currentPage;
-  if (data.pages.length !== 0) {
+  if (data.pages.length > 0) {
     console.log('trueasdf')
     if (pathname === '/') {
       // currentPage = data.pages.find(page => page.startpage === true);
