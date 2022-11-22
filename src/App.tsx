@@ -8,7 +8,7 @@ function App() {
   window.klarContext = {
     isInKlar: typeof parent.frames.window.klar !== 'undefined'
   };
-  const [data, setData] = useState(undefined);
+  const [data, setData] = useState(window.klarContext.isInKlar ? parent.frames.window.klar.data : undefined);
 
   useEffect(() => {
     // window.klar = {};
@@ -16,7 +16,7 @@ function App() {
     if (window.klarContext.isInKlar) {
       // console.log(typeof window.klar !== 'undefined')
       parent.frames.window.klar['setData'] = setData;
-      setData(parent.frames.window.klar.data);
+      // setData(parent.frames.window.klar.data);
       parent.frames.window.reactPageIsLoaded();
       // const currentPage = parent.frames.window.klar.sdk.currentPage.get();
       // window.location.href = currentPage._path;
