@@ -78,7 +78,7 @@ function App() {
                 return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
               }             
             })}
-            {data.pages.length === 0 && 
+            {window.klarContext.isInKlar && data.pages.length === 0 && 
               <Route path="/" element={<Page {...(data as IData)} />} key="no-pages"/>
             }
           </>
