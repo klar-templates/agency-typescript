@@ -17,7 +17,7 @@ function App() {
       // console.log(typeof window.klar !== 'undefined')
       parent.frames.window.klar['setData'] = setData;
       setData(parent.frames.window.klar.data);
-      // parent.frames.window.reactPageIsLoaded();
+      parent.frames.window.reactPageIsLoaded();
       // const currentPage = parent.frames.window.klar.sdk.currentPage.get();
       // window.location.href = currentPage._path;
     } else {
@@ -26,12 +26,6 @@ function App() {
     }
     // return () => clearInterval(id);
   }, []);
-
-  useEffect(() => {
-    if (window.klarContext.isInKlar) {
-      parent.frames.window.reactPageIsLoaded();
-    }
-  }, [data]);
 
   function getData(siteName: string) {
     const cacheKey = 'klar-data';
