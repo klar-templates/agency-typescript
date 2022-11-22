@@ -22,7 +22,7 @@ export default function Page(data: IData) {
     // Tell the user that there are no pages yet.
     return null;
   }
-  console.log('trueasdf again')
+  console.log('trueasdf again', data)
   const blockArray = [];
   for (const [key, value] of Object.entries(window.klarContext.currentPage.blocks)) {
     const block: any = value;
