@@ -1,8 +1,8 @@
 export default function Team(data: any) {
-  const {_id, _type, heading, subHeading, team, text, style } = data.block;
+  const {_id, _type, heading, sub_heading, team, text, style } = data.block;
   return (
     <Block style={style} blockId={_id} templateId={_type}>
-      <Intro heading={heading} subHeading={subHeading} />
+      <Intro heading={heading} subHeading={sub_heading} />
       <Members team={team} />
       <Description text={text} />
     </Block>
