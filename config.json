@@ -1902,6 +1902,12 @@
           "title": "Agency - Start Bootstrap Theme",
           "description": "This is my one page website and it's beautiful!"
         }
+      },
+      "empty-page": {
+        "settings": {
+          "title": "Agency - Start Bootstrap Theme",
+          "description": "This is my one page website and it's beautiful!"
+        }
       }
     },
     "blocks": {
