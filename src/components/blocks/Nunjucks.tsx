@@ -7,8 +7,12 @@ export default function Nunjucks(data: any) {
   useEffect(() => {
     // Get Nunjucks template
     if (window.klarContext.isInKlar) {
-      const templateStr = parent.frames.window.klar.templates.blocks[data.block._type].content;
-      setTemplate(templateStr);
+      let template = parent.frames.window.klar.templates.blocks[data.block._type];
+      if (template) {
+        setTemplate(template.content);
+      } else {
+        console.log('No template content for this block: ', data.block._type)
+      }
     } else {
       getTemplate(data.block._type);
     }
