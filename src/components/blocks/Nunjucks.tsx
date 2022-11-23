@@ -11,7 +11,7 @@ export default function Nunjucks(data: any) {
       if (template) {
         setTemplate(template.content);
       } else {
-        console.log('No template content for this block: ', data.block._type)
+        console.log('No template content for this block:', data.block._type)
       }
     } else {
       getTemplate(data.block._type);
