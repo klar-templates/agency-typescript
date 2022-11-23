@@ -2536,6 +2536,11 @@
       "title": "Kontaktsida",
       "name": "contact-page",
       "default_blocks": ["navigation", "header", "contact", "footer"]
+    },
+    {
+      "title": "Tom sida",
+      "name": "empty-page",
+      "default_blocks": []
     }
   ],
   "blocks_default": [],
