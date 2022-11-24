@@ -3,6 +3,7 @@ import IData from '../service/interface/IData';
 import Layout from './Layout';
 import Navigation from './blocks/Navigation';
 import Header from './blocks/Header';
+import Hero from './blocks/Hero';
 import Team from './blocks/Team';
 import Footer from './blocks/Footer';
 import Nunjucks from './blocks/Nunjucks';
@@ -11,6 +12,7 @@ import KlarEditBlock from './KlarEditBlock';
 const Components: any = {
   Navigation: Navigation,
   Header: Header,
+  Hero: Hero,
   Team: Team,
   Footer: Footer
 }

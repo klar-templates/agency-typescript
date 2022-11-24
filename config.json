@@ -737,6 +737,143 @@
           }
         }
       },
+      "hero": {
+        "title": "Hero",
+        "name": "Hero",
+        "icon": "image",
+        "properties": {
+          "subtitle": {
+            "type": "string",
+            "title": "Lead in"
+          },
+          "title": {
+            "type": "string",
+            "title": "Rubrik" 
+          },
+          "link_text": {
+            "type": "string",
+            "title": "Länktext" 
+          },
+          "link": {
+            "type": "string",
+            "title": "Länk",
+            "format": "uri"
+          },
+          "image": {
+            "type": "string",
+            "title": "Bild",
+            "format": "file"
+          },
+          "show_subtitle": {
+            "type": "boolean",
+            "title": "Show lead in",
+            "ui:widget": "switch"
+          },
+          "show_title": {
+            "type": "boolean",
+            "title": "Show title",
+            "ui:widget": "switch"
+          },
+          "show_button": {
+            "type": "boolean",
+            "title": "Show button",
+            "ui:widget": "switch"
+          },
+          "style": {
+            "properties": {
+              "subtitle_text_color": {
+                "type": "string",
+                "title": "Lead in text color",
+                "format": "color",
+                "ui:css_selector": "header .intro-text .intro-lead-in",
+                "ui:css_property": "color"
+              },
+              "title_text_color": {
+                "type": "string",
+                "title": "Title text color",
+                "format": "color",
+                "ui:css_selector": "header .intro-text .intro-heading",
+                "ui:css_property": "color"
+              },
+              "button_bg_color": {
+                "type": "string",
+                "title": "Button bg color",
+                "format": "color",
+                "no-ui:css_selector": "${block_id_css_id} .btn-xl",
+                "no-ui:css_property": "background-color"
+              },
+              "button_text_color": {
+                "type": "string",
+                "title": "Button text color",
+                "format": "color",
+                "no-ui:css_selector": "${block_id_css_id} .btn-xl",
+                "no-ui:css_property": "color"
+              },
+              "padding_top": {
+                "type": "integer",
+                "title": "Padding top",
+                "minimum": 0,
+                "maximum": 500
+              },
+              "padding_bottom": {
+                "type": "integer",
+                "title": "Padding bottom",
+                "minimum": 0,
+                "maximum": 500
+              },
+              "full_screen": {
+                "type": "boolean",
+                "title": "Full Screen",
+                "ui:widget": "switch"
+              },
+              "text_align": {
+                "type": "string",
+                "title": "Text Align",
+                "enum": [
+                  "left",
+                  "center",
+                  "right"
+                ],
+                "enumNames": [
+                  "Left",
+                  "Center",
+                  "Right"
+                ]
+              },
+              "show_overlay": {
+                "type": "boolean",
+                "title": "Show Overlay",
+                "ui:widget": "switch"
+              },
+              "overlay_bg_color": {
+                "type": "string",
+                "title": "Overlay bg color",
+                "format": "color",
+                "ui:css_selector": "${block_id_css_id} .overlay",
+                "ui:css_property": "background-color"
+              },
+              "overlay_opacity": {
+                "type": "integer",
+                "title": "Overlay Opacity",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "margin_top": {
+                "type": "integer",
+                "title": "Margin top",
+                "minimum": 0,
+                "maximum": 150
+              },
+              "bg_image_position_top": {
+                "type": "integer",
+                "title": "Image position top",
+                "minimum": 0,
+                "maximum": 150
+              }
+            }
+          }
+        }
+      },
       "HeaderReact": {
         "title": "Header",
         "name": "HeaderReact",
@@ -2559,6 +2696,11 @@
     {
       "title": "Header",
       "name": "header",
+      "icon": "image"
+    },
+    {
+      "title": "Hero",
+      "name": "hero",
       "icon": "image"
     },
     {

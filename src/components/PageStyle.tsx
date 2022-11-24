@@ -216,6 +216,9 @@ export default function PageStyle(data: any) {
         }
         /* Global */
         @media (min-width: 768px) {
+          .collapse {
+            visibility: visible;
+          }
           .block {
             padding-top: ${theme.block.padding_top}px;
             padding-bottom: ${theme.block.padding_bottom}px;
