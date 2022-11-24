@@ -739,7 +739,7 @@
       },
       "hero": {
         "title": "Hero",
-        "name": "Hero",
+        "name": "hero",
         "icon": "image",
         "properties": {
           "subtitle": {
