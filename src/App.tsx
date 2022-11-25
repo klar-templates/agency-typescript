@@ -77,7 +77,7 @@ function App() {
       <Router>
         <Routes>
           <>
-            {console.log('location.pathname - inside', location.pathname)}
+            {console.log('location.pathname - inside', location.pathname.includes('/sites/klar-sites/'))}
             {window.klarContext.isInKlar && data.pages.length > 0 && location.pathname.includes('/sites/klar-sites/') && 
               <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
             }
