@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { HelmetProvider } from "react-helmet-async";
 import IData from './service/interface/IData';
 import Page from './components/Page';
@@ -10,6 +10,11 @@ function App() {
   };
   const [data, setData] = useState(window.klarContext.isInKlar ? parent.frames.window.klar.data : undefined);
   useEffect(() => {
+    if (location.href == '/sites/klar-sites/agency-typescript') {
+      console.log('navigate')
+      const routeNavigate = useNavigate();
+      routeNavigate('/');
+    }
     // window.klar = {};
     // window.klar['setData'] = setData;
     if (window.klarContext.isInKlar) {
