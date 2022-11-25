@@ -67,17 +67,16 @@ function App() {
   } else {
     startpage._path = '/';
   }
-  console.log('currentPageInKlar', currentPageInKlar)
-  console.log('window.klarContext.isInKlar', window.klarContext.isInKlar)
+  // console.log('currentPageInKlar', currentPageInKlar)
+  // console.log('window.klarContext.isInKlar', window.klarContext.isInKlar)
   // console.log('location.href', location.href)
-  console.log('location.pathname', location.pathname)
+  // console.log('location.pathname', location.pathname)
 
   return (
     <HelmetProvider>
       <Router>
         <Routes>
           <>
-            {console.log('location.pathname - inside', location.pathname.includes('/sites/klar-sites/'))}
             {window.klarContext.isInKlar && data.pages.length > 0 && location.pathname.includes('/sites/klar-sites/') && 
               <Route path={location.pathname} element={<Navigate replace to={currentPageInKlar} />} />
             }
