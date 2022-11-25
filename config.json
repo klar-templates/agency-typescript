@@ -143,10 +143,8 @@
       "title": "Navigation",
       "name": "navigation",
       "type": "object",
-      
-      "icon": "image",
+      "icon": "navicon",
       "enabled": false, 
-      
       "fields": [
         {
           "title": "title",
@@ -185,6 +183,7 @@
     {
       "title": "Header",
       "name": "header",
+      "icon": "image",
       "type": "object",
       "fields": [
         {
@@ -264,6 +263,7 @@
     {
       "title": "Services",
       "name": "services",
+      "icon": "file-text-o",
       "type": "object",
       "fields": [
         {
@@ -303,6 +303,7 @@
     {
       "title": "Portfolio",
       "name": "portfolio",
+      "icon": "book",
       "type": "object",
       "fields": [
         {
@@ -342,6 +343,7 @@
     {
       "title": "About",
       "name": "about",
+      "icon": "group",
       "type": "object",
       "fields": [
         {
@@ -381,6 +383,7 @@
     {
       "title": "Team",
       "name": "team",
+      "icon": "group",
       "type": "object",
       "fields": [
         {
@@ -509,6 +512,7 @@
     {
       "title": "Clients",
       "name": "clients",
+      "icon": "group",
       "type": "object",
       "fields": [
         {
@@ -548,6 +552,7 @@
     {
       "title": "Contact",
       "name": "contact",
+      "icon": "address-card-o",
       "type": "object",
       "fields": [
         {
@@ -587,6 +592,7 @@
     {
       "title": "Footer",
       "name": "footer",
+      "icon": "address-card-o",
       "type": "object",
       "fields": [
         {
