@@ -9,7 +9,7 @@ function App() {
     isInKlar: typeof parent.frames.window.klar !== 'undefined'
   };
   const [data, setData] = useState(window.klarContext.isInKlar ? parent.frames.window.klar.data : undefined);
-
+  console.log('parent.frames.win', parent.frames.window.klar.data)
   useEffect(() => {
     // window.klar = {};
     // window.klar['setData'] = setData;
@@ -22,7 +22,7 @@ function App() {
       // window.location.href = currentPage._path;
     } else {
       // Param: Site name in Klar
-      getData('agency');
+      getData('agency-typescript');
     }
     // return () => clearInterval(id);
   }, []);
@@ -33,7 +33,7 @@ function App() {
     if (!localStorage.getItem(cacheKey)) {
       async function requestData() {
         const response = await fetch(
-          `https://raw.githubusercontent.com/klar-sites/${siteName}/master/data.json`);
+          `https://raw.githubusercontent.com/klar-sites/${siteName}/main/data.json`);
         return response.json();
       }
       requestData()
