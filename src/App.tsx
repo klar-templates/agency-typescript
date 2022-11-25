@@ -9,7 +9,6 @@ function App() {
     isInKlar: typeof parent.frames.window.klar !== 'undefined'
   };
   const [data, setData] = useState(window.klarContext.isInKlar ? parent.frames.window.klar.data : undefined);
-  console.log('parent.frames.win', parent.frames.window.klar.data)
   useEffect(() => {
     // window.klar = {};
     // window.klar['setData'] = setData;
@@ -62,7 +61,7 @@ function App() {
   } else {
     startpage._path = '/';
   }
-  
+  console.log('currentPageInKlar', currentPageInKlar)
   return (
     <HelmetProvider>
       <Router>
