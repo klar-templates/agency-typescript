@@ -1,1918 +1,630 @@
 {
-  "name": "agency-typescript",
+  "name": "agency",
   "version": "0.0.0",
-  "settings_schema": {
-    "theme": {
-      "title": "Tema",
-      "properties": {
-        "colors": {
-          "title": "Färger",
+  "theme_type": {
+    "title": "Tema",
+    "name": "theme",
+    "type": "theme",
+    "fields": [{
+      "title": "Färger",
+      "name": "colors",
+      "type": "object",
+      "fields": [{
+        "title": "Färger",
+        "name": "colors",
+        "type": "object"
+      },
+      {
+        "title": "Beskrivning",
+        "name": "description",
+        "type": "text"
+      }]
+    },
+    {
+      "title": "Typografi",
+      "name": "typography",
+      "type": "object",
+      "fields": [
+      {
+        "title": "Färger",
+        "name": "colors",
+        "type": "object"
+      },
+      {
+        "title": "Beskrivning",
+        "name": "description",
+        "type": "text"
+      }]
+    },
+    {
+      "title": "Block",
+      "name": "block",
+      "type": "object",
+      "fields": [
+      {
+        "title": "Färger",
+        "name": "colors",
+        "type": "object"
+      },
+      {
+        "title": "Beskrivning",
+        "name": "description",
+        "type": "text"
+      }
+    ] 
+  }]
+  },
+  "page_types": [{
+    "title": "Startsida",
+    "name": "startpage",
+    "type": "page",
+    "default_blocks": ["navigation", "hero", "footer"],
+    "fields": [{
+      "title": "Sidinställningar",
+      "name": "page_settings",
+      "type": "object",
+      "fields": [{
+        "title": "Sidtitel",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "title": "Beskrivning",
+        "name": "description",
+        "type": "text"
+      }]
+    }]
+  },
+  {
+    "title": "Undersida",
+    "name": "subpage",
+    "type": "page",
+    "default_blocks": ["navigation", "hero", "footer"],
+    "fields": [{
+      "title": "Sidinställningar",
+      "name": "page_settings",
+      "type": "object",
+      "fields": [{
+        "title": "Sidtitel",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "title": "Beskrivning",
+        "name": "description",
+        "type": "text"
+      }]
+    }]
+  },
+  {
+    "title": "Blogg",
+    "name": "blog",
+    "type": "page",
+    "default_blocks": ["navigation", "hero", "footer"],
+    "fields": [{
+      "title": "Sidinställningar",
+      "name": "page_settings",
+      "type": "object",
+      "fields": [{
+        "title": "Sidtitel",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "title": "Beskrivning",
+        "name": "description",
+        "type": "text"
+      }]
+    }]
+  },
+  {
+    "title": "Kontaktsida",
+    "name": "contact-page",
+    "type": "page",
+    "default_blocks": ["navigation", "hero", "footer"],
+    "fields": [{
+      "title": "Sidinställningar",
+      "name": "page_settings",
+      "type": "object",
+      "fields": [{
+        "title": "Sidtitel",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "title": "Beskrivning",
+        "name": "description",
+        "type": "text"
+      }]
+    }]
+  }],
+  "block_types": [
+    {
+      "title": "Navigation",
+      "name": "navigation",
+      "type": "object",
+      
+      "icon": "image",
+      "enabled": false, 
+      
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
           "type": "object",
-          "no_ui:css_selector": "body",
-          "properties": {
-            "bg_color": {
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
+    },
+    {
+      "title": "Header",
+      "name": "header",
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
+    },
+    {
+      "title": "Hero",
+      "name": "hero",
+      "icon": "image",
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
+    },
+    {
+      "title": "Services",
+      "name": "services",
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
+    },
+    {
+      "title": "Portfolio",
+      "name": "portfolio",
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
+    },
+    {
+      "title": "About",
+      "name": "about",
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
+    },
+    {
+      "title": "Team",
+      "name": "team",
+      "type": "object",
+      "fields": [
+        {
+        "title": "Rubrik", 
+        "name": "heading",
+        "type": "string"
+        },
+        {
+          "title": "Underrubrik",
+          "name": "sub_heading",
+          "type": "string"
+        },
+        {
+          "title": "Team",
+          "name": "team",
+          "type": "array",
+          "of": [{
+            "title": "Team member",
+            "name": "team_member",
+            "type": "object",
+            "display_field": "heading",
+            "fields": [
+              {
+                "type": "string",
+                "name": "image",
+                "title": "Bild",
+                "format": "file",
+                "default": "https://raw.githubusercontent.com/klar-templates/agency/master/img/team/3.jpg"
+              },
+              {
+                "type": "string",
+                "name": "heading",
+                "title": "Rubrik",
+                "default": "Rubrik"
+              },
+              {
+                "type": "text",
+                "name": "text",
+                "title": "Text",
+                "default": "En kortare text"
+              },
+              {
+                "type": "array",
+                "name": "social_links",
+                "title": "Social links",
+                "default": [
+                  {
+                    "title": "Twitter",
+                    "icon": "twitter",
+                    "link": "#youraccount"
+                  },
+                  {
+                    "title": "Facebook",
+                    "icon": "facebook",
+                    "link": "#youraccount"
+                  },
+                  {
+                    "title": "Instagram",
+                    "icon": "instagram",
+                    "link": "#youraccount"
+                  }
+                ],
+                "of": [{
+                  "title": "Länk",
+                  "name": "link",
+                  "type": "object",
+                  "display_field": "title",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "title": "Titel",
+                      "default": "Titel"
+                    },
+                    "icon": {
+                      "type": "string",
+                      "title": "Ikon",
+                      "default": "twitter",
+                      "ui:widget": "icon"
+                    },
+                    "link": {
+                      "type": "string",
+                      "title": "Länk",
+                      "format": "uri",
+                      "default": "#youraccount"
+                    }
+                  }
+                }]
+              }
+            ]
+          }]
+        },
+        {
+          "title": "Text",
+          "name": "text",
+          "type": "text"
+          
+          
+          
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [{
+            "title": "Block",
+            "name": "block",
+            "type": "object",
+            "ui:css_selector": "#team",
+            "fields": [{
+              "name": "bg_color",
+              "ui:css_selector": "${block_id_css_id}",
               "$ref": "#/definitions/bg_color"
             },
-            "title_text_color": {
-              "$ref": "#/definitions/title_text_color"
-            },
-            "subtitle_text_color": {
-              "$ref": "#/definitions/subtitle_text_color"
-            },
-            "text_color": {
-              "$ref": "#/definitions/text_color"
-            },
-            "link_text_color": {
-              "$ref": "#/definitions/link_text_color"
-            },
-            "link_text_hover_color": {
-              "$ref": "#/definitions/link_text_hover_color"
-            },
-            "primary_color": {
-              "$ref": "#/definitions/primary_color"
-            },
-            "selection_text_color": {
-              "$ref": "#/definitions/selection_text_color"
-            },
-            "selection_bg_color": {
-              "$ref": "#/definitions/selection_bg_color"
-            }
-          }
-        },
-        "typography": {
-          "title": "Typografi",
-          "type": "object",
-          "no_ui:css_selector": "body",
-          "properties": {
-            "title_font_family": {
-              "$ref": "#/definitions/title_font_family"
-            },
-            "subtitle_font_family": {
-              "$ref": "#/definitions/subtitle_font_family"
-            },
-            "text_font_family": {
-              "$ref": "#/definitions/text_font_family"
-            },
-            "type_base_size": {
-              "$ref": "#/definitions/type_base_size"
-            }
-          }
-        },
-        "block": {
-          "title": "Block",
-          "type": "object",
-          "properties": {
-            "padding_top": {
+            {
+              "name":  "padding_top",
               "$ref": "#/definitions/block_padding_top"
             },
-            "padding_bottom": {
+            {
+              "name": "padding_bottom",
               "$ref": "#/definitions/block_padding_bottom"
             }
-          }
-        }
-      }
+            ]
+          }]
+      }]
     },
-    "page": {
-      "title": "Sidinställningar",
-      "properties": {
-        "settings": {
-          "title": "Titel och beskrivning",
+    {
+      "title": "Clients",
+      "name": "clients",
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
           "type": "object",
-          "properties": {
-            "title": {
-              "type": "string",
-              "title": "Sidtitel"
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
             },
-            "description": {
-              "type": "text",
-              "title": "Beskrivning"
-            }
-          }
-        }
-      }
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
     },
-    "blocks": {
-      "navigation": {
-        "title": "Navigation",
-        "name": "navigation",
-        "icon": "navicon",
-        "lobal": true,
-        "tatic": true,
-        "idden": true,
-        "properties": {
-          "logo_text": {
-            "type": "string",
-            "title": "Logotext" 
-          },
-          "navigation": {
-            "type": "array",
-            "title": "Navigation",
-            "items": {
-              "type": "object",
-              "title": "Länk",
-              "display_field": "title",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Title",
-                  "default": "New link"
-                },
-                "link": {
-                  "type": "string",
-                  "title": "Länk",
-                  "format": "uri",
-                  "default": "#"
-                },
-                "open_in_new_page": {
-                  "type": "boolean",
-                  "title": "Open in new page"
-                }
-              }
-            }
-          },
-          "style": {
-            "properties": {
-              "navbar": {
-                "title": "Container",
-                "type": "object",
-                "ui:css_selector": ".navbar-custom",
-                "properties": {
-                  "transparent": {
-                    "type": "boolean",
-                    "title": "Transparent",
-                    "ui:widget": "switch"
-                  },
-                  "sticky": {
-                    "type": "boolean",
-                    "title": "Sticky",
-                    "ui:widget": "switch"
-                  },
-                  "bg_color": {
-                    "type": "string",
-                    "title": "Bakgrundsfärg",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom",
-                    "ui:css_property": "background-color"
-                  },
-                  "padding_top": {
-                    "type": "integer",
-                    "title": "Padding top",
-                    "minimum": 0,
-                    "maximum": 30
-                  },
-                  "padding_bottom": {
-                    "type": "integer",
-                    "title": "Padding bottom",
-                    "minimum": 0,
-                    "maximum": 30
-                  },
-                  "border_bottom_width": {
-                    "type": "integer",
-                    "title": "border bottom width",
-                    "minimum": 0,
-                    "maximum": 10
-                  },
-                  "border_bottom_color": {
-                    "type": "string",
-                    "title": "Border bottom color",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom",
-                    "ui:css_property": "border-color"
-                  },
-                  "show_overlay": {
-                    "type": "boolean",
-                    "title": "Show Overlay",
-                    "ui:widget": "switch"
-                  },
-                  "overlay_bg_color": {
-                    "type": "string",
-                    "title": "Overlay bg color",
-                    "format": "color",
-                    "ui:css_selector": "${block_id_css_id} .overlay",
-                    "ui:css_property": "background-color"
-                  },
-                  "overlay_opacity": {
-                    "type": "integer",
-                    "title": "Overlay Opacity",
-                    "minimum": 0,
-                    "maximum": 100
-                  },
-                  "margin_top_next_block": {
-                    "type": "integer",
-                    "title": "Push down content",
-                    "minimum": 0,
-                    "maximum": 200
-                  }
-                }
-              },
-              "logo": {
-                "title": "Logotyp",
-                "type": "object",
-                "ui:css_selector": ".navbar-brand",
-                "properties": {
-                  "text_color": {
-                    "type": "string",
-                    "title": "Textfärg",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-brand",
-                    "ui:css_property": "color"
-                  },
-                  "text_hover_color": {
-                    "type": "string",
-                    "title": "Textfärg Hover",
-                    "format": "color"
-                  },
-                  "text_focus_color": {
-                    "type": "string",
-                    "title": "Textfärg focus",
-                    "format": "color"
-                  },
-                  "font_family": {
-                    "type": "string",
-                    "title": "Font",
-                    "enum": [
-                      "Open Sans",
-                      "Raleway",
-                      "Roboto",
-                      "Lato",
-                      "Oswald",
-                      "Source Sans Pro",
-                      "Montserrat",
-                      "Droid Serif",
-                      "Roboto Slab",
-                      "Kaushan Script",
-                      "Helvetica Neue",
-                      "Helvetica",
-                      "Arial",
-                      "sans-serif"
-                    ]
-                  },
-                  "image": {
-                    "type": "string",
-                    "title": "Logo",
-                    "format": "file"
-                  },
-                  "padding_top": {
-                    "type": "integer",
-                    "title": "Logo padding top",
-                    "minimum": 0,
-                    "maximum": 30
-                  },
-                  "width": {
-                    "type": "integer",
-                    "title": "Logo width in pixels",
-                    "minimum": 0,
-                    "maximum": 500
-                  },
-                  "show": {
-                    "type": "boolean",
-                    "title": "Visa logobild?"
-                  }
-                }
-              },
-              "navigation": {
-                "title": "Navigation",
-                "type": "object",
-                "ui:css_selector": ".navbar-nav, .navbar-custom .navbar-toggle",
-                "properties": {
-                  "text_color": {
-                    "type": "string",
-                    "title": "Textfärg",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a",
-                    "ui:css_property": "color"
-                  },
-                  "text_hover_color": {
-                    "type": "string",
-                    "title": "Textfärg hover",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a:hover",
-                    "ui:css_property": "color"
-                  },
-                  "text_active_color": {
-                    "type": "string",
-                    "title": "Textfärg active",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a:active",
-                    "ui:css_property": "color"
-                  },
-                  "text_focus_color": {
-                    "type": "string",
-                    "title": "Textfärg focus",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a:focus",
-                    "ui:css_property": "color"
-                  },
-                  "bg_text_color": {
-                    "type": "string",
-                    "title": "Bakgrund på text",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a",
-                    "ui:css_property": "background-color"
-                  },
-                  "bg_text_hover_color": {
-                    "type": "string",
-                    "title": "Bakgrund på text - hover",
-                    "format": "color"
-                  },
-                  "bg_text_active_color": {
-                    "type": "string",
-                    "title": "Bakgrund på text - active",
-                    "format": "color"
-                  },
-                  "bg_text_focus_color": {
-                    "type": "string",
-                    "title": "Bakgrund på text - focus",
-                    "format": "color"
-                  },
-                  "mobile_menu_button_bg_color": {
-                    "type": "string",
-                    "title": "Hamburgermeny-knapp - bakgrund",
-                    "format": "color"
-                  },
-                  "mobile_menu_button_hover_bg_color": {
-                    "type": "string",
-                    "title": "Hamburgermeny-knapp hover - bakgrund",
-                    "format": "color"
-                  },
-                  "mobile_menu_button_focus_bg_color": {
-                    "type": "string",
-                    "title": "Hamburgermeny-knapp focus - bakgrund",
-                    "format": "color"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "NavigationReact": {
-        "title": "Navigation",
-        "name": "NavigationReact",
-        "icon": "navicon",
-        "global": true,
-        "static": true,
-        "hidden": true,
-        "properties": {
-          "logo_text": {
-            "type": "string",
-            "title": "Logotext" 
-          },
-          "navigation": {
-            "type": "array",
-            "title": "Navigation",
-            "items": {
-              "type": "object",
-              "title": "Länk",
-              "display_field": "title",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Title",
-                  "default": "New link"
-                },
-                "link": {
-                  "type": "string",
-                  "title": "Länk",
-                  "format": "uri",
-                  "default": "#"
-                },
-                "open_in_new_page": {
-                  "type": "boolean",
-                  "title": "Open in new page"
-                }
-              }
-            }
-          },
-          "style": {
-            "properties": {
-              "navbar": {
-                "title": "Container",
-                "type": "object",
-                "ui:css_selector": ".navbar-custom",
-                "properties": {
-                  "transparent": {
-                    "type": "boolean",
-                    "title": "Transparent",
-                    "ui:widget": "switch"
-                  },
-                  "sticky": {
-                    "type": "boolean",
-                    "title": "Sticky",
-                    "ui:widget": "switch"
-                  },
-                  "bg_color": {
-                    "type": "string",
-                    "title": "Bakgrundsfärg",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom",
-                    "ui:css_property": "background-color"
-                  },
-                  "padding_top": {
-                    "type": "integer",
-                    "title": "Padding top",
-                    "minimum": 0,
-                    "maximum": 30
-                  },
-                  "padding_bottom": {
-                    "type": "integer",
-                    "title": "Padding bottom",
-                    "minimum": 0,
-                    "maximum": 30
-                  },
-                  "border_bottom_width": {
-                    "type": "integer",
-                    "title": "border bottom width",
-                    "minimum": 0,
-                    "maximum": 10
-                  },
-                  "border_bottom_color": {
-                    "type": "string",
-                    "title": "Border bottom color",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom",
-                    "ui:css_property": "border-color"
-                  },
-                  "show_overlay": {
-                    "type": "boolean",
-                    "title": "Show Overlay",
-                    "ui:widget": "switch"
-                  },
-                  "overlay_bg_color": {
-                    "type": "string",
-                    "title": "Overlay bg color",
-                    "format": "color",
-                    "ui:css_selector": "${block_id_css_id} .overlay",
-                    "ui:css_property": "background-color"
-                  },
-                  "overlay_opacity": {
-                    "type": "integer",
-                    "title": "Overlay Opacity",
-                    "minimum": 0,
-                    "maximum": 100
-                  },
-                  "margin_top_next_block": {
-                    "type": "integer",
-                    "title": "Push down content",
-                    "minimum": 0,
-                    "maximum": 200
-                  }
-                }
-              },
-              "logo": {
-                "title": "Logotyp",
-                "type": "object",
-                "ui:css_selector": ".navbar-brand",
-                "properties": {
-                  "text_color": {
-                    "type": "string",
-                    "title": "Textfärg",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-brand",
-                    "ui:css_property": "color"
-                  },
-                  "text_hover_color": {
-                    "type": "string",
-                    "title": "Textfärg Hover",
-                    "format": "color"
-                  },
-                  "text_focus_color": {
-                    "type": "string",
-                    "title": "Textfärg focus",
-                    "format": "color"
-                  },
-                  "font_family": {
-                    "type": "string",
-                    "title": "Font",
-                    "enum": [
-                      "Open Sans",
-                      "Raleway",
-                      "Roboto",
-                      "Lato",
-                      "Oswald",
-                      "Source Sans Pro",
-                      "Montserrat",
-                      "Droid Serif",
-                      "Roboto Slab",
-                      "Kaushan Script",
-                      "Helvetica Neue",
-                      "Helvetica",
-                      "Arial",
-                      "sans-serif"
-                    ]
-                  },
-                  "image": {
-                    "type": "string",
-                    "title": "Logo",
-                    "format": "file"
-                  },
-                  "padding_top": {
-                    "type": "integer",
-                    "title": "Logo padding top",
-                    "minimum": 0,
-                    "maximum": 30
-                  },
-                  "width": {
-                    "type": "integer",
-                    "title": "Logo width in pixels",
-                    "minimum": 0,
-                    "maximum": 500
-                  },
-                  "show": {
-                    "type": "boolean",
-                    "title": "Visa logobild?"
-                  }
-                }
-              },
-              "navigation": {
-                "title": "Navigation",
-                "type": "object",
-                "ui:css_selector": ".navbar-nav, .navbar-custom .navbar-toggle",
-                "properties": {
-                  "text_color": {
-                    "type": "string",
-                    "title": "Textfärg",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a",
-                    "ui:css_property": "color"
-                  },
-                  "text_hover_color": {
-                    "type": "string",
-                    "title": "Textfärg hover",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a:hover",
-                    "ui:css_property": "color"
-                  },
-                  "text_active_color": {
-                    "type": "string",
-                    "title": "Textfärg active",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a:active",
-                    "ui:css_property": "color"
-                  },
-                  "text_focus_color": {
-                    "type": "string",
-                    "title": "Textfärg focus",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a:focus",
-                    "ui:css_property": "color"
-                  },
-                  "bg_text_color": {
-                    "type": "string",
-                    "title": "Bakgrund på text",
-                    "format": "color",
-                    "ui:css_selector": ".navbar-custom .nav li a",
-                    "ui:css_property": "background-color"
-                  },
-                  "bg_text_hover_color": {
-                    "type": "string",
-                    "title": "Bakgrund på text - hover",
-                    "format": "color"
-                  },
-                  "bg_text_active_color": {
-                    "type": "string",
-                    "title": "Bakgrund på text - active",
-                    "format": "color"
-                  },
-                  "bg_text_focus_color": {
-                    "type": "string",
-                    "title": "Bakgrund på text - focus",
-                    "format": "color"
-                  },
-                  "mobile_menu_button_bg_color": {
-                    "type": "string",
-                    "title": "Hamburgermeny-knapp - bakgrund",
-                    "format": "color"
-                  },
-                  "mobile_menu_button_hover_bg_color": {
-                    "type": "string",
-                    "title": "Hamburgermeny-knapp hover - bakgrund",
-                    "format": "color"
-                  },
-                  "mobile_menu_button_focus_bg_color": {
-                    "type": "string",
-                    "title": "Hamburgermeny-knapp focus - bakgrund",
-                    "format": "color"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "header": {
-        "title": "Header",
-        "name": "header",
-        "icon": "image",
-        "properties": {
-          "subtitle": {
-            "type": "string",
-            "title": "Lead in"
-          },
-          "title": {
-            "type": "string",
-            "title": "Rubrik" 
-          },
-          "link_text": {
-            "type": "string",
-            "title": "Länktext" 
-          },
-          "link": {
-            "type": "string",
-            "title": "Länk",
-            "format": "uri"
-          },
-          "image": {
-            "type": "string",
-            "title": "Bild",
-            "format": "file"
-          },
-          "show_subtitle": {
-            "type": "boolean",
-            "title": "Show lead in",
-            "ui:widget": "switch"
-          },
-          "show_title": {
-            "type": "boolean",
-            "title": "Show title",
-            "ui:widget": "switch"
-          },
-          "show_button": {
-            "type": "boolean",
-            "title": "Show button",
-            "ui:widget": "switch"
-          },
-          "style": {
-            "properties": {
-              "subtitle_text_color": {
-                "type": "string",
-                "title": "Lead in text color",
-                "format": "color",
-                "ui:css_selector": "header .intro-text .intro-lead-in",
-                "ui:css_property": "color"
-              },
-              "title_text_color": {
-                "type": "string",
-                "title": "Title text color",
-                "format": "color",
-                "ui:css_selector": "header .intro-text .intro-heading",
-                "ui:css_property": "color"
-              },
-              "button_bg_color": {
-                "type": "string",
-                "title": "Button bg color",
-                "format": "color",
-                "no-ui:css_selector": "${block_id_css_id} .btn-xl",
-                "no-ui:css_property": "background-color"
-              },
-              "button_text_color": {
-                "type": "string",
-                "title": "Button text color",
-                "format": "color",
-                "no-ui:css_selector": "${block_id_css_id} .btn-xl",
-                "no-ui:css_property": "color"
-              },
-              "padding_top": {
-                "type": "integer",
-                "title": "Padding top",
-                "minimum": 0,
-                "maximum": 500
-              },
-              "padding_bottom": {
-                "type": "integer",
-                "title": "Padding bottom",
-                "minimum": 0,
-                "maximum": 500
-              },
-              "full_screen": {
-                "type": "boolean",
-                "title": "Full Screen",
-                "ui:widget": "switch"
-              },
-              "text_align": {
-                "type": "string",
-                "title": "Text Align",
-                "enum": [
-                  "left",
-                  "center",
-                  "right"
-                ],
-                "enumNames": [
-                  "Left",
-                  "Center",
-                  "Right"
-                ]
-              },
-              "show_overlay": {
-                "type": "boolean",
-                "title": "Show Overlay",
-                "ui:widget": "switch"
-              },
-              "overlay_bg_color": {
-                "type": "string",
-                "title": "Overlay bg color",
-                "format": "color",
-                "ui:css_selector": "${block_id_css_id} .overlay",
-                "ui:css_property": "background-color"
-              },
-              "overlay_opacity": {
-                "type": "integer",
-                "title": "Overlay Opacity",
-                "minimum": 0,
-                "maximum": 100
-              },
-              "margin_top": {
-                "type": "integer",
-                "title": "Margin top",
-                "minimum": 0,
-                "maximum": 150
-              },
-              "bg_image_position_top": {
-                "type": "integer",
-                "title": "Image position top",
-                "minimum": 0,
-                "maximum": 150
-              }
-            }
-          }
-        }
-      },
-      "hero": {
-        "title": "Hero",
-        "name": "hero",
-        "icon": "image",
-        "properties": {
-          "subtitle": {
-            "type": "string",
-            "title": "Lead in"
-          },
-          "title": {
-            "type": "string",
-            "title": "Rubrik" 
-          },
-          "link_text": {
-            "type": "string",
-            "title": "Länktext" 
-          },
-          "link": {
-            "type": "string",
-            "title": "Länk",
-            "format": "uri"
-          },
-          "image": {
-            "type": "string",
-            "title": "Bild",
-            "format": "file"
-          },
-          "show_subtitle": {
-            "type": "boolean",
-            "title": "Show lead in",
-            "ui:widget": "switch"
-          },
-          "show_title": {
-            "type": "boolean",
-            "title": "Show title",
-            "ui:widget": "switch"
-          },
-          "show_button": {
-            "type": "boolean",
-            "title": "Show button",
-            "ui:widget": "switch"
-          },
-          "style": {
-            "properties": {
-              "subtitle_text_color": {
-                "type": "string",
-                "title": "Lead in text color",
-                "format": "color",
-                "ui:css_selector": "header .intro-text .intro-lead-in",
-                "ui:css_property": "color"
-              },
-              "title_text_color": {
-                "type": "string",
-                "title": "Title text color",
-                "format": "color",
-                "ui:css_selector": "header .intro-text .intro-heading",
-                "ui:css_property": "color"
-              },
-              "button_bg_color": {
-                "type": "string",
-                "title": "Button bg color",
-                "format": "color",
-                "no-ui:css_selector": "${block_id_css_id} .btn-xl",
-                "no-ui:css_property": "background-color"
-              },
-              "button_text_color": {
-                "type": "string",
-                "title": "Button text color",
-                "format": "color",
-                "no-ui:css_selector": "${block_id_css_id} .btn-xl",
-                "no-ui:css_property": "color"
-              },
-              "padding_top": {
-                "type": "integer",
-                "title": "Padding top",
-                "minimum": 0,
-                "maximum": 500
-              },
-              "padding_bottom": {
-                "type": "integer",
-                "title": "Padding bottom",
-                "minimum": 0,
-                "maximum": 500
-              },
-              "full_screen": {
-                "type": "boolean",
-                "title": "Full Screen",
-                "ui:widget": "switch"
-              },
-              "text_align": {
-                "type": "string",
-                "title": "Text Align",
-                "enum": [
-                  "left",
-                  "center",
-                  "right"
-                ],
-                "enumNames": [
-                  "Left",
-                  "Center",
-                  "Right"
-                ]
-              },
-              "show_overlay": {
-                "type": "boolean",
-                "title": "Show Overlay",
-                "ui:widget": "switch"
-              },
-              "overlay_bg_color": {
-                "type": "string",
-                "title": "Overlay bg color",
-                "format": "color",
-                "ui:css_selector": "${block_id_css_id} .overlay",
-                "ui:css_property": "background-color"
-              },
-              "overlay_opacity": {
-                "type": "integer",
-                "title": "Overlay Opacity",
-                "minimum": 0,
-                "maximum": 100
-              },
-              "margin_top": {
-                "type": "integer",
-                "title": "Margin top",
-                "minimum": 0,
-                "maximum": 150
-              },
-              "bg_image_position_top": {
-                "type": "integer",
-                "title": "Image position top",
-                "minimum": 0,
-                "maximum": 150
-              }
-            }
-          }
-        }
-      },
-      "HeaderReact": {
-        "title": "Header",
-        "name": "HeaderReact",
-        "icon": "image",
-        "hidden": true,
-        "properties": {
-          "subtitle": {
-            "type": "string",
-            "title": "Lead in"
-          },
-          "title": {
-            "type": "string",
-            "title": "Rubrik" 
-          },
-          "link_text": {
-            "type": "string",
-            "title": "Länktext" 
-          },
-          "link": {
-            "type": "string",
-            "title": "Länk",
-            "format": "uri"
-          },
-          "image": {
-            "type": "string",
-            "title": "Bild",
-            "format": "file"
-          },
-          "show_subtitle": {
-            "type": "boolean",
-            "title": "Show lead in",
-            "ui:widget": "switch"
-          },
-          "show_title": {
-            "type": "boolean",
-            "title": "Show title",
-            "ui:widget": "switch"
-          },
-          "show_button": {
-            "type": "boolean",
-            "title": "Show button",
-            "ui:widget": "switch"
-          },
-          "style": {
-            "properties": {
-              "subtitle_text_color": {
-                "type": "string",
-                "title": "Lead in text color",
-                "format": "color",
-                "ui:css_selector": "header .intro-text .intro-lead-in",
-                "ui:css_property": "color"
-              },
-              "title_text_color": {
-                "type": "string",
-                "title": "Title text color",
-                "format": "color",
-                "ui:css_selector": "header .intro-text .intro-heading",
-                "ui:css_property": "color"
-              },
-              "button_bg_color": {
-                "type": "string",
-                "title": "Button bg color",
-                "format": "color",
-                "no-ui:css_selector": "${block_id_css_id} .btn-xl",
-                "no-ui:css_property": "background-color"
-              },
-              "button_text_color": {
-                "type": "string",
-                "title": "Button text color",
-                "format": "color",
-                "no-ui:css_selector": "${block_id_css_id} .btn-xl",
-                "no-ui:css_property": "color"
-              },
-              "padding_top": {
-                "type": "integer",
-                "title": "Padding top",
-                "minimum": 0,
-                "maximum": 500
-              },
-              "padding_bottom": {
-                "type": "integer",
-                "title": "Padding bottom",
-                "minimum": 0,
-                "maximum": 500
-              },
-              "full_screen": {
-                "type": "boolean",
-                "title": "Full Screen",
-                "ui:widget": "switch"
-              },
-              "text_align": {
-                "type": "string",
-                "title": "Text Align",
-                "enum": [
-                  "left",
-                  "center",
-                  "right"
-                ],
-                "enumNames": [
-                  "Left",
-                  "Center",
-                  "Right"
-                ]
-              },
-              "show_overlay": {
-                "type": "boolean",
-                "title": "Show Overlay",
-                "ui:widget": "switch"
-              },
-              "overlay_bg_color": {
-                "type": "string",
-                "title": "Overlay bg color",
-                "format": "color",
-                "ui:css_selector": "${block_id_css_id} .overlay",
-                "ui:css_property": "background-color"
-              },
-              "overlay_opacity": {
-                "type": "integer",
-                "title": "Overlay Opacity",
-                "minimum": 0,
-                "maximum": 100
-              },
-              "margin_top": {
-                "type": "integer",
-                "title": "Margin top",
-                "minimum": 0,
-                "maximum": 150
-              },
-              "bg_image_position_top": {
-                "type": "integer",
-                "title": "Image position top",
-                "minimum": 0,
-                "maximum": 150
-              }
-            }
-          }
-        }
-      },
-      "services": {
-        "title": "Services",
-        "name": "services",
-        "icon": "file-text-o",
-        "ui:css_selector": "#services",
-        "properties": {
-          "heading": {
-            "type": "string",
-            "title": "Rubrik" 
-          },
-          "sub_heading": {
-            "type": "string",
-            "title": "Underrubrik" 
-          },
-          "items": {
-            "type": "array",
-            "title": "Services",
-            "items": {
-              "type": "object",
-              "title": "Service",
-              "display_field": "heading",
-              "properties": {
-                "icon": {
-                  "type": "string",
-                  "title": "Icon",
-                  "ui:widget": "icon",
-                  "default": "image"
-                },
-                "heading": {
-                  "type": "string",
-                  "title": "Rubrik",
-                  "default": "Rubrik"
-                },
-                "text": {
-                  "type": "text",
-                  "title": "Text",
-                  "default": "En kortare text"
-                }
-              }
-            }
-          },
-          "style": {
-            "properties": {
-              "block": {
-                "title": "Block",
-                "type": "object",
-                "properties": {
-                  "icon_color": {
-                    "type": "string",
-                    "title": "Ikon - färg",
-                    "format": "color",
-                    "default": "#ffffff",
-                    "ui:css_selector": "${block_id_css_id} .fa-inverse",
-                    "ui:css_property": "color"
-                  }
-                }
-              },
-              "colors": {
-                "$ref": "#/definitions/colors"
-              },
-              "layout": {
-                "$ref": "#/definitions/layout"
-              }
-            }
-          }
-        }
-      },
-      "portfolio": {
-        "title": "Portfolio",
-        "name": "portfolio",
-        "icon": "book",
-        "properties": {
-          "heading": {
-            "type": "string",
-            "title": "Rubrik" 
-          },
-          "sub_heading": {
-            "type": "string",
-            "title": "Underrubrik" 
-          },
-          "items": {
-            "type": "array",
-            "title": "Portfolio",
-            "items": {
-              "type": "object",
-              "title": "Portfolio item",
-              "display_field": "title",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Titel",
-                  "default": "Project name"
-                },
-                "summary": {
-                  "type": "text",
-                  "title": "Sammanfattning",
-                  "default": "Lorem ipsum dolor sit amet consectetur."
-                },
-                "body": {
-                  "type": "text",
-                  "title": "Text",
-                  "default": "<p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p><p><strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href=\"https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc\">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href=\"https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc\">here</a>.</p>"
-                },
-                "image": {
-                  "type": "string",
-                  "title": "Bild",
-                  "format": "file",
-                  "default": "https://raw.githubusercontent.com/klar-templates/agency/master/img/portfolio/roundicons.png"
-                },
-                "category": {
-                  "type": "string",
-                  "title": "Kategori",
-                  "default": "Graphic Design"
-                },
-                "client": {
-                  "type": "string",
-                  "title": "Klient",
-                  "default": "Round Icons"
-                },
-                "date": {
-                  "type": "string",
-                  "title": "Datum",
-                  "format": "date-time",
-                  "default": "2014-07-14"
-                }
-              }
-            }
-          },
-          "style": {
-            "properties": {
-              "block": {
-                "title": "Block",
-                "type": "object",
-                "properties": {
-                  "bg_color": {
-                    "ui:css_selector": "${block_id_css_id}",
-                    "$ref": "#/definitions/bg_color"
-                  },
-                  "hover_content_bg_color": {
-                    "type": "string",
-                    "title": "Hover content - bakgrundsfärg",
-                    "ui:css_selector": "${block_id_css_id} .portfolio-item .portfolio-link .portfolio-hover",
-                    "ui:css_property": "background-color",
-                    "format": "rgba",
-                    "efault": "rgba(254,209,54,0.9)",
-                    "$ref": "#/definitions/primary_color"
-                  },
-                  "hover_content_icon_color": {
-                    "type": "string",
-                    "title": "Hover content icon color",
-                    "format": "color",
-                    "ui:css_selector": "${block_id_css_id} .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i",
-                    "ui:css_property": "color"
-                  },
-                  "caption_bg_color": {
-                    "type": "string",
-                    "title": "Caption - bakgrundsfärg",
-                    "format": "color",
-                    "ui:css_selector": "${block_id_css_id} .portfolio-item .portfolio-caption",
-                    "ui:css_property": "background-color"
-                  },
-                  "caption_title_text_color": {
-                    "title": "Caption title color",
-                    "ui:css_selector": "${block_id_css_id} .portfolio-item .portfolio-caption h4",
-                    "ui:css_property": "color",
-                    "$ref": "#/definitions/title_text_color"
-                  },
-                  "caption_text_text_color": {
-                    "title": "Caption text color",
-                    "ui:css_selector": "${block_id_css_id} .portfolio-item .portfolio-caption p",
-                    "ui:css_property": "color",
-                    "$ref": "#/definitions/text_color"
-                  },
-                  "item_bg_color": {
-                    "title": "Item - bakgrundsfärg",
-                    "ui:css_selector": "${block_id_css_class}-modal .modal-content",
-                    "ui:css_property": "background-color",
-                    "$ref": "#/definitions/bg_color"
-                  },
-                  "item_close_btn_color": {
-                    "title": "Item stängknapp - färg",
-                    "$ref": "#/definitions/title_text_color",
-                    "ui:css_selector": "${block_id_css_class}-modal .close-modal .lr, .portfolio-modal .close-modal .lr .rl",
-                    "ui:css_property": "background-color"
-                  },
-                  "padding_top": {
-                    "$ref": "#/definitions/block_padding_top"
-                  },
-                  "padding_bottom": {
-                    "$ref": "#/definitions/block_padding_bottom"
-                  }
-                }
-              },
-              "base": {
-                "title": "Base",
-                "type": "object",
-                "properties": {
-                  "title_text_color": {
-                    "ui:css_selector": "#portfolio${block_id_css_class} h1, #portfolio${block_id_css_class} h2, #portfolio${block_id_css_class} h3, #portfolio${block_id_css_class} h4, #portfolio${block_id_css_class} h5, #portfolio${block_id_css_class} h6",
-                    "$ref": "#/definitions/title_text_color"
-                  },
-                  "subtitle_text_color": {
-                    "$ref": "#/definitions/subtitle_text_color"
-                  },
-                  "text_color": {
-                    "ui:css_selector": "#portfolio${block_id_css_class} p",
-                    "$ref": "#/definitions/text_color"
-                  },
-                  "link_text_color": {
-                    "$ref": "#/definitions/link_text_color"
-                  },
-                  "link_text_hover_color": {
-                    "$ref": "#/definitions/link_text_hover_color"
-                  },
-                  "primary_color": {
-                    "ui:css_selector": "#portfolio${block_id_css_class} .btn-primary",
-                    "$ref": "#/definitions/primary_color"
-                  },
-                  "selection_text_color": {
-                    "$ref": "#/definitions/selection_text_color"
-                  },
-                  "selection_bg_color": {
-                    "$ref": "#/definitions/selection_bg_color"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "about": {
-        "title": "About",
-        "name": "about",
-        "icon": "group",
-        "ui:css_selector": "#about",
-        "properties": {
-          "heading": {
-            "type": "string",
-            "title": "Rubrik"
-          },
-          "sub_heading": {
-            "type": "string",
-            "title": "Underrubrik" 
-          },
-          "items": {
-            "type": "array",
-            "title": "Timeline",
-            "items": {
-              "type": "object",
-              "title": "Timeline item",
-              "display_field": "title",
-              "properties": {
-                "image": {
-                  "type": "string",
-                  "title": "Bild",
-                  "format": "file",
-                  "default": "https://raw.githubusercontent.com/klar-templates/agency/master/img/about/1.jpg"
-                },
-                "title": {
-                  "type": "string",
-                  "title": "Rubrik",
-                  "default": "Rubrik"
-                },
-                "subtitle": {
-                  "type": "string",
-                  "title": "Underrubrik",
-                  "default": "Underrubrik"
-                },
-                "text": {
-                  "type": "text",
-                  "title": "Text",
-                  "default": "En kortare text"
-                }
-              }
-            }
-          },
-          "timeline_end_text": {
-            "type": "string",
-            "title": "Text efter timeline" 
-          },
-          "style": {
-            "properties": {
-              "block": {
-                "title": "Block",
-                "type": "object",
-                "properties": {
-                  "bg_color": {
-                    "ui:css_selector": "${block_id_css_id}",
-                    "$ref": "#/definitions/bg_color"
-                  },
-                  "image_bg_color": {
-                    "type": "string",
-                    "title": "Image - bg color",
-                    "format": "color",
-                    "ui:css_selector": "${block_id_css_id} .timeline > li .timeline-image",
-                    "ui:css_property": "color"
-                  },
-                  "image_border_color": {
-                    "type": "string",
-                    "title": "Image - border color",
-                    "format": "color",
-                    "ui:css_selector": "${block_id_css_id} .timeline > li .timeline-image",
-                    "ui:css_property": "color"
-                  },
-                  "padding_top": {
-                    "$ref": "#/definitions/block_padding_top"
-                  },
-                  "padding_bottom": {
-                    "$ref": "#/definitions/block_padding_bottom"
-                  }
-                }
-              },
-              "base": {
-                "title": "Base",
-                "type": "object",
-                "properties": {
-                  "title_text_color": {
-                    "$ref": "#/definitions/title_text_color"
-                  },
-                  "subtitle_text_color": {
-                    "$ref": "#/definitions/subtitle_text_color"
-                  },
-                  "text_color": {
-                    "$ref": "#/definitions/text_color"
-                  },
-                  "link_text_color": {
-                    "$ref": "#/definitions/link_text_color"
-                  },
-                  "link_text_hover_color": {
-                    "$ref": "#/definitions/link_text_hover_color"
-                  },
-                  "primary_color": {
-                    "$ref": "#/definitions/primary_color"
-                  },
-                  "selection_text_color": {
-                    "$ref": "#/definitions/selection_text_color"
-                  },
-                  "selection_bg_color": {
-                    "$ref": "#/definitions/selection_bg_color"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "team": {
-        "title": "Team",
-        "name": "team",
-        "icon": "group",
-        "properties": {
-          "heading": {
-            "type": "string",
-            "title": "Rubrik" 
-          },
-          "sub_heading": {
-            "type": "string",
-            "title": "Underrubrik" 
-          },
-          "team": {
-            "type": "array",
-            "title": "Team",
-            "items": {
-              "type": "object",
-              "title": "Team member",
-              "display_field": "heading",
-              "properties": {
-                "image": {
-                  "type": "string",
-                  "title": "Bild",
-                  "format": "file",
-                  "default": "https://raw.githubusercontent.com/klar-templates/agency/master/img/team/3.jpg"
-                },
-                "heading": {
-                  "type": "string",
-                  "title": "Rubrik",
-                  "default": "Rubrik"
-                },
-                "text": {
-                  "type": "text",
-                  "title": "Text",
-                  "default": "En kortare text"
-                },
-                "social_links": {
-                  "type": "array",
-                  "title": "Social links",
-                  "default": [
-                    {
-                      "title": "Twitter",
-                      "icon": "twitter",
-                      "link": "#youraccount"
-                    },
-                    {
-                      "title": "Facebook",
-                      "icon": "facebook",
-                      "link": "#youraccount"
-                    },
-                    {
-                      "title": "Instagram",
-                      "icon": "instagram",
-                      "link": "#youraccount"
-                    }
-                  ],
-                  "items": {
-                    "type": "object",
-                    "title": "Länk",
-                    "display_field": "title",
-                    "properties": {
-                      "title": {
-                        "type": "string",
-                        "title": "Titel",
-                        "default": "Titel"
-                      },
-                      "icon": {
-                        "type": "string",
-                        "title": "Ikon",
-                        "default": "twitter",
-                        "ui:widget": "icon"
-                      },
-                      "link": {
-                        "type": "string",
-                        "title": "Länk",
-                        "format": "uri",
-                        "default": "#youraccount"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "text": {
-            "type": "text",
-            "title": "Text",
-            "field": {
-              "height": "120px"
-            }
-          },
-          "style": {
-            "properties": {
-              "block": {
-                "title": "Block",
-                "type": "object",
-                "ui:css_selector": "#team",
-                "properties": {
-                  "bg_color": {
-                    "ui:css_selector": "${block_id_css_id}",
-                    "$ref": "#/definitions/bg_color"
-                  },
-                  "padding_top": {
-                    "$ref": "#/definitions/block_padding_top"
-                  },
-                  "padding_bottom": {
-                    "$ref": "#/definitions/block_padding_bottom"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "TeamReact": {
-        "title": "Team 2",
-        "name": "TeamReact",
-        "icon": "group",
-        "hidden": true,
-        "properties": {
-          "heading": {
-            "type": "string",
-            "title": "Rubrik" 
-          },
-          "sub_heading": {
-            "type": "string",
-            "title": "Underrubrik" 
-          },
-          "team": {
-            "type": "array",
-            "title": "Team",
-            "items": {
-              "type": "object",
-              "title": "Team member",
-              "display_field": "heading",
-              "properties": {
-                "image": {
-                  "type": "string",
-                  "title": "Bild",
-                  "format": "file",
-                  "default": "https://raw.githubusercontent.com/klar-templates/agency/master/img/team/3.jpg"
-                },
-                "heading": {
-                  "type": "string",
-                  "title": "Rubrik",
-                  "default": "Rubrik"
-                },
-                "text": {
-                  "type": "text",
-                  "title": "Text",
-                  "default": "En kortare text"
-                },
-                "social_links": {
-                  "type": "array",
-                  "title": "Social links",
-                  "default": [
-                    {
-                      "title": "Twitter",
-                      "icon": "twitter",
-                      "link": "#youraccount"
-                    },
-                    {
-                      "title": "Facebook",
-                      "icon": "facebook",
-                      "link": "#youraccount"
-                    },
-                    {
-                      "title": "Instagram",
-                      "icon": "instagram",
-                      "link": "#youraccount"
-                    }
-                  ],
-                  "items": {
-                    "type": "object",
-                    "title": "Länk",
-                    "display_field": "title",
-                    "properties": {
-                      "title": {
-                        "type": "string",
-                        "title": "Titel",
-                        "default": "Titel"
-                      },
-                      "icon": {
-                        "type": "string",
-                        "title": "Ikon",
-                        "default": "twitter",
-                        "ui:widget": "icon"
-                      },
-                      "link": {
-                        "type": "string",
-                        "title": "Länk",
-                        "format": "uri",
-                        "default": "#youraccount"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "text": {
-            "type": "text",
-            "title": "Text",
-            "field": {
-              "height": "120px"
-            }
-          },
-          "style": {
-            "properties": {
-              "block": {
-                "title": "Block",
-                "type": "object",
-                "ui:css_selector": "#team",
-                "properties": {
-                  "bg_color": {
-                    "ui:css_selector": "${block_id_css_id}",
-                    "$ref": "#/definitions/bg_color"
-                  },
-                  "padding_top": {
-                    "$ref": "#/definitions/block_padding_top"
-                  },
-                  "padding_bottom": {
-                    "$ref": "#/definitions/block_padding_bottom"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "clients": {
-        "title": "Clients",
-        "name": "clients",
-        "icon": "group",
-        "ui:css_selector": ".clients",
-        "properties": {
-          "items": {
-            "type": "array",
-            "title": "Clients",
-            "items": {
-              "type": "object",
-              "title": "Client",
-              "display_field": "title",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Title",
-                  "default": "Title"
-                },
-                "logo": {
-                  "type": "string",
-                  "title": "Logo",
-                  "format": "file",
-                  "default": "https://raw.githubusercontent.com/klar-templates/agency/master/img/logos/envato.jpg"
-                },
-                "url": {
-                  "type": "string",
-                  "title": "URL",
-                  "format": "uri"
-                }
-              }
-            }
-          },
-          "style": {
-            "properties": {
-              "block": {
-                "title": "Block",
-                "type": "object",
-                "properties": {
-                  "bg_color": {
-                    "ui:css_selector": "${block_id_css_id}",
-                    "$ref": "#/definitions/bg_color"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "contact": {
-        "title": "Contact",
-        "name": "contact",
-        "icon": "address-card-o",
-        "properties": {
-          "heading": {
-            "type": "string",
-            "title": "Rubrik" 
-          },
-          "sub_heading": {
-            "type": "string",
-            "title": "Underrubrik" 
-          },
-          "submit_button_text": {
-            "type": "string",
-            "title": "Knapptext" 
-          },
-          "notification_email": {
-            "type": "string",
-            "format": "email",
-            "title": "Notification email"
-          },
-          "success_message": {
-            "type": "string",
-            "title": "Success Message"
-          },
-          "show_name_field": {
-            "type": "boolean",
-            "title": "Show name field",
-            "ui:widget": "switch"
-          },
-          "show_email_field": {
-            "type": "boolean",
-            "title": "Show email field",
-            "ui:widget": "switch"
-          },
-          "show_phone_field": {
-            "type": "boolean",
-            "title": "Show phone field",
-            "ui:widget": "switch"
-          },
-          "style": {
-            "properties": {
-              "block": {
-                "title": "Block",
-                "type": "object",
-                "properties": {
-                  "bg_color": {
-                    "ui:css_selector": "#contact",
-                    "$ref": "#/definitions/bg_color"
-                  },
-                  "button_bg_color": {
-                    "type": "string",
-                    "title": "Button bg color",
-                    "format": "color",
-                    "no-ui:css_selector": "${block_id_css_id} .btn-xl",
-                    "no-ui:css_property": "background-color"
-                  },
-                  "button_text_color": {
-                    "type": "string",
-                    "title": "Button text color",
-                    "format": "color",
-                    "no-ui:css_selector": "${block_id_css_id} .btn-xl",
-                    "no-ui:css_property": "color"
-                  },
-                  "padding_top": {
-                    "$ref": "#/definitions/block_padding_top"
-                  },
-                  "padding_bottom": {
-                    "$ref": "#/definitions/block_padding_bottom"
-                  },
-                  "show_image": {
-                    "type": "boolean",
-                    "title": "Show background image",
-                    "ui:widget": "switch"
-                  },
-                  "image": {
-                    "type": "string",
-                    "title": "Background image",
-                    "format": "file"
-                  }
-                }
-              },
-              "base": {
-                "title": "Base",
-                "type": "object",
-                "properties": {
-                  "title_text_color": {
-                    "$ref": "#/definitions/title_text_color"
-                  },
-                  "subtitle_text_color": {
-                    "$ref": "#/definitions/subtitle_text_color"
-                  },
-                  "selection_text_color": {
-                    "$ref": "#/definitions/selection_text_color"
-                  },
-                  "selection_bg_color": {
-                    "$ref": "#/definitions/selection_bg_color"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "footer": {
-        "title": "Sidfot",
-        "name": "footer",
-        "icon": "address-card-o",
-        "lobal": true,
-        "tatic": true,
-        "idden": true,
-        "properties": {
-          "copyright_text": {
-            "type": "string",
-            "title": "Copyright text" 
-          },
-          "social_links": {
-            "type": "array",
-            "title": "Social links",
-            "items": {
-              "type": "object",
-              "title": "Länk",
-              "display_field": "title",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Titel",
-                  "default": "Titel"
-                },
-                "icon": {
-                  "type": "string",
-                  "title": "Ikon",
-                  "default": "twitter",
-                  "ui:widget": "icon",
-                  "num": [
-                    "-1",
-                    "twitter",
-                    "facebook",
-                    "instagram",
-                    "linkedin"
-                  ],
-                  "numNames": [
-                    "Välj ikon",
-                    "Twitter",
-                    "Facebook",
-                    "Instagram",
-                    "LinkedIn"
-                  ]
-                },
-                "link": {
-                  "type": "string",
-                  "title": "Länk",
-                  "format": "uri",
-                  "default": "#youraccount"
-                }
-              }
-            }
-          },
-          "quick_links": {
-            "type": "array",
-            "title": "Snabblänkar",
-            "items": {
-              "type": "object",
-              "title": "Länk",
-              "display_field": "title",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Titel",
-                  "default": "New link"
-                },
-                "link": {
-                  "type": "string",
-                  "title": "Länk",
-                  "format": "uri",
-                  "default": "#"
-                }
-              }
-            }
-          }
-        }
-      },
-      "FooterReact": {
-        "title": "Sidfot",
-        "name": "FooterReact",
-        "icon": "address-card-o",
-        "hidden": true,
-        "properties": {
-          "copyright_text": {
-            "type": "string",
-            "title": "Copyright text" 
-          },
-          "social_links": {
-            "type": "array",
-            "title": "Social links",
-            "items": {
-              "type": "object",
-              "title": "Länk",
-              "display_field": "title",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Titel",
-                  "default": "Titel"
-                },
-                "icon": {
-                  "type": "string",
-                  "title": "Ikon",
-                  "default": "twitter",
-                  "ui:widget": "icon",
-                  "num": [
-                    "-1",
-                    "twitter",
-                    "facebook",
-                    "instagram",
-                    "linkedin"
-                  ],
-                  "numNames": [
-                    "Välj ikon",
-                    "Twitter",
-                    "Facebook",
-                    "Instagram",
-                    "LinkedIn"
-                  ]
-                },
-                "link": {
-                  "type": "string",
-                  "title": "Länk",
-                  "format": "uri",
-                  "default": "#youraccount"
-                }
-              }
-            }
-          },
-          "quick_links": {
-            "type": "array",
-            "title": "Snabblänkar",
-            "items": {
-              "type": "object",
-              "title": "Länk",
-              "display_field": "title",
-              "properties": {
-                "title": {
-                  "type": "string",
-                  "title": "Titel",
-                  "default": "New link"
-                },
-                "link": {
-                  "type": "string",
-                  "title": "Länk",
-                  "format": "uri",
-                  "default": "#"
-                }
-              }
-            }
-          }
-        }
-      },
-      "decoration": {
-        "title": "Decoration",
-        "name": "decoration",
-        "icon": "image",
-        "hidden": true,
-        "properties": {
-          "image": {
-            "type": "string",
-            "title": "Image",
-            "format": "file"
-          }
-        }
-      }
+    {
+      "title": "Contact",
+      "name": "contact",
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
+    },
+    {
+      "title": "Footer",
+      "name": "footer",
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
     }
-  },
-  "settings": {
+  ],
+  "data_defaults": {
     "theme": {
       "current": "svt",
       "presets": {
@@ -2009,12 +721,6 @@
         }
       }
     },
-    "page": {
-      "settings": {
-        "title": "Agency - Start Bootstrap Theme",
-        "description": "This is my one page website and it's beautiful!"
-      }
-    },
     "pages": {
       "startpage": {
         "settings": {
@@ -2047,91 +753,34 @@
         }
       }
     },
+    "page": {
+      "settings": {
+        "title": "Agency - Start Bootstrap Theme",
+        "description": "This is my one page website and it's beautiful!"
+      }
+    },
     "blocks": {
       "navigation": {
         "logo_text": "The Page",
         "navigation": [
           {
-       	  	"title": "Services",
+            "title": "Services",
             "link": "#services"
           },
           {
-       	  	"title": "Portfolio",
+            "title": "Portfolio",
             "link": "#portfolio"
           },
           {
-       	  	"title": "About",
+            "title": "About",
             "link": "#about"
           },
           {
-       	  	"title": "Team",
+            "title": "Team",
             "link": "#team"
           },
           {
-       	  	"title": "Contact",
-            "link": "#contact"
-          }
-        ],
-        "style": {
-          "navbar": {
-            "transparent": true,
-            "sticky": true,
-            "bg_color": "#fff",
-            "padding_top": 25,
-            "padding_bottom": 25,
-            "border_bottom_width": 0,
-            "border_bottom_color": "#222",
-            "show_overlay": false,
-            "overlay_bg_color": "#000000",
-            "overlay_opacity": 20,
-            "margin_top_next_block": 0
-          },
-          "logo": {
-            "text_color": "{{theme.colors.primary_color}}",
-            "text_hover_color": "{{theme.colors.primary_color}}",
-            "text_focus_color": "{{theme.colors.primary_color}}",
-            "font_family": "Kaushan Script",
-            "image": "https://assets.brandfolder.com/8w7lv8ml/view.png",
-            "padding_top": 12,
-            "width": 125,
-            "show": false
-          },
-          "navigation": {
-            "text_color": "#fff",
-            "text_hover_color": "{{theme.colors.primary_color}}",
-            "text_active_color": "{{theme.colors.primary_color}}",
-            "text_focus_color": "{{theme.colors.primary_color}}",
-            "bg_text_color": "transparent",
-            "bg_text_hover_color": "transparent",
-            "bg_text_active_color": "{{theme.colors.primary_color}}",
-            "bg_text_focus_color": "{{theme.colors.primary_color}}",
-            "mobile_menu_button_bg_color": "{{theme.colors.primary_color}}",
-            "mobile_menu_button_hover_bg_color": "{{theme.colors.primary_color}}",
-            "mobile_menu_button_focus_bg_color": "{{theme.colors.primary_color}}"
-          }
-        }
-      },
-      "NavigationReact": {
-        "logo_text": "The Page",
-        "navigation": [
-          {
-       	  	"title": "Services",
-            "link": "#services"
-          },
-          {
-       	  	"title": "Portfolio",
-            "link": "#portfolio"
-          },
-          {
-       	  	"title": "About",
-            "link": "#about"
-          },
-          {
-       	  	"title": "Team",
-            "link": "#team"
-          },
-          {
-       	  	"title": "Contact",
+            "title": "Contact",
             "link": "#contact"
           }
         ],
@@ -2190,32 +839,7 @@
           "button_text_color": "#ffffff",
           "padding_top": 300,
           "padding_bottom": 200,
-          "full_screen": true,
-          "text_align": "center",
-          "show_overlay": true,
-          "overlay_bg_color": "#000000",
-          "overlay_opacity": 40,
-          "margin_top": 0,
-          "bg_image_position_top": 0
-        }
-      },
-      "HeaderReact": {
-        "title": "Create an account and start making your own web sites",
-        "subtitle": "Edit everything on this site and if you like it...",
-        "link": "#services",
-        "link_text": "Tell me more",
-        "image": "https://raw.githubusercontent.com/klar-templates/agency/master/img/header-bg.jpg",
-        "show_title": true,
-        "show_subtitle": true,
-        "show_button": true,
-        "style": {
-          "title_text_color": "#ffffff",
-          "subtitle_text_color": "#ffffff",
-          "button_bg_color": "{{theme.colors.primary_color}}",
-          "button_text_color": "#ffffff",
-          "padding_top": 300,
-          "padding_bottom": 200,
-          "full_screen": true,
+          "full_screen": false,
           "text_align": "center",
           "show_overlay": true,
           "overlay_bg_color": "#000000",
@@ -2348,7 +972,6 @@
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
           }
         ],
-        "timeline_end_text": "Be Part<br>Of Our<br>Story!",
         "style": {
           "block": {
             "bg_color": "{{theme.colors.bg_color}}",
@@ -2437,7 +1060,7 @@
           }
         }
       },
-      "TeamReact": {
+      "react": {
         "heading": "Our Amazing Team",
         "sub_heading": "Lorem ipsum dolor sit amet consectetur.",
         "team": [
@@ -2611,368 +1234,57 @@
           }
         }
       },
-      "FooterReact": {
-        "copyright_text": "Copyright &copy; Your Website 2016",
-        "social_links": [
-          {
-            "title": "Twitter",
-            "icon": "twitter",
-            "link": "#youraccount"
-          },
-          {
-            "title": "Facebook",
-            "icon": "facebook",
-            "link": "#youraccount"
-          },
-          {
-            "title": "Instagram",
-            "icon": "instagram",
-            "link": "#youraccount"
-          },
-          {
-            "title": "LinkedIn",
-            "icon": "linkedin",
-            "link": "#youraccount"
-          }
-        ],
-        "quick_links": [
-          {
-            "title": "Privacy Policy",
-            "link": ""
-          },
-          {
-            "title": "Terms of Use",
-            "link": ""
-          }
-        ],
-        "style": {
-          "block": {
-            "bg_color": "{{theme.colors.bg_color}}",
-            "social_links_hover_bg_color": "{{theme.colors.primary_color}}",
-            "padding_top": 25,
-            "padding_bottom": 25
-          }
-        }
-      },
       "decoration": {
         "image": "https://svti.svt.se/wp-content/themes/svti/assets/img/kollage3.jpg"
       }
     }
   },
-  "page_types": [
+  "content_types": [
     {
-      "title": "Startsida",
-      "name": "startpage",
-      "default_blocks": ["navigation", "header", "footer"]
+      "title": "Sidinställningar",
+      "name": "page_settings",
+      "type": "object",
+      "fields": [{
+        "title": "Sidtitel",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "title": "Beskrivning",
+        "name": "description",
+        "type": "text"
+      }]
     },
     {
-      "title": "Undersida",
-      "name": "subpage",
-      "default_blocks": ["navigation", "header", "team", "footer"]
-    },
-    {
-      "title": "Blogg",
-      "name": "blog-page",
-      "default_blocks": ["navigation", "header", "footer"]
-    },
-    {
-      "title": "Kontaktsida",
-      "name": "contact-page",
-      "default_blocks": ["navigation", "header", "contact", "footer"]
-    },
-    {
-      "title": "Tom sida",
-      "name": "empty-page",
-      "default_blocks": []
-    }
-  ],
-  "blocks_default": [],
-  "block_templates": [
-    {
-      "title": "Navigation",
-      "name": "navigation",
-      "icon": "navicon"
-    },
-    {
-      "title": "Header",
-      "name": "header",
-      "icon": "image"
-    },
-    {
-      "title": "Hero",
-      "name": "hero",
-      "icon": "image"
-    },
-    {
-      "title": "Services",
-      "name": "services",
-      "icon": "file-text-o"
-    },
-    {
-      "title": "Portfolio",
-      "name": "portfolio",
-      "icon": "book"
-    },
-    {
-      "title": "About",
-      "name": "about",
-      "icon": "group"
-    },
-    {
-      "title": "Team",
-      "name": "team",
-      "icon": "group"
-    },
-    {
-      "title": "Clients",
-      "name": "clients",
-      "icon": "group"
-    },
-    {
-      "title": "Contact",
-      "name": "contact",
-      "icon": "address-card-o"
-    },
-    {
-      "title": "Footer",
-      "name": "footer",
-      "icon": "address-card-o"
+      "title": "Kategorier",
+      "name": "categories",
+      "type": "array",
+      "fields": [
+      {
+        "title": "Sidtitel",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "title": "Beskrivning",
+        "name": "description",
+        "type": "text"
+      }]
     }
   ],
   "definitions": {
-    "colors": {
-      "title": "Färger",
-      "type": "object",
-      "properties": {
-        "bg_color": {
-          "type": "string",
-          "title": "Bakgrundsfärg",
-          "format": "color",
-          "ui:css_selector": "${block_id_css_id}",
-          "ui:css_property": "background-color",
-          "default": "#ffffff"
-        },
-        "title_text_color": {
-          "type": "string",
-          "title": "Rubrikfärg",
-          "format": "color",
-          "ui:css_selector": "${block_id_css_id} .section-heading, ${block_id_css_id} h1, ${block_id_css_id} h2, ${block_id_css_id} 3, ${block_id_css_id} h4, ${block_id_css_id} h5, ${block_id_css_id} h6",
-          "ui:css_property": "color",
-          "default": "#333333"
-        },
-        "subtitle_text_color": {
-          "type": "string",
-          "title": "Underrubrikfärg",
-          "format": "color",
-          "ui:css_selector": "body ${block_id_css_id} h3.section-subheading",
-          "ui:css_property": "color",
-          "default": "#777777"
-        },
-        "text_color": {
-          "type": "string",
-          "title": "Textfärg",
-          "format": "color",
-          "ui:css_selector": "${block_id_css_id} p",
-          "ui:css_property": "color",
-          "default": "#777777"
-        },
-        "link_text_color": {
-          "type": "string",
-          "title": "Länk textfärg",
-          "format": "color",
-          "default": "#fed136"
-        },
-        "link_text_hover_color": {
-          "type": "string",
-          "title": "Länk textfärg hover",
-          "format": "color",
-          "default": "#fed136"
-        },
-        "primary_color": {
-          "type": "string",
-          "title": "Primary color",
-          "format": "color",
-          "ui:css_selector": "${block_id_css_id} .btn-primary, ${block_id_css_id} .text-primary",
-          "ui:css_property": "color",
-          "default": "#fed136"
-        },
-        "selection_text_color": {
-          "type": "string",
-          "title": "Text selection color",
-          "format": "color",
-          "default": "#ffffff"
-        },
-        "selection_bg_color": {
-          "type": "string",
-          "title": "Text selection bg color",
-          "format": "color",
-          "default": "#fed136"
-        }
-      }
-    },
-    "layout": {
-      "title": "Layout",
-      "type": "object",
-      "properties": {
-        "padding_top": {
-          "type": "integer",
-          "title": "Padding top",
-          "minimum": 0,
-          "maximum": 150,
-          "default": 150
-        },
-        "padding_bottom": {
-          "type": "integer",
-          "title": "Padding bottom",
-          "minimum": 0,
-          "maximum": 150,
-          "default": 150
-        }
-      }
-    },
-    "bg_color": {
-      "type": "string",
+    "title": "Definitions",
+    "name": "definitions",
+    "type": "definitions",
+    "fields": [{
       "title": "Bakgrundsfärg",
-      "format": "color",
-      "ui:css_selector": "body",
-      "ui:css_property": "background-color",
-      "default": "#ffffff"
+      "name": "bg_color",
+      "type": "string"
     },
-    "title_text_color": {
-      "type": "string",
+    {
       "title": "Rubrikfärg",
-      "format": "color",
-      "ui:css_selector": "${block_id_css_id} .section-heading, ${block_id_css_id} h1, ${block_id_css_id} h2, ${block_id_css_id} 3, ${block_id_css_id} h4, ${block_id_css_id} h5, ${block_id_css_id} h6",
-      "ui:css_property": "color",
-      "default": "#333333"
-    },
-    "subtitle_text_color": {
-      "type": "string",
-      "title": "Underrubrikfärg",
-      "format": "color",
-      "ui:css_selector": "body ${block_id_css_id} h3.section-subheading",
-      "ui:css_property": "color",
-      "default": "#777777"
-    },
-    "text_color": {
-      "type": "string",
-      "title": "Textfärg",
-      "format": "color",
-      "ui:css_selector": "${block_id_css_id} p",
-      "ui:css_property": "color",
-      "default": "#777777"
-    },
-    "link_text_color": {
-      "type": "string",
-      "title": "Länk textfärg",
-      "format": "color",
-      "default": "#fed136"
-    },
-    "link_text_hover_color": {
-      "type": "string",
-      "title": "Länk textfärg hover",
-      "format": "color",
-      "default": "#fed136"
-    },
-    "primary_color": {
-      "type": "string",
-      "title": "Primary color",
-      "format": "color",
-      "ui:css_selector": "${block_id_css_id} .btn-primary, ${block_id_css_id} .text-primary",
-      "ui:css_property": "color",
-      "default": "#fed136"
-    },
-    "selection_text_color": {
-      "type": "string",
-      "title": "Text selection color",
-      "format": "color",
-      "default": "#ffffff"
-    },
-    "selection_bg_color": {
-      "type": "string",
-      "title": "Text selection bg color",
-      "format": "color",
-      "default": "#fed136"
-    },
-    "block_padding_top": {
-      "type": "integer",
-      "title": "Padding top",
-      "minimum": 0,
-      "maximum": 150,
-      "default": 150
-    },
-    "block_padding_bottom": {
-      "type": "integer",
-      "title": "Padding bottom",
-      "minimum": 0,
-      "maximum": 150,
-      "default": 150
-    },
-    "title_font_family": {
-      "type": "string",
-      "title": "Title",
-      "enum": [
-        "Open Sans",
-        "Raleway",
-        "Roboto",
-        "Lato",
-        "Oswald",
-        "Source Sans Pro",
-        "Montserrat",
-        "Droid Serif",
-        "Roboto Slab",
-        "Kaushan Script",
-        "Helvetica Neue",
-        "Helvetica",
-        "Arial",
-        "sans-serif"
-      ]
-    },
-    "subtitle_font_family": {
-      "type": "string",
-      "title": "Subtitle",
-      "enum": [
-        "Open Sans",
-        "Raleway",
-        "Roboto",
-        "Lato",
-        "Oswald",
-        "Source Sans Pro",
-        "Montserrat",
-        "Droid Serif",
-        "Roboto Slab",
-        "Kaushan Script",
-        "Helvetica Neue",
-        "Helvetica",
-        "Arial",
-        "sans-serif"
-      ]
-    },
-    "text_font_family": {
-      "type": "string",
-      "title": "Text",
-      "enum": [
-        "Open Sans",
-        "Raleway",
-        "Roboto",
-        "Lato",
-        "Oswald",
-        "Source Sans Pro",
-        "Montserrat",
-        "Droid Serif",
-        "Roboto Slab",
-        "Kaushan Script",
-        "Helvetica Neue",
-        "Helvetica",
-        "Arial",
-        "sans-serif"
-      ]
-    },
-    "type_base_size": {
-      "type": "integer",
-      "minimum": 10,
-      "maximum": 18,
-      "title": "Basstorlek"
-    }
+      "name": "title_text_color",
+      "type": "string"
+    }]
   }
 }
