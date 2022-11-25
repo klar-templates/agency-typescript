@@ -13,6 +13,7 @@ function App() {
     if (location.pathname == '/sites/klar-sites/agency-typescript') {
       console.log('navigate')
       const routeNavigate = useNavigate();
+      console.log('routeNavigate',routeNavigate);
       routeNavigate('/');
     }
     // window.klar = {};
