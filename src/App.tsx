@@ -71,7 +71,7 @@ function App() {
         <Routes>
           <>
             {window.klarContext.isInKlar && data.pages.length > 0  && currentPageInKlar !== location.pathname + '/' && 
-              <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
+              <Route path={location.pathname + "/"} element={<Navigate replace to={currentPageInKlar} />} />
             }
             {(data as IData).pages.map(page => {
               // console.log('Route was added: ', page._path);
