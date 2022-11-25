@@ -48,10 +48,10 @@ export default function Page(data: IData) {
 function createContext(data: IData) {
   const routeLocation = useLocation();
   const routeNavigate = useNavigate();
-  const pathname = location.pathname + routeLocation.pathname;
+  const pathname = '/startsida';
   let currentPage;
   if (data.pages.length > 0) {
-    if (pathname === '/') {
+    if (pathname === '/startsida') {
       // currentPage = data.pages.find(page => page.startpage === true);
       currentPage = data.pages[0];
     } else {
