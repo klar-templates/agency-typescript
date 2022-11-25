@@ -63,7 +63,7 @@ function App() {
   }
   console.log('currentPageInKlar', currentPageInKlar)
   console.log('window.klarContext.isInKlar', window.klarContext.isInKlar)
-  console.log('location.href', location.href)
+  console.log('location.href', location.pathname)
 
   return (
     <HelmetProvider>
