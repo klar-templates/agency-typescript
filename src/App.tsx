@@ -56,7 +56,7 @@ function App() {
   if (window.klarContext.isInKlar) {
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
     if (currentPage) {
-      currentPageInKlar = currentPage._path;
+      currentPageInKlar = location.pathname + currentPage._path;
     }
   } else {
     startpage._path = '/';
@@ -70,12 +70,12 @@ function App() {
       <Router>
         <Routes>
           <>
-            {window.klarContext.isInKlar && data.pages.length > 0  && currentPageInKlar !== location.pathname && 
+            {window.klarContext.isInKlar && data.pages.length > 0  && currentPageInKlar !== location.pathname + '/' && 
               <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
             }
             {(data as IData).pages.map(page => {
               // console.log('Route was added: ', page._path);
-              return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
+              return <Route path={location.pathname + page._path} element={<Page {...(data as IData)} />} key={page._id}/>
             })}
             {window.klarContext.isInKlar && data.pages.length === 0 && 
               <Route path="/" element={<Page {...(data as IData)} />} key="no-pages"/>
