@@ -76,6 +76,9 @@ function App() {
       <Router>
         <Routes>
           <>
+            {window.klarContext.isInKlar && data.pages.length > 0  && location.pathname === '/sites/klar-sites/agency-typescript' && 
+              <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
+            }
             {window.klarContext.isInKlar && data.pages.length > 0  && currentPageInKlar !== '/' && 
               <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
             }
