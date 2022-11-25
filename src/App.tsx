@@ -10,7 +10,7 @@ function App() {
   };
   const [data, setData] = useState(window.klarContext.isInKlar ? parent.frames.window.klar.data : undefined);
   useEffect(() => {
-    if (location.href == '/sites/klar-sites/agency-typescript') {
+    if (location.pathname == '/sites/klar-sites/agency-typescript') {
       console.log('navigate')
       const routeNavigate = useNavigate();
       routeNavigate('/');
