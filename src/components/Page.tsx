@@ -1,20 +1,14 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import IData from '../service/interface/IData';
 import Layout from './Layout';
-import Navigation from './blocks/bootstrap/Navigation';
-import Header from './blocks/bootstrap/Header';
+import Header from './blocks/Header';
 import Hero from './blocks/Hero';
-import Team from './blocks/bootstrap/Team';
-import Footer from './blocks/bootstrap/Footer';
 import Nunjucks from './blocks/bootstrap/Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
 
 const Components: any = {
-  Navigation: Navigation,
   Header: Header,
   Hero: Hero,
-  Team: Team,
-  Footer: Footer
 }
 
 export default function Page(data: IData) {
