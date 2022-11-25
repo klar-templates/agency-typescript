@@ -62,6 +62,7 @@ function App() {
     startpage._path = '/';
   }
   console.log('currentPageInKlar', currentPageInKlar)
+  console.log('window.klarContext.isInKlar', window.klarContext.isInKlar)
   return (
     <HelmetProvider>
       <Router>
