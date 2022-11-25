@@ -140,50 +140,10 @@
   }],
   "block_types": [
     {
-      "title": "Navigation",
-      "name": "navigation",
-      "type": "object",
-      "icon": "navicon",
-      "enabled": false, 
-      "fields": [
-        {
-          "title": "title",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Beskrivning",
-          "name": "description",
-          "type": "text"
-        },
-        {
-          "title": "Style",
-          "name": "style",
-          "type": "object",
-          "fields": [
-            {
-              "title": "title",
-              "name": "title",
-              "type": "string"
-            },
-            {
-              "title": "Beskrivning",
-              "name": "description",
-              "type": "text"
-            },
-            {
-              "title": "Style",
-              "name": "style",
-              "type": "object"
-            } 
-          ]
-        } 
-      ]
-    },
-    {
       "title": "Header",
       "name": "header",
-      "icon": "image",
+      "icon": "navicon",
+      "hidden": false,
       "type": "object",
       "fields": [
         {
@@ -224,6 +184,7 @@
       "title": "Hero",
       "name": "hero",
       "icon": "image",
+      "hidden": false,
       "type": "object",
       "fields": [
         {
@@ -264,6 +225,7 @@
       "title": "Services",
       "name": "services",
       "icon": "file-text-o",
+      "hidden": true,
       "type": "object",
       "fields": [
         {
@@ -304,6 +266,7 @@
       "title": "Portfolio",
       "name": "portfolio",
       "icon": "book",
+      "hidden": true,
       "type": "object",
       "fields": [
         {
@@ -344,6 +307,7 @@
       "title": "About",
       "name": "about",
       "icon": "group",
+      "hidden": true,
       "type": "object",
       "fields": [
         {
@@ -384,6 +348,7 @@
       "title": "Team",
       "name": "team",
       "icon": "group",
+      "hidden": true,
       "type": "object",
       "fields": [
         {
@@ -513,6 +478,7 @@
       "title": "Clients",
       "name": "clients",
       "icon": "group",
+      "hidden": true,
       "type": "object",
       "fields": [
         {
@@ -553,6 +519,7 @@
       "title": "Contact",
       "name": "contact",
       "icon": "address-card-o",
+      "hidden": true,
       "type": "object",
       "fields": [
         {
@@ -593,6 +560,7 @@
       "title": "Footer",
       "name": "footer",
       "icon": "address-card-o",
+      "hidden": true,
       "type": "object",
       "fields": [
         {
