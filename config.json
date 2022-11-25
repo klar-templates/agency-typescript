@@ -1,5 +1,5 @@
 {
-  "name": "agency",
+  "name": "agency-typescript",
   "version": "0.0.0",
   "theme_type": {
     "title": "Tema",
@@ -54,90 +54,92 @@
     ] 
   }]
   },
-  "page_types": [{
-    "title": "Startsida",
-    "name": "startpage",
-    "type": "page",
-    "default_blocks": ["navigation", "hero", "footer"],
-    "fields": [{
-      "title": "Sidinställningar",
-      "name": "page_settings",
-      "type": "object",
-      "fields": [{
-        "title": "Sidtitel",
-        "name": "title",
-        "type": "string"
-      },
-      {
-        "title": "Beskrivning",
-        "name": "description",
-        "type": "text"
-      }]
-    }]
-  },
+  "page_types": [
   {
-    "title": "Undersida",
-    "name": "subpage",
-    "type": "page",
-    "default_blocks": ["navigation", "hero", "footer"],
-    "fields": [{
-      "title": "Sidinställningar",
-      "name": "page_settings",
-      "type": "object",
+      "title": "Startsida",
+      "name": "startpage",
+      "type": "page",
+      "default_blocks": ["navigation", "hero", "footer"],
       "fields": [{
-        "title": "Sidtitel",
-        "name": "title",
-        "type": "string"
-      },
-      {
-        "title": "Beskrivning",
-        "name": "description",
-        "type": "text"
+        "title": "Sidinställningar",
+        "name": "page_settings",
+        "type": "object",
+        "fields": [{
+          "title": "Sidtitel",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        }]
       }]
-    }]
-  },
-  {
-    "title": "Blogg",
-    "name": "blog",
-    "type": "page",
-    "default_blocks": ["navigation", "hero", "footer"],
-    "fields": [{
-      "title": "Sidinställningar",
-      "name": "page_settings",
-      "type": "object",
+    },
+    {
+      "title": "Undersida",
+      "name": "subpage",
+      "type": "page",
+      "default_blocks": ["navigation", "hero", "footer"],
       "fields": [{
-        "title": "Sidtitel",
-        "name": "title",
-        "type": "string"
-      },
-      {
-        "title": "Beskrivning",
-        "name": "description",
-        "type": "text"
+        "title": "Sidinställningar",
+        "name": "page_settings",
+        "type": "object",
+        "fields": [{
+          "title": "Sidtitel",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        }]
       }]
-    }]
-  },
-  {
-    "title": "Kontaktsida",
-    "name": "contact-page",
-    "type": "page",
-    "default_blocks": ["navigation", "hero", "footer"],
-    "fields": [{
-      "title": "Sidinställningar",
-      "name": "page_settings",
-      "type": "object",
+    },
+    {
+      "title": "Blogg",
+      "name": "blog",
+      "type": "page",
+      "default_blocks": ["navigation", "hero", "footer"],
       "fields": [{
-        "title": "Sidtitel",
-        "name": "title",
-        "type": "string"
-      },
-      {
-        "title": "Beskrivning",
-        "name": "description",
-        "type": "text"
+        "title": "Sidinställningar",
+        "name": "page_settings",
+        "type": "object",
+        "fields": [{
+          "title": "Sidtitel",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        }]
       }]
-    }]
-  }],
+    },
+    {
+      "title": "Kontaktsida",
+      "name": "contact-page",
+      "type": "page",
+      "default_blocks": ["navigation", "hero", "footer"],
+      "fields": [{
+        "title": "Sidinställningar",
+        "name": "page_settings",
+        "type": "object",
+        "fields": [{
+          "title": "Sidtitel",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        }]
+      }]
+    }
+  ],
   "block_types": [
     {
       "title": "Header",
