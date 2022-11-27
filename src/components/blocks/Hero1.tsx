@@ -25,7 +25,6 @@ export default function Hero1(data: any) {
             <div className="flex lg:hidden">
               <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                 <span className="sr-only">Open main menu</span>
-                {/* <!-- Heroicon name: outline/bars-3 --> */}
                 <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
@@ -44,7 +43,6 @@ export default function Hero1(data: any) {
               <a href="#" className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log in</a>
             </div>
           </nav>
-          {/* <!-- Mobile menu, show/hide based on menu open state. --> */}
           <div role="dialog" aria-modal="true">
             <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
               <div className="flex h-9 items-center justify-between">
@@ -57,7 +55,6 @@ export default function Hero1(data: any) {
                 <div className="flex">
                   <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                     <span className="sr-only">Close menu</span>
-                    {/* <!-- Heroicon name: outline/x-mark --> */}
                     <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
