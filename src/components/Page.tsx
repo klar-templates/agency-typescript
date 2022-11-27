@@ -5,6 +5,7 @@ import Header from './blocks/Header';
 import Hero from './blocks/Hero';
 import Pricing from './blocks/Pricing';
 import Card from './blocks/Card';
+import Card1 from './blocks/Card1';
 import Nunjucks from './blocks/bootstrap/Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
 
@@ -12,7 +13,8 @@ const Components: any = {
   Header: Header,
   Hero: Hero,
   Pricing: Pricing,
-  Card: Card
+  Card: Card,
+  Card1: Card1
 }
 
 export default function Page(data: IData) {
