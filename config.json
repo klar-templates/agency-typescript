@@ -224,6 +224,14 @@
       ]
     },
     {
+      "title": "Hero 1",
+      "name": "hero1",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
       "title": "Pricing",
       "name": "pricing",
       "icon": "image",
