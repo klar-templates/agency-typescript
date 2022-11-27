@@ -183,6 +183,14 @@
       ]
     },
     {
+      "title": "Header 2",
+      "name": "header2",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
       "title": "Hero",
       "name": "hero",
       "icon": "image",
