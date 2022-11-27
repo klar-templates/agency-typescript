@@ -74,6 +74,5 @@ export default function Header2(data: any) {
           </div>
         </div>
       </div>
-    
   );
 }
