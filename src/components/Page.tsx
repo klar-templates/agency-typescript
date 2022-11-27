@@ -3,12 +3,14 @@ import IData from '../service/interface/IData';
 import Layout from './Layout';
 import Header from './blocks/Header';
 import Hero from './blocks/Hero';
+import Pricing from './blocks/Pricing';
 import Nunjucks from './blocks/bootstrap/Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
 
 const Components: any = {
   Header: Header,
   Hero: Hero,
+  Pricing: Pricing
 }
 
 export default function Page(data: IData) {

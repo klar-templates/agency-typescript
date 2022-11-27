@@ -224,6 +224,47 @@
       ]
     },
     {
+      "title": "Pricing",
+      "name": "pricing",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            },
+            {
+              "title": "Style",
+              "name": "style",
+              "type": "object"
+            } 
+          ]
+        } 
+      ]
+    },
+    {
       "title": "Services",
       "name": "services",
       "icon": "file-text-o",

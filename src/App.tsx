@@ -43,6 +43,7 @@ function App() {
       }
       requestData()
         .then((data) => {
+          console.log(data);
           // localStorage.setItem(cacheKey, JSON.stringify(data));
           setData(data);
         });

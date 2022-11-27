@@ -111,6 +111,7 @@
           --inverse-primary: var(--primary-80);
           --background: var(--neutral-99);
           --on-background: var(--neutral-10);
+          --on-background-muted: var(--neutral-10);
           --surface: var(--neutral-90);
           --on-surface: var(--neutral-30);
           --surface-variant: var(--neutral-90);
@@ -122,39 +123,43 @@
 
           /* light - default */
           --primary: var(--primary-500);
-          --on-primary: var(--primary-50);
+          --on-primary: white;
           --primary-container: var(--primary-100);
           --on-primary-container: var(--primary-900);
           --inverse-primary: var(--primary-900);
           --background: var(--neutral-50);
           --on-background: var(--neutral-900);
-          --surface: var(--neutral-50);
+          --on-background-muted: var(--neutral-700);
+          --surface: var(--neutral-100);
           --on-surface: var(--neutral-900);
-          --surface-variant: var(--neutral-100);
+          --surface-variant: var(--neutral-200);
           --on-surface-variant: var(--neutral-700);
           --inverse-surface: var(--neutral-900);
           --inverse-on-surface: var(--neutral-100);
           --inverse-surface-variant: var(--neutral-700);
           --inverse-on-surface-variant: var(--neutral-200);
+          --outline: var(--neutral-200);
         }
         
         .dark {
           /* dark */
-          --primary: var(--primary-80);
-          --on-primary: var(--primary-20);
-          --primary-container: var(--primary-30);
-          --on-primary-container: var(--primary-90);
-          --inverse-primary: var(--primary-40);
-          --background: var(--neutral-10);
-          --on-background: var(--neutral-90);
-          --surface: var(--neutral-30);
-          --surface-variant: var(--neutral-30);
-          --on-surface-variant: var(--neutral-90);
-          --on-surface: var(--neutral-80);
-          --inverse-surface: var(--neutral-90);
-          --inverse-on-surface: var(--neutral-10);
-          --inverse-surface-variant: var(--neutral-30);
-          --inverse-on-surface-variant: var(--neutral-80);
+          --primary: var(--primary-500);
+          --on-primary: white;
+          --primary-container: var(--primary-100);
+          --on-primary-container: var(--primary-900);
+          --inverse-primary: var(--primary-900);
+          --background: var(--neutral-900);
+          --on-background: var(--neutral-200);
+          --on-background-muted: var(--neutral-100);
+          --surface: var(--neutral-800);
+          --on-surface: var(--neutral-100);
+          --surface-variant: var(--neutral-700);
+          --on-surface-variant: var(--neutral-100);
+          --inverse-surface: var(--neutral-100);
+          --inverse-on-surface: var(--neutral-800);
+          --inverse-surface-variant: var(--neutral-100);
+          --inverse-on-surface-variant: var(--neutral-1800);
+          --outline: var(--neutral-800);
         }
 
         .theme-swiss {
@@ -205,6 +210,7 @@
               'on-primary-container': 'var(--on-primary-container)',
               'inverse-primary': 'var(--inverse-primary)',
               'on-background': 'var(--on-background)',
+              'on-background-muted': 'var(--on-background)',
               'on-surface': 'var(--on-surface)',
               'on-surface-variant': 'var(--on-surface-variant)',
               'inverse-on-surface': 'var(--inverse-on-surface)',
@@ -217,7 +223,7 @@
     
     <!-- Klar Style -->
     <!-- style -->
-    <script type="module" crossorigin src="/assets/index.8f5d19f3.js"></script>
+    <script type="module" crossorigin src="/assets/index.70dc6890.js"></script>
   </head>
   <body class="bg-background">
     <div id="root"></div>
