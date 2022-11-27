@@ -1,8 +1,8 @@
 export default function Card(data: any) {
   const {_id, _type, show_button, show_subtitle, show_title, title, subtitle, link, link_text, style, image } = data.block;
   return (
-    <section className="flex flex-col justify-center antialiased bg-gray-900 text-gray-200 min-h-screen">
-    <div className="max-w-6xl mx-auto p-4 sm:px-6 h-full">
+    <section className="flex flex-col justify-center antialiased bg-inverse-surface py-16 text-inverse-on-surface">
+    <div className="max-w-6xl mx-auto p-4 sm:px-6">
         {/* <!-- Blog post --> */}
         <article className="max-w-sm mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">
             <a className="relative block group" href="#0">
@@ -27,14 +27,14 @@ export default function Card(data: any) {
                         <a className="hover:text-gray-100 transition duration-150 ease-in-out" href="#0">Designing a functional workflow at home.</a>
                     </h3>
                 </header>
-                <p className="text-lg text-gray-400 flex-grow">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
+                <p className="text-lg text-inverse-on-surface-variant flex-grow">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
                 <footer className="flex items-center mt-4">
                     <a href="#0">
                         <img className="rounded-full flex-shrink-0 mr-4" src="https://preview.cruip.com/open-pro/images/news-author-04.jpg" width="40" height="40" alt="Author 04"/>
                     </a>
                     <div>
                         <a className="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out" href="#0">Chris Solerieu</a>
-                        <span className="text-gray-700"> - </span>
+                        <span className="text-inverse-on-surface-variant"> - </span>
                         <span className="text-gray-500">Jan 19, 2020</span>
                     </div>
                 </footer>

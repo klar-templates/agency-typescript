@@ -7,7 +7,7 @@ export default function Hero(data: any) {
                 <div className="w-full lg:w-1/2">
                     <div className="lg:max-w-lg">
                         <h1 className="text-on-background text-2xl font-semibold uppercase lg:text-3xl">Create an account and start making your own web sites.</h1>
-                        <p className="text-on-background-muted mt-2 dark:text-gray-400">Edit everything on this site and if you like it...</p>
+                        <p className="text-on-surface-variant mt-2 dark:text-gray-400">Edit everything on this site and if you like it...</p>
                         <button type="button" className="bg-primary border text-on-primary hover:drop-shadow w-full outline-offset-3 focus:outline-2 ocus:drop-shadow-lg tracking-wider px-6 py-2.5 mt-6 text-sm uppercase transition-colors duration-300 transform rounded-md lg:w-auto">Shop Now</button>
                     </div>
                 </div>
