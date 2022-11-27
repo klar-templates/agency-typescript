@@ -3,7 +3,7 @@ import IData from '../service/interface/IData';
 import Layout from './Layout';
 import Header from './blocks/Header';
 import Hero from './blocks/Hero';
-import Hero1 from './blocks/Hero1';
+// import Hero1 from './blocks/Hero1';
 import Pricing from './blocks/Pricing';
 import Card from './blocks/Card';
 import Card1 from './blocks/Card1';
@@ -15,7 +15,7 @@ import KlarEditBlock from './KlarEditBlock';
 const Components: any = {
   Header: Header,
   Hero: Hero,
-  Hero1: Hero1,
+  // Hero1: Hero1,
   Pricing: Pricing,
   Card: Card,
   Card1: Card1,
