@@ -1,8 +1,8 @@
 export default function Card1(data: any) {
   const {_id, _type, show_button, show_subtitle, show_title, title, subtitle, link, link_text, style, image } = data.block;
   return (
-    <section className="flex flex-col justify-center antialiased bg-gray-50 text-gray-600 min-h-screen p-4">
-    <div className="h-full">
+    <section className="flex flex-col justify-center antialiased bg-surface bg-on-surface p-4 py-16">
+    <div className="">
         {/* <!-- Card --> */}
         <div className="max-w-xs mx-auto">
             <div className="flex flex-col h-full bg-white shadow-lg rounded-lg overflow-hidden">
@@ -19,11 +19,11 @@ export default function Card1(data: any) {
                         {/* <!-- Header --> */}
                         <header className="mb-3">
                             <a className="block focus:outline-none focus-visible:ring-2" href="#0">
-                                <h3 className="text-[22px] text-gray-900 font-extrabold leading-snug">The Ultimate JavaScript Course</h3>
+                                <h3 className="text-[22px] font-extrabold leading-snug">The Ultimate JavaScript Course</h3>
                             </a>
                         </header>
                         {/* <!-- Content --> */}
-                        <div className="mb-8">
+                        <div className="mb-8 text-on-surface-variant">
                             <p>The JavaScript course for everyone! Master JavaScript with projects, challenges and theory.</p>
                         </div>
                     </div>

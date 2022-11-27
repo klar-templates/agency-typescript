@@ -6,6 +6,7 @@ import Hero from './blocks/Hero';
 import Pricing from './blocks/Pricing';
 import Card from './blocks/Card';
 import Card1 from './blocks/Card1';
+import Team1 from './blocks/Team1';
 import Nunjucks from './blocks/bootstrap/Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
 
@@ -14,7 +15,8 @@ const Components: any = {
   Hero: Hero,
   Pricing: Pricing,
   Card: Card,
-  Card1: Card1
+  Card1: Card1,
+  Team1: Team1
 }
 
 export default function Page(data: IData) {

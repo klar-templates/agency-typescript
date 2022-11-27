@@ -281,6 +281,14 @@
       "fields": []
     },
     {
+      "title": "Team 1",
+      "name": "team1",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
       "title": "Services",
       "name": "services",
       "icon": "file-text-o",

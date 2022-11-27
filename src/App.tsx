@@ -38,7 +38,7 @@ function App() {
     if (!localStorage.getItem(cacheKey)) {
       async function requestData() {
         const response = await fetch(
-          `https://raw.githubusercontent.com/klar-sites/${siteName}/main/data.json`);
+          `https://raw.githubusercontent.com/klar-sites/${siteName}/master/data.json`);
         return response.json();
       }
       requestData()
