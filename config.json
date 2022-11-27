@@ -265,6 +265,14 @@
       ]
     },
     {
+      "title": "Card",
+      "name": "card",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
       "title": "Services",
       "name": "services",
       "icon": "file-text-o",

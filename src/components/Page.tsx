@@ -4,13 +4,15 @@ import Layout from './Layout';
 import Header from './blocks/Header';
 import Hero from './blocks/Hero';
 import Pricing from './blocks/Pricing';
+import Card from './blocks/Card';
 import Nunjucks from './blocks/bootstrap/Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
 
 const Components: any = {
   Header: Header,
   Hero: Hero,
-  Pricing: Pricing
+  Pricing: Pricing,
+  Card: Card
 }
 
 export default function Page(data: IData) {

@@ -1,8 +1,8 @@
 export default function Hero(data: any) {
   const {_id, _type, show_button, show_subtitle, show_title, title, subtitle, link, link_text, style, image } = data.block;
   return (
-    <div className="g-primary g-surface-variant">
-        <div className="g-blue-900 g-primary g-surface-variant container px-6 py-16 mx-auto">
+    <div className="g-primary g-surface-variant py-16">
+        <div className="g-blue-900 g-primary g-surface-variant container px-6 mx-auto">
             <div className="items-center lg:flex">
                 <div className="w-full lg:w-1/2">
                     <div className="lg:max-w-lg">

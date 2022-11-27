@@ -3,13 +3,13 @@ export default function Pricing(data: any) {
   return (
     
 
-<section className="flex flex-col justify-center antialiased bg-gray-100 text-gray-600 min-h-screen p-4">
-    <div className="h-full">
+<section className="flex flex-col justify-center antialiased bg-gray-100 text-gray-600 p-4 py-16">
+    <div className="-full">
         {/* <!-- Pricing --> */}
         <div className="max-w-5xl mx-auto" x-data="{ annual: true }">
             <h2 className="text-3xl text-gray-800 font-bold text-center mb-4">Plans</h2>
             {/* <!-- Toggle switch --> */}
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
                 <div className="flex items-center space-x-3 mb-8">
                     <div className="text-sm text-gray-500 font-medium min-w-[120px] text-right">Monthly</div>
                     <div className="relative select-none w-[44px]">
@@ -21,7 +21,7 @@ export default function Pricing(data: any) {
                     </div>
                     <div className="text-sm text-gray-500 font-medium min-w-[120px]">Annually <span className="text-green-500">(-20%)</span></div>
                 </div>
-            </div>
+            </div> */}
             {/* <!-- Pricing tabs --> */}
             <div className="grid grid-cols-12 gap-6">
                 {/* <!-- Tab 1 --> */}
