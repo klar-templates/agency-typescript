@@ -37,8 +37,8 @@ export default function Hero2(data: any) {
               <span>Get this template <span aria-hidden="true" className="text-black/25">→</span></span></a>
               </div>
               </div><div className="relative lg:col-span-2">
-                <img src="https://raw.githubusercontent.com/klar-templates/agency/master/img/header-bg.jpg" width="1600" height="1280" 
-                className="relative z-20 -mb-36 aspect-[800/640] rounded-xl bg-slate-200 shadow-xl shadow-black/5 ring-1 ring-slate-900/5 sm:-mb-16 lg:-mb-8 xl:-mb-16"/>
+                <img src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80" 
+                className="relative z-20 -mb-36 rounded-xl bg-slate-200 shadow-xl shadow-black/5 ring-1 ring-slate-900/5 sm:-mb-16 lg:-mb-8 xl:-mb-16"/>
                 <div className="z-0 hidden md:block">
                   <div className="absolute -top-4 -right-12 -left-12 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]">
                     </div><div className="absolute -top-12 bottom-0 -left-4 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,white_4rem,white_calc(100%-4rem),transparent)]"></div>
