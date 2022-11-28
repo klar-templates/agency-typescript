@@ -345,6 +345,14 @@
       "fields": []
     },
     {
+      "title": "Styleguide",
+      "name": "styleguide",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
       "title": "Services",
       "name": "services",
       "icon": "file-text-o",
