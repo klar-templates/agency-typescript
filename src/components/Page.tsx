@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import IData from '../service/interface/IData';
+import ComponentsBlock from './Components';
 import Layout from './Layout';
 import Header from './blocks/Header';
 import Header2 from './blocks/Header2';
@@ -33,6 +34,9 @@ export default function Page(data: IData) {
     // Tell the user that there are no pages yet.
     return null;
   }
+  if (window.klarContext.pathname === '/components') {
+    return <ComponentsBlock {...data} />
+  }
   const blockArray = [];
   for (const [key, value] of Object.entries(window.klarContext.currentPage.blocks)) {
     const block: any = value;
@@ -58,7 +62,8 @@ export default function Page(data: IData) {
 function createContext(data: IData) {
   const routeLocation = useLocation();
   const routeNavigate = useNavigate();
-  const pathname = '/startsida';
+  // const pathname = '/startsida';
+  const pathname = routeLocation.pathname;
   let currentPage;
   if (data.pages.length > 0) {
     if (pathname === '/startsida') {
