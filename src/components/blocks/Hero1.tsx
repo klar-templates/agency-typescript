@@ -48,7 +48,7 @@ export default function Hero1(data: any) {
                         x2="-78.208"
                         y1=".177"
                         y2="474.645"
-                        gradient-units="userSpaceOnUse"
+                        
                       >
                         <stop stopColor="#9089FC" />
                         <stop offset={1} stopColor="#FF80B5" />
