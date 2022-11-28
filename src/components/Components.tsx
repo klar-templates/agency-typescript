@@ -34,7 +34,7 @@ export default function Components(data: any) {
     if (!localStorage.getItem(cacheKey)) {
       async function requestData() {
         const response = await fetch(
-          `https://raw.githubusercontent.com/klar-templates/${template}/main/config.json`);
+          `https://raw.githubusercontent.com/klar-templates/${template}/master/config.json`);
         return response.json();
       }
       requestData()
