@@ -1,7 +1,7 @@
 export default function Card(data: any) {
   const {_id, _type, show_button, show_subtitle, show_title, title, subtitle, link, link_text, style, image } = data.block;
   return (
-    <section className="flex flex-col justify-center antialiased bg-inverse-surface py-16 text-inverse-on-surface">
+    <section className="relative flex flex-col justify-center antialiased bg-inverse-surface py-16 text-inverse-on-surface">
     <div className="max-w-6xl mx-auto p-4 sm:px-6">
         {/* <!-- Blog post --> */}
         <article className="max-w-sm mx-auto md:max-w-none grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">
