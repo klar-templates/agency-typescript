@@ -55,11 +55,11 @@
   }]
   },
   "page_types": [
-  {
+    {
       "title": "Startsida",
       "name": "startpage",
       "type": "page",
-      "default_blocks": ["navigation", "hero", "footer"],
+      "default_blocks": [],
       "fields": [{
         "title": "Sidinställningar",
         "name": "page_settings",
@@ -80,7 +80,7 @@
       "title": "Undersida",
       "name": "subpage",
       "type": "page",
-      "default_blocks": ["navigation", "hero", "footer"],
+      "default_blocks": [],
       "fields": [{
         "title": "Sidinställningar",
         "name": "page_settings",
