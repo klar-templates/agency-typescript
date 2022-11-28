@@ -48,7 +48,7 @@ export default function Hero1(data: any) {
                       x2="-78.208"
                       y1=".177"
                       y2="474.645"
-                      
+                      gradientUnits={"userSpaceOnUse"}
                       ></linearGradient>
                     {/* <linearGradient
                         id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
