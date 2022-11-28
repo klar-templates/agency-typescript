@@ -1,5 +1,5 @@
-export default function KlarEditBlock({id, type, children}: any) {
-  if (!window.klarContext.isInKlar) {
+export default function KlarEditBlock({id, type, children, isInKlar}: any) {
+  if (!window.klarContext.isInKlar && !isInKlar) {
     return children;
   }
   

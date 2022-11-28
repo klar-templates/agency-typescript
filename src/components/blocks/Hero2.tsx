@@ -1,8 +1,8 @@
 export default function Hero2(data: any) {
   const {_id, _type, show_button, show_subtitle, show_title, title, subtitle, link, link_text, style, image } = data.block;
   return (
-    <div className="relative">
-      <div className="relative mx-auto container px-4 pt-16 sm:px-0 lg:pt-20">
+    <div className="g-background relative">
+      <div className="relative mx-auto container px-4 pt-16 sm:px-10 lg:pt-20">
         <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-y-16 gap-x-8 lg:max-w-none lg:grid-cols-3">
           <div className="flex flex-col lg:pb-6">
             <h1 className="mt-4 text-4xl font-extrabold leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-[3.5rem]">Transmit</h1>

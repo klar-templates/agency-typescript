@@ -3,7 +3,7 @@ export default function Pricing(data: any) {
   return (
     
 
-<section className="flex flex-col justify-center antialiased bg-surface text-gray-600 p-4 py-16">
+<section className="bg-surface flex flex-col justify-center antialiased text-gray-600 p-4 py-16">
     <div className="-full">
         {/* <!-- Pricing --> */}
         <div className="max-w-5xl mx-auto" x-data="{ annual: true }">

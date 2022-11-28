@@ -24,8 +24,8 @@ export default function Layout(data: any) {
   return (<>
     <PageStyle theme={window.klarContext.data.theme} />
     <Helmet>
-      <title>{window.klarContext.currentPage.settings.title}</title>
-      <meta name="description" content={window.klarContext.currentPage.settings.description} />
+      <title>{window.klarContext.currentPage && window.klarContext.currentPage.settings.title}</title>
+      <meta name="description" content={window.klarContext.currentPage && window.klarContext.currentPage.settings.description} />
     </Helmet>
     {/* <Navigation {...headerBlock as any} /> */}
     {blocksToRender}

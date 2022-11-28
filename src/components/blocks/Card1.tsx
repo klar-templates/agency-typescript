@@ -1,7 +1,7 @@
 export default function Card1(data: any) {
   const {_id, _type, show_button, show_subtitle, show_title, title, subtitle, link, link_text, style, image } = data.block;
   return (
-    <section className="flex flex-col justify-center antialiased bg-surface bg-on-surface p-4 py-16">
+    <section className="flex flex-col justify-center antialiased g-background bg-on-surface p-4 py-16">
     <div className="">
         {/* <!-- Card --> */}
         <div className="max-w-xs mx-auto">

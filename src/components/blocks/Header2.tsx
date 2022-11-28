@@ -14,7 +14,7 @@ export default function Header2(data: any) {
     const {_id, _type, logo_text, style } = data.block;
   
   return (
-    <header className="relative z-10 lg:px-8">
+    <header className="g-background relative z-10 lg:px-8">
         <div className="py-6 mx-auto container">
           <nav className="flex h-9 items-center justify-between" aria-label="Global">
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">

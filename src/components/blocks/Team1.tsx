@@ -1,8 +1,8 @@
 export default function Team1(data: any) {
   const {_id, _type, show_button, show_subtitle, show_title, title, subtitle, link, link_text, style, image } = data.block;
   return (
-    <section className="bg-white dark:bg-gray-900">
-    <div className="h-[32rem] bg-gray-100 dark:bg-gray-800">
+    <section className="g-background dark:bg-gray-900">
+    <div className="h-[32rem] g-gray-100 dark:bg-gray-800">
         <div className="container px-6 py-10 mx-auto">
             <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">The Executive Team</h1>
 

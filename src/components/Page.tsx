@@ -35,7 +35,7 @@ export default function Page(data: IData) {
     return null;
   }
   if (window.klarContext.pathname === '/components') {
-    return <ComponentsBlock {...data} />
+    return <ComponentsBlock {...data} components={Components} />
   }
   const blockArray = [];
   for (const [key, value] of Object.entries(window.klarContext.currentPage.blocks)) {

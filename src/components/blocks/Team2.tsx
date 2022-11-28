@@ -3,7 +3,7 @@ export default function Team2(data: any) {
   return (
 
 
-    <section className="bg-white dark:bg-gray-900">
+    <section className="g-background dark:bg-gray-900">
     <div className="container px-6 py-16 mx-auto">
         <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Our Executive Team</h1>
 

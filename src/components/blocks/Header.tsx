@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Header(data: any) {
   const {_id, _type, logo_text, style } = data.block;
   return (
-    <header className="bg-white dark:bg-gray-900">
+    <header className="g-background dark:bg-gray-900">
       <nav className="relative bg-white dark:bg-gray-900">
           <div className="container py-4 mx-auto md:flex md:justify-between md:items-center">
               <div className="flex items-center justify-between">
