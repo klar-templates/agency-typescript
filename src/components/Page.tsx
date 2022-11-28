@@ -7,6 +7,7 @@ import Header2 from './blocks/Header2';
 import Hero from './blocks/Hero';
 import Hero1 from './blocks/Hero1';
 import Hero2 from './blocks/Hero2';
+import Hero3 from './blocks/Hero3';
 import Pricing from './blocks/Pricing';
 import Card from './blocks/Card';
 import Card1 from './blocks/Card1';
@@ -21,6 +22,7 @@ const Components: any = {
   Hero: Hero,
   Hero1: Hero1,
   Hero2: Hero2,
+  Hero3: Hero3,
   Pricing: Pricing,
   Card: Card,
   Card1: Card1,

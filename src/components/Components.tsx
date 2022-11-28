@@ -98,6 +98,11 @@ function Style() {
       background-color: #303130 !important;
       margin: 10px 25px 0px 0px;
       overflow: overlay;
+
+      /*
+        transform: none;
+        padding: 40px;
+      */
     }
     .js-klar-block {
       box-shadow: 0px 4px 5px 0px hsla(0,0%,0%,0.14),0px 1px 10px 0px hsla(0,0%,0%,0.12),0px 2px 4px -1px hsla(0,0%,0%,0.2);
