@@ -123,6 +123,7 @@
 
           /* light - default */
           --primary: var(--primary-500);
+          --primary-dark: var(--primary-700);
           --on-primary: white;
           --primary-container: var(--primary-100);
           --on-primary-container: var(--primary-900);
@@ -144,6 +145,7 @@
         .dark {
           /* dark */
           --primary: var(--primary-500);
+          --primary-dark: var(--primary-700);
           --on-primary: white;
           --primary-container: var(--primary-100);
           --on-primary-container: var(--primary-900);
@@ -197,6 +199,7 @@
           extend: {
             backgroundColor: {
               'primary': 'var(--primary)',
+              'primary-dark': 'var(--primary-dark)',
               'primary-container': 'var(--primary-container)',
               'background': 'var(--background)',
               'surface': 'var(--surface)',
@@ -206,6 +209,7 @@
             },
             textColor: {
               'primary': 'var(--primary)',
+              'primary-dark': 'var(--primary-dark)',
               'on-primary': 'var(--on-primary)',
               'on-primary-container': 'var(--on-primary-container)',
               'inverse-primary': 'var(--inverse-primary)',
