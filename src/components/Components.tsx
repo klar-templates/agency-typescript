@@ -34,7 +34,7 @@ export default function Components(data: any) {
     if (!localStorage.getItem(cacheKey)) {
       async function requestData() {
         const response = await fetch(
-          `https://raw.githubusercontent.com/klar-templates/${template}/main/config.json`);
+          `https://raw.githubusercontent.com/klar-templates/${template}/master/config.json`);
         return response.json();
       }
       requestData()
@@ -91,18 +91,13 @@ export default function Components(data: any) {
 
 function Style() {
   const style = `
-  <style>
+  <styl>
     body {
       transform: scale(0.20);
       transform-origin: right top;
       background-color: #303130 !important;
       margin: 10px 25px 0px 0px;
       overflow: overlay;
-
-      /*
-        transform: none;
-        padding: 40px;
-      */
     }
     .js-klar-block {
       box-shadow: 0px 4px 5px 0px hsla(0,0%,0%,0.14),0px 1px 10px 0px hsla(0,0%,0%,0.12),0px 2px 4px -1px hsla(0,0%,0%,0.2);
@@ -117,6 +112,17 @@ function Style() {
     [data-template-id="card"] section {
       box-shadow: 0px 4px 5px 0px hsla(0,0%,0%,0.14),0px 1px 10px 0px hsla(0,0%,0%,0.12),0px 2px 4px -1px hsla(0,0%,0%,0.2);
       border-radius: 20px;
+    }
+    
+    ody {
+      transform: none;
+      padding: 50px 50px;
+    }
+    js-klar-block {
+      box-shadow: none;
+      background-color: #fff;
+      margin-bottom: 50px;
+      order-radius: inherit;
     }
   </style>
   `;

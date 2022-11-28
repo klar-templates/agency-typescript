@@ -11,6 +11,7 @@ import Hero3 from './blocks/Hero3';
 import Pricing from './blocks/Pricing';
 import Card from './blocks/Card';
 import Card1 from './blocks/Card1';
+import Cards from './blocks/Cards';
 import Team1 from './blocks/Team1';
 import Team2 from './blocks/Team2';
 import Nunjucks from './blocks/bootstrap/Nunjucks';
@@ -26,6 +27,7 @@ const Components: any = {
   Pricing: Pricing,
   Card: Card,
   Card1: Card1,
+  Cards: Cards,
   Team1: Team1,
   Team2: Team2
 }

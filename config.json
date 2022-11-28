@@ -313,6 +313,14 @@
       "fields": []
     },
     {
+      "title": "Cards",
+      "name": "cards",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
       "title": "Team 1",
       "name": "team1",
       "icon": "image",
