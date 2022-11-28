@@ -240,6 +240,14 @@
       "fields": []
     },
     {
+      "title": "Hero 2",
+      "name": "hero2",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
       "title": "Pricing",
       "name": "pricing",
       "icon": "image",

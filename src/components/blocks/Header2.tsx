@@ -35,7 +35,7 @@ export default function Header2(data: any) {
             </div>
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
               {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="font-semibold text-gray-900 hover:text-gray-900">
+                <a key={item.name} href={item.href} className="font-semibold text-on-background hover:text-gray-900">
                   {item.name}
                 </a>
               ))}
