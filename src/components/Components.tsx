@@ -34,7 +34,7 @@ export default function Components(data: any) {
     if (!localStorage.getItem(cacheKey)) {
       async function requestData() {
         const response = await fetch(
-          `https://raw.githubusercontent.com/klar-templates/${template}/master/config.json`);
+          `https://raw.githubusercontent.com/klar-templates/${template}/main/config.json`);
         return response.json();
       }
       requestData()
@@ -91,7 +91,7 @@ export default function Components(data: any) {
 
 function Style() {
   const style = `
-  <styl>
+  <style>
     body {
       transform: scale(0.20);
       transform-origin: right top;
