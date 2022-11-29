@@ -4,6 +4,7 @@ import ComponentsBlock from './Components';
 import Layout from './Layout';
 import Header from './blocks/Header';
 import Header2 from './blocks/Header2';
+import Header3 from './blocks/Header3';
 import Hero from './blocks/Hero';
 import Hero1 from './blocks/Hero1';
 import Hero2 from './blocks/Hero2';
@@ -21,6 +22,7 @@ import KlarEditBlock from './KlarEditBlock';
 const Components: any = {
   Header: Header,
   Header2: Header2,
+  Header3: Header3,
   Hero: Hero,
   Hero1: Hero1,
   Hero2: Hero2,
@@ -31,8 +33,8 @@ const Components: any = {
   Cards: Cards,
   Cards1: Cards1,
   Team1: Team1,
-  Team2: Team2
-}
+  Team2: Team2,
+};
 
 export default function Page(data: IData) {
   createContext(data);
@@ -41,28 +43,37 @@ export default function Page(data: IData) {
     return null;
   }
   if (window.klarContext.pathname === '/components') {
-    return <ComponentsBlock {...data} components={Components} />
+    return <ComponentsBlock {...data} components={Components} />;
   }
   const blockArray = [];
-  for (const [key, value] of Object.entries(window.klarContext.currentPage.blocks)) {
+  for (const [key, value] of Object.entries(
+    window.klarContext.currentPage.blocks,
+  )) {
     const block: any = value;
     // This is going go be fixed. Only block needs to be forwarded in the future.
     const blockData: any = {
-      block: {...block.data, _id: block._id, _type: block._type}
+      block: { ...block.data, _id: block._id, _type: block._type },
     };
     let componentName = block.template_id;
-    componentName = componentName.charAt(0).toUpperCase() + componentName.slice(1);
+    componentName =
+      componentName.charAt(0).toUpperCase() + componentName.slice(1);
     const DynamicComponent = Components[componentName];
     if (DynamicComponent) {
-      blockArray.push(<KlarEditBlock key={block._id} id={block._id} type={block._type}><DynamicComponent {...blockData} /></KlarEditBlock>);
+      blockArray.push(
+        <KlarEditBlock key={block._id} id={block._id} type={block._type}>
+          <DynamicComponent {...blockData} />
+        </KlarEditBlock>,
+      );
     } else {
-      blockArray.push(<KlarEditBlock key={block._id} id={block._id} type={block._type}><Nunjucks {...blockData} /></KlarEditBlock>);
+      blockArray.push(
+        <KlarEditBlock key={block._id} id={block._id} type={block._type}>
+          <Nunjucks {...blockData} />
+        </KlarEditBlock>,
+      );
     }
-  };
+  }
 
-  return (
-    <Layout {...data}>{blockArray}</Layout>
-  );
+  return <Layout {...data}>{blockArray}</Layout>;
 }
 
 function createContext(data: IData) {
@@ -76,7 +87,7 @@ function createContext(data: IData) {
       // currentPage = data.pages.find(page => page.startpage === true);
       currentPage = data.pages[0];
     } else {
-      currentPage = data.pages.find(page => page._path === pathname);
+      currentPage = data.pages.find((page) => page._path === pathname);
     }
   }
   if (window.klarContext.isInKlar) {
@@ -88,6 +99,6 @@ function createContext(data: IData) {
     pathname,
     data,
     currentPage,
-    isInKlar: typeof parent.frames.window.klar !== 'undefined'
+    isInKlar: typeof parent.frames.window.klar !== 'undefined',
   };
 }

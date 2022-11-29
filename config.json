@@ -5,54 +5,59 @@
     "title": "Tema",
     "name": "theme",
     "type": "theme",
-    "fields": [{
-      "title": "Färger",
-      "name": "colors",
-      "type": "object",
-      "fields": [{
-        "title": "Färger",
-        "name": "colors",
-        "type": "object"
-      },
-      {
-        "title": "Beskrivning",
-        "name": "description",
-        "type": "text"
-      }]
-    },
-    {
-      "title": "Typografi",
-      "name": "typography",
-      "type": "object",
-      "fields": [
+    "fields": [
       {
         "title": "Färger",
         "name": "colors",
-        "type": "object"
+        "type": "object",
+        "fields": [
+          {
+            "title": "Färger",
+            "name": "colors",
+            "type": "object"
+          },
+          {
+            "title": "Beskrivning",
+            "name": "description",
+            "type": "text"
+          }
+        ]
       },
       {
-        "title": "Beskrivning",
-        "name": "description",
-        "type": "text"
-      }]
-    },
-    {
-      "title": "Block",
-      "name": "block",
-      "type": "object",
-      "fields": [
-      {
-        "title": "Färger",
-        "name": "colors",
-        "type": "object"
+        "title": "Typografi",
+        "name": "typography",
+        "type": "object",
+        "fields": [
+          {
+            "title": "Färger",
+            "name": "colors",
+            "type": "object"
+          },
+          {
+            "title": "Beskrivning",
+            "name": "description",
+            "type": "text"
+          }
+        ]
       },
       {
-        "title": "Beskrivning",
-        "name": "description",
-        "type": "text"
+        "title": "Block",
+        "name": "block",
+        "type": "object",
+        "fields": [
+          {
+            "title": "Färger",
+            "name": "colors",
+            "type": "object"
+          },
+          {
+            "title": "Beskrivning",
+            "name": "description",
+            "type": "text"
+          }
+        ]
       }
-    ] 
-  }]
+    ]
   },
   "page_types": [
     {
@@ -60,84 +65,100 @@
       "name": "startpage",
       "type": "page",
       "default_blocks": [],
-      "fields": [{
-        "title": "Sidinställningar",
-        "name": "page_settings",
-        "type": "object",
-        "fields": [{
-          "title": "Sidtitel",
-          "name": "title",
-          "type": "string"
-        },
+      "fields": [
         {
-          "title": "Beskrivning",
-          "name": "description",
-          "type": "text"
-        }]
-      }]
+          "title": "Sidinställningar",
+          "name": "page_settings",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Sidtitel",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Undersida",
       "name": "subpage",
       "type": "page",
       "default_blocks": [],
-      "fields": [{
-        "title": "Sidinställningar",
-        "name": "page_settings",
-        "type": "object",
-        "fields": [{
-          "title": "Sidtitel",
-          "name": "title",
-          "type": "string"
-        },
+      "fields": [
         {
-          "title": "Beskrivning",
-          "name": "description",
-          "type": "text"
-        }]
-      }]
+          "title": "Sidinställningar",
+          "name": "page_settings",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Sidtitel",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Blogg",
       "name": "blog",
       "type": "page",
       "default_blocks": ["navigation", "hero", "footer"],
-      "fields": [{
-        "title": "Sidinställningar",
-        "name": "page_settings",
-        "type": "object",
-        "fields": [{
-          "title": "Sidtitel",
-          "name": "title",
-          "type": "string"
-        },
+      "fields": [
         {
-          "title": "Beskrivning",
-          "name": "description",
-          "type": "text"
-        }]
-      }]
+          "title": "Sidinställningar",
+          "name": "page_settings",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Sidtitel",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Kontaktsida",
       "name": "contact-page",
       "type": "page",
       "default_blocks": ["navigation", "hero", "footer"],
-      "fields": [{
-        "title": "Sidinställningar",
-        "name": "page_settings",
-        "type": "object",
-        "fields": [{
-          "title": "Sidtitel",
-          "name": "title",
-          "type": "string"
-        },
+      "fields": [
         {
-          "title": "Beskrivning",
-          "name": "description",
-          "type": "text"
-        }]
-      }]
+          "title": "Sidinställningar",
+          "name": "page_settings",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Sidtitel",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     }
   ],
   "block_types": [
@@ -177,14 +198,22 @@
               "title": "Style",
               "name": "style",
               "type": "object"
-            } 
+            }
           ]
-        } 
+        }
       ]
     },
     {
       "title": "Header 2",
       "name": "header2",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
+      "title": "Header 3",
+      "name": "header3",
       "icon": "image",
       "hidden": false,
       "type": "object",
@@ -226,9 +255,9 @@
               "title": "Style",
               "name": "style",
               "type": "object"
-            } 
+            }
           ]
-        } 
+        }
       ]
     },
     {
@@ -291,9 +320,9 @@
               "title": "Style",
               "name": "style",
               "type": "object"
-            } 
+            }
           ]
-        } 
+        }
       ]
     },
     {
@@ -388,9 +417,9 @@
               "title": "Style",
               "name": "style",
               "type": "object"
-            } 
+            }
           ]
-        } 
+        }
       ]
     },
     {
@@ -429,9 +458,9 @@
               "title": "Style",
               "name": "style",
               "type": "object"
-            } 
+            }
           ]
-        } 
+        }
       ]
     },
     {
@@ -470,9 +499,9 @@
               "title": "Style",
               "name": "style",
               "type": "object"
-            } 
+            }
           ]
-        } 
+        }
       ]
     },
     {
@@ -483,9 +512,9 @@
       "type": "object",
       "fields": [
         {
-        "title": "Rubrik", 
-        "name": "heading",
-        "type": "string"
+          "title": "Rubrik",
+          "name": "heading",
+          "type": "string"
         },
         {
           "title": "Underrubrik",
@@ -496,114 +525,119 @@
           "title": "Team",
           "name": "team",
           "type": "array",
-          "of": [{
-            "title": "Team member",
-            "name": "team_member",
-            "type": "object",
-            "display_field": "heading",
-            "fields": [
-              {
-                "type": "string",
-                "name": "image",
-                "title": "Bild",
-                "format": "file",
-                "default": "https://raw.githubusercontent.com/klar-templates/agency/master/img/team/3.jpg"
-              },
-              {
-                "type": "string",
-                "name": "heading",
-                "title": "Rubrik",
-                "default": "Rubrik"
-              },
-              {
-                "type": "text",
-                "name": "text",
-                "title": "Text",
-                "default": "En kortare text"
-              },
-              {
-                "type": "array",
-                "name": "social_links",
-                "title": "Social links",
-                "default": [
-                  {
-                    "title": "Twitter",
-                    "icon": "twitter",
-                    "link": "#youraccount"
-                  },
-                  {
-                    "title": "Facebook",
-                    "icon": "facebook",
-                    "link": "#youraccount"
-                  },
-                  {
-                    "title": "Instagram",
-                    "icon": "instagram",
-                    "link": "#youraccount"
-                  }
-                ],
-                "of": [{
-                  "title": "Länk",
-                  "name": "link",
-                  "type": "object",
-                  "display_field": "title",
-                  "properties": {
-                    "title": {
-                      "type": "string",
-                      "title": "Titel",
-                      "default": "Titel"
+          "of": [
+            {
+              "title": "Team member",
+              "name": "team_member",
+              "type": "object",
+              "display_field": "heading",
+              "fields": [
+                {
+                  "type": "string",
+                  "name": "image",
+                  "title": "Bild",
+                  "format": "file",
+                  "default": "https://raw.githubusercontent.com/klar-templates/agency/master/img/team/3.jpg"
+                },
+                {
+                  "type": "string",
+                  "name": "heading",
+                  "title": "Rubrik",
+                  "default": "Rubrik"
+                },
+                {
+                  "type": "text",
+                  "name": "text",
+                  "title": "Text",
+                  "default": "En kortare text"
+                },
+                {
+                  "type": "array",
+                  "name": "social_links",
+                  "title": "Social links",
+                  "default": [
+                    {
+                      "title": "Twitter",
+                      "icon": "twitter",
+                      "link": "#youraccount"
                     },
-                    "icon": {
-                      "type": "string",
-                      "title": "Ikon",
-                      "default": "twitter",
-                      "ui:widget": "icon"
+                    {
+                      "title": "Facebook",
+                      "icon": "facebook",
+                      "link": "#youraccount"
                     },
-                    "link": {
-                      "type": "string",
-                      "title": "Länk",
-                      "format": "uri",
-                      "default": "#youraccount"
+                    {
+                      "title": "Instagram",
+                      "icon": "instagram",
+                      "link": "#youraccount"
                     }
-                  }
-                }]
-              }
-            ]
-          }]
+                  ],
+                  "of": [
+                    {
+                      "title": "Länk",
+                      "name": "link",
+                      "type": "object",
+                      "display_field": "title",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "title": "Titel",
+                          "default": "Titel"
+                        },
+                        "icon": {
+                          "type": "string",
+                          "title": "Ikon",
+                          "default": "twitter",
+                          "ui:widget": "icon"
+                        },
+                        "link": {
+                          "type": "string",
+                          "title": "Länk",
+                          "format": "uri",
+                          "default": "#youraccount"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "title": "Text",
           "name": "text",
           "type": "text"
-          
-          
-          
         },
         {
           "title": "Style",
           "name": "style",
           "type": "object",
-          "fields": [{
-            "title": "Block",
-            "name": "block",
-            "type": "object",
-            "ui:css_selector": "#team",
-            "fields": [{
-              "name": "bg_color",
-              "ui:css_selector": "${block_id_css_id}",
-              "$ref": "#/definitions/bg_color"
-            },
+          "fields": [
             {
-              "name":  "padding_top",
-              "$ref": "#/definitions/block_padding_top"
-            },
-            {
-              "name": "padding_bottom",
-              "$ref": "#/definitions/block_padding_bottom"
+              "title": "Block",
+              "name": "block",
+              "type": "object",
+              "ui:css_selector": "#team",
+              "fields": [
+                {
+                  "name": "bg_color",
+                  "ui:css_selector": "${block_id_css_id}",
+                  "$ref": "#/definitions/bg_color"
+                },
+                {
+                  "name": "padding_top",
+                  "$ref": "#/definitions/block_padding_top"
+                },
+                {
+                  "name": "padding_bottom",
+                  "$ref": "#/definitions/block_padding_bottom"
+                }
+              ]
             }
-            ]
-          }]
-      }]
+          ]
+        }
+      ]
     },
     {
       "title": "Clients",
@@ -641,9 +675,9 @@
               "title": "Style",
               "name": "style",
               "type": "object"
-            } 
+            }
           ]
-        } 
+        }
       ]
     },
     {
@@ -682,9 +716,9 @@
               "title": "Style",
               "name": "style",
               "type": "object"
-            } 
+            }
           ]
-        } 
+        }
       ]
     },
     {
@@ -723,9 +757,9 @@
               "title": "Style",
               "name": "style",
               "type": "object"
-            } 
+            }
           ]
-        } 
+        }
       ]
     }
   ],
@@ -865,7 +899,7 @@
       }
     },
     "blocks": {
-      "navigation": {
+      "header": {
         "logo_text": "The Page",
         "navigation": [
           {
@@ -928,7 +962,70 @@
           }
         }
       },
-      "header": {
+      "header3": {
+        "logo_text": "The Page",
+        "navigation": [
+          {
+            "title": "Services",
+            "link": "#services"
+          },
+          {
+            "title": "Portfolio",
+            "link": "#portfolio"
+          },
+          {
+            "title": "About",
+            "link": "#about"
+          },
+          {
+            "title": "Team",
+            "link": "#team"
+          },
+          {
+            "title": "Contact",
+            "link": "#contact"
+          }
+        ],
+        "style": {
+          "navbar": {
+            "transparent": true,
+            "sticky": true,
+            "bg_color": "#222",
+            "padding_top": 25,
+            "padding_bottom": 25,
+            "border_bottom_width": 0,
+            "border_bottom_color": "transparent",
+            "show_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 20,
+            "margin_top_next_block": 0
+          },
+          "logo": {
+            "text_color": "{{theme.colors.primary_color}}",
+            "text_hover_color": "{{theme.colors.primary_color}}",
+            "text_focus_color": "{{theme.colors.primary_color}}",
+            "font_family": "Kaushan Script",
+            "image": "https://assets.brandfolder.com/8w7lv8ml/view.png",
+            "padding_top": 12,
+            "width": 125,
+            "show": false
+          },
+          "navigation": {
+            "text_color": "#fff",
+            "text_hover_color": "{{theme.colors.primary_color}}",
+            "text_active_color": "{{theme.colors.primary_color}}",
+            "text_focus_color": "{{theme.colors.primary_color}}",
+            "bg_text_color": "transparent",
+            "bg_text_hover_color": "transparent",
+            "bg_text_active_color": "{{theme.colors.primary_color}}",
+            "bg_text_focus_color": "{{theme.colors.primary_color}}",
+            "mobile_menu_button_bg_color": "{{theme.colors.primary_color}}",
+            "mobile_menu_button_hover_bg_color": "{{theme.colors.primary_color}}",
+            "mobile_menu_button_focus_bg_color": "{{theme.colors.primary_color}}"
+          }
+        }
+      },
+      "navigation": {
         "title": "Create an account and start making your own web sites",
         "subtitle": "Edit everything on this site and if you like it...",
         "link": "#services",
@@ -973,9 +1070,7 @@
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
           }
         ],
-        "style": {
-          
-        }
+        "style": {}
       },
       "portfolio": {
         "heading": "Portfolio",
@@ -1161,7 +1256,7 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.",
         "style": {
           "block": {
-            "social_links_hover_bg_color": "{{theme.colors.primary_color}}"            
+            "social_links_hover_bg_color": "{{theme.colors.primary_color}}"
           }
         }
       },
@@ -1239,7 +1334,7 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.",
         "style": {
           "block": {
-            "social_links_hover_bg_color": "{{theme.colors.primary_color}}"            
+            "social_links_hover_bg_color": "{{theme.colors.primary_color}}"
           }
         }
       },
@@ -1266,9 +1361,7 @@
             "url": "#clients"
           }
         ],
-        "style": {
-          
-        }
+        "style": {}
       },
       "contact": {
         "heading": "Contact Us",
@@ -1349,47 +1442,52 @@
       "title": "Sidinställningar",
       "name": "page_settings",
       "type": "object",
-      "fields": [{
-        "title": "Sidtitel",
-        "name": "title",
-        "type": "string"
-      },
-      {
-        "title": "Beskrivning",
-        "name": "description",
-        "type": "text"
-      }]
+      "fields": [
+        {
+          "title": "Sidtitel",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        }
+      ]
     },
     {
       "title": "Kategorier",
       "name": "categories",
       "type": "array",
       "fields": [
-      {
-        "title": "Sidtitel",
-        "name": "title",
-        "type": "string"
-      },
-      {
-        "title": "Beskrivning",
-        "name": "description",
-        "type": "text"
-      }]
+        {
+          "title": "Sidtitel",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        }
+      ]
     }
   ],
   "definitions": {
     "title": "Definitions",
     "name": "definitions",
     "type": "definitions",
-    "fields": [{
-      "title": "Bakgrundsfärg",
-      "name": "bg_color",
-      "type": "string"
-    },
-    {
-      "title": "Rubrikfärg",
-      "name": "title_text_color",
-      "type": "string"
-    }]
+    "fields": [
+      {
+        "title": "Bakgrundsfärg",
+        "name": "bg_color",
+        "type": "string"
+      },
+      {
+        "title": "Rubrikfärg",
+        "name": "title_text_color",
+        "type": "string"
+      }
+    ]
   }
 }

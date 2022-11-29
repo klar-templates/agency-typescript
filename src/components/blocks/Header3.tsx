@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
@@ -6,6 +8,7 @@ const navigation = [
 ];
 
 export default function Header2(data: any) {
+  console.log(data);
   const { _id, _type, logo_text, style } = data.block;
 
   return (
@@ -34,7 +37,19 @@ export default function Header2(data: any) {
               {/* <Bars3Icon className="h-6 w-6" aria-hidden="true" /> */}
             </button>
           </div>
-          <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
+          <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end lg:gap-x-12">
+            {window.klarContext.data.pages.map((page: any, i: any) => (
+              <li
+                key={i}
+                className={
+                  page._id === window.klarContext.currentPage._id
+                    ? 'font-semibold text-on-background hover:text-gray-900 active'
+                    : 'font-semibold text-on-background hover:text-gray-900'
+                }
+              >
+                <Link to={page._path}>{page._menu_item_name}</Link>
+              </li>
+            ))}
             {navigation.map((item) => (
               <a
                 key={item.name}
@@ -45,14 +60,14 @@ export default function Header2(data: any) {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
+          {/* <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
             <a
               href="#"
               className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
             >
               Log in
             </a>
-          </div>
+          </div> */}
         </nav>
         <div>
           <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
