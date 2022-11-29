@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 
 export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState('');
+  const cacheKeyTemplate = `${data.block._id}`;
+  let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
 
   useEffect(() => {
     window.nunjucks.configure({ autoescape: false });
@@ -16,7 +18,9 @@ export default function Nunjucks(data: any) {
         console.log('No template content for this block:', data.block._type);
       }
     } else {
-      getTemplate(data.block._type);
+      if (!renderedTemplate) {
+        getTemplate(data.block._type);
+      }
     }
     // return () => clearInterval(id);
   }, []);
@@ -31,7 +35,9 @@ export default function Nunjucks(data: any) {
         return response.text();
       }
       requestData().then((data) => {
-        localStorage.setItem(cacheKey, data);
+        if (window.klarContext.isInKlar) {
+          localStorage.setItem(cacheKey, data);
+        }
         setTemplate(data);
       });
     } else {
@@ -40,16 +46,15 @@ export default function Nunjucks(data: any) {
     }
   }
 
-  if (!template) {
-    return null;
-  }
+  // if (!renderedTemplate) {
+  //   return null;
+  // }
 
-  const cacheKeyTemplate = `${data.block._id}`;
-
-  let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
   if (!renderedTemplate) {
     renderedTemplate = window.nunjucks.renderString(template, data);
-    localStorage.setItem(cacheKeyTemplate, renderedTemplate);
+    if (window.klarContext.isInKlar) {
+      localStorage.setItem(cacheKeyTemplate, renderedTemplate);
+    }
   }
 
   return <div dangerouslySetInnerHTML={{ __html: renderedTemplate }} />;

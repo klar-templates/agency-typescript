@@ -261,6 +261,14 @@
       ]
     },
     {
+      "title": "Hero Nunjucks",
+      "name": "hero-nunjucks",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
       "title": "Hero 1",
       "name": "hero1",
       "icon": "image",
