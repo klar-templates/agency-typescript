@@ -5,6 +5,7 @@ export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState('');
 
   useEffect(() => {
+    window.nunjucks.configure({ autoescape: false });
     // Get Nunjucks template
     if (window.klarContext.isInKlar) {
       let template =
@@ -43,7 +44,13 @@ export default function Nunjucks(data: any) {
     return null;
   }
 
-  const renderedTemplate = window.nunjucks.renderString(template, data);
+  const cacheKeyTemplate = `${data.block._id}`;
+
+  let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
+  if (!renderedTemplate) {
+    renderedTemplate = window.nunjucks.renderString(template, data);
+    localStorage.setItem(cacheKeyTemplate, renderedTemplate);
+  }
 
   return <div dangerouslySetInnerHTML={{ __html: renderedTemplate }} />;
 }

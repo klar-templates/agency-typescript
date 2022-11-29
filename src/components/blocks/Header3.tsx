@@ -43,8 +43,8 @@ export default function Header2(data: any) {
                 key={i}
                 className={
                   page._id === window.klarContext.currentPage._id
-                    ? 'font-semibold text-on-background hover:text-gray-900 active'
-                    : 'font-semibold text-on-background hover:text-gray-900'
+                    ? 'font-semibold text-on-background hover:text-gray-900 list-none whitespace-nowrap active'
+                    : 'font-semibold text-on-background hover:text-gray-900 list-none whitespace-nowrap'
                 }
               >
                 <Link to={page._path}>{page._menu_item_name}</Link>

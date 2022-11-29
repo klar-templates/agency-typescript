@@ -89,7 +89,7 @@
       "title": "Undersida",
       "name": "subpage",
       "type": "page",
-      "default_blocks": [],
+      "default_blocks": ["header3"],
       "fields": [
         {
           "title": "Sidinställningar",

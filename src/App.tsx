@@ -1,14 +1,21 @@
-import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { HelmetProvider } from "react-helmet-async";
+import { useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import IData from './service/interface/IData';
 import Page from './components/Page';
 
 function App() {
   window.klarContext = {
-    isInKlar: typeof parent.frames.window.klar !== 'undefined'
+    isInKlar: typeof parent.frames.window.klar !== 'undefined',
   };
-  const [data, setData] = useState(window.klarContext.isInKlar ? parent.frames.window.klar.data : undefined);
+  const [data, setData] = useState(
+    window.klarContext.isInKlar ? parent.frames.window.klar.data : undefined,
+  );
   useEffect(() => {
     // if (location.pathname == '/sites/klar-sites/agency-typescript') {
     //   console.log('navigate')
@@ -38,27 +45,27 @@ function App() {
     if (!localStorage.getItem(cacheKey)) {
       async function requestData() {
         const response = await fetch(
-          `https://raw.githubusercontent.com/klar-sites/${siteName}/main/data.json`);
+          `https://raw.githubusercontent.com/klar-sites/${siteName}/master/data.json`,
+        );
         return response.json();
       }
-      requestData()
-        .then((data) => {
-          console.log(data);
-          // localStorage.setItem(cacheKey, JSON.stringify(data));
-          setData(data);
-        });
-      } else {
-        const data = JSON.parse(localStorage.getItem(cacheKey) as string);
+      requestData().then((data) => {
+        console.log(data);
+        // localStorage.setItem(cacheKey, JSON.stringify(data));
         setData(data);
-      }
+      });
+    } else {
+      const data = JSON.parse(localStorage.getItem(cacheKey) as string);
+      setData(data);
+    }
   }
 
   if (!data) {
     return null;
   }
 
-  const startpage = (data as IData).pages.find(p => p.startpage)
-  
+  const startpage = (data as IData).pages.find((p) => p.startpage);
+
   let currentPageInKlar: any;
   if (window.klarContext.isInKlar) {
     const currentPage = parent.frames.window.klar.sdk.currentPage.get();
@@ -78,25 +85,45 @@ function App() {
       <Router>
         <Routes>
           <>
-            {window.klarContext.isInKlar && data.pages.length > 0 && location.pathname.includes('/sites/klar-sites/') && 
-              <Route path={location.pathname} element={<Navigate replace to={currentPageInKlar} />} />
-            }
-            {window.klarContext.isInKlar && data.pages.length > 0  && currentPageInKlar !== '/' && 
-              <Route path="/" element={<Navigate replace to={currentPageInKlar} />} />
-            }
-            {(data as IData).pages.map(page => {
+            {window.klarContext.isInKlar &&
+              data.pages.length > 0 &&
+              location.pathname.includes('/sites/klar-sites/') && (
+                <Route
+                  path={location.pathname}
+                  element={<Navigate replace to={currentPageInKlar} />}
+                />
+              )}
+            {window.klarContext.isInKlar &&
+              data.pages.length > 0 &&
+              currentPageInKlar !== '/' && (
+                <Route
+                  path="/"
+                  element={<Navigate replace to={currentPageInKlar} />}
+                />
+              )}
+            {(data as IData).pages.map((page) => {
               // console.log('Route was added: ', page._path);
-              return <Route path={page._path} element={<Page {...(data as IData)} />} key={page._id}/>
+              return (
+                <Route
+                  path={page._path}
+                  element={<Page {...(data as IData)} />}
+                  key={page._id}
+                />
+              );
             })}
-            {window.klarContext.isInKlar && data.pages.length === 0 && 
-              <Route path="/" element={<Page {...(data as IData)} />} key="no-pages"/>
-            }
-            <Route path="/components" element={<Page {...(data as IData)} />}/>
+            {window.klarContext.isInKlar && data.pages.length === 0 && (
+              <Route
+                path="/"
+                element={<Page {...(data as IData)} />}
+                key="no-pages"
+              />
+            )}
+            <Route path="/components" element={<Page {...(data as IData)} />} />
           </>
         </Routes>
       </Router>
     </HelmetProvider>
-  )
+  );
 }
 
-export default App
+export default App;
