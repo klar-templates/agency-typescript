@@ -277,8 +277,8 @@
       "fields": []
     },
     {
-      "title": "Hero 3",
-      "name": "hero3",
+      "title": "Elements",
+      "name": "elements",
       "icon": "image",
       "hidden": false,
       "type": "object",
@@ -324,22 +324,6 @@
           ]
         }
       ]
-    },
-    {
-      "title": "Card",
-      "name": "card",
-      "icon": "image",
-      "hidden": false,
-      "type": "object",
-      "fields": []
-    },
-    {
-      "title": "Card 1",
-      "name": "card1",
-      "icon": "image",
-      "hidden": false,
-      "type": "object",
-      "fields": []
     },
     {
       "title": "Cards",

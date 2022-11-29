@@ -3,7 +3,7 @@ export default function Card1(data: any) {
     <article className="antialiased bg-on-surface">
       <div className="">
         {/* <!-- Card --> */}
-        <div className="max-w-xs mx-auto">
+        <div className="mx-auto">
           <div className="flex flex-col h-full bg-white shadow-lg rounded-lg overflow-hidden">
             {/* <!-- Image --> */}
             <a

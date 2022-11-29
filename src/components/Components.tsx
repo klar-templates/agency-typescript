@@ -80,6 +80,13 @@ export default function Components(data: any) {
       componentName.charAt(0).toUpperCase() + componentName.slice(1);
     // console.log('componentName', componentName)
     const DynamicComponent = Components[componentName];
+    // console.log(blockType.name);
+    // console.log(data.only);
+    if (data.only) {
+      if (data.only !== blockType.name) {
+        return null;
+      }
+    }
     if (DynamicComponent) {
       blockArray.push(
         <KlarEditBlock
@@ -149,5 +156,9 @@ function Style() {
     }
   </style>
   `;
-  return <div dangerouslySetInnerHTML={{ __html: style }} />;
+  if (window.klarContext.isInKlar) {
+    return <div dangerouslySetInnerHTML={{ __html: style }} />;
+  } else {
+    return null;
+  }
 }

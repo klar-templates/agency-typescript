@@ -1,72 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
       @layer base {
         :root {
-          /* primary */
-          --primary-source: #E13241;
-          --primary-0: #000000;
-          --primary-10: #410007;
-          --primary-20: #680011;
-          --primary-25: #7d0017;
-          --primary-30: #92001c;
-          --primary-35: #a90022;
-          --primary-40: #bc112b;
-          --primary-50: #e03140;
-          --primary-60: #ff535a;
-          --primary-70: #ff8888;
-          --primary-80: #ffb3b1;
-          --primary-90: #ffdad8;
-          --primary-95: #ffedeb;
-          --primary-98: #fff8f7;
-          --primary-99: #fffbff;
-          --primary-100: #ffffff;
-
-          /* neutral */
-          --neutral-0: #000000;
-          --neutral-10: #201a1a;
-          --neutral-20: #362f2e;
-          --neutral-25: #413a39;
-          --neutral-30: #4d4544;
-          --neutral-35: #595050;
-          --neutral-40: #655c5c;
-          --neutral-50: #7f7574;
-          --neutral-60: #998e8e;
-          --neutral-70: #b4a9a8;
-          --neutral-80: #d0c4c3;
-          --neutral-90: #ede0df;
-          --neutral-95: #fbeeed;
-          --neutral-98: #fff8f7;
-          --neutral-99: #fffbff;
-          --neutral-100: #ffffff;
-
-          /* neutral-variant */
-          --neutral-variant-0: #000000;
-          --neutral-variant-10: #251918;
-          --neutral-variant-20: #3b2d2c;
-          --neutral-variant-25: #473837;
-          --neutral-variant-30: #524342;
-          --neutral-variant-35: #5f4f4e;
-          --neutral-variant-40: #6b5a5a;
-          --neutral-variant-50: #857372;
-          --neutral-variant-60: #a08c8b;
-          --neutral-variant-70: #bba6a5;
-          --neutral-variant-80: #d7c1c0;
-          --neutral-variant-90: #f4dddc;
-          --neutral-variant-95: #ffedeb;
-          --neutral-variant-98: #fff8f7;
-          --neutral-variant-99: #fffbff;
-          --neutral-variant-100: #ffffff;
-
           /* primary */
           --primary-50: #eff6ff;
           --primary-100: #dbeafe;
@@ -90,7 +35,7 @@
           --neutral-700: #374151;
           --neutral-800: #1f2937;
           --neutral-900: #111827;
-          
+
           /* neutral variant */
           --neutral-variant-50: #f9fafb;
           --neutral-variant-100: #f3f4f6;
@@ -102,24 +47,6 @@
           --neutral-variant-700: #374151;
           --neutral-variant-800: #1f2937;
           --neutral-variant-900: #111827;
-
-           /* light - default */
-          --primary: var(--primary-40);
-          --on-primary: var(--primary-99);
-          --primary-container: var(--primary-90);
-          --on-primary-container: var(--primary-10);
-          --inverse-primary: var(--primary-80);
-          --background: var(--neutral-99);
-          --on-background: var(--neutral-10);
-          --on-background-muted: var(--neutral-10);
-          --surface: var(--neutral-90);
-          --on-surface: var(--neutral-30);
-          --surface-variant: var(--neutral-90);
-          --on-surface-variant: var(--neutral-30);
-          --inverse-surface: var(--neutral-20);
-          --inverse-on-surface: var(--neutral-95);
-          --inverse-surface-variant: var(--neutral-90);
-          --inverse-on-surface-variant: var(--neutral-30);
 
           /* light - default */
           --primary: var(--primary-500);
@@ -142,8 +69,22 @@
           --inverse-surface-variant: var(--neutral-500);
           --inverse-on-surface-variant: var(--neutral-300);
           --outline: var(--neutral-200);
+
+          --color-primary-dark: var(--primary-600);
+          --color-primary-normal: var(--primary-500);
+          --color-primary-light: var(--primary-300);
+          --color-inverse-primary-dark: var(--primary-200);
+          --color-inverse-primary-normal: var(--primary-100);
+          --color-inverse-primary-light: var(--primary-50);
+
+          --color-neutral-dark: var(--neutral-900);
+          --color-neutral-normal: var(--neutral-700);
+          --color-neutral-light: var(--neutral-500);
+          --color-inverse-neutral-dark-inverse: var(--neutral-200);
+          --color-inverse-neutral-normal: var(--neutral-100);
+          --color-inverse-neutral-light: var(--neutral-50);
         }
-        
+
         .dark {
           /* dark */
           --primary: var(--primary-500);
@@ -166,6 +107,20 @@
           --inverse-surface-variant: var(--neutral-100);
           --inverse-on-surface-variant: var(--neutral-1800);
           --outline: var(--neutral-800);
+
+          --color-primary-dark: var(--primary-50);
+          --color-primary-normal: var(--primary-100);
+          --color-primary-light: var(--primary-200);
+          --color-inverse-primary-dark: var(--primary-900);
+          --color-inverse-primary-normal: var(--primary-700);
+          --color-inverse-primary-light: var(--primary-500);
+
+          --color-neutral-dark: var(--neutral-50);
+          --color-neutral-normal: var(--neutral-100);
+          --color-neutral-light: var(--neutral-200);
+          --color-inverse-neutral-dark: var(--neutral-900);
+          --color-inverse-neutral-normal: var(--neutral-700);
+          --color-inverse-neutral-light: var(--neutral-500);
         }
 
         .theme-swiss {
@@ -193,27 +148,44 @@
       function withOpacity(variableName) {
         return ({ opacityValue }) => {
           if (opacityValue !== undefined) {
-            return `rgba(var(${variableName}), ${opacityValue})`
+            return `rgba(var(${variableName}), ${opacityValue})`;
           }
-          return `rgb(var(${variableName}))`
-        }
+          return `rgb(var(${variableName}))`;
+        };
       }
       tailwind.config = {
         theme: {
           extend: {
+            colors: {
+              'primary-dark': 'var(--color-primary-dark)',
+              'primary-normal': 'var(--color-primary-normal)',
+              'primary-light': 'var(--color-primary-light)',
+              'inverse-primary-dark': 'var(--color-inverse-primary-dark)',
+              'inverse-primary-normal': 'var(--color-inverse-primary-normal)',
+              'inverse-primary-light': 'var(--color-inverse-primary-light)',
+
+              'neutral-dark': 'var(--color-neutral-dark)',
+              'neutral-normal': 'var(--color-neutral-normal)',
+              'neutral-light': 'var(--color-neutral-light)',
+              'inverse-neutral-dark': 'var(--color-inverse-neutral-dark)',
+              'inverse-neutral-normal': 'var(--color-inverse-neutral-normal)',
+              'inverse-neutral-light': 'var(--color-inverse-neutral-light)',
+
+              outline: 'var(--outline)',
+            },
             backgroundColor: {
-              'primary': 'var(--primary)',
+              primary: 'var(--primary)',
               'primary-dark': 'var(--primary-dark)',
               'primary-container': 'var(--primary-container)',
-              'background': 'var(--background)',
+              background: 'var(--background)',
               'inverse-background': 'var(--inverse-background)',
-              'surface': 'var(--surface)',
+              surface: 'var(--surface)',
               'surface-variant': 'var(--surface-variant)',
               'inverse-surface': 'var(--inverse-surface)',
-              'inverse-surface-variant': 'var(--inverse-surface-variant)'
+              'inverse-surface-variant': 'var(--inverse-surface-variant)',
             },
             textColor: {
-              'primary': 'var(--primary)',
+              primary: 'var(--primary)',
               'primary-dark': 'var(--primary-dark)',
               'on-primary': 'var(--on-primary)',
               'on-primary-container': 'var(--on-primary-container)',
@@ -224,16 +196,16 @@
               'on-surface': 'var(--on-surface)',
               'on-surface-variant': 'var(--on-surface-variant)',
               'inverse-on-surface': 'var(--inverse-on-surface)',
-              'inverse-on-surface-variant': 'var(--inverse-on-surface-variant)'
-            }
-          }
-        }
-      }
+              'inverse-on-surface-variant': 'var(--inverse-on-surface-variant)',
+            },
+          },
+        },
+      };
     </script>
-    
+
     <!-- Klar Style -->
     <!-- style -->
-    <script type="module" crossorigin src="/assets/index.f3ee3af0.js"></script>
+    <script type="module" crossorigin src="/assets/index.d36e6701.js"></script>
   </head>
   <body class="bg-background">
     <div id="root"></div>

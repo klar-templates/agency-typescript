@@ -8,16 +8,17 @@ import Header3 from './blocks/Header3';
 import Hero from './blocks/Hero';
 import Hero1 from './blocks/Hero1';
 import Hero2 from './blocks/Hero2';
-import Hero3 from './blocks/Hero3';
 import Pricing from './blocks/Pricing';
-import Card from './blocks/Card';
-import Card1 from './elements/Card1';
 import Cards from './blocks/Cards';
 import Cards1 from './blocks/Cards1';
 import Team1 from './blocks/Team1';
 import Team2 from './blocks/Team2';
+import Elements from './blocks/Elements';
 import Nunjucks from './blocks/bootstrap/Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
+// Elements
+import Card from './elements/Card';
+import Card1 from './elements/Card1';
 
 const Components: any = {
   Header: Header,
@@ -26,14 +27,14 @@ const Components: any = {
   Hero: Hero,
   Hero1: Hero1,
   Hero2: Hero2,
-  Hero3: Hero3,
   Pricing: Pricing,
-  Card: Card,
-  Card1: Card1,
   Cards: Cards,
   Cards1: Cards1,
   Team1: Team1,
   Team2: Team2,
+  Card: Card,
+  Card1: Card1,
+  Elements: Elements,
 };
 
 export default function Page(data: IData) {
@@ -43,7 +44,7 @@ export default function Page(data: IData) {
     return null;
   }
   if (window.klarContext.pathname === '/components') {
-    return <ComponentsBlock {...data} components={Components} />;
+    return <ComponentsBlock {...data} components={Components} nly="elements" />;
   }
   const blockArray = [];
   for (const [key, value] of Object.entries(

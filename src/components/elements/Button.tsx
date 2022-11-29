@@ -1,35 +1,53 @@
-export default function Button({type, target, size, color, to, children}: any) {
-   //      <a href="#pricing" className="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-white/0 text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 ">
-              //  <span>Get this template <span aria-hidden="true" className="text-black/25">→</span></span></a>
-    let classes;
-    if (size === 'lg' && type === 'filled-inverse') {
-      classes = 'inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-inverse-background text-inverse-on-background hover:bg-inverse-surface';
-    } else if (size === 'lg' && type === 'filled-primary') {
-      classes = 'inline-flex text-on-primary rounded-lg bg-indigo-600 px-4 py-1.5 text-sm font-semibold leading-7 shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700';
-    } else if (size === 'lg' && type === 'filled-tonal') {
-      classes = 'inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-white/0 text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 ';
-      // classes = 'inline-flex text-on-background rounded-lg bg-surface-variant px-4 py-1.5 text-sm font-semibold leading-7 shadow-sm hover:shadow-lg';
-    } else {
-      return null;
-    }
+import classNames from 'classnames';
 
-    if (to) {
-      return (
-        <a href={to} className={classes} target={target ? target : undefined}>
-          <span className="inline-flex items-center">
-            <span>{children}
-            {/* {' '}<span aria-hidden="true" className="text-black/25">→</span> */}
-            </span>
-          </span>
-        </a>
-        );
-    }
+export default function Button({ type, target, size, to, children }: any) {
+  const classes: any = classNames(
+    'inline-flex',
+    'justify-center',
+    'rounded-lg',
+    'text-sm',
+    'font-semibold',
+    'px-4',
+    {
+      'text-on-background bg-background ring-1 ring-outline drop-shadow hover:drop-shadow-lg':
+        type === 'elevated',
+      'text-on-primary bg-primary ring-1 ring-text-on-primary hover:bg-primary-dark over:text-on-primary-dark':
+        type === 'filled',
+      'text-on-surface-variant bg-outline ring-1 ring-outline hadow hover:drop-shadow ':
+        type === 'tonal',
+      'text-inverse-on-background bg-neutral-dark ring-1 ring-outline hover:drop-shadow hover:bg-neutral-normal':
+        type === 'filled-inverse',
+      'text-background bg-background ring-1 ring-outline hover:drop-shadow':
+        type === 'outlined',
+      'text-background bg-background hover:ring-1 hover:ring-outline':
+        type === 'text',
+      'py-3': size === 'lg',
+      'py-2': !size,
+      'py-1.5': size === 'sm',
+    },
+  );
+
+  if (!classes) {
+    return null;
+  }
+
+  if (to) {
     return (
-      <button type="button" className={classes}>
+      <a href={to} className={classes} target={target ? target : undefined}>
         <span className="inline-flex items-center">
-          <span>{children} </span>
+          <span>
+            {children}
+            {/* {' '}<span aria-hidden="true" className="text-black/25">→</span> */}
+          </span>
         </span>
-      </button>
-
+      </a>
+    );
+  }
+  return (
+    <button type="button" className={classes}>
+      <span className="inline-flex items-center">
+        <span>{children} </span>
+      </span>
+    </button>
   );
 }
