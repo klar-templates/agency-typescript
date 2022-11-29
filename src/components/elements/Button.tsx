@@ -1,6 +1,13 @@
 import classNames from 'classnames';
 
-export default function Button({ type, target, size, to, children }: any) {
+export default function Button({
+  type,
+  target,
+  size,
+  to,
+  rounded,
+  children,
+}: any) {
   const classes: any = classNames(
     'inline-flex',
     'justify-center',
@@ -24,6 +31,7 @@ export default function Button({ type, target, size, to, children }: any) {
       'py-3': size === 'lg',
       'py-2': !size,
       'py-1.5': size === 'sm',
+      'rounded-full': rounded,
     },
   );
 

@@ -70,16 +70,6 @@ export default function Hero3(data: any) {
         <Button
           {...{
             to: 'https://www.google.se',
-            type: 'filled',
-            size: 'lg',
-            target: '_blank',
-          }}
-        >
-          Live preview
-        </Button>
-        <Button
-          {...{
-            to: 'https://www.google.se',
             type: 'text',
             size: 'lg',
             target: '_blank',
@@ -130,15 +120,6 @@ export default function Hero3(data: any) {
           {...{
             to: 'https://www.google.se',
             type: 'filled-inverse',
-            target: '_blank',
-          }}
-        >
-          Live preview
-        </Button>
-        <Button
-          {...{
-            to: 'https://www.google.se',
-            type: 'filled',
             target: '_blank',
           }}
         >
@@ -209,8 +190,66 @@ export default function Hero3(data: any) {
         <Button
           {...{
             to: 'https://www.google.se',
-            type: 'filled',
+            type: 'text',
             size: 'sm',
+            target: '_blank',
+          }}
+        >
+          Live preview
+        </Button>
+      </div>
+
+      <div className="mt-10 flex gap-4">
+        <Button
+          {...{
+            to: 'https://www.google.se',
+            type: 'elevated',
+            rounded: true,
+            size: 'lg',
+            target: '_blank',
+          }}
+        >
+          Live preview
+        </Button>
+        <Button
+          {...{
+            to: 'https://www.google.se',
+            type: 'filled',
+            rounded: true,
+            size: 'lg',
+            target: '_blank',
+          }}
+        >
+          Live preview
+        </Button>
+        <Button
+          {...{
+            to: 'https://www.google.se',
+            type: 'tonal',
+            rounded: true,
+            size: 'lg',
+            target: '_blank',
+          }}
+        >
+          Live preview
+        </Button>
+        <Button
+          {...{
+            to: 'https://www.google.se',
+            type: 'outlined',
+            rounded: true,
+            size: 'lg',
+            target: '_blank',
+          }}
+        >
+          Live preview
+        </Button>
+        <Button
+          {...{
+            to: 'https://www.google.se',
+            type: 'filled-inverse',
+            rounded: true,
+            size: 'lg',
             target: '_blank',
           }}
         >
@@ -220,7 +259,8 @@ export default function Hero3(data: any) {
           {...{
             to: 'https://www.google.se',
             type: 'text',
-            size: 'sm',
+            rounded: true,
+            size: 'lg',
             target: '_blank',
           }}
         >
