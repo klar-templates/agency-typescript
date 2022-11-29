@@ -8,6 +8,7 @@ const navigation = [
 ];
 
 export default function Header2(data: any) {
+  // console.log(window.klarContext.data.pages);
   const { _id, _type, logo_text, style } = data.block;
 
   return (
@@ -41,7 +42,9 @@ export default function Header2(data: any) {
               <li
                 key={i}
                 className={
-                  page._id === window.klarContext.currentPage._id
+                  page._id ===
+                  (window.klarContext.currentPage &&
+                    window.klarContext.currentPage._id)
                     ? 'font-semibold text-on-background hover:text-gray-900 list-none whitespace-nowrap active'
                     : 'font-semibold text-on-background hover:text-gray-900 list-none whitespace-nowrap'
                 }
