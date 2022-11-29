@@ -139,7 +139,7 @@
       "title": "Kontaktsida",
       "name": "contact-page",
       "type": "page",
-      "default_blocks": ["navigation", "hero", "footer"],
+      "default_blocks": ["header3", "cards"],
       "fields": [
         {
           "title": "Sidinställningar",

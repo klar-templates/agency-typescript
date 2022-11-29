@@ -8,7 +8,6 @@ const navigation = [
 ];
 
 export default function Header2(data: any) {
-  console.log(data);
   const { _id, _type, logo_text, style } = data.block;
 
   return (
@@ -50,7 +49,7 @@ export default function Header2(data: any) {
                 <Link to={page._path}>{page._menu_item_name}</Link>
               </li>
             ))}
-            {navigation.map((item) => (
+            {/* {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -58,7 +57,7 @@ export default function Header2(data: any) {
               >
                 {item.name}
               </a>
-            ))}
+            ))} */}
           </div>
           {/* <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
             <a
