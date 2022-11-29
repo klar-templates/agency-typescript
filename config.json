@@ -326,14 +326,6 @@
       ]
     },
     {
-      "title": "Card",
-      "name": "card",
-      "icon": "image",
-      "hidden": false,
-      "type": "object",
-      "fields": []
-    },
-    {
       "title": "Cards",
       "name": "cards",
       "icon": "image",
