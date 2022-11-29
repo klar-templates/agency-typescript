@@ -18,9 +18,7 @@ export default function Nunjucks(data: any) {
         console.log('No template content for this block:', data.block._type);
       }
     } else {
-      if (!renderedTemplate) {
-        getTemplate(data.block._type);
-      }
+      getTemplate(data.block._type);
     }
     // return () => clearInterval(id);
   }, []);
@@ -46,16 +44,16 @@ export default function Nunjucks(data: any) {
     }
   }
 
-  // if (!renderedTemplate) {
-  //   return null;
-  // }
-
-  if (!renderedTemplate) {
-    renderedTemplate = window.nunjucks.renderString(template, data);
-    if (window.klarContext.isInKlar) {
-      localStorage.setItem(cacheKeyTemplate, renderedTemplate);
-    }
+  if (!template) {
+    return null;
   }
+
+  // if (!renderedTemplate) {
+  renderedTemplate = window.nunjucks.renderString(template, data);
+  //   if (window.klarContext.isInKlar) {
+  //     localStorage.setItem(cacheKeyTemplate, renderedTemplate);
+  //   }
+  //  }
 
   return <div dangerouslySetInnerHTML={{ __html: renderedTemplate }} />;
 }
