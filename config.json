@@ -261,12 +261,23 @@
       ]
     },
     {
-      "title": "Hero Nunjucks",
-      "name": "hero-nunjucks",
+      "title": "Hero book",
+      "name": "hero-book",
       "icon": "image",
       "hidden": false,
       "type": "object",
-      "fields": []
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Beskrivning",
+          "name": "description",
+          "type": "text"
+        }
+      ]
     },
     {
       "title": "Hero 1",
@@ -1041,6 +1052,10 @@
           "margin_top": 0,
           "bg_image_position_top": 0
         }
+      },
+      "hero-book": {
+        "title": "Make your ideas look awesome, without relying on a designer.",
+        "description": "Learn how to design beautiful user interfaces by yourself using specific tactics explained from a developer's point-of-view."
       },
       "services": {
         "heading": "Services",
