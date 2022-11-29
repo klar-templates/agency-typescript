@@ -1,4 +1,4 @@
-import Button from '../elements/Button';
+import Button from '../Elements/Button';
 
 export default function Hero3(data: any) {
   const {
