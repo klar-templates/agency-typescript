@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import classNames from '../../utils/classNames';
 
 export default function Button({
   type,
@@ -8,32 +8,25 @@ export default function Button({
   rounded,
   children,
 }: any) {
-  const classes: any = classNames(
-    'inline-flex',
-    'justify-center',
-    'rounded-lg',
-    'text-sm',
-    'font-semibold',
-    'px-4',
-    {
-      'text-on-background bg-background ring-1 ring-outline drop-shadow hover:drop-shadow-lg':
-        type === 'elevated',
-      'text-on-primary bg-primary ring-1 ring-text-on-primary hover:bg-primary-dark over:text-on-primary-dark':
-        type === 'filled',
-      'text-on-surface-variant bg-outline ring-1 ring-outline hadow hover:drop-shadow ':
-        type === 'tonal',
-      'text-inverse-on-background bg-neutral-dark ring-1 ring-outline hover:drop-shadow hover:bg-neutral-normal':
-        type === 'filled-inverse',
-      'text-background bg-background ring-1 ring-outline hover:drop-shadow':
-        type === 'outlined',
-      'text-background bg-background hover:ring-1 hover:ring-outline':
-        type === 'text',
-      'py-3': size === 'lg',
-      'py-2': !size,
-      'py-1.5': size === 'sm',
-      'rounded-full': rounded,
-    },
-  );
+  const classes: any = classNames({
+    'inline-flex justify-center rounded-lg text-sm font-semibold px-4': true,
+    'text-on-background bg-background ring-1 ring-outline drop-shadow hover:drop-shadow-lg':
+      type === 'elevated',
+    'text-on-primary bg-primary ring-1 ring-text-on-primary hover:bg-primary-dark over:text-on-primary-dark':
+      type === 'filled',
+    'text-on-surface-variant bg-outline ring-1 ring-outline hadow hover:drop-shadow ':
+      type === 'tonal',
+    'text-inverse-on-background bg-neutral-dark ring-1 ring-outline hover:drop-shadow hover:bg-neutral-normal':
+      type === 'filled-inverse',
+    'text-background bg-background ring-1 ring-outline hover:drop-shadow':
+      type === 'outlined',
+    'text-background bg-background hover:ring-1 hover:ring-outline':
+      type === 'text',
+    'py-3': size === 'lg',
+    'py-2': !size,
+    'py-1.5': size === 'sm',
+    'rounded-full': rounded,
+  });
 
   if (!classes) {
     return null;

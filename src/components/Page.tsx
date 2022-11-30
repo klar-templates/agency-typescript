@@ -2,23 +2,23 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import IData from '../service/interface/IData';
 import ComponentsBlock from './Components';
 import Layout from './Layout';
-import Header from './Blocks/Header';
-import Header2 from './Blocks/Header2';
-import Header3 from './Blocks/Header3';
-import Hero from './Blocks/Hero';
-import Hero1 from './Blocks/Hero1';
-import Hero2 from './Blocks/Hero2';
-import Pricing from './Blocks/Pricing';
-import Cards from './Blocks/Cards';
-import Cards1 from './Blocks/Cards1';
-import Team1 from './Blocks/Team1';
-import Team2 from './Blocks/Team2';
-import Elements from './Blocks/Elements';
-import Nunjucks from './Blocks/bootstrap/Nunjucks';
+import Header from './blocks/Header';
+import Header2 from './blocks/Header2';
+import Header3 from './blocks/Header3';
+import Hero from './blocks/Hero';
+import Hero1 from './blocks/Hero1';
+import Hero2 from './blocks/Hero2';
+import Pricing from './blocks/Pricing';
+import Cards from './blocks/Cards';
+import Cards1 from './blocks/Cards1';
+import Team1 from './blocks/Team1';
+import Team2 from './blocks/Team2';
+import Elements from './blocks/Elements';
+import Nunjucks from './blocks/bootstrap/Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
 // Elements
-import Card from './Elements/Card';
-import Card1 from './Elements/Card1';
+import Card from './elements/Card';
+import Card1 from './elements/Card1';
 
 const Components: any = {
   Header: Header,

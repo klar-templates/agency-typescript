@@ -1,4 +1,4 @@
-import Card from '../Elements/Card';
+import Card from '../elements/Card';
 
 export default function Cards1(data: any) {
   const {
