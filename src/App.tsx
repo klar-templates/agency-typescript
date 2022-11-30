@@ -81,6 +81,7 @@ function App() {
   console.log('location.href', location.href);
   console.log('location.pathname', location.pathname);
   console.log('data', data);
+  console.log('pages.length', data.pages.length);
 
   return (
     <HelmetProvider>
