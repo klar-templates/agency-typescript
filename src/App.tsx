@@ -8,7 +8,6 @@ import {
 import { HelmetProvider } from 'react-helmet-async';
 import IData from './service/interface/IData';
 import Page from './components/Page';
-import './index.css';
 
 function App() {
   window.klarContext = {
