@@ -84,6 +84,7 @@ function createContext(data: IData) {
   const routeNavigate = useNavigate();
   // const pathname = '/startsida';
   const pathname = routeLocation.pathname;
+  console.log('route pathname', pathname);
   let currentPage;
   if (data.pages.length > 0) {
     if (pathname === '/startsida') {
