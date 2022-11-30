@@ -10,6 +10,7 @@ import IData from './service/interface/IData';
 import Page from './components/Page';
 
 function App() {
+  console.log('Hoppas att det här syns :)');
   window.klarContext = {
     isInKlar: typeof parent.frames.window.klar !== 'undefined',
   };
