@@ -6,5 +6,6 @@ declare global {
     klar: any;
     reactPageIsLoaded: any;
     releaseReactApp: any;
+    reactServerPages: any;
   }
 }

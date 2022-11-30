@@ -1,5 +1,4 @@
 export default function (classes: any) {
-  console.log('Det här skall inte synas', classes);
   if (!classes) {
     return '';
   }

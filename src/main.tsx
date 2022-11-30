@@ -5,7 +5,7 @@ import App from './App';
 import './index.css';
 
 if (window.releaseReactApp) {
-  ReactDOMServer.renderToString(
+  window.reactServerPages = ReactDOMServer.renderToString(
     <React.StrictMode>
       <App />
     </React.StrictMode>,
