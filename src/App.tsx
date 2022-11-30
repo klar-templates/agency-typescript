@@ -87,7 +87,7 @@ function App() {
   if (window.releaseReactApp) {
     return (
       <HelmetProvider>
-        <StaticRouter location={'/startsida'}>
+        <StaticRouter location={currentPageInKlar}>
           <Routes>
             <>
               {window.klarContext.isInKlar &&
