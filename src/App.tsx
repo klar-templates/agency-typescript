@@ -80,6 +80,7 @@ function App() {
   console.log('window.klarContext.isInKlar', window.klarContext.isInKlar);
   console.log('location.href', location.href);
   console.log('location.pathname', location.pathname);
+  console.log('data', data);
 
   return (
     <HelmetProvider>
