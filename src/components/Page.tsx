@@ -39,8 +39,6 @@ const Components: any = {
 
 export default function Page(data: IData) {
   createContext(data);
-  console.log('varför', data);
-  console.log('window.klarContext.data', window.klarContext.data);
   if (window.klarContext.data.pages.length === 0) {
     // Tell the user that there are no pages yet.
     return null;
@@ -89,6 +87,7 @@ function createContext(data: IData) {
   const pathname = routeLocation.pathname;
   console.log('route pathname', pathname);
   let currentPage;
+  console.log('is it this?', data.pages);
   if (data.pages.length > 0) {
     if (pathname === '/startsida') {
       // currentPage = data.pages.find(page => page.startpage === true);
