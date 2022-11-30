@@ -38,12 +38,14 @@ const Components: any = {
 };
 
 export default function Page(data: IData) {
-  console.log('varför', data);
   createContext(data);
+  console.log('varför', data);
+  console.log('window.klarContext.data', window.klarContext.data);
   if (window.klarContext.data.pages.length === 0) {
     // Tell the user that there are no pages yet.
     return null;
   }
+  console.log('därför', data);
   if (window.klarContext.pathname === '/components') {
     return (
       <ComponentsBlock {...data} components={Components} only="elements" />
