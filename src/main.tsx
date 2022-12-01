@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import ReactDOMServer from 'react-dom/server';
 import App from './App';
+import AppServer from './AppServer';
 import './index.css';
 
 if (window.releaseReactApp) {
@@ -14,10 +15,10 @@ if (window.releaseReactApp) {
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
           <React.StrictMode>
-            <App />
+            <AppServer />
           </React.StrictMode>,
         );
-        window.reactServerPages[page._path] = reactHtml;
+        window.reactServerPages[page._path] = '<!DOCTYPE html>' + reactHtml;
       });
     }
   }
