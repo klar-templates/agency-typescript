@@ -24,7 +24,7 @@ export default function Layout(data: any) {
   return (
     <>
       <PageStyle theme={window.klarContext.data.theme} />
-      <Helmet>
+      {/* <Helmet>
         <title>
           {window.klarContext.currentPage &&
             window.klarContext.currentPage.settings.title}
@@ -36,7 +36,7 @@ export default function Layout(data: any) {
             window.klarContext.currentPage.settings.description
           }
         />
-      </Helmet>
+      </Helmet> */}
       {/* <Navigation {...headerBlock as any} /> */}
       {blocksToRender}
       {/* <FooterReact {...footerBlock} /> */}

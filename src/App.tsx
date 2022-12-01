@@ -11,7 +11,6 @@ import IData from './service/interface/IData';
 import Page from './components/Page';
 
 function App() {
-  console.log('Hoppas att det här syns :)');
   window.klarContext = {
     isInKlar: typeof parent.frames.window.klar !== 'undefined',
   };
@@ -77,12 +76,12 @@ function App() {
   } else {
     startpage._path = '/';
   }
-  console.log('currentPageInKlar', currentPageInKlar);
-  console.log('window.klarContext.isInKlar', window.klarContext.isInKlar);
-  console.log('location.href', location.href);
-  console.log('location.pathname', location.pathname);
-  console.log('data', data);
-  console.log('pages.length', data.pages.length);
+  // console.log('currentPageInKlar', currentPageInKlar);
+  // console.log('window.klarContext.isInKlar', window.klarContext.isInKlar);
+  // console.log('location.href', location.href);
+  // console.log('location.pathname', location.pathname);
+  // console.log('data', data);
+  // console.log('pages.length', data.pages.length);
 
   if (window.releaseReactApp) {
     return (
