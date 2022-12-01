@@ -68,7 +68,7 @@
       "fields": [
         {
           "title": "Sidinställningar",
-          "name": "page_settings",
+          "name": "settings",
           "type": "object",
           "fields": [
             {
@@ -93,7 +93,7 @@
       "fields": [
         {
           "title": "Sidinställningar",
-          "name": "page_settings",
+          "name": "settings",
           "type": "object",
           "fields": [
             {
@@ -118,7 +118,7 @@
       "fields": [
         {
           "title": "Sidinställningar",
-          "name": "page_settings",
+          "name": "settings",
           "type": "object",
           "fields": [
             {
@@ -143,7 +143,7 @@
       "fields": [
         {
           "title": "Sidinställningar",
-          "name": "page_settings",
+          "name": "settings",
           "type": "object",
           "fields": [
             {

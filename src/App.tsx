@@ -71,8 +71,9 @@ function App() {
   const startpage = (data as IData).pages.find((p) => p.startpage);
 
   let currentPageInKlar: any;
+  let currentPage;
   if (window.klarContext.isInKlar) {
-    const currentPage = parent.frames.window.klar.sdk.currentPage.get();
+    currentPage = parent.frames.window.klar.sdk.currentPage.get();
     if (currentPage) {
       currentPageInKlar = currentPage._path;
     }
@@ -91,10 +92,10 @@ function App() {
       <HelmetProvider>
         <html>
           <head>
-            <title>Agency - Start Bootstrap Theme</title>
+            <title>{currentPage?.settings?.title}</title>
             <meta
               name="description"
-              content="This is my one page website and it's beautiful!"
+              content={currentPage?.settings?.description}
             ></meta>
           </head>
           <body>
