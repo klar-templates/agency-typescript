@@ -68,18 +68,23 @@
       "fields": [
         {
           "title": "Sidinställningar",
-          "name": "settings",
           "type": "object",
           "fields": [
             {
-              "title": "Sidtitel",
-              "name": "title",
-              "type": "string"
-            },
-            {
-              "title": "Beskrivning",
-              "name": "description",
-              "type": "text"
+              "title": "Titel och beskrivning",
+              "type": "object",
+              "fields": [
+                {
+                  "title": "Sidtitel",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "title": "Beskrivning",
+                  "name": "description",
+                  "type": "text"
+                }
+              ]
             }
           ]
         }
@@ -93,18 +98,23 @@
       "fields": [
         {
           "title": "Sidinställningar",
-          "name": "settings",
           "type": "object",
           "fields": [
             {
-              "title": "Sidtitel",
-              "name": "title",
-              "type": "string"
-            },
-            {
-              "title": "Beskrivning",
-              "name": "description",
-              "type": "text"
+              "title": "Titel och beskrivning",
+              "type": "object",
+              "fields": [
+                {
+                  "title": "Sidtitel",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "title": "Beskrivning",
+                  "name": "description",
+                  "type": "text"
+                }
+              ]
             }
           ]
         }
@@ -118,18 +128,23 @@
       "fields": [
         {
           "title": "Sidinställningar",
-          "name": "settings",
           "type": "object",
           "fields": [
             {
-              "title": "Sidtitel",
-              "name": "title",
-              "type": "string"
-            },
-            {
-              "title": "Beskrivning",
-              "name": "description",
-              "type": "text"
+              "title": "Titel och beskrivning",
+              "type": "object",
+              "fields": [
+                {
+                  "title": "Sidtitel",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "title": "Beskrivning",
+                  "name": "description",
+                  "type": "text"
+                }
+              ]
             }
           ]
         }
@@ -143,18 +158,23 @@
       "fields": [
         {
           "title": "Sidinställningar",
-          "name": "settings",
           "type": "object",
           "fields": [
             {
-              "title": "Sidtitel",
-              "name": "title",
-              "type": "string"
-            },
-            {
-              "title": "Beskrivning",
-              "name": "description",
-              "type": "text"
+              "title": "Titel och beskrivning",
+              "type": "object",
+              "fields": [
+                {
+                  "title": "Sidtitel",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "title": "Beskrivning",
+                  "name": "description",
+                  "type": "text"
+                }
+              ]
             }
           ]
         }
