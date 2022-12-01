@@ -5,6 +5,7 @@ import App from './App';
 import './index.css';
 
 if (window.releaseReactApp) {
+  const tempCurrentPage = localStorage.getItem('current-page') as string;
   window.reactServerPages = [];
   if (parent.frames.window.klar) {
     const pages = parent.frames.window.klar.data.pages;
@@ -20,6 +21,7 @@ if (window.releaseReactApp) {
       });
     }
   }
+  localStorage.setItem('current-page', tempCurrentPage) as unknown;
 } else {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
