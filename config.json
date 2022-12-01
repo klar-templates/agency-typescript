@@ -68,7 +68,7 @@
       "fields": [
         {
           "title": "Sidinställningar",
-          "name": "page",
+          "name": "page_settings",
           "type": "object",
           "fields": [
             {
@@ -97,90 +97,21 @@
       "name": "subpage",
       "type": "page",
       "default_blocks": ["header3"],
-      "fields": [
-        {
-          "title": "Sidinställningar",
-          "type": "object",
-          "fields": [
-            {
-              "title": "Titel och beskrivning",
-              "type": "object",
-              "fields": [
-                {
-                  "title": "Sidtitel",
-                  "name": "title",
-                  "type": "string"
-                },
-                {
-                  "title": "Beskrivning",
-                  "name": "description",
-                  "type": "text"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "fields": []
     },
     {
       "title": "Blogg",
       "name": "blog",
       "type": "page",
       "default_blocks": ["navigation", "hero", "footer"],
-      "fields": [
-        {
-          "title": "Sidinställningar",
-          "type": "object",
-          "fields": [
-            {
-              "title": "Titel och beskrivning",
-              "type": "object",
-              "fields": [
-                {
-                  "title": "Sidtitel",
-                  "name": "title",
-                  "type": "string"
-                },
-                {
-                  "title": "Beskrivning",
-                  "name": "description",
-                  "type": "text"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "fields": []
     },
     {
       "title": "Kontaktsida",
       "name": "contact-page",
       "type": "page",
       "default_blocks": ["header3", "cards"],
-      "fields": [
-        {
-          "title": "Sidinställningar",
-          "type": "object",
-          "fields": [
-            {
-              "title": "Titel och beskrivning",
-              "type": "object",
-              "fields": [
-                {
-                  "title": "Sidtitel",
-                  "name": "title",
-                  "type": "string"
-                },
-                {
-                  "title": "Beskrivning",
-                  "name": "description",
-                  "type": "text"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "fields": []
     }
   ],
   "block_types": [
