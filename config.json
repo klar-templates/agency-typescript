@@ -68,10 +68,12 @@
       "fields": [
         {
           "title": "Sidinställningar",
+          "name": "page",
           "type": "object",
           "fields": [
             {
               "title": "Titel och beskrivning",
+              "name": "settings",
               "type": "object",
               "fields": [
                 {
