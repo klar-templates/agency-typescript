@@ -16,7 +16,7 @@ if (window.releaseReactApp) {
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
           <React.StrictMode>
-            <App />
+            <App1 />
           </React.StrictMode>,
         );
         window.reactServerPages[page._path] = '<!DOCTYPE html>' + reactHtml;
