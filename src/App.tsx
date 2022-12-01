@@ -11,11 +11,10 @@ import IData from './service/interface/IData';
 import Page from './components/Page';
 
 function App() {
-  window.klarContext = {
-    isInKlar: typeof parent.frames.window.klar !== 'undefined',
-  };
   const [data, setData] = useState(
-    window.klarContext.isInKlar ? parent.frames.window.klar.data : undefined,
+    typeof parent.frames.window.klar !== 'undefined'
+      ? parent.frames.window.klar.data
+      : undefined,
   );
   useEffect(() => {
     // if (location.pathname == '/sites/klar-sites/agency-typescript') {
@@ -26,7 +25,7 @@ function App() {
     // }
     // window.klar = {};
     // window.klar['setData'] = setData;
-    if (window.klarContext.isInKlar) {
+    if (typeof parent.frames.window.klar !== 'undefined') {
       // console.log(typeof window.klar !== 'undefined')
       parent.frames.window.klar['setData'] = setData;
       // setData(parent.frames.window.klar.data);
@@ -39,6 +38,10 @@ function App() {
     }
     // return () => clearInterval(id);
   }, []);
+
+  window.klarContext = {
+    isInKlar: typeof parent.frames.window.klar !== 'undefined',
+  };
 
   function getData(siteName: string) {
     const cacheKey = 'klar-data';
