@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import ReactDOMServer from 'react-dom/server';
 import App from './App';
-import App1 from './App1';
 import AppServer from './AppServer';
 import './index.css';
 
@@ -16,7 +15,7 @@ if (window.releaseReactApp) {
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
           <React.StrictMode>
-            <App1 />
+            <App />
           </React.StrictMode>,
         );
         window.reactServerPages[page._path] = '<!DOCTYPE html>' + reactHtml;
@@ -27,7 +26,7 @@ if (window.releaseReactApp) {
 } else {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-      <App1 />
+      <App />
     </React.StrictMode>,
   );
 }
