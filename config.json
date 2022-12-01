@@ -90,21 +90,75 @@
       "name": "subpage",
       "type": "page",
       "default_blocks": ["header3"],
-      "fields": []
+      "fields": [
+        {
+          "title": "Titel och beskrivning",
+          "name": "settings",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Sidtitel",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Blogg",
       "name": "blog",
       "type": "page",
       "default_blocks": ["navigation", "hero", "footer"],
-      "fields": []
+      "fields": [
+        {
+          "title": "Titel och beskrivning",
+          "name": "settings",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Sidtitel",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Kontaktsida",
       "name": "contact-page",
       "type": "page",
       "default_blocks": ["header3", "cards"],
-      "fields": []
+      "fields": [
+        {
+          "title": "Titel och beskrivning",
+          "name": "settings",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Sidtitel",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
+            }
+          ]
+        }
+      ]
     }
   ],
   "block_types": [
