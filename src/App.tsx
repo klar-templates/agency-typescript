@@ -10,7 +10,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import IData from './service/interface/IData';
 import Page from './components/Page';
 
-function App1() {
+function App() {
   const [data, setData] = useState(
     typeof parent.frames.window.klar !== 'undefined'
       ? parent.frames.window.klar.data
@@ -91,7 +91,11 @@ function App1() {
       <HelmetProvider>
         <html>
           <head>
-            <title>Server Rendered App</title>
+            <title>Agency - Start Bootstrap Theme</title>
+            <meta
+              name="description"
+              content="This is my one page website and it's beautiful!"
+            ></meta>
           </head>
           <body>
             <StaticRouter location={currentPageInKlar}>
@@ -192,4 +196,4 @@ function App1() {
   }
 }
 
-export default App1;
+export default App;
