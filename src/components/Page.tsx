@@ -43,7 +43,6 @@ export default function Page(data: IData) {
     // Tell the user that there are no pages yet.
     return null;
   }
-  console.log('därför', data);
   if (window.klarContext.pathname === '/components') {
     return (
       <ComponentsBlock {...data} components={Components} only="elements" />
@@ -85,7 +84,6 @@ function createContext(data: IData) {
   const routeNavigate = useNavigate();
   // const pathname = '/startsida';
   const pathname = routeLocation.pathname;
-  console.log('route pathname', pathname);
   let currentPage;
   if (data.pages.length > 0) {
     if (pathname === '/startsida') {
