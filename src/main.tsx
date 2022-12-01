@@ -9,7 +9,7 @@ if (window.releaseReactApp) {
   if (parent.frames.window.klar) {
     const pages = parent.frames.window.klar.data.pages;
     if (pages.length > 0) {
-      pages.array.forEach((page: any) => {
+      pages.forEach((page: any) => {
         parent.frames.localStorage.setItem(
           'current-page',
           page._path,
