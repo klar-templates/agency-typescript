@@ -67,26 +67,19 @@
       "default_blocks": [],
       "fields": [
         {
-          "title": "Sidinställningar",
-          "name": "page_settings",
+          "title": "Titel och beskrivning",
+          "name": "settings",
           "type": "object",
           "fields": [
             {
-              "title": "Titel och beskrivning",
-              "name": "settings",
-              "type": "object",
-              "fields": [
-                {
-                  "title": "Sidtitel",
-                  "name": "title",
-                  "type": "string"
-                },
-                {
-                  "title": "Beskrivning",
-                  "name": "description",
-                  "type": "text"
-                }
-              ]
+              "title": "Sidtitel",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Beskrivning",
+              "name": "description",
+              "type": "text"
             }
           ]
         }
