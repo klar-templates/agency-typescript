@@ -84,103 +84,100 @@ function App() {
   console.log('data', data);
   console.log('pages.length', data.pages.length);
 
-  if (window.releaseReactApp) {
-    return (
-      <HelmetProvider>
-        <StaticRouter location={currentPageInKlar}>
-          <Routes>
-            <>
-              {window.klarContext.isInKlar &&
-                data.pages.length > 0 &&
-                location.pathname.includes('/sites/klar-sites/') && (
-                  <Route
-                    path={location.pathname}
-                    element={<Navigate replace to={currentPageInKlar} />}
-                  />
-                )}
-              {window.klarContext.isInKlar &&
-                data.pages.length > 0 &&
-                currentPageInKlar !== '/' && (
-                  <Route
-                    path="/"
-                    element={<Navigate replace to={currentPageInKlar} />}
-                  />
-                )}
-              {(data as IData).pages.map((page) => {
-                // console.log('Route was added: ', page._path);
-                return (
-                  <Route
-                    path={page._path}
-                    element={<Page {...(data as IData)} />}
-                    key={page._id}
-                  />
-                );
-              })}
-              {window.klarContext.isInKlar && data.pages.length === 0 && (
+  // if (window.releaseReactApp) {
+  //   return (
+  //     <HelmetProvider>
+  //       <StaticRouter location={currentPageInKlar}>
+  //         <Routes>
+  //           <>
+  //             {window.klarContext.isInKlar &&
+  //               data.pages.length > 0 &&
+  //               location.pathname.includes('/sites/klar-sites/') && (
+  //                 <Route
+  //                   path={location.pathname}
+  //                   element={<Navigate replace to={currentPageInKlar} />}
+  //                 />
+  //               )}
+  //             {window.klarContext.isInKlar &&
+  //               data.pages.length > 0 &&
+  //               currentPageInKlar !== '/' && (
+  //                 <Route
+  //                   path="/"
+  //                   element={<Navigate replace to={currentPageInKlar} />}
+  //                 />
+  //               )}
+  //             {(data as IData).pages.map((page) => {
+  //               // console.log('Route was added: ', page._path);
+  //               return (
+  //                 <Route
+  //                   path={page._path}
+  //                   element={<Page {...(data as IData)} />}
+  //                   key={page._id}
+  //                 />
+  //               );
+  //             })}
+  //             {window.klarContext.isInKlar && data.pages.length === 0 && (
+  //               <Route
+  //                 path="/"
+  //                 element={<Page {...(data as IData)} />}
+  //                 key="no-pages"
+  //               />
+  //             )}
+  //             <Route
+  //               path="/components"
+  //               element={<Page {...(data as IData)} />}
+  //             />
+  //           </>
+  //         </Routes>
+  //       </StaticRouter>
+  //     </HelmetProvider>
+  //   );
+  // } else {
+  return (
+    <HelmetProvider>
+      <Router>
+        <Routes>
+          <>
+            {window.klarContext.isInKlar &&
+              data.pages.length > 0 &&
+              location.pathname.includes('/sites/klar-sites/') && (
                 <Route
-                  path="/"
-                  element={<Page {...(data as IData)} />}
-                  key="no-pages"
+                  path={location.pathname}
+                  element={<Navigate replace to={currentPageInKlar} />}
                 />
               )}
-              <Route
-                path="/components"
-                element={<Page {...(data as IData)} />}
-              />
-            </>
-          </Routes>
-        </StaticRouter>
-      </HelmetProvider>
-    );
-  } else {
-    return (
-      <HelmetProvider>
-        <Router>
-          <Routes>
-            <>
-              {window.klarContext.isInKlar &&
-                data.pages.length > 0 &&
-                location.pathname.includes('/sites/klar-sites/') && (
-                  <Route
-                    path={location.pathname}
-                    element={<Navigate replace to={currentPageInKlar} />}
-                  />
-                )}
-              {window.klarContext.isInKlar &&
-                data.pages.length > 0 &&
-                currentPageInKlar !== '/' && (
-                  <Route
-                    path="/"
-                    element={<Navigate replace to={currentPageInKlar} />}
-                  />
-                )}
-              {(data as IData).pages.map((page) => {
-                // console.log('Route was added: ', page._path);
-                return (
-                  <Route
-                    path={page._path}
-                    element={<Page {...(data as IData)} />}
-                    key={page._id}
-                  />
-                );
-              })}
-              {window.klarContext.isInKlar && data.pages.length === 0 && (
+            {window.klarContext.isInKlar &&
+              data.pages.length > 0 &&
+              currentPageInKlar !== '/' && (
                 <Route
                   path="/"
-                  element={<Page {...(data as IData)} />}
-                  key="no-pages"
+                  element={<Navigate replace to={currentPageInKlar} />}
                 />
               )}
+            {(data as IData).pages.map((page) => {
+              // console.log('Route was added: ', page._path);
+              return (
+                <Route
+                  path={page._path}
+                  element={<Page {...(data as IData)} />}
+                  key={page._id}
+                />
+              );
+            })}
+            {window.klarContext.isInKlar && data.pages.length === 0 && (
               <Route
-                path="/components"
+                path="/"
                 element={<Page {...(data as IData)} />}
+                key="no-pages"
               />
-            </>
-          </Routes>
-        </Router>
-      </HelmetProvider>
-    );
-  }
+            )}
+            <Route path="/components" element={<Page {...(data as IData)} />} />
+          </>
+        </Routes>
+      </Router>
+    </HelmetProvider>
+  );
 }
+// }
 
 export default App;
