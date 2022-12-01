@@ -10,10 +10,7 @@ if (window.releaseReactApp) {
     const pages = parent.frames.window.klar.data.pages;
     if (pages.length > 0) {
       pages.forEach((page: any) => {
-        parent.frames.localStorage.setItem(
-          'current-page',
-          page._path,
-        ) as unknown;
+        localStorage.setItem('current-page', page._path) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
           <React.StrictMode>
             <App />
