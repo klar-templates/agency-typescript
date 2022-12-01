@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import ReactDOMServer from 'react-dom/server';
 import App from './App';
+import App1 from './App1';
 import AppServer from './AppServer';
 import './index.css';
 
@@ -26,7 +27,7 @@ if (window.releaseReactApp) {
 } else {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-      <App />
+      <App1 />
     </React.StrictMode>,
   );
 }
