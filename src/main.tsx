@@ -6,7 +6,7 @@ import './index.css';
 
 if (window.releaseReactApp) {
   const tempCurrentPage = localStorage.getItem('current-page') as string;
-  window.reactServerPages = [];
+  window.reactServerPages = {};
   if (parent.frames.window.klar) {
     const pages = parent.frames.window.klar.data.pages;
     if (pages.length > 0) {
@@ -17,7 +17,7 @@ if (window.releaseReactApp) {
             <App />
           </React.StrictMode>,
         );
-        window.reactServerPages.push(reactHtml);
+        window.reactServerPages[page._path] = reactHtml;
       });
     }
   }
