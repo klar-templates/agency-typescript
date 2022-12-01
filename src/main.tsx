@@ -14,13 +14,12 @@ if (window.releaseReactApp) {
           'current-page',
           page._path,
         ) as unknown;
-        window.reactServerPages.push(
-          ReactDOMServer.renderToString(
-            <React.StrictMode>
-              <App />
-            </React.StrictMode>,
-          ),
+        const reactHtml = ReactDOMServer.renderToString(
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>,
         );
+        window.reactServerPages.push(reactHtml);
       });
     }
   }
