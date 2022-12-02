@@ -56,7 +56,9 @@ function App() {
       requestData().then((data) => {
         console.log(data);
         if (window.production) {
+          data = JSON.stringify(data);
           data = data.replace(/"_path:"\//gm, '"_path:"/agency-typescript/');
+          data = JSON.parse(data);
         }
         // localStorage.setItem(cacheKey, JSON.stringify(data));
         setData(data);
