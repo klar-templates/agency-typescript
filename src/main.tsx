@@ -17,8 +17,7 @@ if (window.releaseReactApp) {
             <App />
           </React.StrictMode>,
         );
-        window.reactServerPages[page._id] =
-          '<!DOCTYPE html lang="sv">' + reactHtml;
+        window.reactServerPages[page._id] = '<!DOCTYPE html>' + reactHtml;
       });
     }
   }

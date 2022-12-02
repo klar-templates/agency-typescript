@@ -90,7 +90,7 @@ function App() {
   if (window.releaseReactApp) {
     return (
       <HelmetProvider>
-        <html>
+        <html lang="en">
           <head>
             <title>{currentPage?.settings?.title}</title>
             <meta
