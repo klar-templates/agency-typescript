@@ -8,7 +8,7 @@ if (window.releaseReactApp) {
   const tempCurrentPage = localStorage.getItem('current-page') as string;
   window.reactServerPages = {};
   if (parent.frames.window.klar) {
-    const pages = { ...parent.frames.window.klar.data.pages };
+    const pages = [...parent.frames.window.klar.data.pages];
     if (pages.length > 0) {
       pages.forEach((page: any) => {
         localStorage.setItem('current-page', page._id) as unknown;
