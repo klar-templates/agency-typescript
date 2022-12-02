@@ -57,7 +57,8 @@ function App() {
         console.log(data);
         if (window.production) {
           data = JSON.stringify(data);
-          data = data.replace(/"_path:"\//gm, '"_path:"/agency-typescript/');
+          // console.log(data);
+          data = data.replace(/"_path":"\//gm, '"_path":"/agency-typescript/');
           data = JSON.parse(data);
         }
         console.log('Fixade urlar: ', data);
@@ -84,7 +85,11 @@ function App() {
       currentPageInKlar = currentPage._path;
     }
   } else {
-    startpage._path = '/';
+    if (window.production) {
+      startpage._path = '/agency-typescript/';
+    } else {
+      startpage._path = '/';
+    }
   }
   // console.log('currentPageInKlar', currentPageInKlar);
   // console.log('window.klarContext.isInKlar', window.klarContext.isInKlar);
