@@ -208,6 +208,14 @@ function App() {
                   key="no-pages"
                 />
               )}
+
+              {location.pathname === '/agency-typescript/' && (
+                <Route
+                  path={location.pathname}
+                  element={<Navigate replace to={currentPageInKlar} />}
+                />
+              )}
+
               <Route
                 path="/components"
                 element={<Page {...(data as IData)} />}
