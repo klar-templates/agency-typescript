@@ -92,13 +92,26 @@ function App() {
       <HelmetProvider>
         <html lang="en">
           <head>
+            <meta charSet="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0"
+            />
             <title>{currentPage?.settings?.title}</title>
             <meta
               name="description"
               content={currentPage?.settings?.description}
             ></meta>
+            <script
+              type="module"
+              crossOrigin="true"
+              src="/assets/index.3bbad176.js"
+            ></script>
+            <link rel="stylesheet" href="/assets/index.d855147e.css" />
           </head>
-          <body>
+          <body className="bg-background">
             <StaticRouter location={currentPageInKlar}>
               <Routes>
                 <>
