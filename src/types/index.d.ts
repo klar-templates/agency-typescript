@@ -7,5 +7,6 @@ declare global {
     reactPageIsLoaded: any;
     releaseReactApp: any;
     reactServerPages: any;
+    env: any;
   }
 }

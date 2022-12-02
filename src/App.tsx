@@ -92,7 +92,7 @@ function App() {
       <HelmetProvider>
         <html lang="en">
           <head>
-            <base href="/agency-typescript" />
+            {/* <base href="/agency-typescript" /> */}
             <meta charSet="utf-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -111,12 +111,15 @@ function App() {
               src="/assets/index.3bbad176.js"
             ></script>
             <link rel="stylesheet" href="/assets/index.d855147e.css" /> */}
+            <link
+              rel="stylesheet"
+              href={`/${window.env.site.github_repo}/assets/index.css`}
+            />
             <script
               type="module"
               crossOrigin="true"
-              src="/assets/index.js"
+              src={`/${window.env.site.github_repo}/assets/index.js`}
             ></script>
-            <link rel="stylesheet" href="/assets/index.css" />
           </head>
           <body className="bg-background">
             <StaticRouter location={currentPageInKlar}>
