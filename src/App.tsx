@@ -113,9 +113,9 @@ function App() {
             <script
               type="module"
               crossOrigin="true"
-              src="/assets/index.js"
+              src="assets/index.js"
             ></script>
-            <link rel="stylesheet" href="/assets/index.css" />
+            <link rel="stylesheet" href="assets/index.css" />
           </head>
           <body className="bg-background">
             <StaticRouter location={currentPageInKlar}>
