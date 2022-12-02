@@ -60,6 +60,7 @@ function App() {
           data = data.replace(/"_path:"\//gm, '"_path:"/agency-typescript/');
           data = JSON.parse(data);
         }
+        console.log('Fixade urlar: ', data);
         // localStorage.setItem(cacheKey, JSON.stringify(data));
         setData(data);
       });
