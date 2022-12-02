@@ -211,12 +211,12 @@ function App() {
                 />
               )}
 
-              {location.pathname === '/agency-typescript/' && (
+              {/* {location.pathname === '/agency-typescript/' && (
                 <Route
                   path={location.pathname}
                   element={<Navigate replace to={currentPageInKlar} />}
                 />
-              )}
+              )} */}
 
               <Route
                 path="/components"
