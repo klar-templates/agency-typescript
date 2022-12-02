@@ -122,49 +122,51 @@ function App() {
             ></script>
           </head>
           <body className="bg-background">
-            <StaticRouter location={currentPageInKlar}>
-              <Routes>
-                <>
-                  {window.klarContext.isInKlar &&
-                    data.pages.length > 0 &&
-                    location.pathname.includes('/sites/klar-sites/') && (
-                      <Route
-                        path={location.pathname}
-                        element={<Navigate replace to={currentPageInKlar} />}
-                      />
-                    )}
-                  {window.klarContext.isInKlar &&
-                    data.pages.length > 0 &&
-                    currentPageInKlar !== '/' && (
+            <div id="root">
+              <StaticRouter location={currentPageInKlar}>
+                <Routes>
+                  <>
+                    {window.klarContext.isInKlar &&
+                      data.pages.length > 0 &&
+                      location.pathname.includes('/sites/klar-sites/') && (
+                        <Route
+                          path={location.pathname}
+                          element={<Navigate replace to={currentPageInKlar} />}
+                        />
+                      )}
+                    {window.klarContext.isInKlar &&
+                      data.pages.length > 0 &&
+                      currentPageInKlar !== '/' && (
+                        <Route
+                          path="/"
+                          element={<Navigate replace to={currentPageInKlar} />}
+                        />
+                      )}
+                    {(data as IData).pages.map((page) => {
+                      // console.log('Route was added: ', page._path);
+                      return (
+                        <Route
+                          path={page._path}
+                          element={<Page {...(data as IData)} />}
+                          key={page._id}
+                        />
+                      );
+                    })}
+                    {window.klarContext.isInKlar && data.pages.length === 0 && (
                       <Route
                         path="/"
-                        element={<Navigate replace to={currentPageInKlar} />}
+                        element={<Page {...(data as IData)} />}
+                        key="no-pages"
                       />
                     )}
-                  {(data as IData).pages.map((page) => {
-                    // console.log('Route was added: ', page._path);
-                    return (
-                      <Route
-                        path={page._path}
-                        element={<Page {...(data as IData)} />}
-                        key={page._id}
-                      />
-                    );
-                  })}
-                  {window.klarContext.isInKlar && data.pages.length === 0 && (
                     <Route
-                      path="/"
+                      path="/components"
                       element={<Page {...(data as IData)} />}
-                      key="no-pages"
                     />
-                  )}
-                  <Route
-                    path="/components"
-                    element={<Page {...(data as IData)} />}
-                  />
-                </>
-              </Routes>
-            </StaticRouter>
+                  </>
+                </Routes>
+              </StaticRouter>
+            </div>
           </body>
         </html>
       </HelmetProvider>
