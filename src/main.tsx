@@ -4,6 +4,10 @@ import ReactDOMServer from 'react-dom/server';
 import App from './App';
 import './index.css';
 
+if (location.host.includes('.github.io')) {
+  window.production = true;
+}
+
 if (window.releaseReactApp) {
   const tempCurrentPage = localStorage.getItem('current-page') as string;
   window.reactServerPages = {};

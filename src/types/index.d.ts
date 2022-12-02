@@ -8,5 +8,6 @@ declare global {
     releaseReactApp: any;
     reactServerPages: any;
     env: any;
+    production: any;
   }
 }

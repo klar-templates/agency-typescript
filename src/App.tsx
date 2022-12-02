@@ -55,6 +55,9 @@ function App() {
       }
       requestData().then((data) => {
         console.log(data);
+        if (window.production) {
+          data = data.replace(/_path: "\//gm, '_path: /agency-typescript/');
+        }
         // localStorage.setItem(cacheKey, JSON.stringify(data));
         setData(data);
       });
