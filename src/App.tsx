@@ -92,6 +92,7 @@ function App() {
       <HelmetProvider>
         <html lang="en">
           <head>
+            <base href="/agency-typescript" />
             <meta charSet="utf-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <link rel="icon" type="image/svg+xml" href="/vite.svg" />
