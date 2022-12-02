@@ -1,10 +1,13 @@
+import RenderStyle from './RenderStyle';
+
 export default function PageStyle(data: any) {
-  return (
-    <Style theme={data.theme} />
-  );
- 
-  function Style({theme}: any) {
-    const themeStyle = ``;
-    return <div dangerouslySetInnerHTML={{__html: themeStyle}} />;
-  }
+  const theme = data.theme;
+  // const pageStyle = `
+  //   body {
+  //     background: red !important;
+  //   }
+  // `;
+  const pageStyle = ``;
+
+  return <RenderStyle>{pageStyle}</RenderStyle>;
 }

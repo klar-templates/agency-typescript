@@ -1,10 +1,9 @@
+import RenderScript from './RenderScript';
+
 export default function PageScript() {
-  return (
-    <Script />
-  );
- 
-  function Script() {
-    const pageScript = ``;
-    return <div dangerouslySetInnerHTML={{__html: pageScript}} />;
-  }
+  // const pageScript = `
+  //   console.log('Från page-script-komponenten');
+  // `;
+  const pageScript = ``;
+  return <RenderScript>{pageScript}</RenderScript>;
 }
