@@ -104,12 +104,18 @@ function App() {
               name="description"
               content={currentPage?.settings?.description}
             ></meta>
-            <script
+            {/* <script
               type="module"
               crossOrigin="true"
               src="/assets/index.3bbad176.js"
             ></script>
-            <link rel="stylesheet" href="/assets/index.d855147e.css" />
+            <link rel="stylesheet" href="/assets/index.d855147e.css" /> */}
+            <script
+              type="module"
+              crossOrigin="true"
+              src="/assets/index.js"
+            ></script>
+            <link rel="stylesheet" href="/assets/index.css" />
           </head>
           <body className="bg-background">
             <StaticRouter location={currentPageInKlar}>
