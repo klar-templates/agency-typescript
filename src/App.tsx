@@ -19,6 +19,7 @@ function getInitData() {
       /"_path":"\//gm,
       '"_path":"/' + window.production.siteName + '/',
     );
+    console.log('siteName', window.production.siteName);
     data = JSON.parse(data);
     console.log('Fixade urlar i function: ', data);
   } else if (typeof parent.frames.window.klar !== 'undefined') {
