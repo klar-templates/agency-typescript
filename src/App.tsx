@@ -209,18 +209,12 @@ function App() {
               </StaticRouter>
             </div>
             <script>
-              {
-                (window.siteConfig = JSON.stringify(
-                  window.prodConfig.siteConfig,
-                ))
-              }
+              {`window.siteConfig = ${JSON.stringify(
+                window.prodConfig.siteConfig,
+              )}`}
             </script>
             <script>
-              {
-                (window.hydratedData = JSON.stringify({
-                  pages: data.pages,
-                }))
-              }
+              {`window.hydratedData = ${JSON.stringify({ pages: data.pages })}`}
             </script>
             <script
               type="module"
