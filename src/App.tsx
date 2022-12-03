@@ -45,7 +45,7 @@ function App() {
     } else {
       // Param: Site name in Klar
       if (window.prodConfig) {
-        setData(window.hydratedData);
+        setData(JSON.parse(window.hydratedData));
       } else {
         getData('agency-typescript');
       }
