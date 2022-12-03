@@ -12,18 +12,18 @@ import Page from './components/Page';
 
 function getInitData() {
   let data = undefined;
-  // if (window.prodConfig) {
-  //   data = parent.frames.window.klar.data;
-  //   data = JSON.stringify(data);
-  //   data = data.replace(
-  //     /"_path":"\//gm,
-  //     '"_path":"/' + window.prodConfig.siteName + '/',
-  //   );
-  //   console.log('siteName', window.prodConfig.siteName);
-  //   data = JSON.parse(data);
-  //   console.log('Fixade urlar i function: ', data);
-  //} else if (typeof parent.frames.window.klar !== 'undefined') {
-  if (typeof parent.frames.window.klar !== 'undefined') {
+  if (window.prodConfig) {
+    data = parent.frames.window.klar.data;
+    data = JSON.stringify(data);
+    data = data.replace(
+      /"_path":"\//gm,
+      '"_path":"/' + window.prodConfig.siteName + '/',
+    );
+    console.log('siteName', window.prodConfig.siteName);
+    data = JSON.parse(data);
+    console.log('Fixade urlar i function: ', data);
+  } else if (typeof parent.frames.window.klar !== 'undefined') {
+    // if (typeof parent.frames.window.klar !== 'undefined') {
     data = parent.frames.window.klar.data;
   }
   return data;
