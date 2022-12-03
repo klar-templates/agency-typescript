@@ -10,5 +10,6 @@ declare global {
     env: any;
     production: any;
     prodConfig: any;
+    hydratedData: any;
   }
 }

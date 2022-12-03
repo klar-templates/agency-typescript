@@ -44,7 +44,11 @@ function App() {
       // window.location.href = currentPage._path;
     } else {
       // Param: Site name in Klar
-      getData('agency-typescript');
+      if (window.prodConfig) {
+        setData(window.hydratedData);
+      } else {
+        getData('agency-typescript');
+      }
     }
     // return () => clearInterval(id);
   }, []);
@@ -190,6 +194,7 @@ function App() {
                 </Routes>
               </StaticRouter>
             </div>
+            <script>{window.prodConfig.hydratedData}</script>
           </body>
         </html>
       </HelmetProvider>
