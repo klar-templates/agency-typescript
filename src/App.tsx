@@ -213,9 +213,13 @@ function App() {
                 window.prodConfig.siteConfig,
               )}`}
             </script>
-            <script>
-              {`window.hydratedData = ${JSON.stringify({ pages: data.pages })}`}
-            </script>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.hydratedData = ${JSON.stringify({
+                  pages: data.pages,
+                })}`,
+              }}
+            />
             <script
               type="module"
               crossOrigin="true"
