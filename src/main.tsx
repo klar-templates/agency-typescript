@@ -4,7 +4,7 @@ import ReactDOMServer from 'react-dom/server';
 import App from './App';
 import './index.css';
 
-if (location.host.includes('.github.io')) {
+if (location.host.includes('.github.io') || window.releaseReactApp) {
   window.production = true;
 }
 
