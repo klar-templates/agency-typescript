@@ -131,11 +131,14 @@ function App() {
               crossOrigin="true"
               src={`/${window.env.site.github_repo}/assets/index.js`}
             ></script> */}
-            <link rel="stylesheet" href={`${window.prodConfig.cssFilepath}`} />
+            <link
+              rel="stylesheet"
+              href={`/${window.env.site.github_repo}/${window.prodConfig.cssFilepath}`}
+            />
             <script
               type="module"
               crossOrigin="true"
-              src={`${window.prodConfig.jsFilepath}`}
+              src={`/${window.env.site.github_repo}/${window.prodConfig.jsFilepath}`}
             ></script>
           </head>
           <body className="bg-background">
