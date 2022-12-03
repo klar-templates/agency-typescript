@@ -45,7 +45,7 @@ export default function Header2(data: any) {
                   page._id ===
                   (window.klarContext.currentPage &&
                     window.klarContext.currentPage._id)
-                    ? 'font-semibold text-on-background list-none whitespace-nowrap text-primary-dark'
+                    ? 'font-semibold list-none whitespace-nowrap text-primary-dark'
                     : 'font-semibold text-on-background hover:text-gray-900 list-none whitespace-nowrap'
                 }
               >
