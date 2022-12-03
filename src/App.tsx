@@ -98,8 +98,14 @@ function App() {
   const startpage = (data as IData).pages.find((p) => p.startpage);
 
   let currentPageInKlar: any;
-  let currentPage;
-  if (window.klarContext.isInKlar) {
+  let currentPage: any;
+  if (window.prodConfig) {
+    currentPage = parent.frames.window.klar.sdk.currentPage.get();
+    currentPage = data.pages.find((p: any) => currentPage._id === p._id);
+    if (currentPage) {
+      currentPageInKlar = currentPage._path;
+    }
+  } else if (window.klarContext.isInKlar) {
     currentPage = parent.frames.window.klar.sdk.currentPage.get();
     if (currentPage) {
       currentPageInKlar = currentPage._path;
