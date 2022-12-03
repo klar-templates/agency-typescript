@@ -10,22 +10,33 @@ import { HelmetProvider } from 'react-helmet-async';
 import IData from './service/interface/IData';
 import Page from './components/Page';
 
-function fixUrlsForProd(data: any) {
+function getInitData() {
+  let data = undefined;
   if (window.production) {
+    data = parent.frames.window.klar.data;
     data = JSON.stringify(data);
-    data = data.replace(/"_path":"\//gm, '"_path":"/agency-typescript/');
+    data = data.replace(
+      /"_path":"\//gm,
+      '"_path":"/' + window.production.siteName + '/',
+    );
     data = JSON.parse(data);
     console.log('Fixade urlar i function: ', data);
+  } else if (typeof parent.frames.window.klar !== 'undefined') {
+    data = parent.frames.window.klar.data;
   }
   return data;
 }
 
+function fixUrlsForProd(data: any) {
+  data = parent.frames.window.klar.data;
+  data = JSON.stringify(data);
+  data = data.replace(/"_path":"\//gm, '"_path":"/agency-typescript/');
+  data = JSON.parse(data);
+  return data;
+}
+
 function App() {
-  const [data, setData] = useState(
-    typeof parent.frames.window.klar !== 'undefined'
-      ? fixUrlsForProd(parent.frames.window.klar.data)
-      : undefined,
-  );
+  const [data, setData] = useState(getInitData());
   useEffect(() => {
     // if (location.pathname == '/sites/klar-sites/agency-typescript') {
     //   console.log('navigate')
@@ -35,7 +46,8 @@ function App() {
     // }
     // window.klar = {};
     // window.klar['setData'] = setData;
-    if (typeof parent.frames.window.klar !== 'undefined') {
+    if (window.production) {
+    } else if (typeof parent.frames.window.klar !== 'undefined') {
       // console.log(typeof window.klar !== 'undefined')
       parent.frames.window.klar['setData'] = setData;
       // setData(parent.frames.window.klar.data);
