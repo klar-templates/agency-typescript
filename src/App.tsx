@@ -10,10 +10,20 @@ import { HelmetProvider } from 'react-helmet-async';
 import IData from './service/interface/IData';
 import Page from './components/Page';
 
+function fixUrlsForProd(data: any) {
+  if (window.production) {
+    data = JSON.stringify(data);
+    data = data.replace(/"_path":"\//gm, '"_path":"/agency-typescript/');
+    data = JSON.parse(data);
+    console.log('Fixade urlar i function: ', data);
+  }
+  return data;
+}
+
 function App() {
   const [data, setData] = useState(
     typeof parent.frames.window.klar !== 'undefined'
-      ? parent.frames.window.klar.data
+      ? fixUrlsForProd(parent.frames.window.klar.data)
       : undefined,
   );
   useEffect(() => {
@@ -54,14 +64,7 @@ function App() {
         return response.json();
       }
       requestData().then((data) => {
-        console.log(data);
-        if (window.production) {
-          data = JSON.stringify(data);
-          // console.log(data);
-          data = data.replace(/"_path":"\//gm, '"_path":"/agency-typescript/');
-          data = JSON.parse(data);
-        }
-        console.log('Fixade urlar: ', data);
+        data = fixUrlsForProd(data);
         // localStorage.setItem(cacheKey, JSON.stringify(data));
         setData(data);
       });
