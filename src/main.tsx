@@ -6,7 +6,9 @@ import './index.css';
 
 if (location.host.includes('.github.io') || window.prodConfig) {
   window.production = true;
-  window.siteConfig = JSON.parse(window.siteConfig);
+  if (typeof window.siteConfig !== 'undefined') {
+    window.siteConfig = JSON.parse(window.siteConfig);
+  }
 }
 
 if (window.releaseReactApp) {
