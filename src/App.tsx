@@ -208,8 +208,20 @@ function App() {
                 </Routes>
               </StaticRouter>
             </div>
-            <script>{window.prodConfig.siteConfig}</script>
-            <script>{window.prodConfig.hydratedData}</script>
+            <script>
+              {
+                (window.siteConfig = JSON.stringify(
+                  window.prodConfig.siteConfig,
+                ))
+              }
+            </script>
+            <script>
+              {
+                (window.hydratedData = JSON.stringify({
+                  pages: data.pages,
+                }))
+              }
+            </script>
             <script
               type="module"
               crossOrigin="true"
