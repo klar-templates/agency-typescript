@@ -12,14 +12,14 @@ import Page from './components/Page';
 
 function getInitData() {
   let data = undefined;
-  if (window.production) {
+  if (window.prodConfig) {
     data = parent.frames.window.klar.data;
     data = JSON.stringify(data);
     data = data.replace(
       /"_path":"\//gm,
-      '"_path":"/' + window.production.siteName + '/',
+      '"_path":"/' + window.prodConfig.siteName + '/',
     );
-    console.log('siteName', window.production.siteName);
+    console.log('siteName', window.prodConfig.siteName);
     data = JSON.parse(data);
     console.log('Fixade urlar i function: ', data);
   } else if (typeof parent.frames.window.klar !== 'undefined') {
