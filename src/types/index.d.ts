@@ -9,5 +9,6 @@ declare global {
     reactServerPages: any;
     env: any;
     production: any;
+    prodConfig: any;
   }
 }
