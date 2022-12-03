@@ -12,6 +12,7 @@ import Page from './components/Page';
 
 function getInitData() {
   let data = undefined;
+  return parent.frames.window.klar.data;
   if (window.prodConfig) {
     data = parent.frames.window.klar.data;
     data = JSON.stringify(data);
@@ -29,7 +30,6 @@ function getInitData() {
 }
 
 function fixUrlsForProd(data: any) {
-  data = parent.frames.window.klar.data;
   data = JSON.stringify(data);
   data = data.replace(/"_path":"\//gm, '"_path":"/agency-typescript/');
   data = JSON.parse(data);
