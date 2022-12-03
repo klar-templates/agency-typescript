@@ -208,11 +208,13 @@ function App() {
                 </Routes>
               </StaticRouter>
             </div>
-            <script>
-              {`window.siteConfig = ${JSON.stringify(
-                window.prodConfig.siteConfig,
-              )}`}
-            </script>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.siteConfig = ${JSON.stringify(
+                  window.prodConfig.siteConfig,
+                )}s`,
+              }}
+            />
             <script
               dangerouslySetInnerHTML={{
                 __html: `window.hydratedData = ${JSON.stringify({
