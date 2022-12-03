@@ -7,7 +7,7 @@ import './index.css';
 if (location.host.includes('.github.io') || window.prodConfig) {
   window.production = true;
   if (typeof window.siteConfig !== 'undefined') {
-    window.siteConfig = JSON.parse(window.siteConfig.replace(/&quot;/gm, '"'));
+    window.siteConfig = JSON.parse(window.siteConfig);
   }
 }
 
