@@ -112,7 +112,7 @@ function App() {
     }
   } else {
     if (window.production) {
-      startpage._path = '/agency-typescript/';
+      startpage._path = window.siteConfig.name;
     } else {
       startpage._path = '/';
     }
@@ -161,11 +161,6 @@ function App() {
               rel="stylesheet"
               href={`/${window.env.site.github_repo}/${window.prodConfig.cssFilepath}`}
             />
-            <script
-              type="module"
-              crossOrigin="true"
-              src={`/${window.env.site.github_repo}/${window.prodConfig.jsFilepath}`}
-            ></script>
           </head>
           <body className="bg-background">
             <div id="root">
@@ -213,7 +208,13 @@ function App() {
                 </Routes>
               </StaticRouter>
             </div>
+            <script>{window.prodConfig.siteConfig}</script>
             <script>{window.prodConfig.hydratedData}</script>
+            <script
+              type="module"
+              crossOrigin="true"
+              src={`/${window.env.site.github_repo}/${window.prodConfig.jsFilepath}`}
+            ></script>
           </body>
         </html>
       </HelmetProvider>

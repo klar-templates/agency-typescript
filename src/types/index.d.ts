@@ -11,5 +11,6 @@ declare global {
     production: any;
     prodConfig: any;
     hydratedData: any;
+    siteConfig: any;
   }
 }
