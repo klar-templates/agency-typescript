@@ -19,9 +19,9 @@ function getInitData() {
       /"_path":"\//gm,
       '"_path":"/' + window.prodConfig.siteName + '/',
     );
-    console.log('siteName', window.prodConfig.siteName);
+    // console.log('siteName', window.prodConfig.siteName);
     data = JSON.parse(data);
-    console.log('Fixade urlar i function: ', data);
+    // console.log('Fixade urlar i function: ', data);
   } else if (typeof parent.frames.window.klar !== 'undefined') {
     // if (typeof parent.frames.window.klar !== 'undefined') {
     data = parent.frames.window.klar.data;
