@@ -212,7 +212,7 @@ function App() {
               dangerouslySetInnerHTML={{
                 __html: `window.siteConfig = ${JSON.stringify(
                   window.prodConfig.siteConfig,
-                )}s`,
+                )}`,
               }}
             />
             <script
