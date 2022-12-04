@@ -130,7 +130,7 @@ function App() {
   // console.log('data', data);
   // console.log('pages.length', data.pages.length);
 
-  if (window.releaseReactApp || window.production) {
+  if (window.releaseReactApp) {
     return (
       <HelmetProvider>
         <html lang="en">
