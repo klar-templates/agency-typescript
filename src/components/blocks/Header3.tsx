@@ -19,7 +19,7 @@ export default function Header2(data: any) {
           aria-label="Global"
         >
           <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-            <Link to="/" className="-m-1.5 p-1.5">
+            <Link to={window.siteConfig.publicPath} className="-m-1.5 p-1.5">
               <span className="r-only text-2xl font-bold ext-primary-dark text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">
                 Brand
               </span>

@@ -6,9 +6,11 @@ import './index.css';
 
 if (location.host.includes('.github.io') || window.prodConfig) {
   window.production = true;
-  if (typeof window.siteConfig !== 'undefined') {
-    window.siteConfig = window.siteConfig;
-  }
+  window.siteConfig = window.siteConfig;
+}
+
+if (typeof window.siteConfig === 'undefined') {
+  window.siteConfig = { publicPath: '/' };
 }
 
 if (window.releaseReactApp) {
