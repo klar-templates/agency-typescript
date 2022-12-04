@@ -56,7 +56,8 @@ function App() {
 
       if (
         parent.frames.window.document.querySelector('.js-btn-preview-page')
-          ?.innerHTML !== 'Redigera'
+          ?.innerHTML !== 'Redigera' &&
+        !parent.frames.window.production
       ) {
         parent.frames.window.klar['setData'] = setData;
       }
