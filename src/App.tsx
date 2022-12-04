@@ -105,6 +105,7 @@ function App() {
     currentPage = parent.frames.window.klar.sdk.currentPage.get();
     currentPage = data.pages.find((p: any) => currentPage._id === p._id);
     if (currentPage) {
+      startpage._path = '/' + window.siteConfig.name + '/';
       currentPageInKlar = currentPage._path;
     }
   } else if (window.klarContext.isInKlar) {
