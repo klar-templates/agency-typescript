@@ -7,9 +7,7 @@ import './index.css';
 if (location.host.includes('.github.io') || window.prodConfig) {
   window.production = true;
   window.siteConfig = window.siteConfig;
-}
-
-if (typeof window.siteConfig === 'undefined') {
+} else {
   window.siteConfig = { publicPath: '/' };
 }
 
