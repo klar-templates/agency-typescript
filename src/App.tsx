@@ -287,16 +287,16 @@ function App() {
                 />
               )}
 
-              {/* <Route
+              <Route
                 path={window.siteConfig.publicPath}
                 element={<Navigate replace to={startpage._path} />}
                 key="redirect-to-start-page"
-              /> */}
-              <Route
+              />
+              {/* <Route
                 path={window.siteConfig.publicPath}
                 element={<Page {...(data as IData)} />}
                 key="redirect-to-start-page"
-              />
+              /> */}
               {/* {location.pathname === '/agency-typescript/' && (
                 <Route
                   path={location.pathname}
