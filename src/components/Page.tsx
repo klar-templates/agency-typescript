@@ -86,7 +86,7 @@ function createContext(data: IData) {
   const pathname = routeLocation.pathname;
   let currentPage;
   if (data.pages.length > 0) {
-    if (pathname === '/startsida') {
+    if (pathname === window.siteConfig.publicPath) {
       // currentPage = data.pages.find(page => page.startpage === true);
       currentPage = data.pages[0];
     } else {
