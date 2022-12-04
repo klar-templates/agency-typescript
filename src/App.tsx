@@ -30,9 +30,11 @@ function getInitData() {
 }
 
 function fixUrlsForProd(data: any) {
-  data = JSON.stringify(data);
-  data = data.replace(/"_path":"\//gm, '"_path":"/agency-typescript/');
-  data = JSON.parse(data);
+  if (window.production) {
+    data = JSON.stringify(data);
+    data = data.replace(/"_path":"\//gm, '"_path":"/agency-typescript/');
+    data = JSON.parse(data);
+  }
   return data;
 }
 
@@ -97,12 +99,13 @@ function App() {
     return null;
   }
 
-  const startpage = (data as IData).pages.find((p) => p.startpage);
+  let startpage = (data as IData).pages.find((p) => p.startpage);
 
   let currentPageInKlar: any;
   let currentPage: any;
   if (window.prodConfig) {
     currentPage = parent.frames.window.klar.sdk.currentPage.get();
+    startpage = data.pages[0];
     currentPage = data.pages.find((p: any) => currentPage._id === p._id);
     if (currentPage) {
       startpage._path = '/' + window.siteConfig.name + '/';
@@ -115,9 +118,9 @@ function App() {
     }
   } else {
     if (window.production) {
-      startpage._path = '/' + window.siteConfig.name + '/';
+      // startpage._path = '/' + window.siteConfig.name + '/';
     } else {
-      startpage._path = '/';
+      // startpage._path = '/';
     }
   }
   // console.log('currentPageInKlar', currentPageInKlar);
@@ -204,6 +207,11 @@ function App() {
                       />
                     )}
                     <Route
+                      path={window.siteConfig.publicPath}
+                      element={<Navigate replace to={startpage._path} />}
+                      key="redirect-to-start-page"
+                    />
+                    <Route
                       path="/components"
                       element={<Page {...(data as IData)} />}
                     />
@@ -274,6 +282,11 @@ function App() {
                 />
               )}
 
+              <Route
+                path={window.siteConfig.publicPath}
+                element={<Navigate replace to={startpage._path} />}
+                key="redirect-to-start-page"
+              />
               {/* {location.pathname === '/agency-typescript/' && (
                 <Route
                   path={location.pathname}
