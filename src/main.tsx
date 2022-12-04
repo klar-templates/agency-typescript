@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import ReactDOMClient from 'react-dom/client';
 import ReactDOMServer from 'react-dom/server';
 import App from './App';
 import './index.css';
@@ -14,7 +15,14 @@ if (location.host.includes('.github.io') || window.prodConfig) {
   window.siteConfig = { publicPath: '/' };
 }
 
-if (window.releaseReactApp) {
+if (location.host.includes('.github.io')) {
+  ReactDOM.hydrate(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.documentElement,
+  );
+} else if (window.releaseReactApp) {
   const tempCurrentPage = localStorage.getItem('current-page') as string;
   window.reactServerPages = {};
   if (parent.frames.window.klar) {
@@ -33,7 +41,9 @@ if (window.releaseReactApp) {
   }
   localStorage.setItem('current-page', tempCurrentPage) as unknown;
 } else {
-  ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  ReactDOMClient.createRoot(
+    document.getElementById('root') as HTMLElement,
+  ).render(
     <React.StrictMode>
       <App />
     </React.StrictMode>,
