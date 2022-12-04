@@ -58,12 +58,12 @@ function App() {
       // window.location.href = currentPage._path;
     } else {
       // Param: Site name in Klar
-      if (window.prodConfig) {
-        console.log('Här ska den inte gå in');
-        setData(JSON.parse(window.hydratedData));
-      } else {
-        getData('agency-typescript');
-      }
+      // if (window.prodConfig) {
+      //   console.log('Här ska den inte gå in');
+      //   setData(JSON.parse(window.hydratedData));
+      // } else {
+      getData('agency-typescript');
+      // }
     }
     // return () => clearInterval(id);
   }, []);
@@ -114,7 +114,7 @@ function App() {
     }
   } else {
     if (window.production) {
-      startpage._path = window.siteConfig.name;
+      startpage._path = '/' + window.siteConfig.name + '/';
     } else {
       startpage._path = '/';
     }
