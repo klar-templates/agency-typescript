@@ -276,11 +276,15 @@ function App() {
                     element={<Navigate replace to={currentPageInKlar} />}
                   />
                 )}
-              <Route
-                path={startpage._path}
-                element={<Navigate replace to={window.siteConfig.publicPath} />}
-                key="redirect-to-start-page"
-              />
+              {!window.klarContext.isInKlar && (
+                <Route
+                  path={startpage._path}
+                  element={
+                    <Navigate replace to={window.siteConfig.publicPath} />
+                  }
+                  key="redirect-to-start-page"
+                />
+              )}
               {(data as IData).pages.map((page) => {
                 // console.log('Route was added: ', page._path);
                 return (
