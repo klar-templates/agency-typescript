@@ -20,7 +20,10 @@ export default function Header2(data: any) {
         >
           <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
             <Link to={window.siteConfig.publicPath} className="-m-1.5 p-1.5">
-              <span className="r-only text-2xl font-bold ext-primary-dark text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">
+              <span
+                style={{ pointerEvents: 'none' }}
+                className="r-only text-2xl font-bold ext-primary-dark text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
+              >
                 Brand
               </span>
               {/* <span className="r-only text-2xl font-bold text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">Your logo</span> */}
