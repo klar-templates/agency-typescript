@@ -94,7 +94,12 @@ function createContext(data: IData) {
     }
   }
   if (window.klarContext.isInKlar) {
-    parent.frames.window.klar['navigate'] = routeNavigate;
+    if (
+      parent.frames.window.document.querySelector('.js-btn-preview-page')
+        ?.innerHTML !== 'Redigera'
+    ) {
+      parent.frames.window.klar['navigate'] = routeNavigate;
+    }
   }
   window.klarContext = {
     location: routeLocation,
