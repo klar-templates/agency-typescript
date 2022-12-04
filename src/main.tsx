@@ -15,14 +15,7 @@ if (location.host.includes('.github.io') || window.prodConfig) {
   window.siteConfig = { publicPath: '/' };
 }
 
-if (location.host.includes('.github.io')) {
-  ReactDOM.hydrate(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-    document.documentElement,
-  );
-} else if (window.releaseReactApp) {
+if (window.releaseReactApp) {
   const tempCurrentPage = localStorage.getItem('current-page') as string;
   window.reactServerPages = {};
   if (parent.frames.window.klar) {
@@ -41,11 +34,26 @@ if (location.host.includes('.github.io')) {
   }
   localStorage.setItem('current-page', tempCurrentPage) as unknown;
 } else {
-  ReactDOMClient.createRoot(
-    document.getElementById('root') as HTMLElement,
-  ).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  );
+  // ReactDOM.hydrate(
+  //   <React.StrictMode>
+  //     <App />
+  //   </React.StrictMode>,
+  //   document.documentElement,
+  // );
+  if (window.production) {
+    ReactDOMClient.hydrateRoot(
+      document.getElementById('root') as HTMLElement,
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+    );
+  } else {
+    ReactDOMClient.createRoot(
+      document.getElementById('root') as HTMLElement,
+    ).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+    );
+  }
 }
