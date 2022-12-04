@@ -52,7 +52,9 @@ export default function Header2(data: any) {
                     : 'font-semibold text-on-background hover:text-gray-900 list-none whitespace-nowrap'
                 }
               >
-                <Link to={page._path}>{page._menu_item_name}</Link>
+                <Link to={i === 0 ? window.siteConfig.publicPath : page._path}>
+                  {page._menu_item_name}
+                </Link>
               </li>
             ))}
             {/* {navigation.map((item) => (
