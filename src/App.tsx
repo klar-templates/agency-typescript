@@ -118,9 +118,9 @@ function App() {
     }
   } else {
     if (window.production) {
-      // startpage._path = '/' + window.siteConfig.name + '/';
+      startpage._path = '/' + window.siteConfig.name + '/';
     } else {
-      // startpage._path = '/';
+      startpage._path = '/';
     }
   }
   // console.log('currentPageInKlar', currentPageInKlar);
@@ -206,11 +206,11 @@ function App() {
                         key="no-pages"
                       />
                     )}
-                    <Route
+                    {/* <Route
                       path={window.siteConfig.publicPath}
                       element={<Navigate replace to={startpage._path} />}
                       key="redirect-to-start-page"
-                    />
+                    /> */}
                     <Route
                       path="/components"
                       element={<Page {...(data as IData)} />}
@@ -282,11 +282,11 @@ function App() {
                 />
               )}
 
-              <Route
+              {/* <Route
                 path={window.siteConfig.publicPath}
                 element={<Navigate replace to={startpage._path} />}
                 key="redirect-to-start-page"
-              />
+              /> */}
               {/* {location.pathname === '/agency-typescript/' && (
                 <Route
                   path={location.pathname}
