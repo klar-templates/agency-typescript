@@ -58,7 +58,6 @@ function App() {
         parent.frames.window.document.querySelector('.js-btn-preview-page')
           ?.innerHTML !== 'Redigera'
       ) {
-        console.log('nu');
         parent.frames.window.klar['setData'] = setData;
       }
       // setData(parent.frames.window.klar.data);
