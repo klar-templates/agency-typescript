@@ -6,8 +6,14 @@ import './index.css';
 
 if (location.host.includes('.github.io') || window.prodConfig) {
   window.production = true;
-  window.siteConfig = window.siteConfig;
+  if (typeof window.siteConfig === 'undefined') {
+    console.log('1');
+    window.siteConfig = window.prodConfig.siteConfig;
+  } else {
+    console.log('2');
+  }
 } else {
+  console.log('3');
   window.siteConfig = { publicPath: '/' };
 }
 
