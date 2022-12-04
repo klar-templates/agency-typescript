@@ -48,7 +48,7 @@ function App() {
     // window.klar = {};
     // window.klar['setData'] = setData;
     if (window.production) {
-      setData(JSON.parse(window.hydratedData));
+      setData(window.hydratedData);
     } else if (typeof parent.frames.window.klar !== 'undefined') {
       // console.log(typeof window.klar !== 'undefined')
       parent.frames.window.klar['setData'] = setData;
