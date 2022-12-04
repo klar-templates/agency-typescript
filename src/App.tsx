@@ -129,7 +129,7 @@ function App() {
       <HelmetProvider>
         <html lang="en">
           <head>
-            <base href="/agency-typescript" />
+            {/* <base href="/agency-typescript" /> */}
             <meta charSet="utf-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <link rel="icon" href="https://klar.website/assets/icon-16.png" />
@@ -157,7 +157,7 @@ function App() {
               crossOrigin="true"
               src={`/${window.env.site.github_repo}/assets/index.js`}
             ></script> */}
-            <link rel="stylesheet" href={`${window.prodConfig.cssFilepath}`} />
+            <link rel="stylesheet" href={`/${window.prodConfig.cssFilepath}`} />
           </head>
           <body className="bg-background">
             <div id="root">
