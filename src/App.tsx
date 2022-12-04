@@ -53,7 +53,13 @@ function App() {
       setData(window.hydratedData);
     } else if (typeof parent.frames.window.klar !== 'undefined') {
       // console.log(typeof window.klar !== 'undefined')
-      console.log('Whaat');
+
+      if (parent.frames.window.document.querySelector('.js-btn-preview-page')) {
+        console.log(
+          parent.frames.window.document.querySelector('.js-btn-preview-page')
+            ?.innerHTML,
+        );
+      }
       parent.frames.window.klar['setData'] = setData;
       // setData(parent.frames.window.klar.data);
       parent.frames.window.reactPageIsLoaded();
