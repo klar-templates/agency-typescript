@@ -48,6 +48,7 @@ function App() {
     // window.klar = {};
     // window.klar['setData'] = setData;
     if (window.production) {
+      setData(JSON.parse(window.hydratedData));
     } else if (typeof parent.frames.window.klar !== 'undefined') {
       // console.log(typeof window.klar !== 'undefined')
       parent.frames.window.klar['setData'] = setData;
@@ -58,6 +59,7 @@ function App() {
     } else {
       // Param: Site name in Klar
       if (window.prodConfig) {
+        console.log('Här ska den inte gå in');
         setData(JSON.parse(window.hydratedData));
       } else {
         getData('agency-typescript');
