@@ -280,6 +280,7 @@ function App() {
             crossOrigin="true"
             src={`${window.siteConfig.publicPath}${window.siteConfig.jsFilepath}`}
           ></script>
+          <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
         </body>
       </>
     );
