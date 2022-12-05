@@ -26,7 +26,7 @@ if (window.releaseReactApp) {
     if (pages.length > 0) {
       pages.forEach((page: any) => {
         const currentPath = '/' + window.siteConfig.name + page._path;
-        console.log('currentPath', currentPath);
+        // console.log('currentPath', currentPath);
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
           <StaticRouter location={currentPath}>
