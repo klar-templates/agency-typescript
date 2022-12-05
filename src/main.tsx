@@ -66,17 +66,25 @@ if (window.releaseReactApp) {
   if (window.production) {
     ReactDOMClient.hydrateRoot(
       document.getElementById('root') as HTMLElement,
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>,
+      <Router>
+        <React.StrictMode>
+          <HelmetProvider>
+            <App />
+          </HelmetProvider>
+        </React.StrictMode>
+      </Router>,
     );
   } else {
     ReactDOMClient.createRoot(
       document.getElementById('root') as HTMLElement,
     ).render(
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>,
+      <Router>
+        <React.StrictMode>
+          <HelmetProvider>
+            <App />
+          </HelmetProvider>
+        </React.StrictMode>
+      </Router>,
     );
   }
 }

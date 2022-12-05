@@ -199,7 +199,7 @@ function App() {
     </Routes>
   );
 
-  if (window.releaseReactApp || window.production) {
+  if (window.releaseReactApp) {
     return (
       <>
         <head>
@@ -286,11 +286,7 @@ function App() {
       </>
     );
   } else {
-    return (
-      <HelmetProvider>
-        <Router>{routes}</Router>
-      </HelmetProvider>
-    );
+    return { routes };
   }
 }
 
