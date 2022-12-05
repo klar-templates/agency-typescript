@@ -264,7 +264,7 @@ function App() {
             <script
               type="module"
               crossOrigin="true"
-              src={`/${window.siteConfig.publicPath}/${window.siteConfig.jsFilepath}`}
+              src={`${window.siteConfig.publicPath}${window.siteConfig.jsFilepath}`}
             ></script>
           </body>
         </html>
