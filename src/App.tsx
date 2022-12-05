@@ -246,7 +246,7 @@ function App() {
                 </StaticRouter>
               )}
             </div>
-            {window.production && <Router>{routes}</Router>}
+            {!window.prodConfig && <Router>{routes}</Router>}
             <script
               dangerouslySetInnerHTML={{
                 __html: `window.siteConfig = ${JSON.stringify(
