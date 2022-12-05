@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { StaticRouter } from 'react-router-dom/server';
 import {
   BrowserRouter as Router,
   Routes,
@@ -202,29 +201,28 @@ function App() {
 
   if (window.releaseReactApp || window.production) {
     return (
-      <HelmetProvider>
-        <html lang="en">
-          <head>
-            {/* <base href="/agency-typescript" /> */}
-            <meta charSet="utf-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <link rel="icon" href="https://klar.website/assets/icon-16.png" />
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1.0"
-            />
-            <title>{currentPage?.settings?.title}</title>
-            <meta
-              name="description"
-              content={currentPage?.settings?.description}
-            ></meta>
-            {/* <script
+      <>
+        <head>
+          {/* <base href="/agency-typescript" /> */}
+          <meta charSet="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <link rel="icon" href="https://klar.website/assets/icon-16.png" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>{currentPage?.settings?.title}</title>
+          <meta
+            name="description"
+            content={currentPage?.settings?.description}
+          ></meta>
+          {/* <script
               type="module"
               crossOrigin="true"
               src="/assets/index.3bbad176.js"
             ></script>
             <link rel="stylesheet" href="/assets/index.d855147e.css" /> */}
-            {/* <link
+          {/* <link
               rel="stylesheet"
               href={`/${window.env.site.github_repo}/assets/index.css`}
             />
@@ -233,66 +231,57 @@ function App() {
               crossOrigin="true"
               src={`/${window.env.site.github_repo}/assets/index.js`}
             ></script> */}
-            <link
-              rel="stylesheet"
-              href={`${window.siteConfig.publicPath}${window.siteConfig.cssFilepath}`}
-            />
-          </head>
-          <body className="bg-background">
-            <div id="root">
-              {window.releaseReactApp ? (
-                <StaticRouter location={currentPageInKlar}>
-                  {routes}
-                </StaticRouter>
-              ) : (
-                <Router>{routes}</Router>
-              )}
-            </div>
-            {/* {!window.releaseReactApp && <Router>{routes}</Router>} */}
-            {window.releaseReactApp && (
-              <>
-                <script
-                  dangerouslySetInnerHTML={{
-                    __html: `window.siteConfig = ${JSON.stringify(
-                      window.prodConfig.siteConfig,
-                    )}`,
-                  }}
-                />
-                <script
-                  dangerouslySetInnerHTML={{
-                    __html: `window.hydratedData = ${JSON.stringify({
-                      pages: data.pages,
-                    })}`,
-                  }}
-                />
-              </>
-            )}
-            {!window.releaseReactApp && (
-              <>
-                <script
-                  dangerouslySetInnerHTML={{
-                    __html: `window.siteConfig = ${JSON.stringify(
-                      window.siteConfig,
-                    )}`,
-                  }}
-                />
-                <script
-                  dangerouslySetInnerHTML={{
-                    __html: `window.hydratedData = ${JSON.stringify({
-                      pages: window.hydratedData.pages,
-                    })}`,
-                  }}
-                />
-              </>
-            )}
-            <script
-              type="module"
-              crossOrigin="true"
-              src={`${window.siteConfig.publicPath}${window.siteConfig.jsFilepath}`}
-            ></script>
-          </body>
-        </html>
-      </HelmetProvider>
+          <link
+            rel="stylesheet"
+            href={`${window.siteConfig.publicPath}${window.siteConfig.cssFilepath}`}
+          />
+        </head>
+        <body className="bg-background">
+          <div id="root">{routes}</div>
+          {/* {!window.releaseReactApp && <Router>{routes}</Router>} */}
+          {window.releaseReactApp && (
+            <>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `window.siteConfig = ${JSON.stringify(
+                    window.prodConfig.siteConfig,
+                  )}`,
+                }}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `window.hydratedData = ${JSON.stringify({
+                    pages: data.pages,
+                  })}`,
+                }}
+              />
+            </>
+          )}
+          {!window.releaseReactApp && (
+            <>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `window.siteConfig = ${JSON.stringify(
+                    window.siteConfig,
+                  )}`,
+                }}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `window.hydratedData = ${JSON.stringify({
+                    pages: window.hydratedData.pages,
+                  })}`,
+                }}
+              />
+            </>
+          )}
+          <script
+            type="module"
+            crossOrigin="true"
+            src={`${window.siteConfig.publicPath}${window.siteConfig.jsFilepath}`}
+          ></script>
+        </body>
+      </>
     );
   } else {
     return (

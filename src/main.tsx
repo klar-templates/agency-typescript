@@ -1,5 +1,8 @@
 import React from 'react';
+import { StaticRouter } from 'react-router-dom/server';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import ReactDOMClient from 'react-dom/client';
 import ReactDOMServer from 'react-dom/server';
 import App from './App';
@@ -24,9 +27,15 @@ if (window.releaseReactApp) {
       pages.forEach((page: any) => {
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
-          <React.StrictMode>
-            <App />
-          </React.StrictMode>,
+          <StaticRouter location={page._path}>
+            <React.StrictMode>
+              <HelmetProvider>
+                <html lang="en">
+                  <App />
+                </html>
+              </HelmetProvider>
+            </React.StrictMode>
+          </StaticRouter>,
         );
         window.reactServerPages[page._id] = '<!DOCTYPE html>' + reactHtml;
       });
@@ -43,9 +52,11 @@ if (window.releaseReactApp) {
   if (window.production) {
     ReactDOMClient.hydrateRoot(
       document.documentElement,
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>,
+      <Router>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </Router>,
     );
   } else {
     ReactDOMClient.createRoot(
