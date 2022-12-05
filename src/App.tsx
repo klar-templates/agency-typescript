@@ -286,7 +286,7 @@ function App(): any {
       </>
     );
   } else {
-    return { routes };
+    return <Router>{routes}</Router>;
   }
 }
 
