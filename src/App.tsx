@@ -172,7 +172,7 @@ function App() {
             ></script> */}
             <link
               rel="stylesheet"
-              href={`${window.siteConfig.publicPath}${window.prodConfig.cssFilepath}`}
+              href={`${window.siteConfig.publicPath}${window.siteConfig.cssFilepath}`}
             />
           </head>
           <body className="bg-background">
@@ -255,7 +255,7 @@ function App() {
             <script
               type="module"
               crossOrigin="true"
-              src={`/${window.env.site.github_repo}/${window.prodConfig.jsFilepath}`}
+              src={`/${window.siteConfig.publicPath}/${window.siteConfig.jsFilepath}`}
             ></script>
           </body>
         </html>
