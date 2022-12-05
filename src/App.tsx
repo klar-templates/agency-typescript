@@ -138,26 +138,25 @@ function App() {
   // console.log('pages.length', data.pages.length);
 
   const routes = (
-    <Router>
-      <Routes>
-        <>
-          {window.klarContext.isInKlar &&
-            data.pages.length > 0 &&
-            location.pathname.includes('/sites/klar-sites/') && (
-              <Route
-                path={location.pathname}
-                element={<Navigate replace to={currentPageInKlar} />}
-              />
-            )}
-          {window.klarContext.isInKlar &&
-            data.pages.length > 0 &&
-            currentPageInKlar !== '/' && (
-              <Route
-                path="/"
-                element={<Navigate replace to={currentPageInKlar} />}
-              />
-            )}
-          {/* {!window.klarContext.isInKlar && (
+    <Routes>
+      <>
+        {window.klarContext.isInKlar &&
+          data.pages.length > 0 &&
+          location.pathname.includes('/sites/klar-sites/') && (
+            <Route
+              path={location.pathname}
+              element={<Navigate replace to={currentPageInKlar} />}
+            />
+          )}
+        {window.klarContext.isInKlar &&
+          data.pages.length > 0 &&
+          currentPageInKlar !== '/' && (
+            <Route
+              path="/"
+              element={<Navigate replace to={currentPageInKlar} />}
+            />
+          )}
+        {/* {!window.klarContext.isInKlar && (
         <Route
           path={startpage._path}
           element={
@@ -166,43 +165,42 @@ function App() {
           key="redirect-to-start-page"
         />
       )} */}
-          {(data as IData).pages.map((page) => {
-            // console.log('Route was added: ', page._path);
-            return (
-              <Route
-                path={page._path}
-                element={<Page {...(data as IData)} />}
-                key={page._id}
-              />
-            );
-          })}
-          {window.klarContext.isInKlar && data.pages.length === 0 && (
+        {(data as IData).pages.map((page) => {
+          // console.log('Route was added: ', page._path);
+          return (
             <Route
-              path="/"
+              path={page._path}
               element={<Page {...(data as IData)} />}
-              key="no-pages"
+              key={page._id}
             />
-          )}
-
+          );
+        })}
+        {window.klarContext.isInKlar && data.pages.length === 0 && (
           <Route
-            path={window.siteConfig.publicPath}
+            path="/"
             element={<Page {...(data as IData)} />}
-            key="redirect-to-start-page"
+            key="no-pages"
           />
-          {/* {location.pathname === '/agency-typescript/' && (
+        )}
+
+        <Route
+          path={window.siteConfig.publicPath}
+          element={<Page {...(data as IData)} />}
+          key="redirect-to-start-page"
+        />
+        {/* {location.pathname === '/agency-typescript/' && (
         <Route
           path={location.pathname}
           element={<Navigate replace to={currentPageInKlar} />}
         />
       )} */}
 
-          <Route path="/components" element={<Page {...(data as IData)} />} />
-        </>
-      </Routes>
-    </Router>
+        <Route path="/components" element={<Page {...(data as IData)} />} />
+      </>
+    </Routes>
   );
 
-  if (window.releaseReactApp) {
+  if (window.releaseReactApp || window.production) {
     return (
       <HelmetProvider>
         <html lang="en">
@@ -242,7 +240,13 @@ function App() {
           </head>
           <body className="bg-background">
             <div id="root">
-              <StaticRouter location={currentPageInKlar}>{routes}</StaticRouter>
+              {window.production ? (
+                <Router>{routes}</Router>
+              ) : (
+                <StaticRouter location={currentPageInKlar}>
+                  {routes}
+                </StaticRouter>
+              )}
             </div>
             <script
               dangerouslySetInnerHTML={{
@@ -268,7 +272,11 @@ function App() {
       </HelmetProvider>
     );
   } else {
-    return <HelmetProvider>{routes}</HelmetProvider>;
+    return (
+      <HelmetProvider>
+        <Router>{routes}</Router>
+      </HelmetProvider>
+    );
   }
 }
 
