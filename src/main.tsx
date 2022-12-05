@@ -42,7 +42,7 @@ if (window.releaseReactApp) {
   // );
   if (window.production) {
     ReactDOMClient.hydrateRoot(
-      document.getElementById('root') as HTMLElement,
+      document.documentElement,
       <React.StrictMode>
         <App />
       </React.StrictMode>,
