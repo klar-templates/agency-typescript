@@ -29,15 +29,13 @@ if (window.releaseReactApp) {
         // console.log('currentPath', currentPath);
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
-          <StaticRouter location={currentPath}>
-            <React.StrictMode>
-              <HelmetProvider>
-                <html lang="en">
-                  <App />
-                </html>
-              </HelmetProvider>
-            </React.StrictMode>
-          </StaticRouter>,
+          <React.StrictMode>
+            <HelmetProvider>
+              <html lang="en">
+                <App />
+              </html>
+            </HelmetProvider>
+          </React.StrictMode>,
         );
         window.reactServerPages[page._id] = '<!DOCTYPE html>' + reactHtml;
       });

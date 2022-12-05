@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { StaticRouter } from 'react-router-dom/server';
 import {
   BrowserRouter as Router,
   Routes,
@@ -238,7 +239,9 @@ function App(): any {
           />
         </head>
         <body className="bg-background">
-          <div id="root">{routes}</div>
+          <div id="root">
+            <StaticRouter location={currentPageInKlar}>{routes}</StaticRouter>
+          </div>
           {/* {!window.releaseReactApp && <Router>{routes}</Router>} */}
           {window.releaseReactApp && (
             <>
