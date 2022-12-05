@@ -40,7 +40,7 @@ if (window.releaseReactApp) {
   //   </React.StrictMode>,
   //   document.documentElement,
   // );
-  if (typeof parent.frames.window.klar !== 'undefined') {
+  if (window.production) {
     ReactDOMClient.hydrateRoot(
       document.getElementById('root') as HTMLElement,
       <React.StrictMode>
