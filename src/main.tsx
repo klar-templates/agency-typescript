@@ -25,6 +25,7 @@ if (window.releaseReactApp) {
     const pages = [...parent.frames.window.klar.data.pages];
     if (pages.length > 0) {
       pages.forEach((page: any) => {
+        console.log('page._path', page._path);
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
           <StaticRouter location={page._path}>
@@ -54,7 +55,9 @@ if (window.releaseReactApp) {
       document.documentElement,
       <Router>
         <React.StrictMode>
-          <App />
+          <HelmetProvider>
+            <App />
+          </HelmetProvider>
         </React.StrictMode>
       </Router>,
     );
