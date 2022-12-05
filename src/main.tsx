@@ -51,16 +51,24 @@ if (window.releaseReactApp) {
   //   </React.StrictMode>,
   //   document.documentElement,
   // );
+  // if (window.production) {
+  //   ReactDOMClient.hydrateRoot(
+  //     document.documentElement,
+  //     <Router>
+  //       <React.StrictMode>
+  //         <HelmetProvider>
+  //           <App />
+  //         </HelmetProvider>
+  //       </React.StrictMode>
+  //     </Router>,
+  //   );
+  // } else {
   if (window.production) {
     ReactDOMClient.hydrateRoot(
-      document.documentElement,
-      <Router>
-        <React.StrictMode>
-          <HelmetProvider>
-            <App />
-          </HelmetProvider>
-        </React.StrictMode>
-      </Router>,
+      document.getElementById('root') as HTMLElement,
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
     );
   } else {
     ReactDOMClient.createRoot(
