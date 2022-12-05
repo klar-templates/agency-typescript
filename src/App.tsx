@@ -215,6 +215,7 @@ function App() {
           <meta
             name="description"
             content={currentPage?.settings?.description}
+            data-rh="true"
           ></meta>
           {/* <script
               type="module"
