@@ -240,13 +240,13 @@ function App() {
           </head>
           <body className="bg-background">
             <div id="root">
-              {window.prodConfig && (
+              {window.releaseReactApp && (
                 <StaticRouter location={currentPageInKlar}>
                   {routes}
                 </StaticRouter>
               )}
             </div>
-            {!window.prodConfig && <Router>{routes}</Router>}
+            {!window.releaseReactApp && <Router>{routes}</Router>}
             <script
               dangerouslySetInnerHTML={{
                 __html: `window.siteConfig = ${JSON.stringify(
