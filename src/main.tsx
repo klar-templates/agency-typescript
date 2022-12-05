@@ -25,10 +25,11 @@ if (window.releaseReactApp) {
     const pages = [...parent.frames.window.klar.data.pages];
     if (pages.length > 0) {
       pages.forEach((page: any) => {
-        console.log('page._path', page._path);
+        const currentPath = '/' + window.siteConfig.name + page._path;
+        console.log('currentPath', currentPath);
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
-          <StaticRouter location={page._path}>
+          <StaticRouter location={currentPath}>
             <React.StrictMode>
               <HelmetProvider>
                 <html lang="en">
