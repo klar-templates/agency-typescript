@@ -29,13 +29,15 @@ if (window.releaseReactApp) {
         // console.log('currentPath', currentPath);
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
-          <React.StrictMode>
-            <HelmetProvider>
-              <html lang="en">
-                <App />
-              </html>
-            </HelmetProvider>
-          </React.StrictMode>,
+          <StaticRouter location={currentPath}>
+            <React.StrictMode>
+              <HelmetProvider>
+                <html lang="en">
+                  <App />
+                </html>
+              </HelmetProvider>
+            </React.StrictMode>
+          </StaticRouter>,
         );
         window.reactServerPages[page._id] = '<!DOCTYPE html>' + reactHtml;
       });
@@ -64,11 +66,9 @@ if (window.releaseReactApp) {
   if (window.production) {
     ReactDOMClient.hydrateRoot(
       document.getElementById('root') as HTMLElement,
-      <React.StrictMode>
-        <HelmetProvider>
-          <App />
-        </HelmetProvider>
-      </React.StrictMode>,
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>,
     );
   } else {
     ReactDOMClient.createRoot(
