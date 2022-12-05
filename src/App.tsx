@@ -37,7 +37,7 @@ function fixUrlsForProd(data: any) {
   return data;
 }
 
-function App() {
+function App(): any {
   const [data, setData] = useState(getInitData());
   useEffect(() => {
     // if (location.pathname == '/sites/klar-sites/agency-typescript') {
