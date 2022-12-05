@@ -249,20 +249,24 @@ function App() {
               )}
             </div>
             {/* {!window.releaseReactApp && <Router>{routes}</Router>} */}
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `window.siteConfig = ${JSON.stringify(
-                  window.prodConfig.siteConfig,
-                )}`,
-              }}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `window.hydratedData = ${JSON.stringify({
-                  pages: data.pages,
-                })}`,
-              }}
-            />
+            {window.releaseReactApp && (
+              <>
+                <script
+                  dangerouslySetInnerHTML={{
+                    __html: `window.siteConfig = ${JSON.stringify(
+                      window.prodConfig.siteConfig,
+                    )}`,
+                  }}
+                />
+                <script
+                  dangerouslySetInnerHTML={{
+                    __html: `window.hydratedData = ${JSON.stringify({
+                      pages: data.pages,
+                    })}`,
+                  }}
+                />
+              </>
+            )}
             <script
               type="module"
               crossOrigin="true"
