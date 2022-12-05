@@ -137,6 +137,71 @@ function App() {
   // console.log('data', data);
   // console.log('pages.length', data.pages.length);
 
+  const routes = (
+    <Router>
+      <Routes>
+        <>
+          {window.klarContext.isInKlar &&
+            data.pages.length > 0 &&
+            location.pathname.includes('/sites/klar-sites/') && (
+              <Route
+                path={location.pathname}
+                element={<Navigate replace to={currentPageInKlar} />}
+              />
+            )}
+          {window.klarContext.isInKlar &&
+            data.pages.length > 0 &&
+            currentPageInKlar !== '/' && (
+              <Route
+                path="/"
+                element={<Navigate replace to={currentPageInKlar} />}
+              />
+            )}
+          {/* {!window.klarContext.isInKlar && (
+        <Route
+          path={startpage._path}
+          element={
+            <Navigate replace to={window.siteConfig.publicPath} />
+          }
+          key="redirect-to-start-page"
+        />
+      )} */}
+          {(data as IData).pages.map((page) => {
+            // console.log('Route was added: ', page._path);
+            return (
+              <Route
+                path={page._path}
+                element={<Page {...(data as IData)} />}
+                key={page._id}
+              />
+            );
+          })}
+          {window.klarContext.isInKlar && data.pages.length === 0 && (
+            <Route
+              path="/"
+              element={<Page {...(data as IData)} />}
+              key="no-pages"
+            />
+          )}
+
+          <Route
+            path={window.siteConfig.publicPath}
+            element={<Page {...(data as IData)} />}
+            key="redirect-to-start-page"
+          />
+          {/* {location.pathname === '/agency-typescript/' && (
+        <Route
+          path={location.pathname}
+          element={<Navigate replace to={currentPageInKlar} />}
+        />
+      )} */}
+
+          <Route path="/components" element={<Page {...(data as IData)} />} />
+        </>
+      </Routes>
+    </Router>
+  );
+
   if (window.releaseReactApp) {
     return (
       <HelmetProvider>
@@ -177,66 +242,7 @@ function App() {
           </head>
           <body className="bg-background">
             <div id="root">
-              <StaticRouter location={currentPageInKlar}>
-                <Routes>
-                  <>
-                    {window.klarContext.isInKlar &&
-                      data.pages.length > 0 &&
-                      location.pathname.includes('/sites/klar-sites/') && (
-                        <Route
-                          path={location.pathname}
-                          element={<Navigate replace to={currentPageInKlar} />}
-                        />
-                      )}
-                    {window.klarContext.isInKlar &&
-                      data.pages.length > 0 &&
-                      currentPageInKlar !== '/' && (
-                        <Route
-                          path="/"
-                          element={<Navigate replace to={currentPageInKlar} />}
-                        />
-                      )}
-                    {/* <Route
-                      path={startpage._path}
-                      element={
-                        <Navigate replace to={window.siteConfig.publicPath} />
-                      }
-                      key="redirect-to-start-page"
-                    /> */}
-                    {(data as IData).pages.map((page) => {
-                      // console.log('Route was added: ', page._path);
-                      return (
-                        <Route
-                          path={page._path}
-                          element={<Page {...(data as IData)} />}
-                          key={page._id}
-                        />
-                      );
-                    })}
-                    {window.klarContext.isInKlar && data.pages.length === 0 && (
-                      <Route
-                        path="/"
-                        element={<Page {...(data as IData)} />}
-                        key="no-pages"
-                      />
-                    )}
-                    {/* <Route
-                      path={window.siteConfig.publicPath}
-                      element={<Navigate replace to={startpage._path} />}
-                      key="redirect-to-start-page"
-                    /> */}
-                    <Route
-                      path={window.siteConfig.publicPath}
-                      element={<Page {...(data as IData)} />}
-                      key="redirect-to-start-page"
-                    />
-                    <Route
-                      path="/components"
-                      element={<Page {...(data as IData)} />}
-                    />
-                  </>
-                </Routes>
-              </StaticRouter>
+              <StaticRouter location={currentPageInKlar}>{routes}</StaticRouter>
             </div>
             <script
               dangerouslySetInnerHTML={{
@@ -262,75 +268,7 @@ function App() {
       </HelmetProvider>
     );
   } else {
-    return (
-      <HelmetProvider>
-        <Router>
-          <Routes>
-            <>
-              {window.klarContext.isInKlar &&
-                data.pages.length > 0 &&
-                location.pathname.includes('/sites/klar-sites/') && (
-                  <Route
-                    path={location.pathname}
-                    element={<Navigate replace to={currentPageInKlar} />}
-                  />
-                )}
-              {window.klarContext.isInKlar &&
-                data.pages.length > 0 &&
-                currentPageInKlar !== '/' && (
-                  <Route
-                    path="/"
-                    element={<Navigate replace to={currentPageInKlar} />}
-                  />
-                )}
-              {/* {!window.klarContext.isInKlar && (
-                <Route
-                  path={startpage._path}
-                  element={
-                    <Navigate replace to={window.siteConfig.publicPath} />
-                  }
-                  key="redirect-to-start-page"
-                />
-              )} */}
-              {(data as IData).pages.map((page) => {
-                // console.log('Route was added: ', page._path);
-                return (
-                  <Route
-                    path={page._path}
-                    element={<Page {...(data as IData)} />}
-                    key={page._id}
-                  />
-                );
-              })}
-              {window.klarContext.isInKlar && data.pages.length === 0 && (
-                <Route
-                  path="/"
-                  element={<Page {...(data as IData)} />}
-                  key="no-pages"
-                />
-              )}
-
-              <Route
-                path={window.siteConfig.publicPath}
-                element={<Page {...(data as IData)} />}
-                key="redirect-to-start-page"
-              />
-              {/* {location.pathname === '/agency-typescript/' && (
-                <Route
-                  path={location.pathname}
-                  element={<Navigate replace to={currentPageInKlar} />}
-                />
-              )} */}
-
-              <Route
-                path="/components"
-                element={<Page {...(data as IData)} />}
-              />
-            </>
-          </Routes>
-        </Router>
-      </HelmetProvider>
-    );
+    return <HelmetProvider>{routes}</HelmetProvider>;
   }
 }
 
