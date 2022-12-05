@@ -40,20 +40,20 @@ if (window.releaseReactApp) {
   //   </React.StrictMode>,
   //   document.documentElement,
   // );
-  // if (window.production) {
-  //   ReactDOMClient.hydrateRoot(
-  //     document.getElementById('root') as HTMLElement,
-  //     <React.StrictMode>
-  //       <App />
-  //     </React.StrictMode>,
-  //   );
-  // } else {
-  ReactDOMClient.createRoot(
-    document.getElementById('root') as HTMLElement,
-  ).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  );
-  // }
+  if (typeof parent.frames.window.klar !== 'undefined') {
+    ReactDOMClient.hydrateRoot(
+      document.getElementById('root') as HTMLElement,
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+    );
+  } else {
+    ReactDOMClient.createRoot(
+      document.getElementById('root') as HTMLElement,
+    ).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+    );
+  }
 }
