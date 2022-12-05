@@ -239,9 +239,7 @@ function App(): any {
           />
         </head>
         <body className="bg-background">
-          <div id="root">
-            <StaticRouter location={currentPageInKlar}>{routes}</StaticRouter>
-          </div>
+          <div id="root"><StaticRouter location={currentPageInKlar}>{routes}</StaticRouter></div>
           {/* {!window.releaseReactApp && <Router>{routes}</Router>} */}
           {window.releaseReactApp && (
             <>
