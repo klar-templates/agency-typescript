@@ -267,6 +267,24 @@ function App() {
                 />
               </>
             )}
+            {!window.releaseReactApp && (
+              <>
+                <script
+                  dangerouslySetInnerHTML={{
+                    __html: `window.siteConfig = ${JSON.stringify(
+                      window.siteConfig,
+                    )}`,
+                  }}
+                />
+                <script
+                  dangerouslySetInnerHTML={{
+                    __html: `window.hydratedData = ${JSON.stringify({
+                      pages: window.hydratedData.pages,
+                    })}`,
+                  }}
+                />
+              </>
+            )}
             <script
               type="module"
               crossOrigin="true"
