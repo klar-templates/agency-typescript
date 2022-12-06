@@ -30,13 +30,11 @@ if (window.releaseReactApp) {
         localStorage.setItem('current-page', page._id) as unknown;
         const reactHtml = ReactDOMServer.renderToString(
           <StaticRouter location={currentPath}>
-            <React.StrictMode>
-              <HelmetProvider>
-                <html lang="en">
-                  <App />
-                </html>
-              </HelmetProvider>
-            </React.StrictMode>
+            <HelmetProvider>
+              <html lang="en">
+                <App />
+              </html>
+            </HelmetProvider>
           </StaticRouter>,
         );
         window.reactServerPages[page._id] = '<!DOCTYPE html>' + reactHtml;
