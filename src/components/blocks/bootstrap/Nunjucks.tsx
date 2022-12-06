@@ -22,14 +22,11 @@ function getTemplateOnInit(data: any) {
 
 export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState(getTemplateOnInit(data));
+  window.nunjucks.configure({ autoescape: false });
   const cacheKeyTemplate = `${data.block._id}`;
   let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
 
   useEffect(() => {
-    if (window.production) {
-      return;
-    }
-    window.nunjucks.configure({ autoescape: false });
     // Get Nunjucks template
     if (window.klarContext.isInKlar) {
       let template =
