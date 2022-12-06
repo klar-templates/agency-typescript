@@ -28,18 +28,20 @@ export default function Nunjucks(data: any) {
 
   useEffect(() => {
     // Get Nunjucks template
-    if (window.klarContext.isInKlar) {
-      let template =
-        parent.frames.window.klar.templates.blocks[data.block._type];
-      if (template) {
-        setTemplate(template.content);
-      } else {
-        console.log('No template content for this block:', data.block._type);
-      }
-    } else {
+    if (!window.production) {
+      // if (window.klarContext.isInKlar) {
+      //   let template =
+      //     parent.frames.window.klar.templates.blocks[data.block._type];
+      //   if (template) {
+      //     setTemplate(template.content);
+      //   } else {
+      //     console.log('No template content for this block:', data.block._type);
+      //   }
+      // } else {
       getTemplate(data.block._type);
+      // }
+      // return () => clearInterval(id);
     }
-    // return () => clearInterval(id);
   }, []);
 
   // This is when you're in this application, when in Klar get the template file from the Klar application.
