@@ -30,14 +30,8 @@ export default function Hero3(data: any) {
       <div className="container mx-auto">
         <div className="intro-text relative z-10 text-center">
           <div
-            className="medium-editor-element intro-lead-in text-white"
+            className="intro-lead-in text-white"
             data-field-string="subtitle"
-            data-medium-editor-element="true"
-            role="textbox"
-            aria-multiline="true"
-            data-medium-editor-editor-index="7"
-            medium-editor-index="352d0493-24a3-cc4c-444d-7bf82c7e87ba"
-            data-placeholder="Type your text"
           >
             Edit everything on this site and if you like it...
           </div>
