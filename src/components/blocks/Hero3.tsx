@@ -29,22 +29,10 @@ export default function Hero3(data: any) {
     >
       <div className="container mx-auto">
         <div className="intro-text relative z-10 text-center">
-          <div
-            className="intro-lead-in text-white"
-            data-field-string="subtitle"
-          >
+          <div className="intro-lead-in" data-field-string="subtitle">
             {subtitle}
           </div>
-          <div
-            className="medium-editor-element intro-heading text-white"
-            data-field-string="title"
-            data-medium-editor-element="true"
-            role="textbox"
-            aria-multiline="true"
-            data-medium-editor-editor-index="8"
-            medium-editor-index="6feeda9b-a28a-d678-103a-dd11e400dd45"
-            data-placeholder="Type your text"
-          >
+          <div className="intro-heading" data-field-string="title">
             Create an account and start making your own web sites
           </div>
           <a
@@ -71,6 +59,7 @@ export default function Hero3(data: any) {
           #header-1669053487845 .intro-lead-in {}
           #header-1669053487845 .intro-lead-in {}
           #header-1669053487845 .intro-text {
+            color: #fff;
             padding: 300px 0 200px;
           }
           #header-1669053487845 .intro-lead-in {
