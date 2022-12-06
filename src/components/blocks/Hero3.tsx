@@ -30,7 +30,7 @@ export default function Hero3(data: any) {
       <div className="container mx-auto">
         <div className="intro-text relative z-10 text-center">
           <div
-            className="medium-editor-element intro-lead-in text-white text-5xl italic mb-4"
+            className="medium-editor-element intro-lead-in text-white"
             data-field-string="subtitle"
             data-medium-editor-element="true"
             role="textbox"
@@ -42,7 +42,7 @@ export default function Hero3(data: any) {
             Edit everything on this site and if you like it...
           </div>
           <div
-            className="medium-editor-element intro-heading text-white text-7xl"
+            className="medium-editor-element intro-heading text-white"
             data-field-string="title"
             data-medium-editor-element="true"
             role="textbox"
