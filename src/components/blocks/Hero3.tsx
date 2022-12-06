@@ -41,7 +41,6 @@ export default function Hero3(data: any) {
           >
             Edit everything on this site and if you like it...
           </div>
-
           <div
             className="medium-editor-element intro-heading text-white text-7xl"
             data-field-string="title"
