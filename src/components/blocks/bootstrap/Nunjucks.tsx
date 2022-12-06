@@ -78,7 +78,11 @@ export default function Nunjucks(data: any) {
     return (
       <>
         <div dangerouslySetInnerHTML={{ __html: renderedTemplate }} />
-        <script>{`const nunjucksTemplate${data.block._id} = '${renderedTemplate}'`}</script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `const nunjucksTemplate${data.block._id} = '${renderedTemplate}'`,
+          }}
+        />
       </>
     );
   }
