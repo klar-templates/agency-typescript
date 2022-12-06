@@ -33,7 +33,7 @@ export default function Hero3(data: any) {
             className="intro-lead-in text-white"
             data-field-string="subtitle"
           >
-            Edit everything on this site and if you like it...
+            {subtitle}
           </div>
           <div
             className="medium-editor-element intro-heading text-white"
