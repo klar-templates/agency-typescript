@@ -8,8 +8,6 @@ import ReactDOMServer from 'react-dom/server';
 import App from './App';
 import './index.css';
 
-window.nunjucksTemplates = {};
-
 if (location.host.includes('.github.io') || window.prodConfig) {
   window.production = true;
   if (typeof window.siteConfig === 'undefined') {
@@ -23,6 +21,7 @@ if (location.host.includes('.github.io') || window.prodConfig) {
 if (window.releaseReactApp) {
   const tempCurrentPage = localStorage.getItem('current-page') as string;
   window.reactServerPages = {};
+  window.nunjucksTemplates = {};
   if (parent.frames.window.klar) {
     const pages = [...parent.frames.window.klar.data.pages];
     if (pages.length > 0) {

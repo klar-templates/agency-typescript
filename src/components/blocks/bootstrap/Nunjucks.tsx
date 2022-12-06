@@ -6,13 +6,16 @@ function getTemplateOnInit(data: any) {
     window.nunjucks.configure({ autoescape: false });
     let template = parent.frames.window.klar.templates.blocks[data.block._type];
     if (template) {
+      if (window.releaseReactApp) {
+        window.nunjucksTemplates[data.block._type] = template.content;
+      }
       return template.content;
     } else {
       console.log('No template content for this block:', data.block._type);
     }
   }
   if (location.host.includes('.github.io')) {
-    return window.nunjucksTemplates[`'nunjucksTemplate${data.block._id}'`];
+    return window.nunjucksTemplates['nunjucksTemplate' + data.block._id];
   }
   return '';
 }
