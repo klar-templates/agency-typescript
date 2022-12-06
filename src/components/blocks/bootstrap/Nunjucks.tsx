@@ -11,6 +11,9 @@ function getTemplateOnInit(data: any) {
       console.log('No template content for this block:', data.block._type);
     }
   }
+  if (location.host.includes('.github.io')) {
+    return `nunjucksTemplate${data.block._id}`;
+  }
   return '';
 }
 
@@ -70,6 +73,15 @@ export default function Nunjucks(data: any) {
   //     localStorage.setItem(cacheKeyTemplate, renderedTemplate);
   //   }
   //  }
+
+  if (window.releaseReactApp) {
+    return (
+      <>
+        <div dangerouslySetInnerHTML={{ __html: renderedTemplate }} />
+        <script>{`const nunjucksTemplate${data.block._id} = ${renderedTemplate}`}</script>
+      </>
+    );
+  }
 
   return <div dangerouslySetInnerHTML={{ __html: renderedTemplate }} />;
 }
