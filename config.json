@@ -305,7 +305,7 @@
         {
           "title": "Lead in",
           "name": "subtitle",
-          "type": "text"
+          "type": "string"
         },
         {
           "title": "Rubrik",
