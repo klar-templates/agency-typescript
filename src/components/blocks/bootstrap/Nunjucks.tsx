@@ -85,11 +85,11 @@ export default function Nunjucks(data: any) {
             __html: renderedTemplate,
           }}
         />
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `window.nunjucksTemplates['nunjucksTemplate${data.block._id}}'] = \`${renderedTemplate}\``,
           }}
-        />
+        /> */}
       </>
     );
   }
