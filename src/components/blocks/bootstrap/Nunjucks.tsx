@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 function getTemplateOnInit(data: any) {
   if (window.klarContext.isInKlar) {
-    window.nunjucks.configure({ autoescape: false });
     let template = parent.frames.window.klar.templates.blocks[data.block._type];
     if (template) {
       if (window.releaseReactApp) {
@@ -29,17 +28,17 @@ export default function Nunjucks(data: any) {
   useEffect(() => {
     // Get Nunjucks template
     if (!window.production) {
-      // if (window.klarContext.isInKlar) {
-      //   let template =
-      //     parent.frames.window.klar.templates.blocks[data.block._type];
-      //   if (template) {
-      //     setTemplate(template.content);
-      //   } else {
-      //     console.log('No template content for this block:', data.block._type);
-      //   }
-      // } else {
-      getTemplate(data.block._type);
-      // }
+      if (window.klarContext.isInKlar) {
+        //   let template =
+        //     parent.frames.window.klar.templates.blocks[data.block._type];
+        //   if (template) {
+        //     setTemplate(template.content);
+        //   } else {
+        //     console.log('No template content for this block:', data.block._type);
+        //   }
+      } else {
+        getTemplate(data.block._type);
+      }
       // return () => clearInterval(id);
     }
   }, []);
