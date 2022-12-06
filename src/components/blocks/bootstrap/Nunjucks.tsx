@@ -1,5 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import RenderScript from '../../RenderScript';
 // import nunjucks from 'vite-plugin-nunjucks';
+
+type scriptInline = {
+  type: any;
+  async: any;
+  innerHTML: any;
+};
 
 function getTemplateOnInit(data: any) {
   if (window.klarContext.isInKlar) {
@@ -21,26 +28,38 @@ function getTemplateOnInit(data: any) {
 
 export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState(getTemplateOnInit(data));
+  const containerRef = useRef(null);
   window.nunjucks.configure({ autoescape: false });
   const cacheKeyTemplate = `${data.block._id}`;
   let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
 
   useEffect(() => {
     // Get Nunjucks template
-    if (!window.production) {
-      if (window.klarContext.isInKlar) {
-        //   let template =
-        //     parent.frames.window.klar.templates.blocks[data.block._type];
-        //   if (template) {
-        //     setTemplate(template.content);
-        //   } else {
-        //     console.log('No template content for this block:', data.block._type);
-        //   }
-      } else {
-        getTemplate(data.block._type);
+    if (window.production) {
+      if (containerRef?.current) {
+        const container: any = containerRef.current;
+        const codeStr = container.querySelector('script').innerHTML;
+        if (codeStr) {
+          const s: Node & scriptInline = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.innerHTML = codeStr;
+          document.body.appendChild(s);
+        }
       }
-      // return () => clearInterval(id);
+    } else if (window.klarContext.isInKlar) {
+      //   let template =
+      //     parent.frames.window.klar.templates.blocks[data.block._type];
+      //   if (template) {
+      //     setTemplate(template.content);
+      //   } else {
+      //     console.log('No template content for this block:', data.block._type);
+      //   }
+    } else {
+      getTemplate(data.block._type);
     }
+    // return () => clearInterval(id);
+    // }
   }, []);
 
   // This is when you're in this application, when in Klar get the template file from the Klar application.
@@ -79,6 +98,7 @@ export default function Nunjucks(data: any) {
     return (
       <>
         <div
+          ref={containerRef}
           dangerouslySetInnerHTML={{
             __html: renderedTemplate,
           }}
