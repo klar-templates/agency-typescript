@@ -119,5 +119,10 @@ export default function Nunjucks(data: any) {
     );
   }
 
-  return <div dangerouslySetInnerHTML={{ __html: renderedTemplate }} />;
+  return (
+    <div
+      ref={containerRef}
+      dangerouslySetInnerHTML={{ __html: renderedTemplate }}
+    />
+  );
 }
