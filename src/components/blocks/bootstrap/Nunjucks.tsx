@@ -12,7 +12,7 @@ function getTemplateOnInit(data: any) {
     }
   }
   if (location.host.includes('.github.io')) {
-    return window.nunjucksTemplates[`nunjucksTemplate${data.block._id}`];
+    return window.nunjucksTemplates[`'nunjucksTemplate${data.block._id}'`];
   }
   return '';
 }
@@ -84,7 +84,7 @@ export default function Nunjucks(data: any) {
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.nunjucksTemplates[nunjucksTemplate${data.block._id}}] = \`${renderedTemplate}\``,
+            __html: `window.nunjucksTemplates['nunjucksTemplate${data.block._id}}'] = \`${renderedTemplate}\``,
           }}
         />
       </>
