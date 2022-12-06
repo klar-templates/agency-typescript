@@ -9,7 +9,9 @@ type scriptInline = {
 };
 
 function renderInlineScript(ref: any) {
+  console.log(ref);
   if (ref?.current) {
+    console.log(ref.current);
     const container: any = ref.current;
     const codeStr = container.querySelector('script').innerHTML;
     if (codeStr) {
