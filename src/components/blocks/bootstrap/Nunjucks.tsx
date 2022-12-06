@@ -1,20 +1,36 @@
 import { useEffect, useState } from 'react';
 // import nunjucks from 'vite-plugin-nunjucks';
 
+function getTemplateOnInit(data: any) {
+  if (window.klarContext.isInKlar) {
+    window.nunjucks.configure({ autoescape: false });
+    console.log('isInKlar');
+    let template = parent.frames.window.klar.templates.blocks[data.block._type];
+    if (template) {
+      console.log('Got the template');
+      return template.content;
+    } else {
+      console.log('No template content for this block:', data.block._type);
+    }
+  }
+  return '';
+}
+
 export default function Nunjucks(data: any) {
-  const [template, setTemplate] = useState('');
+  const [template, setTemplate] = useState(getTemplateOnInit(data));
   const cacheKeyTemplate = `${data.block._id}`;
   let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
 
   useEffect(() => {
+    if (window.production) {
+      return;
+    }
     window.nunjucks.configure({ autoescape: false });
     // Get Nunjucks template
     if (window.klarContext.isInKlar) {
-      console.log('isInKlar');
       let template =
         parent.frames.window.klar.templates.blocks[data.block._type];
       if (template) {
-        console.log('Got the template');
         setTemplate(template.content);
       } else {
         console.log('No template content for this block:', data.block._type);

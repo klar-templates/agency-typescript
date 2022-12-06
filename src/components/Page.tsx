@@ -68,7 +68,6 @@ export default function Page(data: IData) {
         </KlarEditBlock>,
       );
     } else {
-      console.log('find', block.template_id);
       blockArray.push(
         <KlarEditBlock key={block._id} id={block._id} type={block._type}>
           <Nunjucks {...blockData} />
