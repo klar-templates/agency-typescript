@@ -15,7 +15,7 @@ function getTemplateOnInit(data: any) {
     }
   }
   if (location.host.includes('.github.io')) {
-    return window.nunjucksTemplates['nunjucksTemplate' + data.block._id];
+    return window.nunjucksTemplates[data.block._id];
   }
   return '';
 }
