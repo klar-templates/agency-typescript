@@ -8,6 +8,20 @@ type scriptInline = {
   innerHTML: any;
 };
 
+function renderInlineScript(ref: any) {
+  if (ref?.current) {
+    const container: any = ref.current;
+    const codeStr = container.querySelector('script').innerHTML;
+    if (codeStr) {
+      const s: Node & scriptInline = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.innerHTML = codeStr;
+      document.body.appendChild(s);
+    }
+  }
+}
+
 function getTemplateOnInit(data: any) {
   if (window.klarContext.isInKlar) {
     let template = parent.frames.window.klar.templates.blocks[data.block._type];
@@ -36,18 +50,9 @@ export default function Nunjucks(data: any) {
   useEffect(() => {
     // Get Nunjucks template
     if (window.production) {
-      if (containerRef?.current) {
-        const container: any = containerRef.current;
-        const codeStr = container.querySelector('script').innerHTML;
-        if (codeStr) {
-          const s: Node & scriptInline = document.createElement('script');
-          s.type = 'text/javascript';
-          s.async = true;
-          s.innerHTML = codeStr;
-          document.body.appendChild(s);
-        }
-      }
+      renderInlineScript(containerRef);
     } else if (window.klarContext.isInKlar) {
+      renderInlineScript(containerRef);
       //   let template =
       //     parent.frames.window.klar.templates.blocks[data.block._type];
       //   if (template) {
