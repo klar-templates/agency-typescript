@@ -4,10 +4,8 @@ import { useEffect, useState } from 'react';
 function getTemplateOnInit(data: any) {
   if (window.klarContext.isInKlar) {
     window.nunjucks.configure({ autoescape: false });
-    console.log('isInKlar');
     let template = parent.frames.window.klar.templates.blocks[data.block._type];
     if (template) {
-      console.log('Got the template');
       return template.content;
     } else {
       console.log('No template content for this block:', data.block._type);
