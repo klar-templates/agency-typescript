@@ -12,8 +12,7 @@ function getTemplateOnInit(data: any) {
     }
   }
   if (location.host.includes('.github.io')) {
-    return document.querySelector(`#nunjucksTemplate${data.block._id}`)
-      ?.innerHTML;
+    return window.nunjucksTempates[`nunjucksTemplate${data.block._id}`];
   }
   return '';
 }
@@ -80,19 +79,16 @@ export default function Nunjucks(data: any) {
       <>
         <div
           dangerouslySetInnerHTML={{
-            __html:
-              '<div id="nunjucksTemplate' +
-              data.block._id +
-              '">' +
-              renderedTemplate +
-              '</div>',
+            __html: renderedTemplate,
           }}
         />
-        {/* <script
+        <script
           dangerouslySetInnerHTML={{
-            __html: `const nunjucksTemplate${data.block._id} = '${renderedTemplate}'`,
+            __html: window.nunjucksTempates[
+              `nunjucksTemplate${data.block._id}`
+            ].push(`'${renderedTemplate}'`),
           }}
-        /> */}
+        />
       </>
     );
   }

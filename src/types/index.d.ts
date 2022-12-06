@@ -12,5 +12,6 @@ declare global {
     prodConfig: any;
     hydratedData: any;
     siteConfig: any;
+    nunjucksTempates: any;
   }
 }
