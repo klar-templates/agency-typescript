@@ -66,7 +66,6 @@ export default function Nunjucks(data: any) {
 
   // if (!renderedTemplate) {
   renderedTemplate = window.nunjucks.renderString(template, data);
-  console.log('renderedTemplate', renderedTemplate);
   //   if (window.klarContext.isInKlar) {
   //     localStorage.setItem(cacheKeyTemplate, renderedTemplate);
   //   }
