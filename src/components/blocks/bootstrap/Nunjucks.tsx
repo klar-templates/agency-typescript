@@ -10,9 +10,11 @@ export default function Nunjucks(data: any) {
     window.nunjucks.configure({ autoescape: false });
     // Get Nunjucks template
     if (window.klarContext.isInKlar) {
+      console.log('isInKlar');
       let template =
         parent.frames.window.klar.templates.blocks[data.block._type];
       if (template) {
+        console.log('Got the template');
         setTemplate(template.content);
       } else {
         console.log('No template content for this block:', data.block._type);
@@ -50,6 +52,7 @@ export default function Nunjucks(data: any) {
 
   // if (!renderedTemplate) {
   renderedTemplate = window.nunjucks.renderString(template, data);
+  console.log('renderedTemplate', renderedTemplate);
   //   if (window.klarContext.isInKlar) {
   //     localStorage.setItem(cacheKeyTemplate, renderedTemplate);
   //   }
