@@ -61,22 +61,22 @@ if (window.releaseReactApp) {
   //     </Router>,
   //   );
   // } else {
-  if (window.production) {
-    ReactDOMClient.hydrateRoot(
-      document.getElementById('root') as HTMLElement,
+  // if (window.production) {
+  //   ReactDOMClient.hydrateRoot(
+  //     document.getElementById('root') as HTMLElement,
+  //     <HelmetProvider>
+  //       <App />
+  //     </HelmetProvider>,
+  //   );
+  // } else {
+  ReactDOMClient.createRoot(
+    document.getElementById('root') as HTMLElement,
+  ).render(
+    <React.StrictMode>
       <HelmetProvider>
         <App />
-      </HelmetProvider>,
-    );
-  } else {
-    ReactDOMClient.createRoot(
-      document.getElementById('root') as HTMLElement,
-    ).render(
-      <React.StrictMode>
-        <HelmetProvider>
-          <App />
-        </HelmetProvider>
-      </React.StrictMode>,
-    );
-  }
+      </HelmetProvider>
+    </React.StrictMode>,
+  );
+  // }
 }
