@@ -8,7 +8,7 @@ import ReactDOMServer from 'react-dom/server';
 import App from './App';
 import './index.css';
 
-window.nunjucksTemplates = [];
+window.nunjucksTemplates = {};
 
 if (location.host.includes('.github.io') || window.prodConfig) {
   window.production = true;

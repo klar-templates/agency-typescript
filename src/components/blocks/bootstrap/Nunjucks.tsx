@@ -84,9 +84,9 @@ export default function Nunjucks(data: any) {
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: window.nunjucksTemplates[
+            __html: (window.nunjucksTemplates[
               `nunjucksTemplate${data.block._id}`
-            ].push(`'${renderedTemplate}'`),
+            ] = `'${renderedTemplate}'`),
           }}
         />
       </>
