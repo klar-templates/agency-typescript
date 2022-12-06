@@ -296,6 +296,60 @@
       "fields": []
     },
     {
+      "title": "Hero 3",
+      "name": "hero3",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": [
+        {
+          "title": "Lead in",
+          "name": "subtitle",
+          "type": "text"
+        },
+        {
+          "title": "Rubrik",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Länktext",
+          "name": "link_text",
+          "type": "string"
+        },
+        {
+          "title": "Länk",
+          "name": "link",
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "title": "Bild",
+          "name": "image",
+          "type": "string",
+          "format": "file"
+        },
+        {
+          "title": "Show lead in",
+          "name": "show_subtitle",
+          "type": "boolean",
+          "ui:widget": "switch"
+        },
+        {
+          "title": "Show title",
+          "name": "show_title",
+          "type": "boolean",
+          "ui:widget": "switch"
+        },
+        {
+          "title": "Show button",
+          "name": "show_button",
+          "type": "boolean",
+          "ui:widget": "switch"
+        }
+      ]
+    },
+    {
       "title": "Elements",
       "name": "elements",
       "icon": "image",
