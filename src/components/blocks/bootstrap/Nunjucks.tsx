@@ -9,11 +9,9 @@ type scriptInline = {
 };
 
 function renderInlineScript(ref: any) {
-  console.log(ref);
   if (ref?.current) {
-    console.log(ref.current);
     const container: any = ref.current;
-    const codeStr = container.querySelector('script').innerHTML;
+    const codeStr = container.querySelector('script')?.innerHTML;
     if (codeStr) {
       const s: Node & scriptInline = document.createElement('script');
       s.type = 'text/javascript';
@@ -83,10 +81,12 @@ export default function Nunjucks(data: any) {
           localStorage.setItem(cacheKey, data);
         }
         setTemplate(data);
+        renderInlineScript(containerRef);
       });
     } else {
       const data = localStorage.getItem(cacheKey) as string;
       setTemplate(data);
+      renderInlineScript(containerRef);
     }
   }
 
