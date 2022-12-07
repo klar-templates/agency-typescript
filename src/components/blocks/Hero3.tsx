@@ -18,7 +18,7 @@ export default function Hero3(data: any) {
   return (
     <header
       id={_id}
-      className="relative h-screen bg-[url('${image}')]"
+      className={`relative h-screen bg-[url('${image}')]`}
       style={{ backgroundSize: 'cover' }}
       data-field-string-file="image"
       data-placement="top"
