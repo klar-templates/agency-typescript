@@ -12,7 +12,7 @@ export default function Header3(data: any) {
   const { _id, _type, logo_text, style } = data.block;
 
   const classes: any = classNames({
-    'klar-outline bg-background relative z-10 lg:px-8': true,
+    'klar-outline g-background relative z-10 lg:px-8': true,
     dark: style.darkmode,
   });
 
