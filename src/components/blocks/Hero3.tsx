@@ -46,7 +46,7 @@ export default function Hero3(data: any) {
           </a>
         </div>
       </div>
-      <div className="bg-black/40 inset-0 absolute"></div>
+      <div className="background bg-black/40 inset-0 absolute"></div>
       <RenderStyle>
         {`
           #${_id} .intro-lead-in {}
@@ -105,6 +105,9 @@ export default function Hero3(data: any) {
             background-color: #e02e3d;
             border-color: #e02e3d;
             color: #ffffff;
+          }
+          #${_id} .background {
+            pointer-events: none;
           }
         `}
       </RenderStyle>
