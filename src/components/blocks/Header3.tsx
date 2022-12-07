@@ -53,7 +53,7 @@ export default function Header3(data: any) {
                   (window.klarContext.currentPage &&
                     window.klarContext.currentPage._id)
                     ? 'font-semibold list-none whitespace-nowrap text-primary-dark'
-                    : 'font-semibold text-on-background hover:text-gray-900 list-none whitespace-nowrap'
+                    : 'font-semibold text-on-background hover:text-primary-dark list-none whitespace-nowrap'
                 }
               >
                 <Link to={i === 0 ? window.siteConfig.publicPath : page._path}>
