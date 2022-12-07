@@ -13,13 +13,17 @@ export default function Header3(data: any) {
 
   const classes: any = classNames({
     'klar-outline relative z-10 lg:px-8': true,
-    'b-background': !style.transparent,
+    'bg-background': !style.transparent,
     ['bg-[' + style.bg_color + ']']: style.bg_color && !style.transparent,
     dark: style.darkmode,
   });
 
+  const styles: any = {
+    backroundColor: style.bg_color ? style.bg_color : '',
+  };
+
   return (
-    <header className={classes}>
+    <header className={classes} style={styles}>
       <div className="py-6 mx-auto container">
         <nav
           className="flex h-9 items-center justify-between"
