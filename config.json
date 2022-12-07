@@ -229,6 +229,18 @@
               "name": "darkmode",
               "type": "boolean",
               "ui:widget": "switch"
+            },
+            {
+              "title": "Transparent",
+              "name": "transparent",
+              "type": "boolean",
+              "ui:widget": "switch"
+            },
+            {
+              "title": "Bakgrundsfärg",
+              "name": "bg_color",
+              "type": "string",
+              "format": "color"
             }
           ]
         }
@@ -1087,7 +1099,7 @@
           "navbar": {
             "transparent": true,
             "sticky": true,
-            "bg_color": "#222",
+            "bg_color": "transparent",
             "padding_top": 25,
             "padding_bottom": 25,
             "border_bottom_width": 0,

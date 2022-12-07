@@ -12,7 +12,9 @@ export default function Header3(data: any) {
   const { _id, _type, logo_text, style } = data.block;
 
   const classes: any = classNames({
-    'klar-outline g-background relative z-10 lg:px-8': true,
+    'klar-outline relative z-10 lg:px-8': true,
+    'bg-background': !style.transparent,
+    ['bg-[#' + style.bg_color + ']']: style.bg_color && !style.transparent,
     dark: style.darkmode,
   });
 
