@@ -217,7 +217,22 @@
       "icon": "image",
       "hidden": false,
       "type": "object",
-      "fields": [{ "title": "Logotext", "name": "logo_text", "type": "string" }]
+      "fields": [
+        { "title": "Logotext", "name": "logo_text", "type": "string" },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Darkmode",
+              "name": "darkmode",
+              "type": "boolean",
+              "ui:widget": "switch"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Hero",

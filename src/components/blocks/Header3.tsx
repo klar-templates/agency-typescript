@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import classNames from '../../utils/classNames';
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -8,11 +9,15 @@ const navigation = [
 ];
 
 export default function Header3(data: any) {
-  // console.log(window.klarContext.data.pages);
   const { _id, _type, logo_text, style } = data.block;
 
+  const classes: any = classNames({
+    'klar-outline g-background relative z-10 lg:px-8': true,
+    dark: style.darkmode,
+  });
+
   return (
-    <header className="klar-outline g-background relative z-10 lg:px-8">
+    <header className={classes}>
       <div className="py-6 mx-auto container">
         <nav
           className="flex h-9 items-center justify-between"
