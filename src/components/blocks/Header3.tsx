@@ -7,7 +7,7 @@ const navigation = [
   { name: 'Company', href: '#' },
 ];
 
-export default function Header2(data: any) {
+export default function Header3(data: any) {
   // console.log(window.klarContext.data.pages);
   const { _id, _type, logo_text, style } = data.block;
 
@@ -23,6 +23,7 @@ export default function Header2(data: any) {
               <span
                 style={{ pointerEvents: 'none' }}
                 className="r-only text-2xl font-bold ext-primary-dark text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
+                data-field-string="logo_text"
               >
                 {logo_text}
               </span>
