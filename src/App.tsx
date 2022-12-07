@@ -5,7 +5,6 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import IData from './service/interface/IData';
 import Page from './components/Page';
 

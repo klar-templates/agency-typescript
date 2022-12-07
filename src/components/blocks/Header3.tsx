@@ -24,7 +24,7 @@ export default function Header2(data: any) {
                 style={{ pointerEvents: 'none' }}
                 className="r-only text-2xl font-bold ext-primary-dark text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
               >
-                Brand
+                {logo_text}
               </span>
               {/* <span className="r-only text-2xl font-bold text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">Your logo</span> */}
               {/* <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}

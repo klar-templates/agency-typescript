@@ -217,7 +217,7 @@
       "icon": "image",
       "hidden": false,
       "type": "object",
-      "fields": []
+      "fields": [{ "title": "Logotext", "name": "logo_text", "type": "string" }]
     },
     {
       "title": "Hero",
