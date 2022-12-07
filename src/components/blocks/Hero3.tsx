@@ -16,54 +16,71 @@ export default function Hero3(data: any) {
     image,
   } = data.block;
   return (
-    <header
-      id={_id}
-      className={`relative h-screen bg-[url('${image}')]`}
-      style={{ backgroundSize: 'cover' }}
-      data-field-string-file="image"
-      data-placement="top"
-      data-offset-top="210"
-      data-hide-arrow="true"
-      data-wrapper="true"
-      no-data-inset="true"
-    >
-      <div className="container mx-auto">
-        <div className="intro-text relative z-10 text-center">
-          <div className="intro-lead-in" data-field-string="subtitle">
-            {subtitle}
+    <>
+      <header
+        id={_id}
+        className={`klar-outline ${_type}`}
+        data-field-string-file="image"
+        data-placement="top"
+        data-offset-top="210"
+        data-hide-arrow="true"
+        data-wrapper="true"
+        no-data-inset="true"
+      >
+        <div className="container">
+          <div className="intro-text">
+            <div
+              className="intro-lead-in font-serif"
+              data-field-string="subtitle"
+            >
+              {subtitle}
+            </div>
+            <div className="intro-heading font-sans" data-field-string="title">
+              {title}
+            </div>
+            <a
+              href="#"
+              className="button"
+              data-field-string="link_text"
+              data-field-string-format-uri="link"
+              data-placement="bottom"
+            >
+              {link_text}
+            </a>
           </div>
-          <div className="intro-heading" data-field-string="title">
-            {title}
-          </div>
-          <a
-            href="#"
-            className="button"
-            data-field-string="link_text"
-            data-field-string-format-uri="link"
-            data-placement="bottom"
-          >
-            {link_text}
-          </a>
         </div>
-      </div>
-      <div className="background bg-black/40 inset-0 absolute"></div>
+        <div className="background"></div>
+      </header>
       <RenderStyle>
         {`
-          #${_id} .intro-lead-in {}
-          #${_id} .intro-lead-in {}
+          #${_id} {
+            position: relative;
+            background-image: url('${image}');
+            margin-top: 0px;
+            height: 100vh;
+            background-position: 0 0px;
+            text-align: center;
+            background-size: cover;
+          }
+          #${_id} .container {
+            margin: 0 auto;
+          }
           #${_id} .intro-text {
             color: #fff;
             padding: 300px 0 200px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
           }
           #${_id} .intro-lead-in {
-            font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            ont-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-style: italic;
             font-size: 40px;
             line-height: 40px;
             margin-bottom: 25px;
           }
           #${_id} .intro-heading {
-            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            ont-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-transform: uppercase;
             font-weight: 700;
             font-size: 75px;
@@ -71,15 +88,8 @@ export default function Hero3(data: any) {
             margin-bottom: 50px;
           }
           #${_id} .button {
-            background-color: #e02e3d;
-            border-color: #e02e3d;
-            color: #ffffff;
-            color: white;
             display: inline-block;
-            padding: 6px 12px;
             margin-bottom: 0;
-            font-size: 14px;
-            font-weight: 400;
             line-height: 1.42857143;
             text-align: center;
             white-space: nowrap;
@@ -93,9 +103,6 @@ export default function Hero3(data: any) {
             user-select: none;
             background-image: none;
             border: 1px solid transparent;
-            border-radius: 4px;
-            background-color: #fed136;
-            border-color: #fed136;
             font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-transform: uppercase;
             font-weight: 700;
@@ -107,10 +114,12 @@ export default function Hero3(data: any) {
             color: #ffffff;
           }
           #${_id} .background {
-            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.4);
+            inset: 0;
+            position: absolute;
           }
         `}
       </RenderStyle>
-    </header>
+    </>
   );
 }
