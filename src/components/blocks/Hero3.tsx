@@ -19,7 +19,7 @@ export default function Hero3(data: any) {
     <>
       <section
         id={_id}
-        className={`klar-outline ${_type}`}
+        className={`${_type} klar-outline`}
         data-field-string-file="image"
         data-placement="top"
         data-offset-top="210"
@@ -61,12 +61,11 @@ export default function Hero3(data: any) {
       <RenderStyle>
         {`
           #${_id} {
-            top: -84px;
             background-image: url('${image}');
             background-position: 0 0px;
             background-size: cover;
             position: relative;
-            margin-top: 0px;
+            margin-top: -84px;
             height: 100vh;
             text-align: center;
           }
