@@ -17,7 +17,7 @@ export default function Hero3(data: any) {
   } = data.block;
   return (
     <>
-      <header
+      <section
         id={_id}
         className={`klar-outline ${_type}`}
         data-field-string-file="image"
@@ -45,7 +45,7 @@ export default function Hero3(data: any) {
             )}
             {show_button && (
               <a
-                href="#"
+                href={link}
                 className="button"
                 data-field-string="link_text"
                 data-field-string-format-uri="link"
@@ -57,17 +57,18 @@ export default function Hero3(data: any) {
           </div>
         </div>
         <div className="background"></div>
-      </header>
+      </section>
       <RenderStyle>
         {`
           #${_id} {
-            position: relative;
+            top: -84px;
             background-image: url('${image}');
+            background-position: 0 0px;
+            background-size: cover;
+            position: relative;
             margin-top: 0px;
             height: 100vh;
-            background-position: 0 0px;
             text-align: center;
-            background-size: cover;
           }
           #${_id} .container {
             margin: 0 auto;
