@@ -237,7 +237,7 @@ function App(): any {
             href={`${window.siteConfig.publicPath}${window.siteConfig.cssFilepath}`}
           />
         </head>
-        <body className="bg-background" style={{ overflow: 'overlay' }}>
+        <body className="bg-background">
           <div id="root">{routes}</div>
           {/* {!window.releaseReactApp && <Router>{routes}</Router>} */}
           {window.releaseReactApp && (
