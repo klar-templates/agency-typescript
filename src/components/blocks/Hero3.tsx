@@ -37,7 +37,7 @@ export default function Hero3(data: any) {
           </div>
           <a
             href="#"
-            className="btn"
+            className="button"
             data-field-string="link_text"
             data-field-string-format-uri="link"
             data-placement="bottom"
@@ -70,7 +70,7 @@ export default function Hero3(data: any) {
             line-height: 75px;
             margin-bottom: 50px;
           }
-          #${_id} .btn {
+          #${_id} .button {
             background-color: #e02e3d;
             border-color: #e02e3d;
             color: #ffffff;
