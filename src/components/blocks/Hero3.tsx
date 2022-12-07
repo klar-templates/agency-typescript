@@ -29,24 +29,31 @@ export default function Hero3(data: any) {
       >
         <div className="container">
           <div className="intro-text">
-            <div
-              className="intro-lead-in ont-serif"
-              data-field-string="subtitle"
-            >
-              {subtitle}
-            </div>
-            <div className="intro-heading ont-sans" data-field-string="title">
-              {title}
-            </div>
-            <a
-              href="#"
-              className="button"
-              data-field-string="link_text"
-              data-field-string-format-uri="link"
-              data-placement="bottom"
-            >
-              {link_text}
-            </a>
+            {show_subtitle && (
+              <div
+                className="intro-lead-in ont-serif"
+                data-field-string="subtitle"
+                data-placeholder="Text för lead-in"
+              >
+                {subtitle}
+              </div>
+            )}
+            {show_title && (
+              <div className="intro-heading ont-sans" data-field-string="title">
+                {title}
+              </div>
+            )}
+            {show_button && (
+              <a
+                href="#"
+                className="button"
+                data-field-string="link_text"
+                data-field-string-format-uri="link"
+                data-placement="bottom"
+              >
+                {link_text}
+              </a>
+            )}
           </div>
         </div>
         <div className="background"></div>
