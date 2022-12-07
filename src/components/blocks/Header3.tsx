@@ -18,7 +18,7 @@ export default function Header3(data: any) {
   });
 
   const styles = {
-    backgroundColor: style.bg_color ? style.bg_color : '',
+    backgroundColor: style.bg_color && !style.transparent ? style.bg_color : '',
   };
 
   return (
