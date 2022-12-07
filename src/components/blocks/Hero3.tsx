@@ -17,7 +17,7 @@ export default function Hero3(data: any) {
   } = data.block;
   return (
     <header
-      id="header-1669053487845"
+      id={_id}
       className="relative h-screen bg-[url('https://raw.githubusercontent.com/klar-templates/agency/master/img/header-bg.jpg')]"
       style={{ backgroundSize: 'cover' }}
       data-field-string-file="image"
@@ -33,43 +33,36 @@ export default function Hero3(data: any) {
             {subtitle}
           </div>
           <div className="intro-heading" data-field-string="title">
-            Create an account and start making your own web sites
+            {title}
           </div>
           <a
-            href="#services-1669053520380"
-            className="medium-editor-element btn"
+            href="#"
+            className="btn"
             data-field-string="link_text"
             data-field-string-format-uri="link"
             data-placement="bottom"
-            data-medium-editor-element="true"
-            role="textbox"
-            aria-multiline="true"
-            data-medium-editor-editor-index="9"
-            medium-editor-index="cd663e4a-61ec-913f-a6ba-fecb5b3c03c1"
-            data-placeholder="Type your text"
           >
-            Tell me more
+            {link_text}
           </a>
         </div>
       </div>
       <div className="bg-black/40 inset-0 absolute"></div>
       <RenderStyle>
         {`
-          
-          #header-1669053487845 .intro-lead-in {}
-          #header-1669053487845 .intro-lead-in {}
-          #header-1669053487845 .intro-text {
+          #${_id} .intro-lead-in {}
+          #${_id} .intro-lead-in {}
+          #${_id} .intro-text {
             color: #fff;
             padding: 300px 0 200px;
           }
-          #header-1669053487845 .intro-lead-in {
+          #${_id} .intro-lead-in {
             font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-style: italic;
             font-size: 40px;
             line-height: 40px;
             margin-bottom: 25px;
           }
-          #header-1669053487845 .intro-heading {
+          #${_id} .intro-heading {
             font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-transform: uppercase;
             font-weight: 700;
@@ -77,7 +70,7 @@ export default function Hero3(data: any) {
             line-height: 75px;
             margin-bottom: 50px;
           }
-          #header-1669053487845 .btn {
+          #${_id} .btn {
             background-color: #e02e3d;
             border-color: #e02e3d;
             color: #ffffff;
