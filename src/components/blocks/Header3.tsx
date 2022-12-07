@@ -32,6 +32,10 @@ export default function Header3(data: any) {
             <Link
               to={window.siteConfig.publicPath}
               className="text-primary-dark dark:text-primary r-only text-2xl font-bold ext-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
+              style={{
+                fontFamily:
+                  '"Kaushan Script","Helvetica Neue",Helvetica,Arial,sans-serif',
+              }}
               data-field-string="logo_text"
             >
               {logo_text}
