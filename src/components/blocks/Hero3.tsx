@@ -30,12 +30,12 @@ export default function Hero3(data: any) {
         <div className="container">
           <div className="intro-text">
             <div
-              className="intro-lead-in font-serif"
+              className="intro-lead-in ont-serif"
               data-field-string="subtitle"
             >
               {subtitle}
             </div>
-            <div className="intro-heading font-sans" data-field-string="title">
+            <div className="intro-heading ont-sans" data-field-string="title">
               {title}
             </div>
             <a
@@ -73,14 +73,14 @@ export default function Hero3(data: any) {
             text-align: center;
           }
           #${_id} .intro-lead-in {
-            ont-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-style: italic;
             font-size: 40px;
             line-height: 40px;
             margin-bottom: 25px;
           }
           #${_id} .intro-heading {
-            ont-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-transform: uppercase;
             font-weight: 700;
             font-size: 75px;
