@@ -18,7 +18,7 @@ export default function Hero3(data: any) {
   return (
     <header
       id={_id}
-      className="relative h-screen bg-[url('https://raw.githubusercontent.com/klar-templates/agency/master/img/header-bg.jpg')]"
+      className="relative h-screen bg-[url('${image}')]"
       style={{ backgroundSize: 'cover' }}
       data-field-string-file="image"
       data-placement="top"
