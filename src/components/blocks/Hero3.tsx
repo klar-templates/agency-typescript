@@ -71,12 +71,12 @@ export default function Hero3(data: any) {
           }
           #${_id} .container {
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
           }
           #${_id} .intro-text {
             color: #fff;
             padding: 300px 0 200px;
-            position: relative;
-            z-index: 1;
             text-align: center;
           }
           #${_id} .intro-lead-in {
