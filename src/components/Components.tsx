@@ -101,6 +101,7 @@ export default function Components(data: any) {
     } else {
       blockArray.push(
         <KlarEditBlock
+          isInKlar
           key={blockData.block._id}
           id={blockData.block._id}
           type={blockData.block._type}
@@ -156,6 +157,7 @@ function Style() {
     }
   </style>
   `;
+  return <div dangerouslySetInnerHTML={{ __html: style }} />;
   if (window.klarContext.isInKlar) {
     return <div dangerouslySetInnerHTML={{ __html: style }} />;
   } else {
