@@ -274,7 +274,8 @@
               "name": "margin_bottom",
               "title": "Push up content",
               "minimum": -100,
-              "maximum": 10
+              "maximum": 10,
+              "default": 0
             }
           ]
         }
@@ -1116,7 +1117,6 @@
           "overlay_bg_color": "#000000",
           "overlay_opacity": 40,
           "margin_top": 0,
-          "margin_bottom": 0,
           "bg_image_position_top": 0
         }
       },
@@ -1150,6 +1150,7 @@
             "shadow": "none",
             "sticky": true,
             "bg_color": "transparent",
+            "margin_bottom": 0,
             "padding_top": 25,
             "padding_bottom": 25,
             "border_bottom_width": 0,
