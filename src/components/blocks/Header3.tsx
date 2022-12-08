@@ -21,6 +21,7 @@ export default function Header3(data: any) {
     'drop-shadow-lg': style.shadow === 'drop-shadow-lg',
     'drop-shadow-xl': style.shadow === 'drop-shadow-xl',
     'drop-shadow-2xl': style.shadow === 'drop-shadow-2xl',
+    'border border-color-outline': style.border_bottom_with > 0,
   });
 
   const styles = {

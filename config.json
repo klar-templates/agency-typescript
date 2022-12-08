@@ -255,6 +255,19 @@
                 "drop-shadow-xl",
                 "drop-shadow-2xl"
               ]
+            },
+            {
+              "title": "border bottom width",
+              "name": "border_bottom_width",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            {
+              "title": "Border bottom color",
+              "name": "border_bottom_color",
+              "type": "string",
+              "format": "color"
             }
           ]
         }
