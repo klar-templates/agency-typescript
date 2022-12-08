@@ -15,6 +15,12 @@ export default function Header3(data: any) {
     'klar-outline relative z-10 lg:px-8': true,
     'bg-background': !style.transparent,
     dark: style.darkmode,
+    'drop-shadow-sm': style.shadow === 'drop-shadow-sm',
+    'drop-shadow': style.shadow === 'drop-shadow',
+    'drop-shadow-md': style.shadow === 'drop-shadow-md',
+    'drop-shadow-lg': style.shadow === 'drop-shadow-lg',
+    'drop-shadow-xl': style.shadow === 'drop-shadow-xl',
+    'drop-shadow-2xl': style.shadow === 'drop-shadow-2xl',
   });
 
   const styles = {

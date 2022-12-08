@@ -241,6 +241,20 @@
               "name": "bg_color",
               "type": "string",
               "format": "color"
+            },
+            {
+              "title": "Shadow",
+              "name": "shadow",
+              "type": "enum",
+              "enum": [
+                "none",
+                "drop-shadow-sm",
+                "drop-shadow",
+                "drop-shadow-md",
+                "drop-shadow-lg",
+                "drop-shadow-xl",
+                "drop-shadow-2xl"
+              ]
             }
           ]
         }
@@ -1098,6 +1112,7 @@
         "style": {
           "navbar": {
             "transparent": true,
+            "shadow": "none",
             "sticky": true,
             "bg_color": "transparent",
             "padding_top": 25,
