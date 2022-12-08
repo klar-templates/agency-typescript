@@ -245,7 +245,7 @@
             {
               "title": "Shadow",
               "name": "shadow",
-              "type": "enum",
+              "type": "string",
               "enum": [
                 "none",
                 "drop-shadow-sm",
