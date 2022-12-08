@@ -27,7 +27,6 @@ export default function Header3(data: any) {
   const styles = {
     backgroundColor: style.bg_color && !style.transparent ? style.bg_color : '',
     borderBottom: `${style.border_bottom_width}px solid #000`,
-    marginTop: `${style.margin_top}px`,
   };
 
   return (

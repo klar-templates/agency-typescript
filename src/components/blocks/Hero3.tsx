@@ -64,7 +64,7 @@ export default function Hero3(data: any) {
             background-position: 0 0px;
             background-size: cover;
             position: relative;
-            margin-top: ${style.marginTop}px;
+            margin-top: ${style.margin_top}px;
             height: 100vh;
             text-align: center;
           }

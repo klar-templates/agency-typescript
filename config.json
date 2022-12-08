@@ -1097,8 +1097,6 @@
         "show_subtitle": true,
         "show_button": true,
         "style": {
-          "marginTop": 0,
-
           "title_text_color": "#ffffff",
           "subtitle_text_color": "#ffffff",
           "button_bg_color": "{{theme.colors.primary_color}}",
