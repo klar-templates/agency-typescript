@@ -31,7 +31,7 @@ export default function Hero3(data: any) {
           <div className="intro-text">
             {show_subtitle && (
               <div
-                className="intro-lead-in ont-serif transform"
+                className="intro-lead-in ont-serif"
                 data-field-string="subtitle"
                 data-placeholder="Text för lead-in"
               >
