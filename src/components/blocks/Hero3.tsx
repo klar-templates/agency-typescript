@@ -1,4 +1,3 @@
-import Button from '../elements/Button';
 import RenderStyle from '../RenderStyle';
 
 export default function Hero3(data: any) {
@@ -65,7 +64,7 @@ export default function Hero3(data: any) {
             background-position: 0 0px;
             background-size: cover;
             position: relative;
-            margin-top: -84px;
+            margin-top: ${style.marginTop}px;
             height: 100vh;
             text-align: center;
           }

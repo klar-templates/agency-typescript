@@ -268,13 +268,6 @@
               "name": "border_bottom_color",
               "type": "string",
               "format": "color"
-            },
-            {
-              "type": "integer",
-              "name": "margin_top",
-              "title": "Push up content",
-              "minimum": -100,
-              "maximum": 0
             }
           ]
         }
@@ -407,6 +400,20 @@
           "name": "show_button",
           "type": "boolean",
           "ui:widget": "switch"
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "type": "integer",
+              "name": "margin_top",
+              "title": "Push up content",
+              "minimum": -100,
+              "maximum": 0
+            }
+          ]
         }
       ]
     },
@@ -1090,6 +1097,8 @@
         "show_subtitle": true,
         "show_button": true,
         "style": {
+          "marginTop": 0,
+
           "title_text_color": "#ffffff",
           "subtitle_text_color": "#ffffff",
           "button_bg_color": "{{theme.colors.primary_color}}",
