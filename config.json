@@ -274,8 +274,7 @@
               "name": "margin_bottom",
               "title": "Push up content",
               "minimum": -100,
-              "maximum": 10,
-              "default": 0
+              "maximum": 0
             }
           ]
         }
@@ -1145,6 +1144,10 @@
           }
         ],
         "style": {
+          "transparent": false,
+          "shadow": "none",
+          "bg_color": "transparent",
+          "margin_bottom": 0,
           "navbar": {
             "transparent": true,
             "shadow": "none",
