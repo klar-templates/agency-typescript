@@ -408,7 +408,7 @@
           "fields": [
             {
               "type": "integer",
-              "name": "margin_top",
+              "name": "margin_bottom",
               "title": "Push up content",
               "minimum": -100,
               "maximum": 0
@@ -1109,6 +1109,7 @@
           "overlay_bg_color": "#000000",
           "overlay_opacity": 40,
           "margin_top": 0,
+          "margin_bottom": 0,
           "bg_image_position_top": 0
         }
       },
