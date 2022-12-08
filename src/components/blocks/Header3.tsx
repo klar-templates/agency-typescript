@@ -25,7 +25,10 @@ export default function Header3(data: any) {
   });
 
   const styles = {
-    backgroundColor: style.bg_color && !style.transparent ? style.bg_color : '',
+    backgroundColor:
+      style.bg_color && !style.transparent && style.bg_color !== 'transparent'
+        ? style.bg_color
+        : '',
     borderBottom: `${style.border_bottom_width}px solid var(--outline)`,
     marginBottom: `${style.margin_bottom}px`,
   };

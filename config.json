@@ -1144,6 +1144,7 @@
           }
         ],
         "style": {
+          "darkmode": false,
           "transparent": false,
           "shadow": "none",
           "bg_color": "transparent",
