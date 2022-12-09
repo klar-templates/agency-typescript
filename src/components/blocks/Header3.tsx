@@ -36,7 +36,8 @@ export default function Header3(data: any) {
   }
   const classes: any = classNames({
     'klar-outline relative z-10 lg:px-8': true,
-    'bg-background': !style.transparent,
+    'bg-background':
+      !style.transparent && !style.gradient && style.gradient !== 'none',
     dark: style.darkmode,
     'drop-shadow-sm': style.shadow === 'drop-shadow-sm',
     'drop-shadow': style.shadow === 'drop-shadow',
@@ -58,7 +59,11 @@ export default function Header3(data: any) {
 
   const styles = {
     backgroundColor:
-      style.bg_color && !style.transparent && style.bg_color !== 'transparent'
+      style.bg_color &&
+      !style.transparent &&
+      style.bg_color !== 'transparent' &&
+      !style.gradient &&
+      style.gradent !== 'none'
         ? style.bg_color
         : '',
     borderBottom: `${style.border_bottom_width}px solid ${
