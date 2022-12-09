@@ -1178,8 +1178,8 @@
           "bg_color": "transparent",
           "margin_bottom": 0,
           "gradient": "none",
-          "gradientFrom": "#222",
-          "gradientTo": "transparent",
+          "gradient_from": "#000",
+          "gradient_to": "transparent",
           "navbar": {
             "transparent": true,
             "shadow": "none",
