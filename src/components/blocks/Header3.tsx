@@ -33,7 +33,6 @@ export default function Header3(data: any) {
       direction = 'top left';
     }
     backgroundImage = `linear-gradient(to ${direction}, ${style.gradient_from}, ${style.gradient_to}`;
-    console.log(backgroundImage);
   }
 
   const classes: any = classNames({

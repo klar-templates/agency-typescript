@@ -1179,7 +1179,7 @@
           "margin_bottom": 0,
           "gradient": "none",
           "gradient_from": "#000",
-          "gradient_to": "transparent",
+          "gradient_to": "#fff",
           "navbar": {
             "transparent": true,
             "shadow": "none",
