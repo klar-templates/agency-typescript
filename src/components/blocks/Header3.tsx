@@ -32,7 +32,7 @@ export default function Header3(data: any) {
     } else if (style.gradient === 'bg-gradient-to-tl') {
       direction = 'top left';
     }
-    backgroundImage: `linear-gradient(to ${direction}, ${style.gradientFrom}, ${style.gradientTo}`;
+    backgroundImage = `linear-gradient(to ${direction}, ${style.gradientFrom}, ${style.gradientTo}`;
   }
   const classes: any = classNames({
     'klar-outline relative z-10 lg:px-8': true,
