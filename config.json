@@ -277,8 +277,8 @@
               "maximum": 0
             },
             {
-              "title": "Shadow",
-              "name": "shadow",
+              "title": "Gradient",
+              "name": "gradient",
               "type": "string",
               "enum": [
                 "none",
