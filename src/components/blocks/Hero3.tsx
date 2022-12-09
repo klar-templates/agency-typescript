@@ -46,7 +46,7 @@ export default function Hero3(data: any) {
             {show_button && (
               <a
                 href={link}
-                className="button"
+                className="button text-on-primary bg-primary dark:bg-primary-dark"
                 data-field-string="link_text"
                 data-field-string-format-uri="link"
                 data-placement="bottom"
@@ -116,9 +116,9 @@ export default function Hero3(data: any) {
             border-radius: 3px;
             font-size: 18px;
             padding: 20px 40px;
-            background-color: #e02e3d;
-            border-color: #e02e3d;
-            color: #ffffff;
+            ackground-color: #e02e3d;
+            order-color: #e02e3d;
+            olor: #ffffff;
           }
           #${_id} .background {
             background-color: rgba(0, 0, 0, 0.4);
