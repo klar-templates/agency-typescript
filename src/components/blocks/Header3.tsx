@@ -11,6 +11,29 @@ const navigation = [
 export default function Header3(data: any) {
   const { _id, _type, logo_text, style } = data.block;
 
+  let backgroundImage;
+
+  if (style.gradient && style.gradient !== 'none') {
+    let direction;
+    if (style.gradient === 'bg-gradient-to-t') {
+      direction = 'top';
+    } else if (style.gradient === 'bg-gradient-to-tr') {
+      direction = 'top right';
+    } else if (style.gradient === 'bg-gradient-to-r') {
+      direction = 'right';
+    } else if (style.gradient === 'bg-gradient-to-br') {
+      direction = 'bottom right';
+    } else if (style.gradient === 'bg-gradient-to-b') {
+      direction = 'bottom';
+    } else if (style.gradient === 'bg-gradient-to-bl') {
+      direction = 'bottom left';
+    } else if (style.gradient === 'bg-gradient-to-l') {
+      direction = 'left';
+    } else if (style.gradient === 'bg-gradient-to-tl') {
+      direction = 'top left';
+    }
+    backgroundImage: `linear-gradient(to ${direction}, ${style.gradientFrom}, ${style.gradientTo}`;
+  }
   const classes: any = classNames({
     'klar-outline relative z-10 lg:px-8': true,
     'bg-background': !style.transparent,
@@ -21,6 +44,15 @@ export default function Header3(data: any) {
     'drop-shadow-lg': style.shadow === 'drop-shadow-lg',
     'drop-shadow-xl': style.shadow === 'drop-shadow-xl',
     'drop-shadow-2xl': style.shadow === 'drop-shadow-2xl',
+    // 'bg-none': style.gradient === 'bg-none',
+    // 'bg-gradient-to-t': style.gradient === 'bg-gradient-to-t',
+    // 'bg-gradient-to-tr': style.gradient === 'bg-gradient-to-tr',
+    // 'bg-gradient-to-r': style.gradient === 'bg-gradient-to-r',
+    // 'bg-gradient-to-br': style.gradient === 'bg-gradient-to-br',
+    // 'bg-gradient-to-b': style.gradient === 'bg-gradient-to-b',
+    // 'bg-gradient-to-bl': style.gradient === 'bg-gradient-to-bl',
+    // 'bg-gradient-to-l': style.gradient === 'bg-gradient-to-l',
+    // 'bg-gradient-to-tl': style.gradient === 'bg-gradient-to-tl',
     'border border-color-outline': false,
   });
 
@@ -35,6 +67,7 @@ export default function Header3(data: any) {
         : 'var(--outline)'
     }`,
     marginBottom: `${style.margin_bottom}px`,
+    backgroundImage,
   };
 
   return (

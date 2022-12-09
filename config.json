@@ -275,6 +275,34 @@
               "title": "Push up content",
               "minimum": -100,
               "maximum": 0
+            },
+            {
+              "title": "Shadow",
+              "name": "shadow",
+              "type": "string",
+              "enum": [
+                "none",
+                "bg-gradient-to-t",
+                "bg-gradient-to-tr",
+                "bg-gradient-to-r",
+                "bg-gradient-to-br",
+                "bg-gradient-to-b",
+                "bg-gradient-to-bl",
+                "bg-gradient-to-l",
+                "bg-gradient-to-tl"
+              ]
+            },
+            {
+              "title": "Gradient from",
+              "name": "gradient_from",
+              "type": "string",
+              "format": "color"
+            },
+            {
+              "title": "Gradient to",
+              "name": "gradient_to",
+              "type": "string",
+              "format": "color"
             }
           ]
         }
@@ -1149,6 +1177,9 @@
           "shadow": "none",
           "bg_color": "transparent",
           "margin_bottom": 0,
+          "gradient": "none",
+          "gradientFrom": "#222",
+          "gradientTo": "transparent",
           "navbar": {
             "transparent": true,
             "shadow": "none",
