@@ -13,7 +13,7 @@ export default function Header3(data: any) {
 
   let backgroundImage;
 
-  if (style.gradient && style.gradient !== 'none') {
+  if (style.gradient && style.gradient !== 'none' && !style.transparent) {
     let direction;
     if (style.gradient === 'bg-gradient-to-t') {
       direction = 'top';
