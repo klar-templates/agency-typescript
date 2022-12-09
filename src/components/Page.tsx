@@ -52,7 +52,11 @@ export default function Page(data: IData) {
   for (const [key, value] of Object.entries(
     window.klarContext.currentPage.blocks,
   )) {
-    const block: any = value;
+    let block: any = value;
+    if (window.klarContext.data.global?.blocks?.[block._type]) {
+      // console.log(window.klarContext.data.global?.blocks?.[block._type]);
+      block = window.klarContext.data.global.blocks[block._type];
+    }
     // This is going go be fixed. Only block needs to be forwarded in the future.
     const blockData: any = {
       block: { ...block.data, _id: block._id, _type: block._type },
