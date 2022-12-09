@@ -30,7 +30,9 @@ export default function Header3(data: any) {
         ? style.bg_color
         : '',
     borderBottom: `${style.border_bottom_width}px solid ${
-      style.border_bottom_color ? style.border_bottom_color : 'var(--outline)'
+      style.border_bottom_color && style.border_bottom_color !== 'transparent'
+        ? style.border_bottom_color
+        : 'var(--outline)'
     }`,
     marginBottom: `${style.margin_bottom}px`,
   };
