@@ -81,7 +81,7 @@ export default function Header3(data: any) {
           className="flex h-9 items-center justify-between"
           aria-label="Global"
         >
-          <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
+          <div className="flex lg:min-w-0 lg:shrink" aria-label="Global">
             <Link
               to={window.siteConfig.publicPath}
               className="js-klar-logo text-primary-dark dark:text-primary r-only text-2xl font-bold ext-gray-800 transition-colors duration-300 transform lg:text-3xl hover:text-gray-700 dark:hover:text-primary"
@@ -106,7 +106,7 @@ export default function Header3(data: any) {
               {/* <Bars3Icon className="h-6 w-6" aria-hidden="true" /> */}
             </button>
           </div>
-          <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end lg:gap-x-12">
+          <div className="hidden lg:flex lg:min-w-0 lg:shrink lg:justify-end lg:gap-x-12">
             {window.klarContext.data.pages.map((page: any, i: any) => (
               <li
                 key={i}
