@@ -73,7 +73,12 @@ export default function Page(data: IData) {
       // globalBlock._id = block._id;
       // globalBlock._type = block._type;
       // globalBlock.template_id = block.template_id;
-      block = { ...globalBlock };
+      block = {
+        ...globalBlock,
+        _id: block._id,
+        _type: block._type,
+        template_id: block.template_id,
+      };
     }
     // This is going go be fixed. Only block needs to be forwarded in the future.
     const blockData: any = {
