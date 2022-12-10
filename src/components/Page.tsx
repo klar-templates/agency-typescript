@@ -56,7 +56,10 @@ export default function Page(data: IData) {
     if (window.klarContext.data.global?.blocks?.[block._type]) {
       // console.log(window.klarContext.data.global?.blocks?.[block._type]);
       const isUniqueStyle = block.data.style._unique_style;
-      let globalBlock = window.klarContext.data.global.blocks[block._type];
+      let globalBlock = Object.assign(
+        {},
+        window.klarContext.data.global.blocks[block._type],
+      );
       if (isUniqueStyle) {
         console.log(isUniqueStyle);
         globalBlock['style'] = block.data.style;
