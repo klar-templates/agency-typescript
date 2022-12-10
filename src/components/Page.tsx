@@ -62,13 +62,15 @@ export default function Page(data: IData) {
       );
       if (isUniqueStyle) {
         console.log(isUniqueStyle);
-        globalBlock['style'] = block.data.style;
-        globalBlock['data']['style'] = block.data.style;
+        // globalBlock['style'] = block.data.style;
+        // globalBlock['data']['style'] = block.data.style;
+      } else {
+        block = globalBlock;
       }
-      globalBlock._id = block._id;
-      globalBlock._type = block._type;
-      globalBlock.template_id = block.template_id;
-      block = globalBlock;
+      // globalBlock._id = block._id;
+      // globalBlock._type = block._type;
+      // globalBlock.template_id = block.template_id;
+      // block = globalBlock;
     }
     // This is going go be fixed. Only block needs to be forwarded in the future.
     const blockData: any = {
