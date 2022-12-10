@@ -60,16 +60,16 @@ export default function Page(data: IData) {
         {},
         window.klarContext.data.global.blocks[block._type],
       );
-      if (isUniqueStyle) {
-        console.log(isUniqueStyle);
-        // globalBlock['style'] = block.data.style;
-        // globalBlock['data']['style'] = block.data.style;
-      } else {
-        globalBlock._id = block._id;
-        globalBlock._type = block._type;
-        globalBlock.template_id = block.template_id;
-        block = globalBlock;
-      }
+      // if (isUniqueStyle) {
+      //   console.log(isUniqueStyle);
+      //   // block['style'] = globalBlock.data.style;
+      //   // block['data']['style'] = globalBlock.data.style;
+      // } else {
+      //   globalBlock._id = block._id;
+      //   globalBlock._type = block._type;
+      //   globalBlock.template_id = block.template_id;
+      //   block = globalBlock;
+      // }
       // globalBlock._id = block._id;
       // globalBlock._type = block._type;
       // globalBlock.template_id = block.template_id;
