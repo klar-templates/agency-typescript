@@ -52,7 +52,7 @@ export default function Page(data: IData) {
   for (const [key, value] of Object.entries(
     window.klarContext.currentPage.blocks,
   )) {
-    let block: any = value;
+    let block: any = Object.assign({}, value);
     if (window.klarContext.data.global?.blocks?.[block._type]) {
       // console.log(window.klarContext.data.global?.blocks?.[block._type]);
       const isUniqueStyle = block.data.style._unique_style;
