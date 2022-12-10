@@ -62,8 +62,16 @@ export default function Page(data: IData) {
       );
       if (isUniqueStyle) {
         // console.log(isUniqueStyle);
-        globalBlock['style'] = Object.assign({}, block.data.style);
-        globalBlock['data']['style'] = Object.assign({}, block.data.style);
+        // globalBlock['style'] = Object.assign({}, block.data.style);
+        // globalBlock['data']['style'] = Object.assign({}, block.data.style);
+        block = {
+          ...globalBlock,
+          style: block.data.style,
+          data: { ...globalBlock, style: block.data.style },
+          _id: block._id,
+          _type: block._type,
+          template_id: block.template_id,
+        };
       } else {
         // globalBlock._id = block._id;
         // globalBlock._type = block._type;
