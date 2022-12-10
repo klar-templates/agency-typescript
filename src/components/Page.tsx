@@ -65,6 +65,9 @@ export default function Page(data: IData) {
         // globalBlock['style'] = block.data.style;
         // globalBlock['data']['style'] = block.data.style;
       } else {
+        globalBlock._id = block._id;
+        globalBlock._type = block._type;
+        globalBlock.template_id = block.template_id;
         block = globalBlock;
       }
       // globalBlock._id = block._id;
