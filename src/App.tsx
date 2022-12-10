@@ -11,7 +11,7 @@ import Page from './components/Page';
 function getInitData() {
   let data = undefined;
   if (window.prodConfig) {
-    data = { ...parent.frames.window.klar.data };
+    data = Object.assign({}, parent.frames.window.klar.data);
     data = JSON.stringify(data);
     data = data.replace(
       /"_path":"\//gm,
@@ -22,7 +22,7 @@ function getInitData() {
     // console.log('Fixade urlar i function: ', data);
   } else if (typeof parent.frames.window.klar !== 'undefined') {
     // if (typeof parent.frames.window.klar !== 'undefined') {
-    data = { ...parent.frames.window.klar.data };
+    data = Object.assign({}, parent.frames.window.klar.data);
   }
   return data;
 }
