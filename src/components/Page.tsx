@@ -67,7 +67,7 @@ export default function Page(data: IData) {
         block = {
           ...globalBlock,
           style: block.data.style,
-          data: { ...globalBlock.data, style: block.data.style },
+          data: { ...block.data },
           _id: block._id,
           _type: block._type,
           template_id: block.template_id,
