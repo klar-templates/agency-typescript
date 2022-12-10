@@ -55,7 +55,16 @@ export default function Page(data: IData) {
     let block: any = value;
     if (window.klarContext.data.global?.blocks?.[block._type]) {
       // console.log(window.klarContext.data.global?.blocks?.[block._type]);
-      block = window.klarContext.data.global.blocks[block._type];
+      const isUniqueStyle = block.data.style._unique_style;
+      let globalBlock = window.klarContext.data.global.blocks[block._type];
+      if (isUniqueStyle) {
+        console.log(isUniqueStyle);
+        globalBlock['style'] = block.data.style;
+        globalBlock['data']['style'] = block.data.style;
+        block = globalBlock;
+      } else {
+        block = globalBlock;
+      }
     }
     // This is going go be fixed. Only block needs to be forwarded in the future.
     const blockData: any = {

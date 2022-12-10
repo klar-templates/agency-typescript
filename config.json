@@ -216,7 +216,7 @@
       "name": "header3",
       "icon": "image",
       "hidden": false,
-      "global": true,
+      "global": false,
       "type": "object",
       "fields": [
         { "title": "Logotext", "name": "logo_text", "type": "string" },
