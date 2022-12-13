@@ -53,41 +53,41 @@ export default function Page(data: IData) {
     window.klarContext.currentPage.blocks,
   )) {
     let block: any = Object.assign({}, value);
-    if (window.klarContext.data.global?.blocks?.[block._type]) {
-      // console.log(window.klarContext.data.global?.blocks?.[block._type]);
-      const isUniqueStyle = block.data.style._unique_style;
-      let globalBlock = Object.assign(
-        {},
-        window.klarContext.data.global.blocks[block._type],
-      );
-      if (isUniqueStyle) {
-        // console.log(isUniqueStyle);
-        // globalBlock['style'] = Object.assign({}, block.data.style);
-        // globalBlock['data']['style'] = Object.assign({}, block.data.style);
-        block = {
-          ...globalBlock,
-          style: block.data.style,
-          data: { ...block.data },
-          _id: block._id,
-          _type: block._type,
-          template_id: block.template_id,
-        };
-      } else {
-        // globalBlock._id = block._id;
-        // globalBlock._type = block._type;
-        // globalBlock.template_id = block.template_id;
-        // block = globalBlock;
-        block = {
-          ...globalBlock,
-          _id: block._id,
-          _type: block._type,
-          template_id: block.template_id,
-        };
-      }
-      // globalBlock._id = block._id;
-      // globalBlock._type = block._type;
-      // globalBlock.template_id = block.template_id;
-    }
+    // if (window.klarContext.data.global?.blocks?.[block._type]) {
+    //   // console.log(window.klarContext.data.global?.blocks?.[block._type]);
+    //   const isUniqueStyle = block.data.style._unique_style;
+    //   let globalBlock = Object.assign(
+    //     {},
+    //     window.klarContext.data.global.blocks[block._type],
+    //   );
+    //   if (isUniqueStyle) {
+    //     // console.log(isUniqueStyle);
+    //     // globalBlock['style'] = Object.assign({}, block.data.style);
+    //     // globalBlock['data']['style'] = Object.assign({}, block.data.style);
+    //     block = {
+    //       ...globalBlock,
+    //       style: block.data.style,
+    //       data: { ...block.data },
+    //       _id: block._id,
+    //       _type: block._type,
+    //       template_id: block.template_id,
+    //     };
+    //   } else {
+    //     // globalBlock._id = block._id;
+    //     // globalBlock._type = block._type;
+    //     // globalBlock.template_id = block.template_id;
+    //     // block = globalBlock;
+    //     block = {
+    //       ...globalBlock,
+    //       _id: block._id,
+    //       _type: block._type,
+    //       template_id: block.template_id,
+    //     };
+    //   }
+    //   // globalBlock._id = block._id;
+    //   // globalBlock._type = block._type;
+    //   // globalBlock.template_id = block.template_id;
+    // }
     // This is going go be fixed. Only block needs to be forwarded in the future.
     const blockData: any = {
       block: { ...block.data, _id: block._id, _type: block._type },
