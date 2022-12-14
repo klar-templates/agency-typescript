@@ -78,7 +78,7 @@ export default function Header3(data: any) {
 
   return (
     <header className={classes} style={styles}>
-      <div className="py-6 px-6 mx-auto lg:px-0 container">
+      <div className="py-6 px-6 mx-auto lg:px-0 ontainer">
         <nav
           className="flex h-9 items-center justify-between"
           aria-label="Global"
@@ -99,7 +99,7 @@ export default function Header3(data: any) {
               {/* <img className="h-8" src="https://demo.kaliumtheme.com/main/wp-content/uploads/2015/03/99c8d4a6236909e8ca6595f17d3beb42.png" alt="" /> */}
             </Link>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex md:hidden">
             <button
               type="button"
               onClick={() => setMobileMenuVisible(true)}
@@ -124,7 +124,7 @@ export default function Header3(data: any) {
               </svg>
             </button>
           </div>
-          <div className="hidden lg:flex lg:min-w-0 lg:shrink lg:justify-end lg:gap-x-12">
+          <div className="hidden md:flex md:min-w-0 md:shrink md:justify-end md:gap-x-12">
             {window.klarContext.data.pages.map((page: any, i: any) => (
               <li
                 key={i}
@@ -161,7 +161,7 @@ export default function Header3(data: any) {
           </div> */}
         </nav>
         {mobileMenuVisible && (
-          <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+          <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 md:hidden">
             <div className="flex h-9 items-center justify-between">
               <div className="flex">
                 {/* <a href="#" className="-m-1.5 p-1.5">
@@ -199,7 +199,7 @@ export default function Header3(data: any) {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke="currentColor"
                     aria-hidden="true"
                     onClick={() => setMobileMenuVisible(false)}
