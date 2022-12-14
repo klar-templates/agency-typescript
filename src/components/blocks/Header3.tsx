@@ -103,7 +103,7 @@ export default function Header3(data: any) {
             <button
               type="button"
               onClick={() => setMobileMenuVisible(true)}
-              className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white"
             >
               <span className="sr-only">Open main menu</span>
               {/* <Bars3Icon className="h-6 w-6" aria-hidden="true" /> */}
@@ -161,7 +161,7 @@ export default function Header3(data: any) {
           </div> */}
         </nav>
         {mobileMenuVisible && (
-          <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 md:hidden">
+          <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 md:hidden dark:bg-slate-900">
             <div className="flex h-9 items-center justify-between">
               <div className="flex">
                 {/* <a href="#" className="-m-1.5 p-1.5">
@@ -190,7 +190,7 @@ export default function Header3(data: any) {
               <div className="flex">
                 <button
                   type="button"
-                  className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                  className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white"
                 >
                   <span className="sr-only">Close menu</span>
                   {/* <XMarkIcon className="h-6 w-6" aria-hidden="true" /> */}
@@ -225,7 +225,7 @@ export default function Header3(data: any) {
                           (window.klarContext.currentPage &&
                             window.klarContext.currentPage._id)
                             ? '-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10 text-primary-dark dark:text-primary'
-                            : '-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10'
+                            : '-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10 dark:text-white'
                         }
                       >
                         {page._menu_item_name}
