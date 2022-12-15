@@ -48,11 +48,11 @@ export default function Page(data: IData) {
   if (window.klarContext.pathname === '/components') {
     return <ComponentsBlock {...data} components={Components} nly="elements" />;
   }
-  const blockArray = [];
-  for (const [key, value] of Object.entries(
-    window.klarContext.currentPage.blocks,
-  )) {
-    let block: any = Object.assign({}, value);
+  const blockArray: any = [];
+  window.klarContext.currentPage.blocks.map((block: any) => {
+    // console.log(block);
+    // console.log(window.klarContext.currentPage.blocks);
+    // let block: any = Object.assign({}, value);
     // if (window.klarContext.data.global?.blocks?.[block._type]) {
     //   // console.log(window.klarContext.data.global?.blocks?.[block._type]);
     //   const isUniqueStyle = block.data.style._unique_style;
@@ -109,7 +109,7 @@ export default function Page(data: IData) {
         </KlarEditBlock>,
       );
     }
-  }
+  });
 
   return <Layout {...data}>{blockArray}</Layout>;
 }
