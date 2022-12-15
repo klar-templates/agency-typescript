@@ -39,21 +39,21 @@ const Components: any = {
   Elements: Elements,
 };
 
-function sort(blocks: any) {
-  function compareFn(a: any, b: any) {
-    a = a._position;
-    b = b._position;
-    if (a < b) {
-      return -1;
-    }
-    if (a > b) {
-      return 1;
-    }
-    // a must be equal to b
-    return 0;
-  }
-  return blocks.sort(compareFn);
-}
+// function sort(blocks: any) {
+//   function compareFn(a: any, b: any) {
+//     a = a._position;
+//     b = b._position;
+//     if (a < b) {
+//       return -1;
+//     }
+//     if (a > b) {
+//       return 1;
+//     }
+//     // a must be equal to b
+//     return 0;
+//   }
+//   return blocks.sort(compareFn);
+// }
 
 export default function Page(data: IData) {
   createContext(data);
@@ -65,8 +65,8 @@ export default function Page(data: IData) {
     return <ComponentsBlock {...data} components={Components} nly="elements" />;
   }
   const blockArray: any = [];
-  const sortedBlocks = sort(window.klarContext.currentPage.blocks);
-  sortedBlocks.map((block: any) => {
+  // const sortedBlocks = sort(window.klarContext.currentPage.blocks);
+  window.klarContext.currentPage.blocks.map((block: any) => {
     // console.log(block);
     // console.log(window.klarContext.currentPage.blocks);
     // let block: any = Object.assign({}, value);
