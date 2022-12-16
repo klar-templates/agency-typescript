@@ -28,7 +28,7 @@ export default function Hero3(data: any) {
         no-data-inset="true"
       >
         <div className="container-auto">
-          <div className="intro-text">
+          <div className="intro-text py-40 md:py-[130px] lg:py-[170px]">
             {show_subtitle && (
               <div
                 className="intro-lead-in mb-4 md:mb-6 text-2xl md:text-4xl"
@@ -71,16 +71,13 @@ export default function Hero3(data: any) {
             margin-top: 0;
             height: 100vh;
             text-align: center;
-            display: flex;
           }
           #${_id} .container-auto {
-            display: flex;
-            align-items: center;
+            
           }
           #${_id} .intro-text {
             align-items: center;
             color: #fff;
-            adding: 300px 0 200px;
             text-align: center;
             position: relative;
             z-index: 1;
