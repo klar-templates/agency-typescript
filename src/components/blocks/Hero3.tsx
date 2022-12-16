@@ -19,7 +19,7 @@ export default function Hero3(data: any) {
     <>
       <section
         id={_id}
-        className={`${_type} klar-outline`}
+        className={`${_type} section klar-outline`}
         data-field-string-file="image"
         data-placement="top"
         data-offset-top="210"
@@ -27,11 +27,11 @@ export default function Hero3(data: any) {
         data-wrapper="true"
         no-data-inset="true"
       >
-        <div className="container">
+        <div className="container-auto">
           <div className="intro-text">
             {show_subtitle && (
               <div
-                className="intro-lead-in ont-serif"
+                className="intro-lead-in mb-4 md:mb-6 text-2xl md:text-4xl"
                 data-field-string="subtitle"
                 data-placeholder="Text för lead-in"
               >
@@ -39,7 +39,10 @@ export default function Hero3(data: any) {
               </div>
             )}
             {show_title && (
-              <div className="intro-heading ont-sans" data-field-string="title">
+              <div
+                className="intro-heading mb-8 md:mb-12 text-5xl md:text-7xl"
+                data-field-string="title"
+              >
                 {title}
               </div>
             )}
@@ -68,31 +71,29 @@ export default function Hero3(data: any) {
             margin-top: 0;
             height: 100vh;
             text-align: center;
+            display: flex;
           }
-          #${_id} .container {
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
+          #${_id} .container-auto {
+            display: flex;
+            align-items: center;
           }
           #${_id} .intro-text {
+            align-items: center;
             color: #fff;
-            padding: 300px 0 200px;
+            adding: 300px 0 200px;
             text-align: center;
+            position: relative;
+            z-index: 1;
           }
           #${_id} .intro-lead-in {
             font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-style: italic;
-            font-size: 40px;
-            line-height: 40px;
-            margin-bottom: 25px;
           }
           #${_id} .intro-heading {
             font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 75px;
-            line-height: 75px;
-            margin-bottom: 50px;
+        
           }
           #${_id} .button {
             display: inline-block;

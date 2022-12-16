@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .section {
+    @apply py-20 sm:py-32;
+  }
+
+  .container-auto {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .display-1 {
+    @apply text-7xl;
+  }
+
+  .display-2 {
+    @apply text-6xl;
+  }
+
+  .display-3 {
+    @apply text-5xl;
+  }
+
+  .heading-1 {
+    @apply text-4xl;
+  }
+
+  .heading-2 {
+    @apply text-3xl;
+  }
+
+  .heading-3 {
+    @apply text-2xl;
+  }
+
+  .paragraph {
+    @apply text-base;
+  }
+}
