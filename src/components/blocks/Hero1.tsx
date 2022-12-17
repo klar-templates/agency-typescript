@@ -42,7 +42,7 @@ export default function Hero1(data: any) {
       </div>
       <main className="relative z-10">
         <div className="relative px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl px-16 pb-32 pt-20 sm:py-40">
+          <div className="mx-auto max-w-3xl px:4 sm:px-16 pb-32 pt-20 sm:pt-40 sm:pb-48">
             <div>
               {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                 <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">

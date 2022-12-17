@@ -28,10 +28,10 @@ export default function Hero3(data: any) {
         no-data-inset="true"
       >
         <div className="container-auto">
-          <div className="intro-text py-40 md:py-[130px] lg:py-[170px]">
+          <div className="intro-text py-32 md:py-[130px] lg:py-[170px]">
             {show_subtitle && (
               <div
-                className="intro-lead-in mb-4 md:mb-6 text-2xl md:text-4xl lg:text-[40px]"
+                className="intro-lead-in mb-4 md:mb-6 text-2xl lg:text-4xl lg:text-[40px]"
                 data-field-string="subtitle"
                 data-placeholder="Text för lead-in"
               >
@@ -40,7 +40,7 @@ export default function Hero3(data: any) {
             )}
             {show_title && (
               <div
-                className="intro-heading mb-8 md:mb-12 text-5xl md:text-7xl lg:text-[75px]"
+                className="intro-heading mb-8 md:mb-12 text-4xl sm:text-5xl lg:text-7xl lg:text-[75px]"
                 data-field-string="title"
               >
                 {title}

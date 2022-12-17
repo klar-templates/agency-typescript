@@ -20,7 +20,7 @@ export default function Cards(data: any) {
   return (
     <Section type="normal">
       <Container>
-        <Grid columns="1,2,3">
+        <Grid columns="1,2,2,3">
           <Card />
           <Card />
           <Card />
