@@ -34,8 +34,8 @@ export default function Hero1(data: any) {
               y1=".177"
               y2="474.645"
             >
-              <stop stopColor="#d81ccb"></stop>
-              <stop offset="1" stopColor="#d81ccb"></stop>
+              <stop stopColor="#efa4ea"></stop>
+              <stop offset="1" stopColor="#efa4ea"></stop>
             </linearGradient>
           </defs>
         </svg>
@@ -101,8 +101,8 @@ export default function Hero1(data: any) {
                       y1=".177"
                       y2="474.645"
                     >
-                      <stop stopColor="#d81ccb" />
-                      <stop offset={1} stopColor="#d81ccb" />
+                      <stop stopColor="#efa4ea" />
+                      <stop offset={1} stopColor="#efa4ea" />
                     </linearGradient>
                   </defs>
                 </svg>
