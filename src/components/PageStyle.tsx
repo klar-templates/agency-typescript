@@ -18,16 +18,16 @@ export default function PageStyle(data: any) {
     --primary-900: ${primary_shades['900']};
 
     /* neutral */
-    --neutral-50: ${neutral_shades['100']};
+    --neutral-50: ${neutral_shades['50']};
     --neutral-100: ${neutral_shades['100']};
-    --neutral-200: ${neutral_shades['100']};
-    --neutral-300: ${neutral_shades['100']};
-    --neutral-400: ${neutral_shades['100']};
-    --neutral-500: ${neutral_shades['100']};
-    --neutral-600: ${neutral_shades['100']};
-    --neutral-700: ${neutral_shades['100']};
-    --neutral-800: ${neutral_shades['100']};
-    --neutral-900: ${neutral_shades['100']};
+    --neutral-200: ${neutral_shades['200']};
+    --neutral-300: ${neutral_shades['300']};
+    --neutral-400: ${neutral_shades['400']};
+    --neutral-500: ${neutral_shades['500']};
+    --neutral-600: ${neutral_shades['600']};
+    --neutral-700: ${neutral_shades['700']};
+    --neutral-800: ${neutral_shades['800']};
+    --neutral-900: ${neutral_shades['900']};
 
     /* neutral variant */
     --neutral-variant-50: #f9fafb;
