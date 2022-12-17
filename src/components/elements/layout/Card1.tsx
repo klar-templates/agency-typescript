@@ -1,10 +1,12 @@
+import Button from '../Button';
+
 export default function Card1(data: any) {
   return (
     <article className="antialiased bg-on-surface">
       <div className="">
         {/* <!-- Card --> */}
         <div className="mx-auto">
-          <div className="flex flex-col h-full bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="flex flex-col h-full bg-white shadow overflow-hidden">
             {/* <!-- Image --> */}
             <a
               className="block focus:outline-none focus-visible:ring-2"
@@ -21,7 +23,7 @@ export default function Card1(data: any) {
               </figure>
             </a>
             {/* <!-- Card Content --> */}
-            <div className="flex-grow flex flex-col p-5">
+            <div className="flex-grow flex flex-col p-3 lg:p-4">
               {/* <!-- Card body --> */}
               <div className="flex-grow">
                 {/* <!-- Header --> */}
@@ -30,7 +32,7 @@ export default function Card1(data: any) {
                     className="block focus:outline-none focus-visible:ring-2"
                     href="#0"
                   >
-                    <h3 className="text-[22px] font-extrabold leading-snug">
+                    <h3 className="text-[22px] font-bold leading-snug">
                       The Ultimate JavaScript Course
                     </h3>
                   </a>
@@ -46,18 +48,32 @@ export default function Card1(data: any) {
               {/* <!-- Card footer --> */}
               <div className="flex justify-end space-x-2">
                 {/* <a className="font-medium text-sm inline-flex items-center justify-center px-3 py-1.5 rounded leading-5 text-gray-500 hover:underline focus:outline-none focus-visible:ring-2" href="#0">Cancel</a> */}
-                <a
-                  className="font-semibold text-sm inline-flex items-center justify-center px-3 py-1.5 border border-transparent rounded leading-5 shadow-sm transition duration-150 ease-in-out bg-indigo-50 focus:outline-none focus-visible:ring-2 hover:bg-indigo-100 text-indigo-500"
-                  href="#0"
+                <Button
+                  {...{
+                    to: 'https://www.google.se',
+                    type: 'outlined',
+                    size: 'sm',
+                    target: '_blank',
+                  }}
                 >
                   Preview
-                </a>
-                <a
+                </Button>
+                <Button
+                  {...{
+                    to: 'https://www.google.se',
+                    type: 'filled',
+                    size: 'sm',
+                    target: '_blank',
+                  }}
+                >
+                  Read more
+                </Button>
+                {/* <a
                   className="font-semibold text-sm inline-flex items-center justify-center px-3 py-1.5 border border-transparent rounded leading-5 shadow-sm transition duration-150 ease-in-out bg-indigo-500 focus:outline-none focus-visible:ring-2 hover:bg-indigo-600 text-white"
                   href="#0"
                 >
                   Read more
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
