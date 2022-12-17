@@ -1,7 +1,7 @@
 import Section from '../elements/layout/Section';
 import Container from '../elements/layout/Container';
 import Grid from '../elements/layout/Grid';
-import Card from '../elements/Card';
+import Card from '../elements/layout/Card1';
 
 export default function Cards1(data: any) {
   const {
@@ -20,7 +20,7 @@ export default function Cards1(data: any) {
   return (
     <Section type="normal">
       <Container>
-        <Grid columns="1,2,3,4">
+        <Grid columns="1,2,3">
           <Card />
           <Card />
           <Card />

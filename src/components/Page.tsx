@@ -18,8 +18,8 @@ import Elements from './blocks/Elements';
 import Nunjucks from './blocks/bootstrap/Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
 // Elements
-import Card from './elements/Card';
-import Card1 from './elements/Card1';
+import Card from './elements/layout/Card';
+import Card1 from './elements/layout/Card1';
 
 const Components: any = {
   Header: Header,
