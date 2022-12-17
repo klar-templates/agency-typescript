@@ -15,7 +15,7 @@ export default function Styleguide(data: any) {
     <Section type="normal">
       <Container>
         <h1 className="pt-4 text-4xl">Styleguide</h1>
-        <div className="mt-6">
+        <div className="">
           <Nunjucks {...blockData} />
         </div>
       </Container>
