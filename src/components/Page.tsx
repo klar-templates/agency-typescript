@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import IData from '../service/interface/IData';
 import ComponentsBlock from './Components';
+import Styleguide from './Styleguide';
 import Layout from './Layout';
 import Header from './blocks/Header';
 import Header2 from './blocks/Header2';
@@ -63,6 +64,9 @@ export default function Page(data: IData) {
   }
   if (window.klarContext.pathname === '/components') {
     return <ComponentsBlock {...data} components={Components} nly="elements" />;
+  }
+  if (window.klarContext.pathname === '/styleguide') {
+    return <Styleguide {...data} />;
   }
   const blockArray: any = [];
   // const sortedBlocks = sort(window.klarContext.currentPage.blocks);
