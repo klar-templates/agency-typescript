@@ -1,4 +1,7 @@
 export default function RenderStyle({ children, id }: any) {
-  const style = `<style id=${id}>${children}</style>`;
+  let style = `<style>${children}</style>`;
+  if (id) {
+    let style = `<style id=${id}>${children}</style>`;
+  }
   return <div dangerouslySetInnerHTML={{ __html: style }} />;
 }
