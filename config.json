@@ -933,7 +933,37 @@
         "default": {
           "colors": {
             "primary_color": "#6366f1",
+            "primary_shades": {
+              "name": "Primary",
+              "colors": {
+                "50": "#f7f7fe",
+                "100": "#eff0fe",
+                "200": "#d8d9fc",
+                "300": "#c1c2f9",
+                "400": "#9294f5",
+                "500": "#6366f1",
+                "600": "#595cd9",
+                "700": "#4a4db5",
+                "800": "#3b3d91",
+                "900": "#313276"
+              }
+            },
             "neutral_color": "#6b7280",
+            "neutral_shades": {
+              "name": "neutral",
+              "colors": {
+                "50": "#f8f8f9",
+                "100": "#f0f1f2",
+                "200": "#dadcdf",
+                "300": "#c4c7cc",
+                "400": "#979ca6",
+                "500": "#6b7280",
+                "600": "#606773",
+                "700": "#505660",
+                "800": "#40444d",
+                "900": "#34383f"
+              }
+            },
             "bg_color": "#ffffff",
             "title_text_color": "#333333",
             "subtitle_text_color": "#777777",
