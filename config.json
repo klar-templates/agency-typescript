@@ -12,6 +12,11 @@
         "type": "object",
         "fields": [
           {
+            "title": "asfd color",
+            "name": "df",
+            "type": "string"
+          },
+          {
             "title": "Primary color",
             "name": "primary_color",
             "type": "string",
