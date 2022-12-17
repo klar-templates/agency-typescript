@@ -34,8 +34,8 @@ export default function Hero1(data: any) {
               y1=".177"
               y2="474.645"
             >
-              <stop stopColor="#3b82f6"></stop>
-              <stop offset="1" stopColor="#3b82f6"></stop>
+              <stop stopColor="#d81ccb"></stop>
+              <stop offset="1" stopColor="#d81ccb"></stop>
             </linearGradient>
           </defs>
         </svg>
@@ -63,7 +63,7 @@ export default function Hero1(data: any) {
                 <div className="mt-8 flex gap-x-4 sm:justify-center">
                   <a
                     href="#"
-                    className="text-on-primary inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
+                    className="bg-primary text-on-primary inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 shadow-sm hover:bg-primary-dark"
                   >
                     Get started{' '}
                     <span className="text-on-primary" aria-hidden="true">
@@ -101,8 +101,8 @@ export default function Hero1(data: any) {
                       y1=".177"
                       y2="474.645"
                     >
-                      <stop stopColor="#3b82f6" />
-                      <stop offset={1} stopColor="#3b82f6" />
+                      <stop stopColor="#d81ccb" />
+                      <stop offset={1} stopColor="#d81ccb" />
                     </linearGradient>
                   </defs>
                 </svg>
