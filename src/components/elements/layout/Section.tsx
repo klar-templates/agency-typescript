@@ -1,20 +1,10 @@
 import classNames from '../../../utils/classNames';
 
-export default function Section({
-  type,
-  target,
-  size,
-  to,
-  rounded,
-  children,
-}: any) {
+export default function Section({ children, type }: any) {
   const classes: any = classNames({
-    'inline-flex justify-center rounded-lg text-sm font-semibold px-4': true,
+    'py-20 sm:py-32': !type,
+    'py-3 sm:py-4': type === 'normal',
   });
 
-  if (!classes) {
-    return null;
-  }
-
-  return <Section className={classes}>{children}</Section>;
+  return <section className={classes}>{children}</section>;
 }
