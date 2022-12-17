@@ -12,14 +12,10 @@
         "type": "object",
         "fields": [
           {
-            "title": "Färger",
-            "name": "colors",
-            "type": "object"
-          },
-          {
-            "title": "Beskrivning",
-            "name": "description",
-            "type": "text"
+            "title": "Primary color",
+            "name": "primary_color",
+            "type": "string",
+            "format": "color"
           }
         ]
       },
@@ -926,17 +922,17 @@
   ],
   "data_defaults": {
     "theme": {
-      "current": "svt",
+      "current": "default",
       "presets": {
         "default": {
           "colors": {
+            "primary_color": "#222",
             "bg_color": "#ffffff",
             "title_text_color": "#333333",
             "subtitle_text_color": "#777777",
             "text_color": "#777777",
             "link_text_color": "#fed136",
             "link_text_hover_color": "#fec503",
-            "primary_color": "#fed136",
             "selection_text_color": "#ffffff",
             "selection_bg_color": "#fed136"
           },
