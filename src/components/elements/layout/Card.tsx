@@ -2,7 +2,7 @@ export default function Card(data: any) {
   return (
     <article className="bg-background text-on-background md: md: md: lg: xl:">
       <a
-        className="block focus:outline-none focus-visible:ring-2 mb-6"
+        className="block focus:outline-none focus-visible:ring-2 mb-4"
         href="#0"
       >
         <figure className="relative h-0 pb-[56.25%] overflow-hidden">
@@ -15,11 +15,11 @@ export default function Card(data: any) {
           />
         </figure>
       </a>
-      <div className="px-4 pb-6">
+      <div>
         <header>
           <div className="mb-2">
-            <ul className="flex flex-wrap text-xs font-medium -m-1">
-              <li className="m-1">
+            <ul className="flex gap-2 flex-wrap text-xs font-medium">
+              <li>
                 <a
                   className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out"
                   href="#0"
@@ -27,7 +27,7 @@ export default function Card(data: any) {
                   Product
                 </a>
               </li>
-              <li className="m-1">
+              <li>
                 <a
                   className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-blue-500 hover:bg-blue-600 transition duration-150 ease-in-out"
                   href="#0"
@@ -46,7 +46,7 @@ export default function Card(data: any) {
             </a>
           </h3>
         </header>
-        <p className="text-md text-on-surface-variant flex-grow">
+        <p className=" text-on-surface-variant flex-grow">
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
         </p>
@@ -60,7 +60,7 @@ export default function Card(data: any) {
               alt="Author 04"
             />
           </a>
-          <div>
+          <div className="">
             <a
               className="font-medium text-on-surface hover:text-on-surface-variant transition duration-150 ease-in-out"
               href="#0"

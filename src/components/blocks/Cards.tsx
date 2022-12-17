@@ -1,3 +1,6 @@
+import Section from '../elements/layout/Section';
+import Container from '../elements/layout/Container';
+import Grid from '../elements/layout/Grid';
 import Card from '../elements/layout/Card';
 
 export default function Cards(data: any) {
@@ -15,15 +18,19 @@ export default function Cards(data: any) {
     image,
   } = data.block;
   return (
-    <section className="container mx-auto grid grid-cols-4 gap-8 py-16">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </section>
+    <Section type="normal">
+      <Container>
+        <Grid columns="1,2,3">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </Grid>
+      </Container>
+    </Section>
   );
 }
