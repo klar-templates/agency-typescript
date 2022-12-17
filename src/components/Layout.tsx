@@ -5,21 +5,21 @@ import PageScript from './PageScript';
 export default function Layout(data: any) {
   let headerBlock;
   let footerBlock;
-  const blocksToRender: any = [];
+  // const blocksToRender: any = [];
 
-  data.children.forEach((block: any) => {
-    // console.log(block)
-    // if (block.type.name === 'navigation') {
-    //   headerBlock = block.props;
-    //   console.log('hehehe', headerBlock)
-    //   return;
-    // }
-    // if (block.type.name === 'FooterReact') {
-    //   footerBlock = block.props;
-    //   return;
-    // }
-    blocksToRender.push(block);
-  });
+  // data.children.forEach((block: any) => {
+  //   // console.log(block)
+  //   // if (block.type.name === 'navigation') {
+  //   //   headerBlock = block.props;
+  //   //   console.log('hehehe', headerBlock)
+  //   //   return;
+  //   // }
+  //   // if (block.type.name === 'FooterReact') {
+  //   //   footerBlock = block.props;
+  //   //   return;
+  //   // }
+  //   blocksToRender.push(block);
+  // });
 
   return (
     <>
@@ -38,7 +38,8 @@ export default function Layout(data: any) {
         />
       </Helmet>
       {/* <Navigation {...headerBlock as any} /> */}
-      {blocksToRender}
+      {data.children}
+      {/* {blocksToRender} */}
       {/* <FooterReact {...footerBlock} /> */}
       {/* <PageScript /> */}
     </>
