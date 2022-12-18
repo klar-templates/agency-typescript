@@ -234,6 +234,18 @@ function App(): any {
             ></script> */}
           <link
             rel="stylesheet"
+            href={`https://fonts.googleapis.com/css?family=${data.theme.typography.font_display}:400,500,600,700`}
+          />
+          <link
+            rel="stylesheet"
+            href={`https://fonts.googleapis.com/css?family=${data.theme.typography.font_body}:400,500,600,700`}
+          />
+          <link
+            rel="stylesheet"
+            href={`https://fonts.googleapis.com/css?family=${data.theme.typography.font_logo}:400,500,600,700`}
+          />
+          <link
+            rel="stylesheet"
             href={`${window.siteConfig.publicPath}${window.siteConfig.cssFilepath}`}
           />
         </head>
