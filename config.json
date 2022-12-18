@@ -273,6 +273,37 @@
           "type": "object",
           "fields": [
             {
+              "title": "Logotyp",
+              "name": "logo",
+              "type": "object",
+              "fields": [
+                {
+                  "type": "string",
+                  "name": "font_family",
+                  "title": "Font",
+                  "enum": [
+                    "Open Sans",
+                    "Raleway",
+                    "Roboto",
+                    "Roboto Condensed",
+                    "Lato",
+                    "Oswald",
+                    "Source Sans Pro",
+                    "Montserrat",
+                    "Slabo 27 px",
+                    "Droid Serif",
+                    "Roboto Slab",
+                    "Kaushan Script",
+                    "PT Sans",
+                    "Helvetica Neue",
+                    "Helvetica",
+                    "Arial",
+                    "sans-serif"
+                  ]
+                }
+              ]
+            },
+            {
               "title": "Darkmode",
               "name": "darkmode",
               "type": "boolean",
@@ -351,37 +382,6 @@
               "name": "gradient_to",
               "type": "string",
               "format": "color"
-            },
-            {
-              "title": "Logotyp",
-              "name": "logo",
-              "type": "object",
-              "fields": [
-                {
-                  "type": "string",
-                  "name": "font_family",
-                  "title": "Font",
-                  "enum": [
-                    "Open Sans",
-                    "Raleway",
-                    "Roboto",
-                    "Roboto Condensed",
-                    "Lato",
-                    "Oswald",
-                    "Source Sans Pro",
-                    "Montserrat",
-                    "Slabo 27 px",
-                    "Droid Serif",
-                    "Roboto Slab",
-                    "Kaushan Script",
-                    "PT Sans",
-                    "Helvetica Neue",
-                    "Helvetica",
-                    "Arial",
-                    "sans-serif"
-                  ]
-                }
-              ]
             }
           ]
         }
