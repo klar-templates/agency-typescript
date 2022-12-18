@@ -245,6 +245,11 @@ function App(): any {
             href={`https://fonts.googleapis.com/css?family=${data.theme.typography.font_logo}:400,500,600,700`}
           />
           <link
+            href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
             rel="stylesheet"
             href={`${window.siteConfig.publicPath}${window.siteConfig.cssFilepath}`}
           />
