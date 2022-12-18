@@ -50,7 +50,6 @@ module.exports = {
           800: 'var(--neutral-800)',
           900: 'var(--neutral-900)',
         },
-
         'primary-dark': 'var(--color-primary-dark)',
         'primary-normal': 'var(--color-primary-normal)',
         'primary-light': 'var(--color-primary-light)',
