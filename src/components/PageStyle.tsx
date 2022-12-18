@@ -6,19 +6,28 @@ export default function PageStyle(data: any) {
     ',ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
 
   useEffect(() => {
+    const systemWebfonts = ['ui-sans-serif', 'Open Sans'];
     const googleEndpoint = 'https://fonts.googleapis.com/css?family=';
-    let link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = `${googleEndpoint}${data.theme.typography.font_display}:400,500,600,700`;
-    document.querySelector('head')?.appendChild(link);
-    link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = `${googleEndpoint}${data.theme.typography.font_body}:400,500,600,700`;
-    document.querySelector('head')?.appendChild(link);
-    link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = `${googleEndpoint}${data.theme.typography.font_logo}:400,500,600,700`;
-    document.querySelector('head')?.appendChild(link);
+    let link;
+    if (!systemWebfonts.includes(data.theme.typography.font_display)) {
+      link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${googleEndpoint}${data.theme.typography.font_display}:400,500,600,700`;
+      document.querySelector('head')?.appendChild(link);
+    }
+    if (!systemWebfonts.includes(data.theme.typography.font_body)) {
+      link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${googleEndpoint}${data.theme.typography.font_body}:400,500,600,700`;
+      document.querySelector('head')?.appendChild(link);
+    }
+    console.log(data.theme.typography.font_logo);
+    if (!systemWebfonts.includes(data.theme.typography.font_logo)) {
+      link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${googleEndpoint}${data.theme.typography.font_logo}:400,500,600,700`;
+      document.querySelector('head')?.appendChild(link);
+    }
   });
 
   const primary_shades = data.theme.colors.primary_shades.colors;
