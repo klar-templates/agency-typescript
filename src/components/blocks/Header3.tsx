@@ -76,6 +76,10 @@ export default function Header3(data: any) {
     backgroundImage: backgroundImage,
   };
 
+  if (!style.border_bottom_width) {
+    styles['borderBottom'] = 'none';
+  }
+
   return (
     <header className={classes} style={styles}>
       <div className="py-6 container-auto">
@@ -86,7 +90,7 @@ export default function Header3(data: any) {
           <div className="flex lg:min-w-0 lg:shrink" aria-label="Global">
             <Link
               to={window.siteConfig.publicPath}
-              className="js-klar-logo text-primary-dark dark:text-primary r-only text-2xl font-bold ext-gray-800 transition-colors duration-300 transform lg:text-3xl hover:text-gray-700 dark:hover:text-primary"
+              className="js-klar-logo text-primary-dark dark:text-primary r-only text-2xl font-bold ext-gray-800 transition-colors duration-300 transform lg:text-3xl"
               style={{
                 fontFamily:
                   '"Kaushan Script","Helvetica Neue",Helvetica,Arial,sans-serif',
@@ -174,7 +178,7 @@ export default function Header3(data: any) {
                 </a> */}
                 <Link
                   to={window.siteConfig.publicPath}
-                  className="js-klar-logo text-primary-dark dark:text-primary r-only text-2xl font-bold ext-gray-800 transition-colors duration-300 transform lg:text-3xl hover:text-gray-700 dark:hover:text-primary"
+                  className="js-klar-logo text-primary-dark dark:text-primary text-2xl font-bold lg:text-3xl"
                   style={{
                     fontFamily:
                       '"Kaushan Script","Helvetica Neue",Helvetica,Arial,sans-serif',
