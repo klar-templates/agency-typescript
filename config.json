@@ -456,8 +456,8 @@
       ]
     },
     {
-      "title": "About",
-      "name": "about",
+      "title": "About 1",
+      "name": "about1",
       "icon": "image",
       "hidden": false,
       "type": "object",

@@ -1,4 +1,4 @@
-export default function About(data: any) {
+export default function About1(data: any) {
   const {
     _id,
     _type,
