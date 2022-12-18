@@ -14,21 +14,41 @@ export default function PageStyle(data: any) {
     ];
     const googleEndpoint = 'https://fonts.googleapis.com/css?family=';
     let link;
-    if (!systemWebfonts.includes(data.theme.typography.font_display)) {
+    if (
+      !systemWebfonts.includes(data.theme.typography.font_display) &&
+      !document.querySelector(
+        '#font-display-' + data.theme.typography.font_display.replace(' ', '-'),
+      )
+    ) {
       link = document.createElement('link');
+      link.id =
+        'font-display-' + data.theme.typography.font_display.replace(' ', '-');
       link.rel = 'stylesheet';
       link.href = `${googleEndpoint}${data.theme.typography.font_display}:400,500,600,700`;
       document.querySelector('head')?.appendChild(link);
     }
-    if (!systemWebfonts.includes(data.theme.typography.font_body)) {
+    if (
+      !systemWebfonts.includes(data.theme.typography.font_body) &&
+      !document.querySelector(
+        '#font-body-' + data.theme.typography.font_body.replace(' ', '-'),
+      )
+    ) {
       link = document.createElement('link');
+      link.id =
+        'font-body-' + data.theme.typography.font_body.replace(' ', '-');
       link.rel = 'stylesheet';
       link.href = `${googleEndpoint}${data.theme.typography.font_body}:400,500,600,700`;
       document.querySelector('head')?.appendChild(link);
     }
-    console.log(data.theme.typography.font_logo);
-    if (!systemWebfonts.includes(data.theme.typography.font_logo)) {
+    if (
+      !systemWebfonts.includes(data.theme.typography.font_logo) &&
+      !document.querySelector(
+        '#font-logo-' + data.theme.typography.font_logo.replace(' ', '-'),
+      )
+    ) {
       link = document.createElement('link');
+      link.id =
+        'font-logo-' + data.theme.typography.font_logo.replace(' ', '-');
       link.rel = 'stylesheet';
       link.href = `${googleEndpoint}${data.theme.typography.font_logo}:400,500,600,700`;
       document.querySelector('head')?.appendChild(link);
