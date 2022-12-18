@@ -8,7 +8,7 @@ function withOpacity(variableName) {
     return `rgb(var(${variableName}))`;
   };
 }
-
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
     './index.html',
@@ -19,47 +19,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: [
-          'var(--font-display)',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'Noto Sans',
-          'sans-serif',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji',
-        ],
-        body: [
-          'var(--font-body)',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'Noto Sans',
-          'sans-serif',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji',
-        ],
-        logo: [
-          'var(--font-logo)',
-          'Helvetica Neue',
-          'Helvetica',
-          'Arial',
-          'sans-serif',
-        ],
+        display: ['var(--font-display)', ...defaultTheme.fontFamily.sans],
+        body: ['var(--font-body)', ...defaultTheme.fontFamily.sans],
+        logo: ['var(--font-logo)', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
