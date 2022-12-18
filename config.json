@@ -1014,9 +1014,9 @@
             "selection_bg_color": "#fed136"
           },
           "typography": {
-            "title_font_family": "Montserrat",
+            "font_display": "Montserrat",
+            "font_body": "Roboto Slab",
             "subtitle_font_family": "Droid Serif",
-            "text_font_family": "Roboto Slab",
             "type_base_size": 14
           },
           "block": {
