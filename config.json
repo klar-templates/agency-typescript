@@ -1030,7 +1030,7 @@
             "font_display": "Montserrat",
             "font_body": "Roboto Slab",
             "subtitle_font_family": "Droid Serif",
-            "text_base_size": 14
+            "text_base_size": 16
           },
           "block": {
             "padding_top": "150",
