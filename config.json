@@ -31,14 +31,46 @@
         "type": "object",
         "fields": [
           {
-            "title": "Färger",
-            "name": "colors",
-            "type": "object"
+            "title": "Font display",
+            "type": "string",
+            "name": "font_display",
+            "enum": [
+              "Open Sans",
+              "Raleway",
+              "Roboto",
+              "Lato",
+              "Oswald",
+              "Source Sans Pro",
+              "Montserrat",
+              "Droid Serif",
+              "Roboto Slab",
+              "Kaushan Script",
+              "Helvetica Neue",
+              "Helvetica",
+              "Arial",
+              "sans-serif"
+            ]
           },
           {
-            "title": "Beskrivning",
-            "name": "description",
-            "type": "text"
+            "title": "Font body",
+            "type": "string",
+            "name": "font_body",
+            "enum": [
+              "Open Sans",
+              "Raleway",
+              "Roboto",
+              "Lato",
+              "Oswald",
+              "Source Sans Pro",
+              "Montserrat",
+              "Droid Serif",
+              "Roboto Slab",
+              "Kaushan Script",
+              "Helvetica Neue",
+              "Helvetica",
+              "Arial",
+              "sans-serif"
+            ]
           }
         ]
       },
