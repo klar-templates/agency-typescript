@@ -208,7 +208,7 @@ Error generating stack: `+l.message+`
   }
 
   body {
-    font-size: ${e.theme.typography.text_font_size}px;
+    font-size: ${e.theme.typography.text_base_size}px;
   }
 
   h1, h2, h3, h4, h5, h6 {
