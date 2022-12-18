@@ -161,7 +161,7 @@ export default function Header3(data: any) {
           </div> */}
         </nav>
         {mobileMenuVisible && (
-          <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 md:hidden dark:bg-slate-900">
+          <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-4 py-6 md:hidden dark:bg-slate-900">
             <div className="flex h-9 items-center justify-between">
               <div className="flex">
                 {/* <a href="#" className="-m-1.5 p-1.5">

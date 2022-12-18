@@ -75,10 +75,10 @@ export default function Hero1(data: any) {
                   </a>
                   <a
                     href="#"
-                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-neutral-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                   >
                     Live demo{' '}
-                    <span className="text-gray-400" aria-hidden="true">
+                    <span className="text-neutral-400" aria-hidden="true">
                       &rarr;
                     </span>
                   </a>

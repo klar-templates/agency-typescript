@@ -456,6 +456,14 @@
       ]
     },
     {
+      "title": "About",
+      "name": "about",
+      "icon": "image",
+      "hidden": false,
+      "type": "object",
+      "fields": []
+    },
+    {
       "title": "Elements",
       "name": "elements",
       "icon": "image",

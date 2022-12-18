@@ -17,7 +17,7 @@ export default function Card(data: any) {
       </a>
       <div>
         <header>
-          <div className="mb-2">
+          {/* <div className="mb-2">
             <ul className="flex gap-2 flex-wrap text-xs font-medium">
               <li>
                 <a
@@ -36,6 +36,14 @@ export default function Card(data: any) {
                 </a>
               </li>
             </ul>
+          </div> */}
+          <div className="mb-2">
+            <a
+              className="text-sm font-medium inline-flex text-primary-700 hover:text-primary-900 transition duration-150 ease-in-out"
+              href="#0"
+            >
+              Product
+            </a>
           </div>
           <h3 className="text-2xl lg:text-2xl font-bold leading-tight mb-2">
             <a

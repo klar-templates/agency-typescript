@@ -19,6 +19,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: 'var(--primary-500)',
+          50: 'var(--primary-50)',
+          100: 'var(--primary-100)',
+          200: 'var(--primary-200)',
+          300: 'var(--primary-300)',
+          400: 'var(--primary-400)',
+          500: 'var(--primary-500)',
+          600: 'var(--primary-600)',
+          700: 'var(--primary-700)',
+          800: 'var(--primary-800)',
+          900: 'var(--primary-900)',
+        },
+        neutral: {
+          DEFAULT: 'var(--neutral-500)',
+          50: 'var(--neutral-50)',
+          100: 'var(--neutral-100)',
+          200: 'var(--neutral-200)',
+          300: 'var(--neutral-300)',
+          400: 'var(--neutral-400)',
+          500: 'var(--neutral-500)',
+          600: 'var(--neutral-600)',
+          700: 'var(--neutral-700)',
+          800: 'var(--neutral-800)',
+          900: 'var(--neutral-900)',
+        },
+
         'primary-dark': 'var(--color-primary-dark)',
         'primary-normal': 'var(--color-primary-normal)',
         'primary-light': 'var(--color-primary-light)',
@@ -33,11 +60,6 @@ module.exports = {
         'inverse-neutral-normal': 'var(--color-inverse-neutral-normal)',
         'inverse-neutral-light': 'var(--color-inverse-neutral-light)',
 
-        outline: 'var(--outline)',
-      },
-      backgroundColor: {
-        primary: 'var(--primary)',
-        'primary-dark': 'var(--primary-dark)',
         'primary-container': 'var(--primary-container)',
         background: 'var(--background)',
         'inverse-background': 'var(--inverse-background)',
@@ -45,10 +67,7 @@ module.exports = {
         'surface-variant': 'var(--surface-variant)',
         'inverse-surface': 'var(--inverse-surface)',
         'inverse-surface-variant': 'var(--inverse-surface-variant)',
-      },
-      textColor: {
-        primary: 'var(--primary)',
-        'primary-dark': 'var(--primary-dark)',
+
         'on-primary': 'var(--on-primary)',
         'on-primary-container': 'var(--on-primary-container)',
         'inverse-primary': 'var(--inverse-primary)',
@@ -59,6 +78,8 @@ module.exports = {
         'on-surface-variant': 'var(--on-surface-variant)',
         'inverse-on-surface': 'var(--inverse-on-surface)',
         'inverse-on-surface-variant': 'var(--inverse-on-surface-variant)',
+
+        outline: 'var(--outline)',
       },
     },
   },

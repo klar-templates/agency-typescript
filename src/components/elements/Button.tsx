@@ -13,19 +13,19 @@ export default function Button({
     'inline-flex justify-center rounded text-sm font-semibold': true,
     'text-on-background bg-background ring-1 ring-outline drop-shadow hover:drop-shadow-lg':
       type === 'elevated',
-    'text-on-primary bg-primary ring-1 ring-text-on-primary hover:bg-primary-dark over:text-on-primary-dark':
+    'text-on-primary bg-primary ring-1 ring-on-primary hover:bg-primary-dark over:text-on-primary-dark':
       type === 'filled',
     'text-on-surface-variant bg-outline ring-1 ring-outline hover:drop-shadow ':
       type === 'tonal',
     'text-inverse-on-background bg-neutral-dark ring-1 ring-outline hover:drop-shadow hover:bg-neutral-normal':
       type === 'filled-inverse',
-    'text-background bg-background ring-1 ring-outline hover:drop-shadow':
+    'bg-background text-on-background ring-1 ring-outline hover:drop-shadow':
       type === 'outlined',
     'text-background bg-background hover:ring-1 hover:ring-outline':
       type === 'text',
-    'py-3 px-4': size === 'lg',
+    'py-1.5 px-4': size === 'lg',
     'py-2 px-3': !size,
-    'py-1.5 px-2': size === 'sm',
+    'py-1 px-2': size === 'sm',
     'rounded-full': rounded,
   });
 

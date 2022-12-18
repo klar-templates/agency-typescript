@@ -43,7 +43,6 @@ export default function PageStyle(data: any) {
 
     /* light - default */
     --primary: var(--primary-500);
-    --primary-dark: var(--primary-700);
     --on-primary: white;
     --primary-container: var(--primary-100);
     --on-primary-container: var(--primary-900);
