@@ -1,6 +1,23 @@
+import { useEffect } from 'react';
 import RenderStyle from './RenderStyle';
 
 export default function PageStyle(data: any) {
+  useEffect(() => {
+    const googleEndpoint = 'https://fonts.googleapis.com/css?family=';
+    let link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${googleEndpoint}${data.theme.typography.font_display}:300,400,500,600,700,800,900`;
+    document.querySelector('head')?.appendChild(link);
+    link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${googleEndpoint}${data.theme.typography.font_body}:300,400,500,600,700,800,900`;
+    document.querySelector('head')?.appendChild(link);
+    link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${googleEndpoint}${data.theme.typography.font_body}:300,400,500,600,700,800,900`;
+    document.querySelector('head')?.appendChild(link);
+  });
+
   const primary_shades = data.theme.colors.primary_shades.colors;
   const neutral_shades = data.theme.colors.neutral_shades.colors;
   const pageStyle = `
