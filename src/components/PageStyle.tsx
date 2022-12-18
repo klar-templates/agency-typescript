@@ -2,19 +2,22 @@ import { useEffect } from 'react';
 import RenderStyle from './RenderStyle';
 
 export default function PageStyle(data: any) {
+  const fallbackFonts =
+    'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
+
   useEffect(() => {
     const googleEndpoint = 'https://fonts.googleapis.com/css?family=';
     let link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `${googleEndpoint}${data.theme.typography.font_display}:300,400,500,600,700,800,900`;
+    link.href = `${googleEndpoint}${data.theme.typography.font_display}:400,500,600,700`;
     document.querySelector('head')?.appendChild(link);
     link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `${googleEndpoint}${data.theme.typography.font_body}:300,400,500,600,700,800,900`;
+    link.href = `${googleEndpoint}${data.theme.typography.font_body}:400,500,600,700`;
     document.querySelector('head')?.appendChild(link);
     link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `${googleEndpoint}${data.theme.typography.font_logo}:300,400,500,600,700,800,900`;
+    link.href = `${googleEndpoint}${data.theme.typography.font_logo}:400,500,600,700`;
     document.querySelector('head')?.appendChild(link);
   });
 
@@ -22,6 +25,11 @@ export default function PageStyle(data: any) {
   const neutral_shades = data.theme.colors.neutral_shades.colors;
   const pageStyle = `
   :root {
+    /* font family */
+    --font-display: ${data.theme.typography.font_display};
+    --font-body: ${data.theme.typography.font_body};
+    --font-logo: ${data.theme.typography.font_logo};
+    
     /* primary */
     --primary-50: ${primary_shades['50']};
     --primary-100: ${primary_shades['100']};
@@ -133,10 +141,10 @@ export default function PageStyle(data: any) {
   }
 
   body {
-    font-family: ${data.theme.typography.font_body}
+    font-family: ${data.theme.typography.font_body}${fallbackFonts};
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: ${data.theme.typography.font_display}
+    font-family: ${data.theme.typography.font_display}${fallbackFonts};
   }
   `;
   return <RenderStyle id="css-variables">{pageStyle}</RenderStyle>;
