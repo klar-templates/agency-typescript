@@ -124,7 +124,7 @@ export default function Header3(data: any) {
               </svg>
             </button>
           </div>
-          <div className="hidden md:flex md:min-w-0 md:shrink md:justify-end md:gap-x-12">
+          <div className="hidden font-display md:flex md:min-w-0 md:shrink md:justify-end md:gap-x-12">
             {window.klarContext.data.pages.map((page: any, i: any) => (
               <li
                 key={i}
@@ -161,7 +161,7 @@ export default function Header3(data: any) {
           </div> */}
         </nav>
         {mobileMenuVisible && (
-          <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-4 py-6 md:hidden dark:bg-slate-900">
+          <div className="fixed inset-0 z-10 overflow-y-auto bg-white px-4 py-6 md:hidden dark:bg-neutral-900">
             <div className="flex h-9 items-center justify-between">
               <div className="flex">
                 {/* <a href="#" className="-m-1.5 p-1.5">
@@ -215,7 +215,7 @@ export default function Header3(data: any) {
             </div>
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
+                <div className="space-y-2 py-6 font-display">
                   {window.klarContext.data.pages.map((page: any, i: any) => (
                     <li key={i} className={'block'}>
                       <Link
