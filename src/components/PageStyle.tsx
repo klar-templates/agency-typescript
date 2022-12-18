@@ -14,7 +14,7 @@ export default function PageStyle(data: any) {
     document.querySelector('head')?.appendChild(link);
     link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `${googleEndpoint}${data.theme.typography.font_body}:300,400,500,600,700,800,900`;
+    link.href = `${googleEndpoint}${data.theme.typography.font_logo}:300,400,500,600,700,800,900`;
     document.querySelector('head')?.appendChild(link);
   });
 
