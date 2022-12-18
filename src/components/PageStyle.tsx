@@ -9,7 +9,7 @@ export default function PageStyle(data: any) {
     const systemWebfonts = [
       'ui-sans-serif',
       'Open Sans',
-      'arial',
+      'Arial',
       'sans-serif',
     ];
     const googleEndpoint = 'https://fonts.googleapis.com/css?family=';
