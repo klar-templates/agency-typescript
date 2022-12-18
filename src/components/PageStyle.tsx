@@ -6,7 +6,12 @@ export default function PageStyle(data: any) {
     ',ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
 
   useEffect(() => {
-    const systemWebfonts = ['ui-sans-serif', 'Open Sans'];
+    const systemWebfonts = [
+      'ui-sans-serif',
+      'Open Sans',
+      'arial',
+      'sans-serif',
+    ];
     const googleEndpoint = 'https://fonts.googleapis.com/css?family=';
     let link;
     if (!systemWebfonts.includes(data.theme.typography.font_display)) {
