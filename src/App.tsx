@@ -252,7 +252,7 @@ function App(): any {
               <script
                 dangerouslySetInnerHTML={{
                   __html: `window.hydratedData = ${JSON.stringify({
-                    pages: data.pages,
+                    ...data,
                   })}`,
                 }}
               />
