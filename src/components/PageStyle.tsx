@@ -114,6 +114,13 @@ export default function PageStyle(data: any) {
     --color-inverse-neutral-normal: var(--neutral-700);
     --color-inverse-neutral-light: var(--neutral-500);
   }
+
+  body {
+    font-family: ${data.theme.typography.font_body}
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${data.theme.typography.font_display}
+  }
   `;
   return <RenderStyle id="css-variables">{pageStyle}</RenderStyle>;
 }

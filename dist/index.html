@@ -14,7 +14,32 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          // families: ['Roboto', 'Roboto Slab', 'Droid Serif'],
+          families: [
+            'Roboto' + ':300,400,500,600,700,800,900',
+            'Roboto Slab' + ':300,400,500,600,700,800,900',
+            'Droid Serif' + ':300,400,500,600,700,800,900',
+            'Kaushan Script' + ':300,400,500,600,700,800,900',
+          ],
+        },
+      });
+    </script>
+    <script>
+      // async function getGoogleFonts() {
+      //   const response = await fetch(
+      //     `https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyC2jKmd4osgjKC4ivvBpc5MKgE7D8guvE8`,
+      //   );
+      //   return response.json();
+      // }
+      // getGoogleFonts().then((data) => {
+      //   console.log(data.items.find((f) => f.family === 'Roboto'));
+      // });
+    </script>
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
       rel="stylesheet"
       type="text/css"
@@ -37,7 +62,7 @@
     <link
       href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Oswald|Raleway|Roboto|Source+Sans+Pro"
       rel="stylesheet"
-    />
+    /> -->
 
     <!-- Klar Style -->
     <!-- style -->
@@ -155,7 +180,7 @@
         --color-inverse-neutral-light: var(--neutral-500);
       }
     </style> -->
-    <script type="module" crossorigin src="/assets/index.e37e965e.js"></script>
+    <script type="module" crossorigin src="/assets/index.25622a54.js"></script>
     <link rel="stylesheet" href="/assets/index.a52b8e23.css">
   </head>
   <body class="bg-background">

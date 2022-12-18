@@ -38,13 +38,16 @@
               "Open Sans",
               "Raleway",
               "Roboto",
+              "Roboto Condensed",
               "Lato",
               "Oswald",
               "Source Sans Pro",
               "Montserrat",
+              "Slabo 27 px",
               "Droid Serif",
               "Roboto Slab",
               "Kaushan Script",
+              "PT Sans",
               "Helvetica Neue",
               "Helvetica",
               "Arial",
@@ -59,18 +62,28 @@
               "Open Sans",
               "Raleway",
               "Roboto",
+              "Roboto Condensed",
               "Lato",
               "Oswald",
               "Source Sans Pro",
               "Montserrat",
+              "Slabo 27 px",
               "Droid Serif",
               "Roboto Slab",
               "Kaushan Script",
+              "PT Sans",
               "Helvetica Neue",
               "Helvetica",
               "Arial",
               "sans-serif"
             ]
+          },
+          {
+            "title": "Basstorlek",
+            "name": "text_base_size",
+            "type": "integer",
+            "minimum": 10,
+            "maximum": 18
           }
         ]
       },
@@ -1017,7 +1030,7 @@
             "font_display": "Montserrat",
             "font_body": "Roboto Slab",
             "subtitle_font_family": "Droid Serif",
-            "type_base_size": 14
+            "text_base_size": 14
           },
           "block": {
             "padding_top": "150",
