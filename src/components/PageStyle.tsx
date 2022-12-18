@@ -174,6 +174,10 @@ export default function PageStyle(data: any) {
     --color-inverse-neutral-light: var(--neutral-500);
   }
 
+  body {
+    font-size: ${data.theme.typography.text_font_size};
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: ${data.theme.typography.font_display}${fallbackFonts};
   }
