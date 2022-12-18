@@ -83,7 +83,7 @@
             "name": "text_base_size",
             "type": "integer",
             "minimum": 10,
-            "maximum": 18
+            "maximum": 20
           }
         ]
       },
