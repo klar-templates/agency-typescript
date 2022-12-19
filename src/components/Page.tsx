@@ -16,6 +16,7 @@ import Cards1 from './blocks/Cards1';
 import Team1 from './blocks/Team1';
 import Team2 from './blocks/Team2';
 import About1 from './blocks/About1';
+import Footer from './blocks/Footer';
 import Elements from './blocks/Elements';
 import Nunjucks from './blocks/Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
@@ -39,6 +40,7 @@ const Components: any = {
   Card: Card,
   Card1: Card1,
   About1: About1,
+  Footer: Footer,
   Elements: Elements,
 };
 
