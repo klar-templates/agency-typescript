@@ -250,6 +250,11 @@ function App(): any {
             type="text/css"
           />
           <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
             rel="stylesheet"
             href={`${window.siteConfig.publicPath}${window.siteConfig.cssFilepath}`}
           />

@@ -56,6 +56,13 @@ export default function PageStyle(data: any) {
       link.href = `${googleEndpoint}${data.theme.typography.font_logo}:400,500,600,700`;
       document.querySelector('head')?.appendChild(link);
     }
+    if (!document.querySelector('#font-logo-DroidSerif')) {
+      link = document.createElement('link');
+      link.id = 'font-logo-DroidSerif';
+      link.rel = 'stylesheet';
+      link.href = `https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic`;
+      document.querySelector('head')?.appendChild(link);
+    }
   });
 
   if (
