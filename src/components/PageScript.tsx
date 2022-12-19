@@ -7,9 +7,6 @@ export default function PageScript() {
   ) {
     return null;
   }
-  // const pageScript = `
-  //   console.log('Från page-script-komponenten');
-  // `;
   const pageScript = ``;
   return <RenderScript>{pageScript}</RenderScript>;
 }
