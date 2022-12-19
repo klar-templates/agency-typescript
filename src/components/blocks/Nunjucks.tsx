@@ -27,7 +27,42 @@ function getTemplateOnInit(data: any) {
     let template = parent.frames.window.klar.templates.blocks[data.block._type];
     if (template) {
       if (window.releaseReactApp) {
-        window.nunjucksTemplates[data.block._type] = template.content;
+        let templateContent = template.content;
+        let style: any =
+          templateContent.match(/<style>(?:.|\n)*?<\/style>/gm) || '';
+        if (style) {
+          style = style[0];
+          style = style.replace('<style>', '');
+          style = style.replace('</style>', '');
+          style = style.replace(/\n/gm, '');
+        }
+        let script: any =
+          templateContent.match(/<script>(?:.|\n)*?<\/script>/gm) || '';
+        if (script) {
+          script = script[0];
+          script = script.replace('<script>', '');
+          script = script.replace('</script>', '');
+          script = script.replace(/\n/gm, '');
+        }
+        templateContent = templateContent.replace(
+          /<style>(?:.|\n)*?<\/style>/gm,
+          '',
+        );
+        templateContent = templateContent.replace(
+          /<script>(?:.|\n)*?<\/script>/gm,
+          '',
+        );
+        // console.log(style);
+        // console.log(script);
+        // console.log(templateContent);
+        if (style) {
+          window.reactCss += style;
+        }
+        if (script) {
+          window.reactJs += script;
+        }
+        window.nunjucksTemplates[data.block._type] = templateContent;
+        return templateContent;
       }
       return template.content;
     } else {
