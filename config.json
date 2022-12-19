@@ -986,7 +986,8 @@
       "title": "Footer",
       "name": "footer",
       "icon": "address-card-o",
-      "hidden": true,
+      "hidden": false,
+      "global": true,
       "type": "object",
       "fields": [
         {
