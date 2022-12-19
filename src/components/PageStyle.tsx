@@ -58,6 +58,13 @@ export default function PageStyle(data: any) {
     }
   });
 
+  if (
+    window.releaseReactApp &&
+    window.klarContext.data.pages[0]._id !== window.klarContext.currentPage._id
+  ) {
+    return null;
+  }
+
   const primary_shades = data.theme.colors.primary_shades.colors;
   const neutral_shades = data.theme.colors.neutral_shades.colors;
   const pageStyle = `
