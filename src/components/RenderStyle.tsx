@@ -1,5 +1,4 @@
 export default function RenderStyle({ children, id }: any) {
-  console.log(children);
   if (window.releaseReactApp) {
     window.reactCss += children;
   }
