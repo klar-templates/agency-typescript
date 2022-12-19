@@ -7,6 +7,8 @@ declare global {
     reactPageIsLoaded: any;
     releaseReactApp: any;
     reactServerPages: any;
+    reactCss: any;
+    reactJs: any;
     env: any;
     production: any;
     prodConfig: any;

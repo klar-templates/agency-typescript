@@ -22,6 +22,8 @@ if (window.releaseReactApp) {
   const tempCurrentPage = localStorage.getItem('current-page') as string;
   window.reactServerPages = {};
   window.nunjucksTemplates = {};
+  window.reactCss = '';
+  window.reactJs = '';
   if (parent.frames.window.klar) {
     const pages = [...parent.frames.window.klar.data.pages];
     if (pages.length > 0) {
