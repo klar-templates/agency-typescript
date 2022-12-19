@@ -5,7 +5,7 @@ export default function Container({ children, columns }: any) {
 
   const classObject = {
     'grid gap-4 lg:gap-8': true,
-    'grid-cols-2 lg:grid-cols-3 ': !columns,
+    'grid-cols-2 lg:grid-cols-3': !columns,
     'grid-cols-1': cols[0] === '1',
     'grid-cols-2': cols[0] === '2',
     'grid-cols-3': cols[0] === '3',
