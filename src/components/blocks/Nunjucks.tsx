@@ -70,16 +70,13 @@ export default function Nunjucks(data: any) {
   // This is when you're in this application, when in Klar get the template file from the Klar application.
   function getTemplate(templateName: string) {
     const cacheKey = 'klar-nunjucks-template-' + templateName;
-    let data = '';
     if (!localStorage.getItem(cacheKey)) {
       async function requestData() {
         const response = await fetch(`/blocks/${templateName}.html`);
         return response.text();
       }
       requestData().then((data) => {
-        if (window.klarContext.isInKlar) {
-          localStorage.setItem(cacheKey, data);
-        }
+        // localStorage.setItem(cacheKey, data);
         setTemplate(data);
         renderInlineScript(containerRef);
       });
@@ -94,30 +91,7 @@ export default function Nunjucks(data: any) {
     return null;
   }
 
-  // if (!renderedTemplate) {
   renderedTemplate = window.nunjucks.renderString(template, data);
-  //   if (window.klarContext.isInKlar) {
-  //     localStorage.setItem(cacheKeyTemplate, renderedTemplate);
-  //   }
-  //  }
-
-  if (window.releaseReactApp) {
-    return (
-      <>
-        <div
-          ref={containerRef}
-          dangerouslySetInnerHTML={{
-            __html: renderedTemplate,
-          }}
-        />
-        {/* <script
-          dangerouslySetInnerHTML={{
-            __html: `window.nunjucksTemplates['nunjucksTemplate${data.block._id}}'] = \`${renderedTemplate}\``,
-          }}
-        /> */}
-      </>
-    );
-  }
 
   return (
     <div
