@@ -1,6 +1,6 @@
-import Layout from '../Layout';
+import Layout from '../system/Layout';
 import Nunjucks from '../blocks/Nunjucks';
-import KlarEditBlock from '../KlarEditBlock';
+import KlarEditBlock from '../system/KlarEditBlock';
 import conf from '../../../config.json';
 import { useEffect, useState } from 'react';
 

@@ -1,4 +1,4 @@
-import Layout from '../Layout';
+import Layout from '../system/Layout';
 import Nunjucks from '../blocks/Nunjucks';
 import Container from '../elements/layout/Container';
 import Section from '../elements/layout/Section';

@@ -6,7 +6,7 @@ import {
   Navigate,
 } from 'react-router-dom';
 import IData from './service/interface/IData';
-import Page from './components/Page';
+import Page from './components/system/Page';
 
 function getInitData() {
   let data = undefined;

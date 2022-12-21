@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import RenderScript from '../RenderScript';
+import RenderScript from '../system/RenderScript';
 // import nunjucks from 'vite-plugin-nunjucks';
 
 type scriptInline = {
