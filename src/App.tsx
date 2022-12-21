@@ -195,6 +195,7 @@ function App(): any {
 
         <Route path="/components" element={<Page {...(data as IData)} />} />
         <Route path="/styleguide" element={<Page {...(data as IData)} />} />
+        <Route path="index.html" element={<Navigate replace to="/" />} />
       </>
     </Routes>
   );
