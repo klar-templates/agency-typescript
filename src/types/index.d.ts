@@ -15,5 +15,6 @@ declare global {
     hydratedData: any;
     siteConfig: any;
     nunjucksTemplates: any;
+    templateComponents: any;
   }
 }
