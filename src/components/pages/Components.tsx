@@ -1,7 +1,7 @@
-import Layout from './Layout';
-import Nunjucks from './blocks/Nunjucks';
-import KlarEditBlock from './KlarEditBlock';
-import conf from '../../config.json';
+import Layout from '../Layout';
+import Nunjucks from '../blocks/Nunjucks';
+import KlarEditBlock from '../KlarEditBlock';
+import conf from '../../../config.json';
 import { useEffect, useState } from 'react';
 
 export default function Components(data: any) {

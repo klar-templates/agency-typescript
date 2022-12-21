@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import IData from '../service/interface/IData';
-import ComponentsBlock from './Components';
-import Styleguide from './Styleguide';
+import ComponentsBlock from './pages/Components';
+import Styleguide from './pages/Styleguide';
 import Layout from './Layout';
 import Header from './blocks/Header';
 import Header2 from './blocks/Header2';
