@@ -9,6 +9,13 @@ export default defineConfig({
 // export default defineConfig({
 //   plugins: [react()],
 //   build: {
+//     outDir: 'dist',
+//   },
+// });
+
+// export default defineConfig({
+//   plugins: [react()],
+//   build: {
 //     lib: {
 //       // Could also be a dictionary or array of multiple entry points
 //       entry: './src/main.tsx',
