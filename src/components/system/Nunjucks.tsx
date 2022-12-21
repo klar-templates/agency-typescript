@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import fooa from '../../../public/blocks/hero-book.html?raw';
 
 type scriptInline = {
   type: any;
@@ -76,6 +77,7 @@ function getTemplateOnInit(data: any) {
 export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState(getTemplateOnInit(data));
   const containerRef = useRef(null);
+  console.log(fooa);
   window.nunjucks.configure({ autoescape: false });
   const cacheKeyTemplate = `${data.block._id}`;
   let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
