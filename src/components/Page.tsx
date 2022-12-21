@@ -44,7 +44,7 @@ const Components: any = {
   Elements: Elements,
 };
 
-// console.log(window.templateComponents);
+console.log(window.templateComponents);
 
 // function sort(blocks: any) {
 //   function compareFn(a: any, b: any) {
