@@ -1,5 +1,5 @@
 import Layout from '../system/Layout';
-import Nunjucks from '../blocks/Nunjucks';
+import Nunjucks from '../system/Nunjucks';
 import Container from '../elements/layout/Container';
 import Section from '../elements/layout/Section';
 import Grid from '../elements/layout/Grid';

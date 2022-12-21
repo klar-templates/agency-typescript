@@ -18,7 +18,7 @@ import Team2 from '../blocks/Team2';
 import About1 from '../blocks/About1';
 import Footer from '../blocks/Footer';
 import Elements from '../blocks/Elements';
-import Nunjucks from '../blocks/Nunjucks';
+import Nunjucks from './Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
 // Elements
 import Card from '../elements/layout/Card';
