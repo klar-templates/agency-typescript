@@ -1,5 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
-import fooa from '../../../public/blocks/hero-book.html?raw';
+import herobook from '../blocks/nunjucks/hero-book.html?raw';
+import styleguide from '../blocks/nunjucks/hero-book.html?raw';
+
+const templates: any = {
+  'hero-book': herobook,
+  styleguide: styleguide,
+};
 
 type scriptInline = {
   type: any;
@@ -22,11 +28,13 @@ function renderInlineScript(ref: any) {
 }
 
 function getTemplateOnInit(data: any) {
+  let template;
   if (window.klarContext.isInKlar) {
-    let template = parent.frames.window.klar.templates.blocks[data.block._type];
+    // template = parent.frames.window.klar.templates.blocks[data.block._type];
+    template = templates[data.block._type];
     if (template) {
       if (window.releaseReactApp) {
-        let templateContent = template.content;
+        let templateContent = template;
         let style: any =
           templateContent.match(/<style>(?:.|\n)*?<\/style>/gm) || '';
         if (style) {
@@ -63,21 +71,32 @@ function getTemplateOnInit(data: any) {
         window.nunjucksTemplates[data.block._type] = templateContent;
         return templateContent;
       }
-      return template.content;
-    } else {
-      console.log('No template content for this block:', data.block._type);
+      // return template.content;
+      //return template;
     }
+    // else {
+    //   console.log('No template content for this block:', data.block._type);
+    // }
+  } else if (location.host.includes('.github.io')) {
+    template = window.nunjucksTemplates[data.block._type];
+    // if (template) {
+    //   return template;
+    // } else {
+    //   console.log('No template content for this block:', data.block._type);
+    // }
+  } else {
+    template = templates[data.block._type];
   }
-  if (location.host.includes('.github.io')) {
-    return window.nunjucksTemplates[data.block._type];
+  if (template) {
+    return template;
+  } else {
+    console.log('No template content for this block:', data.block._type);
   }
-  return '';
 }
 
 export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState(getTemplateOnInit(data));
   const containerRef = useRef(null);
-  console.log(fooa);
   window.nunjucks.configure({ autoescape: false });
   const cacheKeyTemplate = `${data.block._id}`;
   let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
@@ -96,7 +115,8 @@ export default function Nunjucks(data: any) {
       //     console.log('No template content for this block:', data.block._type);
       //   }
     } else {
-      getTemplate(data.block._type);
+      renderInlineScript(containerRef);
+      // getTemplate(data.block._type);
     }
     // return () => clearInterval(id);
     // }
