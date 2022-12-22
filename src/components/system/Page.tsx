@@ -144,6 +144,14 @@ export default function Page(data: IData) {
 function createContext(data: IData) {
   const routeLocation = useLocation();
   const routeNavigate = useNavigate();
+  if (window.initTemplate && !window.templateLoaded) {
+    window.initTemplate({
+      setData: window.initTemplateSetDataTemp,
+      data: data,
+      navigate: routeNavigate,
+    });
+    window.templateLoaded = true;
+  }
   // const pathname = '/startsida';
   const pathname = routeLocation.pathname;
   let currentPage;

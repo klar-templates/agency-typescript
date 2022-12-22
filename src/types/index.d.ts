@@ -16,5 +16,8 @@ declare global {
     siteConfig: any;
     nunjucksTemplates: any;
     templateComponents: any;
+    initTemplate: any;
+    templateLoaded: any;
+    initTemplateSetDataTemp: any;
   }
 }

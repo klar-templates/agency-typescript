@@ -69,6 +69,10 @@ function App(): any {
       //   console.log('Här ska den inte gå in');
       //   setData(JSON.parse(window.hydratedData));
       // } else {
+      // Set data here to include it in page create context
+      if (window.initTemplate) {
+        window.initTemplateSetDataTemp = setData;
+      }
       getData('agency-typescript');
       // }
     }
