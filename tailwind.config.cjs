@@ -13,7 +13,7 @@ module.exports = {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    './public/blocks/*.html',
+    './src/components/blocks/nunjucks/*.html',
   ],
   darkMode: 'class',
   theme: {
