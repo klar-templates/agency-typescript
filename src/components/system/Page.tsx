@@ -119,7 +119,7 @@ export default function Page(data: IData) {
     const blockData: any = {
       block: { ...block.data, _id: block._id, _type: block._type },
     };
-    let componentName = block.template_id;
+    let componentName = block._type;
     componentName =
       componentName.charAt(0).toUpperCase() + componentName.slice(1);
     const DynamicComponent = Components[componentName];
