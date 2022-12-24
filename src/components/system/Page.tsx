@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import IData from '../../service/interface/IData';
 import ComponentsBlock from '../pages/Components';
 import Styleguide from '../pages/Styleguide';
@@ -24,7 +24,7 @@ import KlarEditBlock from './KlarEditBlock';
 import Card from '../elements/layout/Card';
 import Card1 from '../elements/layout/Card1';
 
-const Components: any = {
+let Components: any = {
   Header: Header,
   Header2: Header2,
   Header3: Header3,
@@ -44,7 +44,10 @@ const Components: any = {
   Elements: Elements,
 };
 
-// console.log(window.templateComponents);
+window.KlarReactLink = Link;
+if (window.templateComponents) {
+  Components = { ...Components, ...window.templateComponents };
+}
 
 // function sort(blocks: any) {
 //   function compareFn(a: any, b: any) {
@@ -77,44 +80,6 @@ export default function Page(data: IData) {
   const blockArray: any = [];
   // const sortedBlocks = sort(window.klarContext.currentPage.blocks);
   window.klarContext.currentPage.blocks.map((block: any) => {
-    // console.log(block);
-    // console.log(window.klarContext.currentPage.blocks);
-    // let block: any = Object.assign({}, value);
-    // if (window.klarContext.data.global?.blocks?.[block._type]) {
-    //   // console.log(window.klarContext.data.global?.blocks?.[block._type]);
-    //   const isUniqueStyle = block.data.style._unique_style;
-    //   let globalBlock = Object.assign(
-    //     {},
-    //     window.klarContext.data.global.blocks[block._type],
-    //   );
-    //   if (isUniqueStyle) {
-    //     // console.log(isUniqueStyle);
-    //     // globalBlock['style'] = Object.assign({}, block.data.style);
-    //     // globalBlock['data']['style'] = Object.assign({}, block.data.style);
-    //     block = {
-    //       ...globalBlock,
-    //       style: block.data.style,
-    //       data: { ...block.data },
-    //       _id: block._id,
-    //       _type: block._type,
-    //       template_id: block.template_id,
-    //     };
-    //   } else {
-    //     // globalBlock._id = block._id;
-    //     // globalBlock._type = block._type;
-    //     // globalBlock.template_id = block.template_id;
-    //     // block = globalBlock;
-    //     block = {
-    //       ...globalBlock,
-    //       _id: block._id,
-    //       _type: block._type,
-    //       template_id: block.template_id,
-    //     };
-    //   }
-    //   // globalBlock._id = block._id;
-    //   // globalBlock._type = block._type;
-    //   // globalBlock.template_id = block.template_id;
-    // }
     // This is going go be fixed. Only block needs to be forwarded in the future.
     const blockData: any = {
       block: { ...block.data, _id: block._id, _type: block._type },
