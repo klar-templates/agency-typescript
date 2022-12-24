@@ -20,9 +20,13 @@ import Footer from '../blocks/Footer';
 import Elements from '../blocks/Elements';
 import Nunjucks from './Nunjucks';
 import KlarEditBlock from './KlarEditBlock';
-// Elements
 import Card from '../elements/layout/Card';
 import Card1 from '../elements/layout/Card1';
+// Elements
+import Section from '../elements/layout/Section';
+import Container from '../elements/layout/Container';
+import Grid from '../elements/layout/Grid';
+import Button from '../elements/Button';
 
 let Components: any = {
   Header: Header,
@@ -44,7 +48,15 @@ let Components: any = {
   Elements: Elements,
 };
 
-window.KlarReactLink = Link;
+let KlarComponents: any = {
+  Section: Section,
+  Container: Container,
+  Grid: Grid,
+  Button: Button,
+};
+
+window.KlarComponents = KlarComponents;
+window.KlarLink = Link;
 if (window.templateComponents) {
   Components = { ...Components, ...window.templateComponents };
 }

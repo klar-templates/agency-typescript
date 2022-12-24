@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import herobook from '../blocks/nunjucks/hero-book.html?raw';
-import styleguide from '../blocks/nunjucks/hero-book.html?raw';
+import styleguide from '../blocks/nunjucks/styleguide.html?raw';
 
 const templates: any = {
   'hero-book': herobook,

@@ -19,6 +19,7 @@ declare global {
     initTemplate: any;
     templateLoaded: any;
     initTemplateSetDataTemp: any;
-    KlarReactLink: any;
+    KlarLink: any;
+    KlarComponents: any;
   }
 }
