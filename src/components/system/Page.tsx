@@ -1,3 +1,4 @@
+import React from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import IData from '../../service/interface/IData';
 import ComponentsBlock from '../pages/Components';
@@ -55,6 +56,7 @@ let KlarComponents: any = {
   Button: Button,
 };
 
+window.React = React;
 window.KlarComponents = KlarComponents;
 window.KlarLink = Link;
 if (window.templateComponents) {
