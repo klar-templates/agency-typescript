@@ -54,11 +54,12 @@ let KlarComponents: any = {
   Container: Container,
   Grid: Grid,
   Button: Button,
+  Link: Link,
 };
 
 window.React = React;
-window.KlarComponents = KlarComponents;
-window.KlarLink = Link;
+// window.KlarComponents = KlarComponents;
+// window.KlarLink = Link;
 if (window.templateComponents) {
   Components = { ...Components, ...window.templateComponents };
 }
