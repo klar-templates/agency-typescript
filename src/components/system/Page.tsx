@@ -97,6 +97,7 @@ export default function Page(data: IData) {
     // This is going go be fixed. Only block needs to be forwarded in the future.
     const blockData: any = {
       block: { ...block.data, _id: block._id, _type: block._type },
+      ui: KlarComponents,
     };
     let componentName = block._type;
     componentName =
