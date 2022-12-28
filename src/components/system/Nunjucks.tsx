@@ -139,7 +139,8 @@ export default function Nunjucks(data: any) {
       }
       requestData().then((data) => {
         // localStorage.setItem(cacheKey, data);
-        if (data) {
+        // console.log(data);
+        if (data && data.indexOf('<!DOCTYPE html>') === -1) {
           setTemplate(data);
           renderInlineScript(containerRef);
         } else {
