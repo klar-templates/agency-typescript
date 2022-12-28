@@ -91,7 +91,10 @@ function getTemplateOnInit(data: any) {
   if (template) {
     return template;
   } else {
-    console.log('No template content for this block:', data.block._type);
+    if (parent.frames && parent.frames.initTemplate) {
+    } else {
+      console.log('No template content for block:', data.block._type);
+    }
   }
 }
 
@@ -116,8 +119,11 @@ export default function Nunjucks(data: any) {
       //     console.log('No template content for this block:', data.block._type);
       //   }
     } else {
-      renderInlineScript(containerRef);
-      // getTemplate(data.block._type);
+      if (parent.frames && parent.frames.initTemplate) {
+        getTemplate(data.block._type);
+      } else {
+        renderInlineScript(containerRef);
+      }
     }
     // return () => clearInterval(id);
     // }
@@ -128,7 +134,7 @@ export default function Nunjucks(data: any) {
     const cacheKey = 'klar-nunjucks-template-' + templateName;
     if (!localStorage.getItem(cacheKey)) {
       async function requestData() {
-        const response = await fetch(`/blocks/${templateName}.html`);
+        const response = await fetch(`/blocks/nunjucks/${templateName}.html`);
         return response.text();
       }
       requestData().then((data) => {
