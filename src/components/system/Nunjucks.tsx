@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import nunjucks from 'nunjucks';
 import herobook from '../blocks/nunjucks/hero-book.html?raw';
 import styleguide from '../blocks/nunjucks/styleguide.html?raw';
 
@@ -97,7 +98,7 @@ function getTemplateOnInit(data: any) {
 export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState(getTemplateOnInit(data));
   const containerRef = useRef(null);
-  window.nunjucks.configure({ autoescape: false });
+  nunjucks.configure({ autoescape: false });
   const cacheKeyTemplate = `${data.block._id}`;
   let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
 
@@ -146,7 +147,7 @@ export default function Nunjucks(data: any) {
     return null;
   }
 
-  renderedTemplate = window.nunjucks.renderString(template, data);
+  renderedTemplate = nunjucks.renderString(template, data);
 
   return (
     <div
