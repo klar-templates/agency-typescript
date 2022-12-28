@@ -139,8 +139,12 @@ export default function Nunjucks(data: any) {
       }
       requestData().then((data) => {
         // localStorage.setItem(cacheKey, data);
-        setTemplate(data);
-        renderInlineScript(containerRef);
+        if (data) {
+          setTemplate(data);
+          renderInlineScript(containerRef);
+        } else {
+          console.log('No template content for block:', templateName);
+        }
       });
     } else {
       const data = localStorage.getItem(cacheKey) as string;
