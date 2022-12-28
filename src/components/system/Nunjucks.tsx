@@ -119,7 +119,11 @@ export default function Nunjucks(data: any) {
       //     console.log('No template content for this block:', data.block._type);
       //   }
     } else {
-      if (parent.frames && parent.frames.initTemplate) {
+      if (
+        parent.frames &&
+        parent.frames.initTemplate &&
+        !templates[data.block._type]
+      ) {
         getTemplate(data.block._type);
       } else {
         renderInlineScript(containerRef);
