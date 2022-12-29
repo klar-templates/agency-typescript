@@ -151,7 +151,7 @@ export default function Nunjucks(data: any) {
 
     // if (!window[cacheKey]) {
     async function requestData() {
-      const response = await fetch(`/blocks/nunjucks/${templateName}.html`);
+      const response = await fetch(`/blocks/${templateName}.html`);
       return response.text();
     }
     requestData().then((data: any) => {
