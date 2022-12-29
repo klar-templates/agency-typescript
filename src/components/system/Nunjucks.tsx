@@ -135,7 +135,8 @@ export default function Nunjucks(data: any) {
 
   // This is when you're in this application, when in Klar get the template file from the Klar application.
   function getTemplate(templateName: string) {
-    const cacheKey: any = 'klar-nunjucks-template-' + templateName;
+    let cacheKey: any = 'klar-nunjucks-template-' + templateName;
+    cacheKey = cacheKey.replace('-', '');
     // if (!localStorage.getItem(cacheKey)) {
     if (!window[cacheKey]) {
       async function requestData() {
