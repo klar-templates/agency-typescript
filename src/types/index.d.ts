@@ -21,6 +21,7 @@ declare global {
     initTemplateSetDataTemp: any;
     KlarLink: any;
     KlarComponents: any;
+    templateNunjucksBlocks: any;
     React: any;
   }
 }

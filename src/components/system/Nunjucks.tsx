@@ -3,10 +3,14 @@ import nunjucks from 'nunjucks';
 import herobook from '../blocks/nunjucks/hero-book.html?raw';
 import styleguide from '../blocks/nunjucks/styleguide.html?raw';
 
-const templates: any = {
+let templates: any = {
   'hero-book': herobook,
   styleguide: styleguide,
 };
+
+if (window.templateNunjucksBlocks) {
+  templates = { ...templates, ...window.templateNunjucksBlocks };
+}
 
 type scriptInline = {
   type: any;
@@ -125,15 +129,15 @@ export default function Nunjucks(data: any) {
       //     console.log('No template content for this block:', data.block._type);
       //   }
     } else {
-      if (
-        parent.frames &&
-        parent.frames.initTemplate &&
-        !templates[data.block._type]
-      ) {
-        getTemplate(data.block._type);
-      } else {
-        renderInlineScript(containerRef);
-      }
+      // if (
+      //   parent.frames &&
+      //   parent.frames.initTemplate &&
+      //   !templates[data.block._type]
+      // ) {
+      //   getTemplate(data.block._type);
+      // } else {
+      renderInlineScript(containerRef);
+      // }
     }
     // return () => clearInterval(id);
     // }
