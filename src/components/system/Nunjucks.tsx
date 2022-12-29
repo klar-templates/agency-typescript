@@ -92,6 +92,12 @@ function getTemplateOnInit(data: any) {
     return template;
   } else {
     if (parent.frames && parent.frames.initTemplate) {
+      let cacheKey: any = 'klar-nunjucks-template-' + data.block._type;
+      cacheKey = cacheKey.replace(/-/gm, '');
+      if (window[cacheKey]) {
+        template = window[cacheKey];
+        return template;
+      }
     } else {
       console.log('No template content for block:', data.block._type);
     }
@@ -138,28 +144,33 @@ export default function Nunjucks(data: any) {
     let cacheKey: any = 'klar-nunjucks-template-' + templateName;
     cacheKey = cacheKey.replace(/-/gm, '');
     // if (!localStorage.getItem(cacheKey)) {
-    if (!window[cacheKey]) {
-      async function requestData() {
-        const response = await fetch(`/blocks/nunjucks/${templateName}.html`);
-        return response.text();
-      }
-      requestData().then((data: any) => {
-        // localStorage.setItem(cacheKey, data);
-        window[cacheKey] = data;
-        // console.log(data);
-        if (data && data.indexOf('<!DOCTYPE html>') === -1) {
-          setTemplate(data);
-          renderInlineScript(containerRef);
-        } else {
-          console.log('No template content for block:', templateName);
-        }
-      });
-    } else {
-      // const data = localStorage.getItem(cacheKey) as string;
-      const data = window[cacheKey];
-      setTemplate(data);
+    if (window[cacheKey]) {
       renderInlineScript(containerRef);
+      return;
     }
+
+    // if (!window[cacheKey]) {
+    async function requestData() {
+      const response = await fetch(`/blocks/nunjucks/${templateName}.html`);
+      return response.text();
+    }
+    requestData().then((data: any) => {
+      // localStorage.setItem(cacheKey, data);
+      window[cacheKey] = data;
+      // console.log(data);
+      if (data && data.indexOf('<!DOCTYPE html>') === -1) {
+        setTemplate(data);
+        renderInlineScript(containerRef);
+      } else {
+        console.log('No template content for block:', templateName);
+      }
+    });
+    // } else {
+    //   // const data = localStorage.getItem(cacheKey) as string;
+    //   const data = window[cacheKey];
+    //   setTemplate(data);
+    //   renderInlineScript(containerRef);
+    // }
   }
 
   if (!template) {
