@@ -9,24 +9,12 @@
       'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
       'Noto Color Emoji';
   }
-  .section {
-    @apply py-20 sm:py-32;
-  }
 
-  .container-auto {
-    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
-  }
-
-  /* .display-1 {
-    @apply text-7xl;
-  }
-
-  .display-2 {
-    @apply text-6xl;
-  }
-
-  .display-3 {
-    @apply text-5xl;
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold;
   }
 
   .heading-1 {
@@ -39,6 +27,46 @@
 
   .heading-3 {
     @apply text-2xl;
+  }
+
+  .heading-4 {
+    @apply text-xl;
+  }
+
+  .section {
+    @apply py-16 sm:py-20;
+  }
+
+  .section-heading {
+    @apply heading-1;
+  }
+
+  .section-subheading {
+    @apply text-base font-medium italic mt-3;
+  }
+
+  .container-fluid {
+    @apply max-w-7xl;
+  }
+
+  .container-padding-x {
+    @apply px-4 sm:px-6 xl:px-8;
+  }
+
+  .grid-gap {
+    @apply gap-4 md:gap-8 lg:gap-12;
+  }
+
+  /* .display-1 {
+    @apply text-7xl;
+  }
+
+  .display-2 {
+    @apply text-6xl;
+  }
+
+  .display-3 {
+    @apply text-5xl;
   }
 
   .paragraph {

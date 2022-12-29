@@ -27,7 +27,7 @@ export default function Hero3(data: any) {
         data-wrapper="true"
         no-data-inset="true"
       >
-        <div className="container-auto">
+        <div className="container-fluid container-padding-x mx-auto">
           <div className="intro-text py-32 md:py-[130px] lg:py-[170px]">
             {show_subtitle && (
               <div

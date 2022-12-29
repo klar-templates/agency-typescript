@@ -82,7 +82,7 @@ export default function Header3(data: any) {
 
   return (
     <header className={classes} style={styles}>
-      <div className="py-6 container-auto">
+      <div className="py-6 container-fluid container-padding-x mx-auto">
         <nav
           className="flex h-9 items-center justify-between"
           aria-label="Global"
