@@ -135,14 +135,16 @@ export default function Nunjucks(data: any) {
 
   // This is when you're in this application, when in Klar get the template file from the Klar application.
   function getTemplate(templateName: string) {
-    const cacheKey = 'klar-nunjucks-template-' + templateName;
-    if (!localStorage.getItem(cacheKey)) {
+    const cacheKey: any = 'klar-nunjucks-template-' + templateName;
+    // if (!localStorage.getItem(cacheKey)) {
+    if (!window[cacheKey]) {
       async function requestData() {
         const response = await fetch(`/blocks/nunjucks/${templateName}.html`);
         return response.text();
       }
-      requestData().then((data) => {
+      requestData().then((data: any) => {
         // localStorage.setItem(cacheKey, data);
+        window[cacheKey] = data;
         // console.log(data);
         if (data && data.indexOf('<!DOCTYPE html>') === -1) {
           setTemplate(data);
@@ -152,7 +154,8 @@ export default function Nunjucks(data: any) {
         }
       });
     } else {
-      const data = localStorage.getItem(cacheKey) as string;
+      // const data = localStorage.getItem(cacheKey) as string;
+      const data = window[cacheKey];
       setTemplate(data);
       renderInlineScript(containerRef);
     }
