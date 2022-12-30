@@ -15,7 +15,7 @@ export default function PageStyle(data: any) {
       'Arial',
       'sans-serif',
     ];
-    const googleEndpoint = 'https://fonts.googleapis.com/css?family=';
+    const googleEndpoint = '//fonts.googleapis.com/css?family=';
     let link;
     if (
       !systemWebfonts.includes(data.theme.typography.font_display) &&
@@ -60,14 +60,14 @@ export default function PageStyle(data: any) {
       link = document.createElement('link');
       link.id = 'font-logo-DroidSerif';
       link.rel = 'stylesheet';
-      link.href = `https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic`;
+      link.href = `//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic`;
       document.querySelector('head')?.appendChild(link);
     }
     if (!document.querySelector('#font-font-awesome')) {
       link = document.createElement('link');
       link.id = 'font-font-awesome';
       link.rel = 'stylesheet';
-      link.href = `https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`;
+      link.href = `//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`;
       document.querySelector('head')?.appendChild(link);
     }
   });
