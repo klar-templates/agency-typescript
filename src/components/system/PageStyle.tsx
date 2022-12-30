@@ -17,19 +17,19 @@ export default function PageStyle(data: any) {
     ];
     const googleEndpoint = '//fonts.googleapis.com/css?family=';
     let link;
-    if (
-      !systemWebfonts.includes(data.theme.typography.font_display) &&
-      !document.querySelector(
-        '#font-display-' + data.theme.typography.font_display.replace(' ', '-'),
-      )
-    ) {
-      link = document.createElement('link');
-      link.id =
-        'font-display-' + data.theme.typography.font_display.replace(' ', '-');
-      link.rel = 'stylesheet';
-      link.href = `${googleEndpoint}${data.theme.typography.font_display}:400,500,600,700`;
-      document.querySelector('head')?.appendChild(link);
-    }
+    // if (
+    //   !systemWebfonts.includes(data.theme.typography.font_display) &&
+    //   !document.querySelector(
+    //     '#font-display-' + data.theme.typography.font_display.replace(' ', '-'),
+    //   )
+    // ) {
+    //   link = document.createElement('link');
+    //   link.id =
+    //     'font-display-' + data.theme.typography.font_display.replace(' ', '-');
+    //   link.rel = 'stylesheet';
+    //   link.href = `${googleEndpoint}${data.theme.typography.font_display}:400,500,600,700`;
+    //   document.querySelector('head')?.appendChild(link);
+    // }
     if (
       !systemWebfonts.includes(data.theme.typography.font_body) &&
       !document.querySelector(

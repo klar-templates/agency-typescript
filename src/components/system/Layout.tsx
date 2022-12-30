@@ -3,6 +3,7 @@ import PageStyle from './PageStyle';
 import PageScript from './PageScript';
 
 export default function Layout(data: any) {
+  const googleEndpoint = '//fonts.googleapis.com/css?family=';
   let headerBlock;
   let footerBlock;
   // const blocksToRender: any = [];
@@ -35,6 +36,10 @@ export default function Layout(data: any) {
             window.klarContext.currentPage &&
             window.klarContext.currentPage.settings.description
           }
+        />
+        <link
+          rel="stylesheet"
+          href={`${googleEndpoint}${data.theme.typography.font_display}:400,500,600,700`}
         />
       </Helmet>
       {/* <Navigation {...headerBlock as any} /> */}
