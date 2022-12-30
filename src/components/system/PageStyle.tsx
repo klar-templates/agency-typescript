@@ -6,17 +6,17 @@ export default function PageStyle(data: any) {
     ',ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
 
   useEffect(() => {
-    if (window.production) {
-      return;
-    }
-    const systemWebfonts = [
-      'ui-sans-serif',
-      'Open Sans',
-      'Arial',
-      'sans-serif',
-    ];
-    const googleEndpoint = '//fonts.googleapis.com/css?family=';
-    let link;
+    // if (window.production) {
+    //   return;
+    // }
+    // const systemWebfonts = [
+    //   'ui-sans-serif',
+    //   'Open Sans',
+    //   'Arial',
+    //   'sans-serif',
+    // ];
+    // const googleEndpoint = '//fonts.googleapis.com/css?family=';
+    // let link;
     // if (
     //   !systemWebfonts.includes(data.theme.typography.font_display) &&
     //   !document.querySelector(
@@ -30,46 +30,46 @@ export default function PageStyle(data: any) {
     //   link.href = `${googleEndpoint}${data.theme.typography.font_display}:400,500,600,700`;
     //   document.querySelector('head')?.appendChild(link);
     // }
-    if (
-      !systemWebfonts.includes(data.theme.typography.font_body) &&
-      !document.querySelector(
-        '#font-body-' + data.theme.typography.font_body.replace(' ', '-'),
-      )
-    ) {
-      link = document.createElement('link');
-      link.id =
-        'font-body-' + data.theme.typography.font_body.replace(' ', '-');
-      link.rel = 'stylesheet';
-      link.href = `${googleEndpoint}${data.theme.typography.font_body}:400,500,600,700`;
-      document.querySelector('head')?.appendChild(link);
-    }
-    if (
-      !systemWebfonts.includes(data.theme.typography.font_logo) &&
-      !document.querySelector(
-        '#font-logo-' + data.theme.typography.font_logo.replace(' ', '-'),
-      )
-    ) {
-      link = document.createElement('link');
-      link.id =
-        'font-logo-' + data.theme.typography.font_logo.replace(' ', '-');
-      link.rel = 'stylesheet';
-      link.href = `${googleEndpoint}${data.theme.typography.font_logo}:400,500,600,700`;
-      document.querySelector('head')?.appendChild(link);
-    }
-    if (!document.querySelector('#font-logo-DroidSerif')) {
-      link = document.createElement('link');
-      link.id = 'font-logo-DroidSerif';
-      link.rel = 'stylesheet';
-      link.href = `//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic`;
-      document.querySelector('head')?.appendChild(link);
-    }
-    if (!document.querySelector('#font-font-awesome')) {
-      link = document.createElement('link');
-      link.id = 'font-font-awesome';
-      link.rel = 'stylesheet';
-      link.href = `//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`;
-      document.querySelector('head')?.appendChild(link);
-    }
+    // if (
+    //   !systemWebfonts.includes(data.theme.typography.font_body) &&
+    //   !document.querySelector(
+    //     '#font-body-' + data.theme.typography.font_body.replace(' ', '-'),
+    //   )
+    // ) {
+    //   link = document.createElement('link');
+    //   link.id =
+    //     'font-body-' + data.theme.typography.font_body.replace(' ', '-');
+    //   link.rel = 'stylesheet';
+    //   link.href = `${googleEndpoint}${data.theme.typography.font_body}:400,500,600,700`;
+    //   document.querySelector('head')?.appendChild(link);
+    // }
+    // if (
+    //   !systemWebfonts.includes(data.theme.typography.font_logo) &&
+    //   !document.querySelector(
+    //     '#font-logo-' + data.theme.typography.font_logo.replace(' ', '-'),
+    //   )
+    // ) {
+    //   link = document.createElement('link');
+    //   link.id =
+    //     'font-logo-' + data.theme.typography.font_logo.replace(' ', '-');
+    //   link.rel = 'stylesheet';
+    //   link.href = `${googleEndpoint}${data.theme.typography.font_logo}:400,500,600,700`;
+    //   document.querySelector('head')?.appendChild(link);
+    // }
+    // if (!document.querySelector('#font-logo-DroidSerif')) {
+    //   link = document.createElement('link');
+    //   link.id = 'font-logo-DroidSerif';
+    //   link.rel = 'stylesheet';
+    //   link.href = `//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic`;
+    //   document.querySelector('head')?.appendChild(link);
+    // }
+    // if (!document.querySelector('#font-font-awesome')) {
+    //   link = document.createElement('link');
+    //   link.id = 'font-font-awesome';
+    //   link.rel = 'stylesheet';
+    //   link.href = `//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`;
+    //   document.querySelector('head')?.appendChild(link);
+    // }
   });
 
   if (
