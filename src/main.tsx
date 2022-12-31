@@ -8,6 +8,17 @@ import ReactDOMServer from 'react-dom/server';
 import App from './App';
 import './index.css';
 
+// text-neutral-0
+// text-neutral-1
+// text-neutral-2
+// text-neutral-3
+// text-neutral-4
+// text-neutral-5
+// text-neutral-6
+// text-neutral-7
+// text-neutral-8
+// text-neutral-9
+
 if (location.host.includes('.github.io') || window.prodConfig) {
   window.production = true;
   if (typeof window.siteConfig === 'undefined') {
