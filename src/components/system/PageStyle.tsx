@@ -196,17 +196,6 @@ export default function PageStyle(data: any) {
     --color-inverse-neutral-dark: var(--neutral-900);
     --color-inverse-neutral-normal: var(--neutral-700);
     --color-inverse-neutral-light: var(--neutral-500);
-
-    --neutral-50: var(--neutral-900);
-    --neutral-100: var(--neutral-800);
-    --neutral-200: var(--neutral-700);
-    --neutral-300: var(--neutral-600);
-    --neutral-400: var(--neutral-500);
-    --neutral-500: var(--neutral-400);
-    --neutral-600: var(--neutral-300);
-    --neutral-700: var(--neutral-200);
-    --neutral-800: var(--neutral-100);
-    --neutral-900: var(--neutral-50);
   }
 
   body {
