@@ -62,6 +62,10 @@ module.exports = {
         'neutral-normal': 'var(--neutral-500)',
         'neutral-low': 'var(--neutral-300)',
         'neutral-lower': 'var(--neutral-200)',
+
+        'neutral-dark': 'var(--color-neutral-dark)',
+        'neutral-normal': 'var(--color-neutral-normal)',
+        'neutral-light': 'var(--color-neutral-light)',
         'inverse-neutral-dark': 'var(--color-inverse-neutral-dark)',
         'inverse-neutral-normal': 'var(--color-inverse-neutral-normal)',
         'inverse-neutral-light': 'var(--color-inverse-neutral-light)',
