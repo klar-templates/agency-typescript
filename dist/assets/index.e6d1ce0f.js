@@ -167,6 +167,17 @@ Error generating stack: `+o.message+`
     --color-inverse-neutral-dark-inverse: var(--neutral-200);
     --color-inverse-neutral-normal: var(--neutral-100);
     --color-inverse-neutral-light: var(--neutral-50);
+
+    --neutral-0: var(--neutral-50);
+    --neutral-1: var(--neutral-100);
+    --neutral-2: var(--neutral-200);
+    --neutral-3: var(--neutral-300);
+    --neutral-4: var(--neutral-400);
+    --neutral-5: var(--neutral-500);
+    --neutral-6: var(--neutral-600);
+    --neutral-7: var(--neutral-700);
+    --neutral-8: var(--neutral-800);
+    --neutral-9: var(--neutral-900);
   }
 
   .dark {
@@ -205,6 +216,17 @@ Error generating stack: `+o.message+`
     --color-inverse-neutral-dark: var(--neutral-900);
     --color-inverse-neutral-normal: var(--neutral-700);
     --color-inverse-neutral-light: var(--neutral-500);
+
+    --neutral-0: var(--neutral-900);
+    --neutral-1: var(--neutral-800);
+    --neutral-2: var(--neutral-700);
+    --neutral-3: var(--neutral-600);
+    --neutral-4: var(--neutral-500);
+    --neutral-5: var(--neutral-400);
+    --neutral-6: var(--neutral-300);
+    --neutral-7: var(--neutral-200);
+    --neutral-8: var(--neutral-100);
+    --neutral-9: var(--neutral-50);
   }
 
   body {
