@@ -3,7 +3,7 @@ import PageStyle from './PageStyle';
 import PageScript from './PageScript';
 
 export default function Layout(data: any) {
-  const googleEndpoint = '//fonts.googleapis.com/css?family=';
+  const googleEndpoint = 'https://fonts.googleapis.com/css?family=';
   const systemWebfonts = ['ui-sans-serif', 'Open Sans', 'Arial', 'sans-serif'];
   let headerBlock;
   let footerBlock;
@@ -38,6 +38,16 @@ export default function Layout(data: any) {
             window.klarContext.currentPage.settings.description
           }
         />
+        {!window.production && (
+          <>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossOrigin="true"
+            />
+          </>
+        )}
         {!window.production &&
           !systemWebfonts.includes(data.theme.typography.font_display) && (
             <link
