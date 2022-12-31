@@ -40,7 +40,17 @@ export default function Hero3(data: any) {
             )}
             {show_title && (
               <div
-                className="intro-heading mb-8 md:mb-12 text-4xl sm:text-5xl lg:text-7xl lg:text-[75px]"
+                className="intro-heading mb-8 md:mb-12 text-4xl sm:text-5xl lg:text-7xl lg:text-[75px] text-neutral-0 text-neutral-1
+                text-neutral-2
+                text-neutral-3
+                text-neutral-4
+                text-neutral-5
+                text-neutral-6
+                text-neutral-7
+                text-neutral-8
+                text-neutral-9
+                text-white"
+                style={{ color: 'white' }}
                 data-field-string="title"
               >
                 {title}
