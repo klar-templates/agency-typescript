@@ -53,6 +53,37 @@ export default function Styleguide(data: any) {
         border-primary-800
         border-primary-900
 
+        dark:bg-primary-50
+        dark:bg-primary-100
+        dark:bg-primary-200
+        dark:bg-primary-300
+        dark:bg-primary-400
+        dark:bg-primary-500
+        dark:bg-primary-600
+        dark:bg-primary-700
+        dark:bg-primary-800
+        dark:bg-primary-900
+        dark:text-primary-50
+        dark:text-primary-100
+        dark:text-primary-200
+        dark:text-primary-300
+        dark:text-primary-400
+        dark:text-primary-500
+        dark:text-primary-600
+        dark:text-primary-700
+        dark:text-primary-800
+        dark:text-primary-900
+        dark:border-primary-50
+        dark:border-primary-100
+        dark:border-primary-200
+        dark:border-primary-300
+        dark:border-primary-400
+        dark:border-primary-500
+        dark:border-primary-600
+        dark:border-primary-700
+        dark:border-primary-800
+        dark:border-primary-900
+
         bg-neutral-50
         bg-neutral-100
         bg-neutral-200
@@ -83,6 +114,37 @@ export default function Styleguide(data: any) {
         border-neutral-700
         border-neutral-800
         border-neutral-900
+
+        dark:bg-neutral-50
+        dark:bg-neutral-100
+        dark:bg-neutral-200
+        dark:bg-neutral-300
+        dark:bg-neutral-400
+        dark:bg-neutral-500
+        dark:bg-neutral-600
+        dark:bg-neutral-700
+        dark:bg-neutral-800
+        dark:bg-neutral-900
+        dark:text-neutral-50
+        dark:text-neutral-100
+        dark:text-neutral-200
+        dark:text-neutral-300
+        dark:text-neutral-400
+        dark:text-neutral-500
+        dark:text-neutral-600
+        dark:text-neutral-700
+        dark:text-neutral-800
+        dark:text-neutral-900
+        dark:border-neutral-50
+        dark:border-neutral-100
+        dark:border-neutral-200
+        dark:border-neutral-300
+        dark:border-neutral-400
+        dark:border-neutral-500
+        dark:border-neutral-600
+        dark:border-neutral-700
+        dark:border-neutral-800
+        dark:border-neutral-900
         hidden
         "
       >
