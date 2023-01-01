@@ -21,6 +21,7 @@ export default function Styleguide(data: any) {
       </Section>
       <div
         className="
+        grid-gap
         bg-primary-50
         bg-primary-100
         bg-primary-200
