@@ -145,6 +145,12 @@ export default function Styleguide(data: any) {
         dark:border-neutral-700
         dark:border-neutral-800
         dark:border-neutral-900
+
+        black
+        white
+        dark:black
+        dark:white
+        
         hidden
         "
       >
