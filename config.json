@@ -1190,7 +1190,7 @@
               }
             },
             "bg_color": "#fff",
-            "bg_color_darkmode": "#222",
+            "bg_color_darkmode": "#121212",
             "title_text_color": "#333333",
             "subtitle_text_color": "#777777",
             "text_color": "#777777",
