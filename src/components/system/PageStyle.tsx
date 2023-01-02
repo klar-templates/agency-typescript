@@ -81,6 +81,12 @@ export default function PageStyle(data: any) {
 
   const primary_shades = data.theme.colors.primary_shades.colors;
   const neutral_shades = data.theme.colors.neutral_shades.colors;
+  const primary_shades_rgb = data.theme.colors.primary_shades_rgb.colors;
+  const neutral_shades_rgb = data.theme.colors.neutral_shades_rgb.colors;
+  // console.log(
+  //   `${primary_shades_rgb['50'].r} ${primary_shades_rgb['50'].g} ${primary_shades_rgb['50'].b}`,
+  // );
+
   const pageStyle = `
   :root {
     /* font family */
@@ -111,6 +117,30 @@ export default function PageStyle(data: any) {
     --neutral-700: ${neutral_shades['700']};
     --neutral-800: ${neutral_shades['800']};
     --neutral-900: ${neutral_shades['900']};
+
+    /* primary */
+    --primary-50: ${primary_shades_rgb['50'].r} ${primary_shades_rgb['50'].g} ${primary_shades_rgb['50'].b};
+    --primary-100: ${primary_shades_rgb['100'].r} ${primary_shades_rgb['100'].g} ${primary_shades_rgb['100'].b};
+    --primary-200: ${primary_shades_rgb['200'].r} ${primary_shades_rgb['200'].g} ${primary_shades_rgb['200'].b};
+    --primary-300: ${primary_shades_rgb['300'].r} ${primary_shades_rgb['300'].g} ${primary_shades_rgb['300'].b};
+    --primary-400: ${primary_shades_rgb['400'].r} ${primary_shades_rgb['400'].g} ${primary_shades_rgb['400'].b};
+    --primary-500: ${primary_shades_rgb['500'].r} ${primary_shades_rgb['500'].g} ${primary_shades_rgb['500'].b};
+    --primary-600: ${primary_shades_rgb['600'].r} ${primary_shades_rgb['600'].g} ${primary_shades_rgb['600'].b};
+    --primary-700: ${primary_shades_rgb['700'].r} ${primary_shades_rgb['700'].g} ${primary_shades_rgb['700'].b};
+    --primary-800: ${primary_shades_rgb['800'].r} ${primary_shades_rgb['800'].g} ${primary_shades_rgb['800'].b};
+    --primary-900: ${primary_shades_rgb['900'].r} ${primary_shades_rgb['900'].g} ${primary_shades_rgb['900'].b};
+
+    /* neutral */
+    --neutral-50: ${neutral_shades_rgb['50'].r} ${neutral_shades_rgb['50'].g} ${neutral_shades_rgb['50'].b};
+    --neutral-100: ${neutral_shades_rgb['100'].r} ${neutral_shades_rgb['100'].g} ${neutral_shades_rgb['100'].b};
+    --neutral-200: ${neutral_shades_rgb['200'].r} ${neutral_shades_rgb['200'].g} ${neutral_shades_rgb['200'].b};
+    --neutral-300: ${neutral_shades_rgb['300'].r} ${neutral_shades_rgb['300'].g} ${neutral_shades_rgb['300'].b};
+    --neutral-400: ${neutral_shades_rgb['400'].r} ${neutral_shades_rgb['400'].g} ${neutral_shades_rgb['400'].b};
+    --neutral-500: ${neutral_shades_rgb['500'].r} ${neutral_shades_rgb['500'].g} ${neutral_shades_rgb['500'].b};
+    --neutral-600: ${neutral_shades_rgb['600'].r} ${neutral_shades_rgb['600'].g} ${neutral_shades_rgb['600'].b};
+    --neutral-700: ${neutral_shades_rgb['700'].r} ${neutral_shades_rgb['700'].g} ${neutral_shades_rgb['700'].b};
+    --neutral-800: ${neutral_shades_rgb['800'].r} ${neutral_shades_rgb['800'].g} ${neutral_shades_rgb['800'].b};
+    --neutral-900: ${neutral_shades_rgb['900'].r} ${neutral_shades_rgb['900'].g} ${neutral_shades_rgb['900'].b};
 
     /* neutral variant */
     --neutral-variant-50: #f9fafb;

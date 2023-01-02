@@ -13,7 +13,7 @@ export default function Hero1(data: any) {
     image,
   } = data.block;
   return (
-    <div className="g-background text-on-background ext-inverse-on-surface relative isolate order-t">
+    <div className="text-neutral-900 relative isolate order-t">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -34,10 +34,10 @@ export default function Hero1(data: any) {
               y1=".177"
               y2="474.645"
             >
-              <stop style={{ stopColor: 'var(--primary-300)' }}></stop>
+              <stop style={{ stopColor: 'rgb(var(--primary-300))' }}></stop>
               <stop
                 offset="1"
-                style={{ stopColor: 'var(--primary-300)' }}
+                style={{ stopColor: 'rgb(var(--primary-300))' }}
               ></stop>
             </linearGradient>
           </defs>
@@ -58,7 +58,7 @@ export default function Hero1(data: any) {
                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
                   Data to enrich your online business
                 </h1>
-                <p className="text-on-surface ext-inverse-on-surface mt-6 text-lg leading-8 sm:text-center">
+                <p className="text-neutral-700 ext-inverse-on-surface mt-6 text-lg leading-8 sm:text-center">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
                   qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
                   occaecat fugiat aliqua.
@@ -66,7 +66,7 @@ export default function Hero1(data: any) {
                 <div className="mt-8 flex gap-x-4 sm:justify-center">
                   <a
                     href="#"
-                    className="bg-primary text-on-primary inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 shadow-sm hover:bg-primary-dark"
+                    className="bg-primary text-white inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 shadow-sm hover:bg-black"
                   >
                     Get started{' '}
                     <span className="text-on-primary" aria-hidden="true">
@@ -104,10 +104,10 @@ export default function Hero1(data: any) {
                       y1=".177"
                       y2="474.645"
                     >
-                      <stop style={{ stopColor: 'var(--primary-300)' }} />
+                      <stop style={{ stopColor: 'rgb(var(--primary-300))' }} />
                       <stop
                         offset={1}
-                        style={{ stopColor: 'var(--primary-300)' }}
+                        style={{ stopColor: 'rgb(var(--primary-300))' }}
                       />
                     </linearGradient>
                   </defs>
