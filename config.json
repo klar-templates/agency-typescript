@@ -42,36 +42,6 @@
         ]
       },
       {
-        "title": "Light",
-        "name": "lightmode",
-        "type": "object",
-        "fields": [
-          {
-            "title": "Bakgrundsfärg",
-            "name": "bg_color",
-            "type": "string",
-            "format": "color",
-            "ui:css_selector": "body",
-            "ui:css_property": "background-color"
-          }
-        ]
-      },
-      {
-        "title": "Dark",
-        "name": "darkmode",
-        "type": "object",
-        "fields": [
-          {
-            "title": "Bakgrundsfärg",
-            "name": "bg_color",
-            "type": "string",
-            "format": "color",
-            "ui:css_selector": "body",
-            "ui:css_property": "background-color"
-          }
-        ]
-      },
-      {
         "title": "Typografi",
         "name": "typography",
         "type": "object",
@@ -175,6 +145,36 @@
             "type": "integer",
             "minimum": 10,
             "maximum": 20
+          }
+        ]
+      },
+      {
+        "title": "Light",
+        "name": "lightmode",
+        "type": "object",
+        "fields": [
+          {
+            "title": "Bakgrundsfärg",
+            "name": "bg_color",
+            "type": "string",
+            "format": "color",
+            "ui:css_selector": "body",
+            "ui:css_property": "background-color"
+          }
+        ]
+      },
+      {
+        "title": "Dark",
+        "name": "darkmode",
+        "type": "object",
+        "fields": [
+          {
+            "title": "Bakgrundsfärg",
+            "name": "bg_color",
+            "type": "string",
+            "format": "color",
+            "ui:css_selector": "body",
+            "ui:css_property": "background-color"
           }
         ]
       },
