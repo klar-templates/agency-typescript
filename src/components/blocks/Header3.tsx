@@ -90,7 +90,7 @@ export default function Header3(data: any) {
           <div className="flex lg:min-w-0 lg:shrink" aria-label="Global">
             <Link
               to={window.siteConfig.publicPath}
-              className="font-logo js-klar-logo text-primary-dark dark:text-primary r-only text-2xl font-bold ext-gray-800 transition-colors duration-300 transform lg:text-3xl"
+              className="font-logo js-klar-logo text-primary dark:text-primary r-only text-2xl font-bold ext-gray-800 transition-colors duration-300 transform lg:text-3xl"
               data-field-string="logo_text"
             >
               {logo_text}
@@ -132,8 +132,8 @@ export default function Header3(data: any) {
                   page._id ===
                   (window.klarContext.currentPage &&
                     window.klarContext.currentPage._id)
-                    ? 'font-semibold list-none whitespace-nowrap text-primary-700 dark:text-primary'
-                    : 'font-semibold text-neutral-900 hover:text-primary-700 dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap'
+                    ? 'font-semibold list-none whitespace-nowrap text-primary dark:text-primary'
+                    : 'font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap'
                 }
               >
                 <Link to={i === 0 ? window.siteConfig.publicPath : page._path}>
