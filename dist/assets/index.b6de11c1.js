@@ -96,30 +96,6 @@ Error generating stack: `+o.message+`
     --font-display: ${e.theme.typography.font_display};
     --font-body: ${e.theme.typography.font_body};
     --font-logo: ${e.theme.typography.font_logo};
-    
-    /* primary */
-    --primary-50: ${n[50]};
-    --primary-100: ${n[100]};
-    --primary-200: ${n[200]};
-    --primary-300: ${n[300]};
-    --primary-400: ${n[400]};
-    --primary-500: ${n[500]};
-    --primary-600: ${n[600]};
-    --primary-700: ${n[700]};
-    --primary-800: ${n[800]};
-    --primary-900: ${n[900]};
-
-    /* neutral */
-    --neutral-50: ${r[50]};
-    --neutral-100: ${r[100]};
-    --neutral-200: ${r[200]};
-    --neutral-300: ${r[300]};
-    --neutral-400: ${r[400]};
-    --neutral-500: ${r[500]};
-    --neutral-600: ${r[600]};
-    --neutral-700: ${r[700]};
-    --neutral-800: ${r[800]};
-    --neutral-900: ${r[900]};
 
     /* primary */
     --primary-50: ${i[50].r} ${i[50].g} ${i[50].b};
@@ -144,8 +120,34 @@ Error generating stack: `+o.message+`
     --neutral-700: ${o[700].r} ${o[700].g} ${o[700].b};
     --neutral-800: ${o[800].r} ${o[800].g} ${o[800].b};
     --neutral-900: ${o[900].r} ${o[900].g} ${o[900].b};
+    
+    /* primary
+    --primary-50: ${n[50]};
+    --primary-100: ${n[100]};
+    --primary-200: ${n[200]};
+    --primary-300: ${n[300]};
+    --primary-400: ${n[400]};
+    --primary-500: ${n[500]};
+    --primary-600: ${n[600]};
+    --primary-700: ${n[700]};
+    --primary-800: ${n[800]};
+    --primary-900: ${n[900]};
+    */
 
-    /* neutral variant */
+    /* neutral
+    --neutral-50: ${r[50]};
+    --neutral-100: ${r[100]};
+    --neutral-200: ${r[200]};
+    --neutral-300: ${r[300]};
+    --neutral-400: ${r[400]};
+    --neutral-500: ${r[500]};
+    --neutral-600: ${r[600]};
+    --neutral-700: ${r[700]};
+    --neutral-800: ${r[800]};
+    --neutral-900: ${r[900]};
+    */
+    
+    /* neutral variant
     --neutral-variant-50: #f9fafb;
     --neutral-variant-100: #f3f4f6;
     --neutral-variant-200: #e5e7eb;
@@ -156,8 +158,9 @@ Error generating stack: `+o.message+`
     --neutral-variant-700: #374151;
     --neutral-variant-800: #1f2937;
     --neutral-variant-900: #111827;
+    */
 
-    /* light - default */
+    /* light - default
     --primary: var(--primary-500);
     --on-primary: white;
     --primary-container: var(--primary-100);
@@ -202,10 +205,11 @@ Error generating stack: `+o.message+`
     --neutral-7: var(--neutral-700);
     --neutral-8: var(--neutral-800);
     --neutral-9: var(--neutral-900);
+    */
   }
 
   .dark {
-    /* dark */
+    /* dark
     --primary: var(--primary-500);
     --primary-dark: var(--primary-700);
     --on-primary: white;
@@ -251,6 +255,7 @@ Error generating stack: `+o.message+`
     --neutral-7: var(--neutral-200);
     --neutral-8: var(--neutral-100);
     --neutral-9: var(--neutral-50);
+    */
   }
 
   body {

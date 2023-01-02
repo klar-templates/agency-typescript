@@ -93,30 +93,6 @@ export default function PageStyle(data: any) {
     --font-display: ${data.theme.typography.font_display};
     --font-body: ${data.theme.typography.font_body};
     --font-logo: ${data.theme.typography.font_logo};
-    
-    /* primary */
-    --primary-50: ${primary_shades['50']};
-    --primary-100: ${primary_shades['100']};
-    --primary-200: ${primary_shades['200']};
-    --primary-300: ${primary_shades['300']};
-    --primary-400: ${primary_shades['400']};
-    --primary-500: ${primary_shades['500']};
-    --primary-600: ${primary_shades['600']};
-    --primary-700: ${primary_shades['700']};
-    --primary-800: ${primary_shades['800']};
-    --primary-900: ${primary_shades['900']};
-
-    /* neutral */
-    --neutral-50: ${neutral_shades['50']};
-    --neutral-100: ${neutral_shades['100']};
-    --neutral-200: ${neutral_shades['200']};
-    --neutral-300: ${neutral_shades['300']};
-    --neutral-400: ${neutral_shades['400']};
-    --neutral-500: ${neutral_shades['500']};
-    --neutral-600: ${neutral_shades['600']};
-    --neutral-700: ${neutral_shades['700']};
-    --neutral-800: ${neutral_shades['800']};
-    --neutral-900: ${neutral_shades['900']};
 
     /* primary */
     --primary-50: ${primary_shades_rgb['50'].r} ${primary_shades_rgb['50'].g} ${primary_shades_rgb['50'].b};
@@ -141,8 +117,34 @@ export default function PageStyle(data: any) {
     --neutral-700: ${neutral_shades_rgb['700'].r} ${neutral_shades_rgb['700'].g} ${neutral_shades_rgb['700'].b};
     --neutral-800: ${neutral_shades_rgb['800'].r} ${neutral_shades_rgb['800'].g} ${neutral_shades_rgb['800'].b};
     --neutral-900: ${neutral_shades_rgb['900'].r} ${neutral_shades_rgb['900'].g} ${neutral_shades_rgb['900'].b};
+    
+    /* primary
+    --primary-50: ${primary_shades['50']};
+    --primary-100: ${primary_shades['100']};
+    --primary-200: ${primary_shades['200']};
+    --primary-300: ${primary_shades['300']};
+    --primary-400: ${primary_shades['400']};
+    --primary-500: ${primary_shades['500']};
+    --primary-600: ${primary_shades['600']};
+    --primary-700: ${primary_shades['700']};
+    --primary-800: ${primary_shades['800']};
+    --primary-900: ${primary_shades['900']};
+    */
 
-    /* neutral variant */
+    /* neutral
+    --neutral-50: ${neutral_shades['50']};
+    --neutral-100: ${neutral_shades['100']};
+    --neutral-200: ${neutral_shades['200']};
+    --neutral-300: ${neutral_shades['300']};
+    --neutral-400: ${neutral_shades['400']};
+    --neutral-500: ${neutral_shades['500']};
+    --neutral-600: ${neutral_shades['600']};
+    --neutral-700: ${neutral_shades['700']};
+    --neutral-800: ${neutral_shades['800']};
+    --neutral-900: ${neutral_shades['900']};
+    */
+    
+    /* neutral variant
     --neutral-variant-50: #f9fafb;
     --neutral-variant-100: #f3f4f6;
     --neutral-variant-200: #e5e7eb;
@@ -153,8 +155,9 @@ export default function PageStyle(data: any) {
     --neutral-variant-700: #374151;
     --neutral-variant-800: #1f2937;
     --neutral-variant-900: #111827;
+    */
 
-    /* light - default */
+    /* light - default
     --primary: var(--primary-500);
     --on-primary: white;
     --primary-container: var(--primary-100);
@@ -199,10 +202,11 @@ export default function PageStyle(data: any) {
     --neutral-7: var(--neutral-700);
     --neutral-8: var(--neutral-800);
     --neutral-9: var(--neutral-900);
+    */
   }
 
   .dark {
-    /* dark */
+    /* dark
     --primary: var(--primary-500);
     --primary-dark: var(--primary-700);
     --on-primary: white;
@@ -248,6 +252,7 @@ export default function PageStyle(data: any) {
     --neutral-7: var(--neutral-200);
     --neutral-8: var(--neutral-100);
     --neutral-9: var(--neutral-50);
+    */
   }
 
   body {
