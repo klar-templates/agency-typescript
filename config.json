@@ -1189,17 +1189,17 @@
                 }
               }
             },
-            "bg_color": "#fff",
-            "bg_color_darkmode": "#121212",
+            "bg_color": "#f8f8f9",
+            "bg_color_darkmode": "#34383f",
             "bg_color_rgb": {
               "r": 248,
               "g": 248,
-              "b": 248
+              "b": 249
             },
             "bg_color_rgb_darkmode": {
-              "r": 18,
-              "g": 18,
-              "b": 18
+              "r": 52,
+              "g": 56,
+              "b": 63
             },
             "title_text_color": "#333333",
             "subtitle_text_color": "#777777",
