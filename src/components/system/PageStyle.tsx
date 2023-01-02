@@ -255,6 +255,10 @@ export default function PageStyle(data: any) {
     font-size: ${data.theme.typography.text_base_size}px;
   }
 
+  .dark body {
+    background-color: rgb(var(--neutral-900));
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: ${data.theme.typography.font_display}${fallbackFonts};
   }
