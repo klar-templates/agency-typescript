@@ -31,6 +31,14 @@
             "ui:css_selector": "body",
             "ui:css_property": "background-color",
             "default": "#ffffff"
+          },
+          {
+            "title": "Bakgrundsfärg - Darkmode",
+            "name": "bg_color_darkmode",
+            "type": "string",
+            "format": "color",
+            "ui:css_selector": "body",
+            "ui:css_property": "background-color"
           }
         ]
       },
