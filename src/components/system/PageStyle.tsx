@@ -251,6 +251,7 @@ export default function PageStyle(data: any) {
   }
 
   body {
+    background-color: #fff;
     font-size: ${data.theme.typography.text_base_size}px;
   }
 
