@@ -259,12 +259,12 @@ Error generating stack: `+o.message+`
   }
 
   body {
-    background-color: rgb(${e.theme.colors.bg_color_rgb.r} ${e.theme.colors.bg_color_rgb.g} ${e.theme.colors.bg_color_rgb.b});
+    background-color: ${e.theme.colors.bg_color};
     font-size: ${e.theme.typography.text_base_size}px;
   }
 
   .dark body {
-    background-color: rgb(${e.theme.colors.bg_color_rgb_darkmode.r} ${e.theme.colors.bg_color_rgb_darkmode.g} ${e.theme.colors.bg_color_rgb_darkmode.b});
+    background-color: ${e.theme.colors.bg_color_darkmode};
   }
 
   h1, h2, h3, h4, h5, h6 {
