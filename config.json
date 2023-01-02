@@ -149,7 +149,7 @@
         ]
       },
       {
-        "title": "Light",
+        "title": "Lightmode",
         "name": "lightmode",
         "type": "object",
         "fields": [
@@ -164,7 +164,7 @@
         ]
       },
       {
-        "title": "Dark",
+        "title": "Darkmode",
         "name": "darkmode",
         "type": "object",
         "fields": [

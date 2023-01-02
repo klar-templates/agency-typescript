@@ -261,7 +261,7 @@ export default function PageStyle(data: any) {
   }
 
   .dark body {
-    background-color: ${data.theme.colors.darkmode.bg_color_darkmode};
+    background-color: ${data.theme.colors.darkmode.bg_color};
   }
 
   h1, h2, h3, h4, h5, h6 {
