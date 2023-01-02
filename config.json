@@ -161,23 +161,6 @@
             "ui:css_property": "background-color"
           }
         ]
-      },
-      {
-        "title": "Block",
-        "name": "block",
-        "type": "object",
-        "fields": [
-          {
-            "title": "Färger",
-            "name": "colors",
-            "type": "object"
-          },
-          {
-            "title": "Beskrivning",
-            "name": "description",
-            "type": "text"
-          }
-        ]
       }
     ]
   },
