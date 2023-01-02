@@ -22,22 +22,6 @@
             "name": "neutral_color",
             "type": "string",
             "format": "color"
-          },
-          {
-            "title": "Bakgrundsfärg",
-            "name": "bg_color",
-            "type": "string",
-            "format": "color",
-            "ui:css_selector": "body",
-            "ui:css_property": "background-color"
-          },
-          {
-            "title": "Bakgrundsfärg - Darkmode",
-            "name": "bg_color_darkmode",
-            "type": "string",
-            "format": "color",
-            "ui:css_selector": ".dark body",
-            "ui:css_property": "background-color"
           }
         ]
       },
