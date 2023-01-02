@@ -29,8 +29,7 @@
             "type": "string",
             "format": "color",
             "ui:css_selector": "body",
-            "ui:css_property": "background-color",
-            "default": "#ffffff"
+            "ui:css_property": "background-color"
           },
           {
             "title": "Bakgrundsfärg - Darkmode",
@@ -1080,7 +1079,8 @@
                 "900": "#34383f"
               }
             },
-            "bg_color": "#ffffff",
+            "bg_color": "#fff",
+            "bg_color_darkmode": "#222",
             "title_text_color": "#333333",
             "subtitle_text_color": "#777777",
             "text_color": "#777777",
