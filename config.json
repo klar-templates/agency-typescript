@@ -42,6 +42,36 @@
         ]
       },
       {
+        "title": "Light",
+        "name": "lightmode",
+        "type": "object",
+        "fields": [
+          {
+            "title": "Bakgrundsfärg",
+            "name": "bg_color",
+            "type": "string",
+            "format": "color",
+            "ui:css_selector": "body",
+            "ui:css_property": "background-color"
+          }
+        ]
+      },
+      {
+        "title": "Dark",
+        "name": "darkmode",
+        "type": "object",
+        "fields": [
+          {
+            "title": "Bakgrundsfärg",
+            "name": "bg_color",
+            "type": "string",
+            "format": "color",
+            "ui:css_selector": "body",
+            "ui:css_property": "background-color"
+          }
+        ]
+      },
+      {
         "title": "Typografi",
         "name": "typography",
         "type": "object",
@@ -1208,6 +1238,12 @@
             "link_text_hover_color": "#fec503",
             "selection_text_color": "#ffffff",
             "selection_bg_color": "#fed136"
+          },
+          "lightmode": {
+            "bg_color": "#f8f8f9"
+          },
+          "darkmode": {
+            "bg_color": "#f8f8f9"
           },
           "typography": {
             "font_display": "Montserrat",
