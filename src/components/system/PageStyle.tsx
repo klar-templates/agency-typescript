@@ -256,12 +256,12 @@ export default function PageStyle(data: any) {
   }
 
   body {
-    background-color: ${data.theme.colors.bg_color};
+    background-color: rgb(${data.theme.colors.bg_color_rgb.r} ${data.theme.colors.bg_color_rgb.g} ${data.theme.colors.bg_color_rgb.b});
     font-size: ${data.theme.typography.text_base_size}px;
   }
 
   .dark body {
-    background-color: ${data.theme.colors.bg_color_darkmode};
+    background-color: rgb(${data.theme.colors.bg_color_rgb_darkmode.r} ${data.theme.colors.bg_color_rgb_darkmode.g} ${data.theme.colors.bg_color_rgb_darkmode.b});
   }
 
   h1, h2, h3, h4, h5, h6 {
