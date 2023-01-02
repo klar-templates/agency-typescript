@@ -256,12 +256,12 @@ export default function PageStyle(data: any) {
   }
 
   body {
-    background-color: ${data.theme.colors.lightmode.bg_color};
+    background-color: ${data.theme.lightmode.bg_color};
     font-size: ${data.theme.typography.text_base_size}px;
   }
 
   .dark body {
-    background-color: ${data.theme.colors.darkmode.bg_color};
+    background-color: ${data.theme.darkmode.bg_color};
   }
 
   h1, h2, h3, h4, h5, h6 {
