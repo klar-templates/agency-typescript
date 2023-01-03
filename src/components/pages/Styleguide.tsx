@@ -22,6 +22,7 @@ export default function Styleguide(data: any) {
       <div
         className="
         grid-gap
+        bg-primary
         bg-primary-50
         bg-primary-100
         bg-primary-200
@@ -32,6 +33,7 @@ export default function Styleguide(data: any) {
         bg-primary-700
         bg-primary-800
         bg-primary-900
+        text-primary
         text-primary-50
         text-primary-100
         text-primary-200
@@ -42,6 +44,7 @@ export default function Styleguide(data: any) {
         text-primary-700
         text-primary-800
         text-primary-900
+        border-primary
         border-primary-50
         border-primary-100
         border-primary-200
@@ -53,6 +56,7 @@ export default function Styleguide(data: any) {
         border-primary-800
         border-primary-900
 
+        dark:bg-primary
         dark:bg-primary-50
         dark:bg-primary-100
         dark:bg-primary-200
@@ -63,6 +67,7 @@ export default function Styleguide(data: any) {
         dark:bg-primary-700
         dark:bg-primary-800
         dark:bg-primary-900
+        dark:text-primary
         dark:text-primary-50
         dark:text-primary-100
         dark:text-primary-200
@@ -73,6 +78,7 @@ export default function Styleguide(data: any) {
         dark:text-primary-700
         dark:text-primary-800
         dark:text-primary-900
+        dark:border-primary
         dark:border-primary-50
         dark:border-primary-100
         dark:border-primary-200
@@ -84,6 +90,7 @@ export default function Styleguide(data: any) {
         dark:border-primary-800
         dark:border-primary-900
 
+        bg-neutral
         bg-neutral-50
         bg-neutral-100
         bg-neutral-200
@@ -94,6 +101,7 @@ export default function Styleguide(data: any) {
         bg-neutral-700
         bg-neutral-800
         bg-neutral-900
+        text-neutral
         text-neutral-50
         text-neutral-100
         text-neutral-200
@@ -104,6 +112,7 @@ export default function Styleguide(data: any) {
         text-neutral-700
         text-neutral-800
         text-neutral-900
+        border-neutral
         border-neutral-50
         border-neutral-100
         border-neutral-200
@@ -115,6 +124,7 @@ export default function Styleguide(data: any) {
         border-neutral-800
         border-neutral-900
 
+        dark:bg-neutral
         dark:bg-neutral-50
         dark:bg-neutral-100
         dark:bg-neutral-200
@@ -125,6 +135,7 @@ export default function Styleguide(data: any) {
         dark:bg-neutral-700
         dark:bg-neutral-800
         dark:bg-neutral-900
+        dark:text-neutral
         dark:text-neutral-50
         dark:text-neutral-100
         dark:text-neutral-200
@@ -135,6 +146,7 @@ export default function Styleguide(data: any) {
         dark:text-neutral-700
         dark:text-neutral-800
         dark:text-neutral-900
+        dark:border-neutral
         dark:border-neutral-50
         dark:border-neutral-100
         dark:border-neutral-200
