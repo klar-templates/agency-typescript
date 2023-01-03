@@ -257,11 +257,13 @@ export default function PageStyle(data: any) {
 
   body {
     background-color: ${data.theme.lightmode.bg_color};
+    color: var(--neutral-700);
     font-size: ${data.theme.typography.text_base_size}px;
   }
 
   .dark body {
     background-color: ${data.theme.darkmode.bg_color};
+    color: var(--neutral-200);
   }
 
   h1, h2, h3, h4, h5, h6 {
