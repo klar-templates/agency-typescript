@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   html {
     font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
@@ -19,28 +23,13 @@
 }
 
 @layer components {
-  .heading-1 {
-    @apply text-4xl;
-  }
-
-  .heading-2 {
-    @apply text-3xl;
-  }
-
-  .heading-3 {
-    @apply text-2xl;
-  }
-
-  .heading-4 {
-    @apply text-xl;
-  }
-
-  .section {
+  /* Block */
+  .section-padding-y {
     @apply py-16 sm:py-20;
   }
 
   .section-heading {
-    @apply heading-1;
+    @apply text-4xl;
   }
 
   .section-subheading {
@@ -51,11 +40,65 @@
     @apply max-w-7xl;
   }
 
+  /* Spacing */
   .container-padding-x {
     @apply px-4 sm:px-6 xl:px-8;
   }
 
   .grid-gap {
     @apply gap-4 md:gap-8 lg:gap-12;
+  }
+
+  .flex-gap {
+    @apply gap-2 md:gap-4;
+  }
+
+  /* Button */
+  .btn {
+    @apply px-5 py-2 text-sm leading-5 rounded-lg font-semibold;
+  }
+
+  .btn-text {
+    @apply dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-800;
+  }
+
+  .btn-link {
+    @apply text-primary-500 hover:underline;
+  }
+
+  .btn-filled {
+    @apply bg-primary-500 hover:bg-primary-700 text-white dark:bg-primary-100 dark:text-primary-800;
+  }
+
+  .btn-filled-dark {
+    @apply bg-slate-900 hover:bg-slate-700 text-white dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200 dark:hover:text-slate-900;
+  }
+
+  .btn-tonal {
+    @apply bg-primary-100 text-primary-900 hover:bg-primary-200 dark:bg-primary-800 dark:text-primary-100 dark:hover:bg-primary-700;
+  }
+
+  .btn-outlined {
+    @apply text-primary-500 border border-neutral-900/10 hover:border-neutral-900/20 dark:text-neutral-100 dark:border-neutral-100/10 dark:hover:border-neutral-100/20;
+  }
+
+  .btn-elevated {
+    @apply text-primary-500 dark:text-neutral-100 shadow shadow-black/[0.1] hover:shadow-black/[0.2] dark:shadow-black/25  hover:dark:shadow-black/50;
+  }
+
+  .btn:disabled {
+    @apply opacity-[0.38];
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  .btn-lg {
+    @apply px-7 py-3 text-base;
+  }
+
+  .btn-xl {
+    @apply px-10 py-4 text-base;
   }
 }

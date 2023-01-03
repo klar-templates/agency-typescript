@@ -19,7 +19,7 @@ export default function Hero3(data: any) {
     <>
       <section
         id={_id}
-        className={`${_type} section klar-outline`}
+        className={`${_type} section-padding-y klar-outline`}
         data-field-string-file="image"
         data-placement="top"
         data-offset-top="210"
