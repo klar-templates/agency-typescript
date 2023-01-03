@@ -157,7 +157,7 @@
             "name": "bg_color",
             "type": "string",
             "format": "color",
-            "ui:css_selector": "body",
+            "ui:css_selector": ".dark body",
             "ui:css_property": "background-color"
           }
         ]
