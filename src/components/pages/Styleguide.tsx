@@ -177,6 +177,8 @@ export default function Styleguide(data: any) {
         btn-sm
         btn-lg
         btn-xl
+
+        hidden
         "
       >
         Hello
