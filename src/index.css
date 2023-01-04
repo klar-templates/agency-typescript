@@ -18,6 +18,10 @@
   }
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer components {
   /* Block */
   .section-padding-y {
@@ -51,7 +55,11 @@
 
   /* Button */
   .btn {
-    @apply px-5 py-2 text-sm leading-5 rounded-lg font-semibold;
+    @apply px-5 py-2 text-sm leading-5 rounded-lg font-semibold inline-flex items-center;
+  }
+
+  .btn [class^='material-icons'] {
+    @apply mr-1.5;
   }
 
   .btn-text {
@@ -59,7 +67,7 @@
   }
 
   .btn-link {
-    @apply text-primary-500 hover:underline;
+    @apply text-primary-500 hover:bg-neutral-200;
   }
 
   .btn-filled {
@@ -84,6 +92,14 @@
 
   .btn:disabled {
     @apply opacity-[0.38];
+  }
+
+  .btn-icon {
+    @apply py-2.5 px-3 rounded-full;
+  }
+
+  .btn-icon [class^='material-icons'] {
+    @apply m-0;
   }
 
   .btn-sm {
