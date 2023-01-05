@@ -16,7 +16,6 @@
             "name": "head_elements",
             "type": "text",
             "description": "Lägg till meta-data m.m för bättre SEO. En ny rad för varje element.",
-            "placeholder": "&lt;link rel=\"stylesheet\" href=\"/style.css\"&gt;",
             "field": {
               "height": "120px"
             }
@@ -1064,9 +1063,8 @@
   ],
   "data_defaults": {
     "site": {
-      "colors": {
-        "primary_color": "#6366f1",
-        "neutral_color": "#6b7280"
+      "head": {
+        "head_elements": "<link rel=\"stylesheet\" href=\"/style.css\">"
       }
     },
     "theme": {
