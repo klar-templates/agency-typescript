@@ -150,7 +150,8 @@ function App(): any {
               element={<Navigate replace to={currentPageInKlar} />}
             />
           )}
-        {/* {window.klarContext.isInKlar &&
+        {/* This code could potentially be needed.
+        {window.klarContext.isInKlar &&
           data.pages.length > 0 &&
           currentPageInKlar !== '/' && (
             <Route
