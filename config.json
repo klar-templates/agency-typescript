@@ -7,21 +7,18 @@
     "type": "site-settings",
     "fields": [
       {
-        "title": "Färger",
-        "name": "colors",
+        "title": "Head",
+        "name": "head",
         "type": "object",
+        "description": "Lägg till meta-data m.m för bättre SEO.",
         "fields": [
           {
-            "title": "Primary color",
-            "name": "primary_color",
-            "type": "string",
-            "format": "color"
-          },
-          {
-            "title": "Neutral color",
-            "name": "neutral_color",
-            "type": "string",
-            "format": "color"
+            "title": "Head elements",
+            "name": "head_elements",
+            "type": "text",
+            "field": {
+              "height": "120px"
+            }
           }
         ]
       }
