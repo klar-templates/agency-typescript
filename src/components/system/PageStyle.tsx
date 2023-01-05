@@ -270,5 +270,11 @@ export default function PageStyle(data: any) {
     font-family: ${data.theme.typography.font_display}${fallbackFonts};
   }
   `;
+
+  // let metaElements: any = [];
+  // [{ name: 'og:title', content: 'En titel' }].map((m, i) => {
+  //   metaElements.push(`<meta name=${m.name} content=${m.content} />`);
+  // });
+  // pageStyle = pageStyle + '\n' + metaElements.join('');
   return <RenderStyle id="css-variables">{pageStyle}</RenderStyle>;
 }
