@@ -124,7 +124,7 @@ export default function Layout(data: any) {
     headElementsArr.push(htmlStrToReactComponent(hE));
     // headElementsArr[i].key = `head-element-${i}`;
   });
-  console.log(headElementsArr);
+  // console.log(headElementsArr);
   return (
     <>
       {/* <PageStyle theme={window.klarContext.data.theme} /> */}
