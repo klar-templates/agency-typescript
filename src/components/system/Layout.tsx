@@ -44,23 +44,6 @@ export default function Layout(data: any) {
     <script {...s} key={`script-${i}`} />
   ));
 
-  const scriptHtmlString = `<script
-    src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-    crossorigin="anonymous"></script>`;
-  const htmlStrToReactComponent = (str: any) => {
-    const dom = new DOMParser().parseFromString(str, 'text/html');
-    const el: any = dom.documentElement.querySelector(
-      ':not(html):not(head):not(body)',
-    );
-    const NodeName = el.nodeName.toLowerCase();
-    const attributes = Object.fromEntries(
-      [...el.attributes].map(({ name, value }) => [name, value]),
-    );
-    return <NodeName {...attributes} />;
-  };
-  const scriptEl = htmlStrToReactComponent(scriptHtmlString);
-
   const fallbackFonts =
     ',ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
   const primary_shades = data.theme.colors.primary_shades.colors;
@@ -114,17 +97,34 @@ export default function Layout(data: any) {
     font-family: ${data.theme.typography.font_display}${fallbackFonts};
   }`;
 
+  const htmlStrToReactComponent = (str: any, key: any) => {
+    const dom = new DOMParser().parseFromString(str, 'text/html');
+    const el: any = dom.documentElement.querySelector(
+      ':not(html):not(head):not(body)',
+    );
+    el.key = key;
+    const NodeName = el.nodeName.toLowerCase();
+    const attributes = Object.fromEntries(
+      [...el.attributes].map(({ name, value }) => [name, value]),
+    );
+    attributes.key = key;
+    return <NodeName {...attributes} />;
+  };
+
   const headElementsArr: any = [];
   const headElementsText = `
     <meta name="og:title" content="This is my one page website and it's beautiful!">
     <link rel="stylesheet" type="text/css" href="/assets/css/style1.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/style2.css">`;
   let headElements: any = headElementsText.match(/<(?:.|\n)*?>/gm);
-  headElements.map((hE: any, i: any) => {
-    headElementsArr.push(htmlStrToReactComponent(hE));
+  headElements.map((headElement: any, i: any) => {
+    headElementsArr.push(
+      htmlStrToReactComponent(headElement, `head-element-${i}`),
+    );
     // headElementsArr[i].key = `head-element-${i}`;
   });
   // console.log(headElementsArr);
+
   return (
     <>
       {/* <PageStyle theme={window.klarContext.data.theme} /> */}
