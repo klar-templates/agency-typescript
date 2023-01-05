@@ -1,6 +1,32 @@
 {
   "name": "agency-typescript",
   "version": "0.0.0",
+  "site_type": {
+    "title": "Inställningar",
+    "name": "site_settings",
+    "type": "site-settings",
+    "fields": [
+      {
+        "title": "Färger",
+        "name": "colors",
+        "type": "object",
+        "fields": [
+          {
+            "title": "Primary color",
+            "name": "primary_color",
+            "type": "string",
+            "format": "color"
+          },
+          {
+            "title": "Neutral color",
+            "name": "neutral_color",
+            "type": "string",
+            "format": "color"
+          }
+        ]
+      }
+    ]
+  },
   "theme_type": {
     "title": "Tema",
     "name": "theme",
