@@ -16,7 +16,7 @@
             "name": "head_elements",
             "type": "text",
             "description": "Lägg till meta-data m.m för bättre SEO. En ny rad för varje element.",
-            "placeholder": "<link rel=\"stylesheet\" href=\"/style.css\">",
+            "placeholder": "&lt;link rel=\"stylesheet\" href=\"/style.css\"&gt;",
             "field": {
               "height": "120px"
             }
