@@ -1065,6 +1065,12 @@
     }
   ],
   "data_defaults": {
+    "site": {
+      "colors": {
+        "primary_color": "#6366f1",
+        "neutral_color": "#6b7280"
+      }
+    },
     "theme": {
       "current": "default",
       "presets": {
