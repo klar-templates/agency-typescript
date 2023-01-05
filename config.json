@@ -19,6 +19,16 @@
             "field": {
               "height": "120px"
             }
+          },
+          {
+            "title": "Inline script",
+            "name": "inline_script",
+            "type": "text",
+            "placeholder": "console.log('Hello Klar Site!')",
+            "description": "Lägg till ett inline script.",
+            "field": {
+              "height": "120px"
+            }
           }
         ]
       }
@@ -1064,7 +1074,8 @@
   "data_defaults": {
     "site": {
       "head": {
-        "head_elements": "<link rel=\"stylesheet\" href=\"/style.css\">"
+        "head_elements": "",
+        "inline_script": "console.log('Hello Klar Site!')"
       }
     },
     "theme": {
