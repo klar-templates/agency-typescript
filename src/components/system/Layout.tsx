@@ -127,7 +127,7 @@ export default function Layout(data: any) {
 
   return (
     <>
-      {/* <PageStyle theme={window.klarContext.data.theme} /> */}
+      <PageStyle theme={window.klarContext.data.theme} />
       <Helmet>
         <title>
           {window.klarContext.currentPage &&

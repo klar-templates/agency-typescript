@@ -25,7 +25,7 @@
             "name": "inline_script",
             "type": "text",
             "placeholder": "console.log('Hello Klar Site!')",
-            "description": "Lägg till ett inline script.",
+            "description": "Lägg till ett inline script i head.",
             "field": {
               "height": "120px"
             }
