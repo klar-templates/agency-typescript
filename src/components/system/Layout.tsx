@@ -111,17 +111,22 @@ export default function Layout(data: any) {
     return <NodeName {...attributes} />;
   };
 
-  const headElementsArray: any = [];
-  let headElements: any = data.site.data.head.head_elements_array;
-  if (headElements) {
-    headElements.map((headElement: any, i: any) => {
-      headElementsArray.push(
-        htmlStrToReactComponent(headElement, `head-element-${i}`),
-      );
-    });
-    console.log(headElementsArray);
+  let headElementsArray: any = [];
+  if (window.head_elements_array) {
+    headElementsArray = window.head_elements_array;
+  } else {
+    let headElements: any = data.site.data.head.head_elements_array;
+    if (headElements) {
+      headElements.map((headElement: any, i: any) => {
+        headElementsArray.push(
+          htmlStrToReactComponent(headElement, `head-element-${i}`),
+        );
+      });
+      window.head_elements_array = headElementsArray;
+    }
   }
-  console.log(data.site.data.head.head_elements_array);
+  // console.log(headElementsArray);
+  // console.log(data.site.data.head.head_elements_array);
 
   return (
     <>
@@ -140,7 +145,7 @@ export default function Layout(data: any) {
         />
         {/* {metaTags} */}
         <style>{cssVariables}</style>
-        {/* {headElementsArr} */}
+        {headElementsArray}
         {/* {linkTags} */}
         {/* {scriptTags} */}
         {/* {scriptEl} */}

@@ -22,6 +22,7 @@ declare global {
     KlarLink: any;
     KlarComponents: any;
     templateNunjucksBlocks: any;
+    head_elements_array: any;
     React: any;
   }
 }
