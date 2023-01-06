@@ -11,7 +11,7 @@ export default function Layout(data: any) {
       {data.children}
       {/* {blocksToRender} */}
       {/* <FooterReact {...footerBlock} /> */}
-      {/* <PageScript /> */}
+      <PageScript />
     </>
   );
 }

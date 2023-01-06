@@ -23,6 +23,7 @@ declare global {
     KlarComponents: any;
     templateNunjucksBlocks: any;
     head_elements_array: any;
+    templateJs: any;
     React: any;
   }
 }

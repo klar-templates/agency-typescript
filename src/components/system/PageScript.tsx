@@ -7,6 +7,9 @@ export default function PageScript() {
   ) {
     return null;
   }
-  const pageScript = ``;
+  let pageScript = ``;
+  if (window.templateJs) {
+    pageScript = window.templateJs;
+  }
   return <RenderScript>{pageScript}</RenderScript>;
 }
