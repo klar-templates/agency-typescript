@@ -16,6 +16,16 @@ export default function RenderScript({ children }: any) {
     s.async = true;
     s.innerHTML = children;
     document.body.appendChild(s);
+
+    return () => {
+      if (s) {
+        try {
+          document.body.removeChild(s);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    };
   });
   if (window.releaseReactApp) {
     window.reactJs += children;
