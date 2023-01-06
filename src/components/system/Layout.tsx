@@ -22,27 +22,27 @@ export default function Layout(data: any) {
   //   // }
   //   blocksToRender.push(block);
   // });
-  const metaArr = [];
-  metaArr.push({ name: 'og:title', content: 'En titel igen' });
-  const metaTags = metaArr.map((m, i) => <meta {...m} key={`meta-${i}`} />);
-  const linkArr = [];
-  linkArr.push({
-    href: 'https://www.google.se',
-    crossOrigin: undefined,
-    rel: 'stylesheet',
-    type: 'text/css',
-  });
-  const linkTags = linkArr.map((l, i) => <link {...l} key={`link-${i}`} />);
-  const scriptArr = [];
-  scriptArr.push({
-    src: 'https://code.jquery.com/jquery-3.6.3.min.js',
-    rel: '',
-    type: 'text/javascript',
-    chilren: 'console.log("Gab)',
-  });
-  const scriptTags = scriptArr.map((s, i) => (
-    <script {...s} key={`script-${i}`} />
-  ));
+  // const metaArr = [];
+  // metaArr.push({ name: 'og:title', content: 'En titel igen' });
+  // const metaTags = metaArr.map((m, i) => <meta {...m} key={`meta-${i}`} />);
+  // const linkArr = [];
+  // linkArr.push({
+  //   href: 'https://www.google.se',
+  //   crossOrigin: undefined,
+  //   rel: 'stylesheet',
+  //   type: 'text/css',
+  // });
+  // const linkTags = linkArr.map((l, i) => <link {...l} key={`link-${i}`} />);
+  // const scriptArr = [];
+  // scriptArr.push({
+  //   src: 'https://code.jquery.com/jquery-3.6.3.min.js',
+  //   rel: '',
+  //   type: 'text/javascript',
+  //   chilren: 'console.log("Gab)',
+  // });
+  // const scriptTags = scriptArr.map((s, i) => (
+  //   <script {...s} key={`script-${i}`} />
+  // ));
 
   const fallbackFonts =
     ',ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"';
@@ -111,19 +111,17 @@ export default function Layout(data: any) {
     return <NodeName {...attributes} />;
   };
 
-  const headElementsArr: any = [];
-  const headElementsText = `
-    <meta name="og:title" content="This is my one page website and it's beautiful!">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style1.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style2.css">`;
-  let headElements: any = headElementsText.match(/<(?:.|\n)*?>/gm);
-  headElements.map((headElement: any, i: any) => {
-    headElementsArr.push(
-      htmlStrToReactComponent(headElement, `head-element-${i}`),
-    );
-    // headElementsArr[i].key = `head-element-${i}`;
-  });
-  // console.log(headElementsArr);
+  const headElementsArray: any = [];
+  let headElements: any = data.site.data.head.head_elements_array;
+  if (headElements) {
+    headElements.map((headElement: any, i: any) => {
+      headElementsArray.push(
+        htmlStrToReactComponent(headElement, `head-element-${i}`),
+      );
+    });
+    console.log(headElementsArray);
+  }
+  console.log(data.site.data.head.head_elements_array);
 
   return (
     <>
