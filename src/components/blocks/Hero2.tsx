@@ -13,7 +13,7 @@ export default function Hero2(data: any) {
     image,
   } = data.block;
   return (
-    <div className="g-background relative">
+    <section className="g-background relative">
       <div className="relative mx-auto container px-4 py-16 sm:px-10 lg:pt-20">
         <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-y-16 gap-x-8 lg:max-w-none lg:grid-cols-3">
           <div className="flex flex-col lg:pb-6">
@@ -168,6 +168,6 @@ export default function Hero2(data: any) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

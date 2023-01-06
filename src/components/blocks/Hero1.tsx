@@ -13,7 +13,7 @@ export default function Hero1(data: any) {
     image,
   } = data.block;
   return (
-    <div className="text-neutral-900 relative isolate order-t">
+    <section className="text-neutral-900 relative isolate order-t">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -121,6 +121,6 @@ export default function Hero1(data: any) {
         <div className="absolute inset-0 bg-[url('https://raw.githubusercontent.com/klar-templates/agency/master/img/header-bg.jpg')]"></div>
         <div className="absolute inset-0 bg-black opacity-[0.4]"></div>  
       </div> */}
-    </div>
+    </section>
   );
 }
