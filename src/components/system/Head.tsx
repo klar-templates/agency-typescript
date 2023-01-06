@@ -1,20 +1,25 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import nunjucks from 'nunjucks';
+import RenderScript from './RenderScript';
 
 const htmlStrToReactComponent = (str: any, key: any) => {
   const dom = new DOMParser().parseFromString(str, 'text/html');
   const el: any = dom.documentElement.querySelector(
     ':not(html):not(head):not(body)',
   );
-  el.key = key;
   const NodeName = el.nodeName.toLowerCase();
   const attributes = Object.fromEntries(
-    [...el.attributes].map(({ name, value }) => [name, value]),
+    [...el.attributes].map(({ name, value }) => [
+      name,
+      nunjucks.renderString(value, window.klarContext.currentPage),
+    ]),
   );
   attributes.key = key;
   return <NodeName {...attributes} />;
 };
 
 export default function Layout(data: any) {
+  nunjucks.configure({ autoescape: false });
   const googleEndpoint = 'https://fonts.googleapis.com/css?family=';
   const systemWebfonts = ['ui-sans-serif', 'Open Sans', 'Arial', 'sans-serif'];
 
@@ -76,6 +81,7 @@ export default function Layout(data: any) {
   } else {
     let headElements: any = data.site.data.head.head_elements_array;
     if (headElements) {
+      headElements.push('<meta name="title" content="{{_menu_item_name}}">');
       headElements.map((headElement: any, i: any) => {
         headElementsArray.push(
           htmlStrToReactComponent(headElement, `head-element-${i}`),
@@ -84,6 +90,8 @@ export default function Layout(data: any) {
       window.head_elements_array = headElementsArray;
     }
   }
+  // console.log(window.klarContext.currentPage);
+  // console.log(window.head_elements_array);
   return (
     <>
       <Helmet>
@@ -144,6 +152,9 @@ export default function Layout(data: any) {
           />
         )}
       </Helmet>
+      {/* {data.site.data.head.head_elements_array && (
+        <RenderScript>{data.site.data.head.inline_script}</RenderScript>
+      )} */}
     </>
   );
 }
