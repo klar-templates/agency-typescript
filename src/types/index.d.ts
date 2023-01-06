@@ -24,6 +24,7 @@ declare global {
     templateNunjucksBlocks: any;
     head_elements_array: any;
     templateJs: any;
+    nunjucksScriptHasBeenLoaded: any;
     React: any;
   }
 }

@@ -11,5 +11,8 @@ export default function PageScript() {
   if (window.templateJs) {
     pageScript = window.templateJs;
   }
+  if (!pageScript) {
+    return null;
+  }
   return <RenderScript>{pageScript}</RenderScript>;
 }

@@ -19,18 +19,51 @@ type scriptInline = {
 };
 
 function renderInlineScript(ref: any) {
+  // if (!window.nunjucksScriptHasBeenLoaded && ref?.current) {
+  let s: Node & scriptInline;
   if (ref?.current) {
+    // window.nunjucksScriptHasBeenLoaded = true;
     const container: any = ref.current;
     const codeStr = container.querySelector('script')?.innerHTML;
     if (codeStr) {
-      const s: Node & scriptInline = document.createElement('script');
+      s = document.createElement('script');
       s.type = 'text/javascript';
       s.async = true;
       s.innerHTML = codeStr;
       document.body.appendChild(s);
+      // ref.current.appendChild(s);
+      return s;
     }
   }
+  return null;
 }
+
+// function useScript(ref: any) {
+//   useEffect(() => {
+//     let s: Node & scriptInline;
+//     if (ref?.current) {
+//       // window.nunjucksScriptHasBeenLoaded = true;
+//       const container: any = ref.current;
+//       const codeStr = container.querySelector('script')?.innerHTML;
+//       if (codeStr) {
+//         s = document.createElement('script');
+//         s.type = 'text/javascript';
+//         s.async = true;
+//         s.innerHTML = codeStr;
+//         document.body.appendChild(s);
+//         // return s;
+//       }
+//     }
+
+//     return () => {
+//       try {
+//         ref.current.removeChild(s);
+//       } catch (e) {
+//         console.log(e);
+//       }
+//     };
+//   }, [ref]);
+// }
 
 function getTemplateOnInit(data: any) {
   let template;
@@ -110,17 +143,19 @@ function getTemplateOnInit(data: any) {
 
 export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState(getTemplateOnInit(data));
-  const containerRef = useRef(null);
+  const containerRef: any = useRef(null);
+  // useScript(containerRef);
   nunjucks.configure({ autoescape: false });
   const cacheKeyTemplate = `${data.block._id}`;
   let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
 
   useEffect(() => {
     // Get Nunjucks template
+    let script: any;
     if (window.production) {
-      renderInlineScript(containerRef);
+      script = renderInlineScript(containerRef);
     } else if (window.klarContext.isInKlar) {
-      renderInlineScript(containerRef);
+      script = renderInlineScript(containerRef);
       //   let template =
       //     parent.frames.window.klar.templates.blocks[data.block._type];
       //   if (template) {
@@ -136,11 +171,22 @@ export default function Nunjucks(data: any) {
       // ) {
       //   getTemplate(data.block._type);
       // } else {
-      renderInlineScript(containerRef);
+      script = renderInlineScript(containerRef);
       // }
     }
     // return () => clearInterval(id);
     // }
+    return () => {
+      if (script) {
+        try {
+          // console.log(containerRef.current);
+          // containerRef?.current.removeChild(script);
+          document.body.removeChild(script);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    };
   }, []);
 
   // This is when you're in this application, when in Klar get the template file from the Klar application.
