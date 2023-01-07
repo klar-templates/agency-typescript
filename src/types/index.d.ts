@@ -26,6 +26,7 @@ declare global {
     head_elements_array: any;
     templateJs: any;
     nunjucksScriptHasBeenLoaded: any;
+    PubSub: any;
     React: any;
   }
 }

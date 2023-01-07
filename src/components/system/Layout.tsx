@@ -1,10 +1,12 @@
 import Head from './Head';
+import PageTransition from '../../hooks/PageTransition';
 import PageStyle from './PageStyle';
 import PageScript from './PageScript';
 
 export default function Layout(data: any) {
   return (
     <>
+      <PageTransition />
       <PageStyle theme={window.klarContext.data.theme} />
       <Head {...data}></Head>
       {/* <Navigation {...headerBlock as any} /> */}
