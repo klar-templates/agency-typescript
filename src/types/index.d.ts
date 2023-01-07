@@ -20,6 +20,7 @@ declare global {
     templateLoaded: any;
     initTemplateSetDataTemp: any;
     KlarLink: any;
+    KlarNavigate: any;
     KlarComponents: any;
     templateNunjucksBlocks: any;
     head_elements_array: any;
