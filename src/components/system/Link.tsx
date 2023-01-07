@@ -5,14 +5,12 @@ export default function Link(data: any) {
     console.log(location.pathname);
     console.log(data.to);
     const href = data.to;
-    delete data.to;
+    // delete data.to;
     const newData = {
       ...data,
       href: href,
-      onClick: {
-        function(e: any) {
-          e.preventDefault;
-        },
+      onClick: function (e: any) {
+        e.preventDefault();
       },
     };
     return <a {...newData}>{data.children}</a>;

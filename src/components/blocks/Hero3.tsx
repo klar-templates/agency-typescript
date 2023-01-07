@@ -59,7 +59,7 @@ export default function Hero3(data: any) {
             )}
             {show_button && (
               <Link
-                to={link}
+                to="/"
                 className="button text-on-primary bg-primary dark:bg-primary-dark"
                 data-field-string="link_text"
                 data-field-string-format-uri="link"
