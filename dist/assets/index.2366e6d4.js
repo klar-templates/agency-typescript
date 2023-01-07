@@ -156,13 +156,13 @@ else {`),this._emit("cb()")),this._emitLine("}")},k.compileIfAsync=function(g,h)
 
   body {
     background-color: ${e.theme.lightmode.bg_color};
-    color: rgb(var(--neutral-700));
+    color: rgb(var(--neutral-900));
     font-size: ${e.theme.typography.text_base_size}px;
   }
 
   .dark body {
     background-color: ${e.theme.darkmode.bg_color};
-    color: rgb(var(--neutral-200));
+    color: rgb(var(--neutral-50));
   }
 
   h1, h2, h3, h4, h5, h6 {
