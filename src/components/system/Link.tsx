@@ -6,7 +6,15 @@ export default function Link(data: any) {
     console.log(data.to);
     const href = data.to;
     delete data.to;
-    const newData = { ...data, href: href };
+    const newData = {
+      ...data,
+      href: href,
+      onClick: {
+        function(e: any) {
+          e.preventDefault;
+        },
+      },
+    };
     return <a {...newData}>{data.children}</a>;
   }
   return <LinkOriginal {...data}>{data.children}</LinkOriginal>;
