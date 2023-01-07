@@ -58,15 +58,13 @@ export default function Layout(data: any) {
     --neutral-700: ${neutral_shades_rgb['700'].r} ${neutral_shades_rgb['700'].g} ${neutral_shades_rgb['700'].b};
     --neutral-800: ${neutral_shades_rgb['800'].r} ${neutral_shades_rgb['800'].g} ${neutral_shades_rgb['800'].b};
     --neutral-900: ${neutral_shades_rgb['900'].r} ${neutral_shades_rgb['900'].g} ${neutral_shades_rgb['900'].b};
+
+    --bg-color: ${data.theme.lightmode.bg_color};
+    --text-base-size: ${data.theme.typography.text_base_size};
   }
 
-  body {
-    background-color: ${data.theme.lightmode.bg_color};
-    font-size: ${data.theme.typography.text_base_size}px;
-  }
-  
-  .dark body {
-    background-color: ${data.theme.darkmode.bg_color};
+  .dark {
+    --bg-color: ${data.theme.darkmode.bg_color};
   }`;
 
   let headElementsArray: any = [];
