@@ -1,5 +1,6 @@
 import Button from '../elements/Button';
 import RenderStyle from '../system/RenderStyle';
+import Link from '../system/Link';
 
 export default function Hero3(data: any) {
   const {
@@ -57,7 +58,7 @@ export default function Hero3(data: any) {
               </div>
             )}
             {show_button && (
-              <a
+              <Link
                 href={link}
                 className="button text-on-primary bg-primary dark:bg-primary-dark"
                 data-field-string="link_text"
@@ -65,7 +66,7 @@ export default function Hero3(data: any) {
                 data-placement="bottom"
               >
                 {link_text}
-              </a>
+              </Link>
             )}
           </div>
         </div>

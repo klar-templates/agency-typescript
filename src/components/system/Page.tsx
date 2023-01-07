@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import IData from '../../service/interface/IData';
 import ComponentsBlock from '../pages/Components';
 import Styleguide from '../pages/Styleguide';
@@ -28,6 +28,7 @@ import Section from '../elements/layout/Section';
 import Container from '../elements/layout/Container';
 import Grid from '../elements/layout/Grid';
 import Button from '../elements/Button';
+import Link from '../system/Link';
 
 let Components: any = {
   Header: Header,
