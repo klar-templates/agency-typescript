@@ -19,10 +19,10 @@ export default function Link(data: any) {
     return () => {
       if (el) {
         try {
-          // console.log(containerRef.current);
-          // containerRef?.current.removeChild(script);
-          el.removeEventListener('click', preventLink);
-          console.log('tog bort event');
+          if (data.to === location.pathname) {
+            el.removeEventListener('click', preventLink);
+            console.log('tog bort event');
+          }
         } catch (e) {
           console.log(e);
         }
