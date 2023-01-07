@@ -12,6 +12,9 @@ export default function Link(data: any) {
       onClick: function (e: any) {
         e.preventDefault();
       },
+      onDoubleClick: function (e: any) {
+        e.preventDefault();
+      },
     };
     return <a {...newData}>{data.children}</a>;
   }
