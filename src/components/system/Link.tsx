@@ -10,11 +10,11 @@ export default function Link(data: any) {
     }
     const el = linkRef?.current;
     if (el) {
-      if (data.to === location.pathname) {
-        if (linkRef.current) {
-          el.addEventListener('click', preventLink);
-        }
+      // if (data.to === location.pathname) {
+      if (linkRef.current) {
+        el.addEventListener('click', preventLink);
       }
+      // }
     }
     return () => {
       if (el) {
