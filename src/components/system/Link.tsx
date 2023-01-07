@@ -11,6 +11,7 @@ export default function Link(data: any) {
       ...data,
       href: href,
       onClick: function (e: any) {
+        console.log('nu');
         e.preventDefault();
         e.stopPropagation();
         return false;
