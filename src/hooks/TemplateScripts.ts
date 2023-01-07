@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 export default function PageTransition() {
   const routePath = useLocation();
   const runScripts = () => {
-    // console.log('Run scripts');
     function createRipple(event: any) {
       const el = event.currentTarget;
 
@@ -59,10 +58,6 @@ export default function PageTransition() {
               window.PubSub.unsubscribe('page-transition', sub_uid);
             },
           );
-          // function removeNavigateTo() {
-          //   console.log('tog bort lyssnaren')
-          //   link.removeEventListener('click', navigateTo);
-          // }
         }
       }
     }
