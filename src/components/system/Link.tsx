@@ -8,19 +8,19 @@ export default function Link(data: any) {
     // delete data.to;
     const newData = {
       ...data,
-      // href: href,
+      href: href,
       onClick: function (e: any) {
         e.preventDefault();
+        e.stopPropagation();
+        return false;
       },
       onDoubleClick: function (e: any) {
         e.preventDefault();
+        e.stopPropagation();
+        return false;
       },
     };
-    return (
-      <a {...newData} style={{ cursor: 'pointer' }}>
-        {data.children}
-      </a>
-    );
+    return <a {...newData}>{data.children}</a>;
   }
   console.log('nooooo');
   return <LinkOriginal {...data}>{data.children}</LinkOriginal>;
