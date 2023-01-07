@@ -17,7 +17,7 @@ export default function Link(data: any) {
       },
     };
     return (
-      <a {...newData} style={{ cursor: 'hand' }}>
+      <a {...newData} style={{ cursor: 'pointer' }}>
         {data.children}
       </a>
     );
