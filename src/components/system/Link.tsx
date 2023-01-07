@@ -20,7 +20,7 @@ export default function Link(data: any) {
       if (el) {
         try {
           if (data.to === location.pathname) {
-            el.removeEventListener('click', preventLink);
+            // el.removeEventListener('click', preventLink);
             // console.log('tog bort event');
           }
         } catch (e) {
