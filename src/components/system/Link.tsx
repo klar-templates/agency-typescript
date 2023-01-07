@@ -16,6 +16,12 @@ export default function Link(data: any) {
         e.stopPropagation();
         return false;
       },
+      onDoubleClick: function (e: any) {
+        console.log('nu1 double');
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      },
     };
     return <a {...newData}>{data.children}</a>;
   }

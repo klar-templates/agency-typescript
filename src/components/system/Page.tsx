@@ -97,7 +97,6 @@ export default function Page(data: IData) {
   // const sortedBlocks = sort(window.klarContext.currentPage.blocks);
   window.klarContext.currentPage.blocks.map((block: any) => {
     // This is going go be fixed. Only block needs to be forwarded in the future.
-    console.log('Check');
     const blockData: any = {
       block: { ...block.data, _id: block._id, _type: block._type },
       ui: KlarComponents,
