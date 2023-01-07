@@ -11,9 +11,9 @@ export default function Link(data: any) {
     }
     const el = linkRef?.current;
     if (el) {
-      // if (data.to === location.pathname) {
-      if (disable) {
-        console.log('disable');
+      if (data.to === location.pathname) {
+        // if (disable) {
+        // console.log('disable');
         if (linkRef.current) {
           el.addEventListener('click', preventLink);
         }
@@ -22,10 +22,10 @@ export default function Link(data: any) {
     return () => {
       if (el) {
         try {
-          // if (data.to === location.pathname) {
-          if (disable) {
-            setDisable(false);
-            console.log('enable');
+          if (data.to === location.pathname) {
+            // if (disable) {
+            // setDisable(false);
+            // console.log('enable');
             el.removeEventListener('click', preventLink);
             // console.log('tog bort event');
           }
@@ -34,17 +34,8 @@ export default function Link(data: any) {
         }
       }
     };
-  }, [disable]);
+  }, []);
   const linkData = { ...data, ref: linkRef };
   // console.log('Link loaded!');
-  return (
-    <LinkOriginal
-      {...linkData}
-      onClick={function () {
-        setDisable(true);
-      }}
-    >
-      {data.children}
-    </LinkOriginal>
-  );
+  return <LinkOriginal {...linkData}>{data.children}</LinkOriginal>;
 }
