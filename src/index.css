@@ -67,23 +67,15 @@
 
   /* Button */
   .btn {
-    @apply px-5 py-2 text-sm leading-5 rounded-lg font-semibold inline-flex items-center;
-  }
-
-  .btn [class^='material-icons'] {
-    @apply mr-1.5;
+    @apply pl-6 px-6 h-10 font-normal text-base rounded-lg leading-[1.313rem] inline-flex items-center relative overflow-hidden transition duration-[400ms] transition-[background];
   }
 
   .btn-text {
-    @apply dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-800;
-  }
-
-  .btn-link {
-    @apply text-primary-500 hover:bg-neutral-200;
+    @apply text-primary-500 dark:text-neutral-100 hover:bg-transparent dark:hover:bg-transparent;
   }
 
   .btn-filled {
-    @apply bg-primary-500 hover:bg-primary-700 text-white dark:bg-primary-100 dark:text-primary-800;
+    @apply bg-primary-500 text-white hover:bg-primary-700 dark:bg-primary-100 dark:text-primary-800;
   }
 
   .btn-filled-dark {
@@ -99,30 +91,102 @@
   }
 
   .btn-elevated {
-    @apply text-primary-500 dark:text-neutral-100 shadow shadow-black/[0.1] hover:shadow-black/[0.2] dark:shadow-black/25  hover:dark:shadow-black/50;
+    @apply text-primary-500 shadow shadow-black/10 hover:shadow-black/20 dark:text-neutral-100;
+    /* shadow-[0_0_0.5rem_rgba(0,0,0,0.3)] */
   }
 
   .btn:disabled {
     @apply opacity-[0.38];
   }
 
-  .btn-icon {
-    @apply py-2.5 px-3 rounded-full;
+  /* Extended buttons */
+  .btn-extended-start {
+    @apply pl-4 px-6;
   }
 
-  .btn-icon [class^='material-icons'] {
+  .btn-extended-start [class^='material-icons'],
+  .btn-extended-start .fa {
+    @apply mr-2 text-xl leading-5 w-5 h-5;
+  }
+
+  .btn-extended-end {
+    @apply pl-6 px-4;
+  }
+
+  .btn-extended-end [class^='material-icons'],
+  .btn-extended-end .fa {
+    @apply ml-2 text-xl leading-5 w-5 h-5;
+  }
+
+  /* Icon buttons */
+  .btn-icon {
+    @apply p-0 w-10 h-10 justify-center rounded-full text-xl;
+  }
+
+  .btn-icon [class^='material-icons'],
+  .btn-icon .fa {
     @apply m-0;
   }
 
   .btn-sm {
-    @apply px-3 py-1.5 text-xs;
+    @apply px-4 h-8 text-xs font-semibold;
   }
 
   .btn-lg {
-    @apply px-7 py-3 text-base;
+    @apply px-8 h-12 text-lg leading-5;
   }
 
   .btn-xl {
-    @apply px-10 py-4 text-base;
+    @apply px-10 h-14 text-base;
+  }
+
+  /* State buttons */
+  .btn-filled.btn-color-success {
+    @apply bg-green-600 hover:bg-green-700 focus:bg-green-800 dark:bg-green-100;
+  }
+
+  .btn-filled.btn-color-error {
+    @apply bg-red-500 hover:bg-red-600 focus:bg-red-700 dark:bg-red-100;
+  }
+
+  .btn-filled.btn-color-danger {
+    @apply bg-orange-500 hover:bg-orange-600 focus:bg-orange-700 dark:bg-orange-100;
+  }
+
+  .btn-filled.btn-color-info {
+    @apply bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 dark:bg-blue-100;
+  }
+
+  .btn-filled.btn-color-link {
+    @apply bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 dark:bg-blue-100;
+  }
+
+  /* Ripple */
+  .btn .ripple {
+    @apply absolute rounded-[50%] animate-[ripple_600ms_linear] bg-white/[0.7];
+  }
+
+  .btn-text .ripple,
+  .btn-link .ripple,
+  .btn-elevated .ripple,
+  .btn-outlined .ripple {
+    @apply bg-black/[0.1] dark:bg-white/[0.1];
+  }
+
+  .btn-filled .ripple {
+    @apply dark:bg-black/[0.1];
+  }
+
+  .btn-text .ripple,
+  .btn-link .ripple,
+  .btn-outlined .ripple {
+    @apply bg-primary/[0.3] dark:bg-primary-100/[0.3];
+  }
+
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
   }
 }
