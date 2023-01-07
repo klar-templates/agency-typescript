@@ -6,7 +6,7 @@ export default function Link(data: any) {
   useEffect(() => {
     function preventLink(e: any) {
       e.preventDefault();
-      console.log('uuu');
+      // console.log('uuu');
     }
     const el = linkRef?.current;
     if (el) {
@@ -21,7 +21,7 @@ export default function Link(data: any) {
         try {
           if (data.to === location.pathname) {
             el.removeEventListener('click', preventLink);
-            console.log('tog bort event');
+            // console.log('tog bort event');
           }
         } catch (e) {
           console.log(e);
@@ -30,6 +30,6 @@ export default function Link(data: any) {
     };
   }, []);
   const linkData = { ...data, ref: linkRef };
-  console.log('Link loaded!');
+  // console.log('Link loaded!');
   return <LinkOriginal {...linkData}>{data.children}</LinkOriginal>;
 }
