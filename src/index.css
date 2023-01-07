@@ -10,11 +10,25 @@
       'Noto Color Emoji';
   }
 
+  body {
+    color: rgb(var(--neutral-900));
+  }
+
+  .dark body {
+    color: rgb(var(--neutral-50));
+  }
+
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5,
+  h6 {
     @apply font-bold;
+    font-family: var(--font-display), system-ui, -apple-system,
+      BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+      'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol', 'Noto Color Emoji';
   }
 }
 

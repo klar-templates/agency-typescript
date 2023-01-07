@@ -62,17 +62,11 @@ export default function Layout(data: any) {
 
   body {
     background-color: ${data.theme.lightmode.bg_color};
-    color: rgb(var(--neutral-900));
     font-size: ${data.theme.typography.text_base_size}px;
   }
-
+  
   .dark body {
     background-color: ${data.theme.darkmode.bg_color};
-    color: rgb(var(--neutral-50));
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: ${data.theme.typography.font_display}${fallbackFonts};
   }`;
 
   let headElementsArray: any = [];
