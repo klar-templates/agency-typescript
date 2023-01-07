@@ -60,7 +60,6 @@ let KlarComponents: any = {
 window.React = React;
 // window.KlarComponents = KlarComponents;
 window.KlarLink = Link;
-window.KlarNavigate = useNavigate();
 if (window.templateComponents) {
   Components = { ...Components, ...window.templateComponents };
 }
@@ -134,6 +133,7 @@ function createContext(data: IData) {
     });
     window.templateLoaded = true;
   }
+  window.KlarNavigate = routeNavigate;
   // const pathname = '/startsida';
   const pathname = routeLocation.pathname;
   let currentPage;
