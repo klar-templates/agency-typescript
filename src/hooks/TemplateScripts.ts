@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 export default function PageTransition() {
   const routePath = useLocation();
   const runScripts = () => {
-    console.log('Run scripts');
+    // console.log('Run scripts');
     function createRipple(event: any) {
       const el = event.currentTarget;
 
