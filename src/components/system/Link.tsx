@@ -8,7 +8,7 @@ export default function Link(data: any) {
     // delete data.to;
     const newData = {
       ...data,
-      href: href,
+      // href: href,
       onClick: function (e: any) {
         e.preventDefault();
       },
@@ -16,7 +16,11 @@ export default function Link(data: any) {
         e.preventDefault();
       },
     };
-    return <a {...newData}>{data.children}</a>;
+    return (
+      <a {...newData} style={{ cursor: 'hand' }}>
+        {data.children}
+      </a>
+    );
   }
   console.log('nooooo');
   return <LinkOriginal {...data}>{data.children}</LinkOriginal>;
