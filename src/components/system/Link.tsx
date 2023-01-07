@@ -1,6 +1,7 @@
 import { Link as LinkOriginal } from 'react-router-dom';
 
 export default function Link(data: any) {
+  console.log('agaaain');
   if (data.to === location.pathname) {
     console.log(location.pathname);
     console.log(data.to);
