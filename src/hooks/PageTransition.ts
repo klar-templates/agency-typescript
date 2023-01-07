@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 export default function PageTransition() {
   const routePath = useLocation();
   const goToTop = () => {
-    console.log('Go to top!');
+    // console.log('Go to top!');
     window.scrollTo(0, 0);
   };
   useEffect(() => {

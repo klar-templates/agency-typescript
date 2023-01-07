@@ -9,7 +9,6 @@ import App from './App';
 import './index.css';
 
 if (!window.PubSub && !window.releaseReactApp) {
-  console.log('l');
   /**
    * @fileOverview Publish and subscribe module
    * @author <a href="mailto:brianfegan@gmail.com">Brian Fegan</a>
