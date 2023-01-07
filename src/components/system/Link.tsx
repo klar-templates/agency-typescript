@@ -4,8 +4,10 @@ export default function Link(data: any) {
   if (data.to === location.pathname) {
     console.log(location.pathname);
     console.log(data.to);
-    data.href == data.to;
-    return <a {...data}>{data.children}</a>;
+    const href = data.to;
+    delete data.to;
+    const newData = { ...data, href: href };
+    return <a {...newData}>{data.children}</a>;
   }
   return <LinkOriginal {...data}>{data.children}</LinkOriginal>;
 }
