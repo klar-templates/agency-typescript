@@ -23,11 +23,12 @@ export default function Link(data: any) {
         return false;
       },
     };
-    return (
-      <a {...newData} style={{ pointerEvents: 'none', cursor: 'pointer' }}>
-        {data.children}
-      </a>
-    );
+    return <a {...newData}>{data.children}</a>;
+    // return (
+    //   <a {...newData} style={{ pointerEvents: 'none', cursor: 'pointer' }}>
+    //     {data.children}
+    //   </a>
+    // );
   }
   console.log('nooooo');
   return <LinkOriginal {...data}>{data.children}</LinkOriginal>;
