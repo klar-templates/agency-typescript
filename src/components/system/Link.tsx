@@ -24,7 +24,7 @@ export default function Link(data: any) {
       },
     };
     return (
-      <a {...newData} style={{ pointerEvents: 'none' }}>
+      <a {...newData} style={{ pointerEvents: 'none', cursor: 'pointer' }}>
         {data.children}
       </a>
     );
