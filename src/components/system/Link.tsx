@@ -15,5 +15,6 @@ export default function Link(data: any) {
     };
     return <a {...newData}>{data.children}</a>;
   }
+  console.log('nooooo');
   return <LinkOriginal {...data}>{data.children}</LinkOriginal>;
 }
