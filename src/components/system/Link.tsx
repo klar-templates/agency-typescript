@@ -22,8 +22,11 @@ export default function Link(data: any) {
     return () => {
       if (el) {
         try {
-          if (data.to === location.pathname) {
-            // el.removeEventListener('click', preventLink);
+          // if (data.to === location.pathname) {
+          if (disable) {
+            setDisable(false);
+            console.log('enable');
+            el.removeEventListener('click', preventLink);
             // console.log('tog bort event');
           }
         } catch (e) {
