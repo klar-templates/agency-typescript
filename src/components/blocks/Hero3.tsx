@@ -58,7 +58,7 @@ export default function Hero3(data: any) {
               </div>
             )}
             {show_button && (
-              <window.KlarLink
+              <Link
                 to="/"
                 className="button text-on-primary bg-primary dark:bg-primary-dark"
                 data-field-string="link_text"
@@ -66,7 +66,7 @@ export default function Hero3(data: any) {
                 data-placement="bottom"
               >
                 {link_text}
-              </window.KlarLink>
+              </Link>
             )}
           </div>
         </div>
