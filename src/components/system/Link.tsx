@@ -11,13 +11,6 @@ export default function Link(data: any) {
       href: href,
       onClick: function (e: any) {
         e.preventDefault();
-        e.stopImmediatePropagation();
-        e.stopPropagation();
-        return false;
-      },
-      onDoubleClick: function (e: any) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
         e.stopPropagation();
         return false;
       },
