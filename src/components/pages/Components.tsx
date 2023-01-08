@@ -20,9 +20,9 @@ export default function Components(data: any) {
       if (window.templateConfig) {
         console.log(config);
         console.log(window.templateConfig);
-        // config['block_types'] = config.block_types.concat(
-        //   window.templateConfig.block_types,
-        // );
+        config['block_types'] = config.block_types.concat(
+          window.templateConfig.block_types,
+        );
         config['data_defaults'].blocks = {
           ...config.data_defaults.blocks,
           ...window.templateConfig.data_defaults.blocks,
