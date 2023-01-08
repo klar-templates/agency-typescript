@@ -4,7 +4,6 @@ import IData from '../../service/interface/IData';
 import ComponentsBlock from '../pages/Components';
 import Styleguide from '../pages/Styleguide';
 import Layout from './Layout';
-import Header from '../blocks/Header';
 import Header2 from '../blocks/Header2';
 import Header3 from '../blocks/Header3';
 import Hero from '../blocks/Hero';
@@ -31,7 +30,6 @@ import Button from '../elements/Button';
 import Link from '../system/Link';
 
 let Components: any = {
-  Header: Header,
   Header2: Header2,
   Header3: Header3,
   Hero: Hero,

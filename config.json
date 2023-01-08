@@ -301,47 +301,6 @@
   ],
   "block_types": [
     {
-      "title": "Header",
-      "name": "header",
-      "icon": "navicon",
-      "hidden": false,
-      "type": "object",
-      "fields": [
-        {
-          "title": "title",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Beskrivning",
-          "name": "description",
-          "type": "text"
-        },
-        {
-          "title": "Style",
-          "name": "style",
-          "type": "object",
-          "fields": [
-            {
-              "title": "title",
-              "name": "title",
-              "type": "string"
-            },
-            {
-              "title": "Beskrivning",
-              "name": "description",
-              "type": "text"
-            },
-            {
-              "title": "Style",
-              "name": "style",
-              "type": "object"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "Header 2",
       "name": "header2",
       "icon": "image",
