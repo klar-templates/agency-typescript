@@ -304,7 +304,7 @@
       "title": "Header 2",
       "name": "header2",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": []
     },
@@ -470,7 +470,7 @@
       "title": "Hero 1",
       "name": "hero1",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": []
     },
@@ -478,7 +478,7 @@
       "title": "Hero 2",
       "name": "hero2",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": []
     },
@@ -554,7 +554,7 @@
       "title": "About 1",
       "name": "about1",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": []
     },
@@ -562,7 +562,7 @@
       "title": "Elements",
       "name": "elements",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": []
     },
@@ -570,7 +570,7 @@
       "title": "Pricing",
       "name": "pricing",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": [
         {
@@ -619,7 +619,7 @@
       "title": "Cards 1",
       "name": "cards1",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": []
     },
@@ -627,7 +627,7 @@
       "title": "Team 1",
       "name": "team1",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": []
     },
@@ -635,7 +635,7 @@
       "title": "Team 2",
       "name": "team2",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": []
     },

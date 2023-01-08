@@ -58,7 +58,6 @@ export default function Components(data: any) {
   if (!config) {
     return null;
   }
-  // console.log('tiiiiiiiime')
 
   const dataDefaults = config.data_defaults.blocks;
   const Components = data.components;
@@ -86,6 +85,9 @@ export default function Components(data: any) {
       if (data.only !== blockType.name) {
         return null;
       }
+    }
+    if (blockType.hidden) {
+      return null;
     }
     if (DynamicComponent) {
       blockArray.push(
