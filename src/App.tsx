@@ -150,7 +150,7 @@ function App(): any {
               element={<Navigate replace to={currentPageInKlar} />}
             />
           )}
-        {/* This code could potentially be needed.
+        {/* This code could potentially be needed. */}
         {window.klarContext.isInKlar &&
           data.pages.length > 0 &&
           currentPageInKlar !== '/' && (
@@ -158,7 +158,7 @@ function App(): any {
               path="/"
               element={<Navigate replace to={currentPageInKlar} />}
             />
-          )} */}
+          )}
         {/* {!window.klarContext.isInKlar && (
         <Route
           path={startpage._path}
