@@ -136,7 +136,7 @@ export default function Components(data: any) {
 }
 
 function Style() {
-  const style = `
+  let style = `
   <style>
     body {
       transform: scale(0.20);
@@ -172,6 +172,7 @@ function Style() {
     }
   </style>
   `;
+  style = ``;
   return <div dangerouslySetInnerHTML={{ __html: style }} />;
   if (window.klarContext.isInKlar) {
     return <div dangerouslySetInnerHTML={{ __html: style }} />;
