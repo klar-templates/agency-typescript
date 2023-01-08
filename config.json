@@ -407,10 +407,10 @@
       ]
     },
     {
-      "title": "Hero - test",
+      "title": "Hero",
       "name": "hero",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": [
         {
