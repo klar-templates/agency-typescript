@@ -99,9 +99,9 @@ export default function Components(data: any) {
         return null;
       }
     }
-    if (blockType.hidden) {
-      return null;
-    }
+    // if (blockType.hidden) {
+    //   return null;
+    // }
     if (DynamicComponent) {
       blockArray.push(
         <KlarEditBlock
