@@ -451,7 +451,7 @@
       "title": "Hero book",
       "name": "hero-book",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": [
         {
