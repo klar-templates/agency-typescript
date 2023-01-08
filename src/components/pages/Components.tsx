@@ -18,6 +18,8 @@ export default function Components(data: any) {
       // console.log('whhhhhhaaaat')
       let config = conf;
       if (window.templateConfig) {
+        console.log(config);
+        console.log(window.templateConfig);
         config['block_types'] = config.block_types.concat(
           window.templateConfig.block_types,
         );
