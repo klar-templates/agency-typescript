@@ -486,7 +486,7 @@
       "title": "Hero 3",
       "name": "hero3",
       "icon": "image",
-      "hidden": false,
+      "hidden": true,
       "type": "object",
       "fields": [
         {
