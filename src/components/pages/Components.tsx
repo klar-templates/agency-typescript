@@ -20,7 +20,7 @@ export default function Components(data: any) {
       if (window.templateConfig) {
         config = { ...config, ...window.templateConfig };
       }
-      setConfig(conf);
+      setConfig(config);
       // getData('agency-typescript');
     }
     setTimeout(() => {
