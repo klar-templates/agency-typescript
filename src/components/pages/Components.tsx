@@ -23,10 +23,10 @@ export default function Components(data: any) {
         // config['block_types'] = config.block_types.concat(
         //   window.templateConfig.block_types,
         // );
-        // config['data_defaults'].blocks = {
-        //   ...config.data_defaults.blocks,
-        //   ...window.templateConfig.data_defaults.blocks,
-        // };
+        config['data_defaults'].blocks = {
+          ...config.data_defaults.blocks,
+          ...window.templateConfig.data_defaults.blocks,
+        };
       }
       setConfig(config);
       // getData('agency-typescript');
