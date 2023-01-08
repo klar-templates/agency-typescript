@@ -16,6 +16,10 @@ export default function Components(data: any) {
     } else {
       // Param: Site name in Klar
       // console.log('whhhhhhaaaat')
+      let config = conf;
+      if (window.templateConfig) {
+        config = { ...config, ...window.templateConfig };
+      }
       setConfig(conf);
       // getData('agency-typescript');
     }
