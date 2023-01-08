@@ -84,7 +84,14 @@ export default function Page(data: IData) {
     return null;
   }
   if (window.klarContext.pathname === '/components') {
-    return <ComponentsBlock {...data} components={Components} nly="elements" />;
+    return (
+      <ComponentsBlock
+        {...data}
+        components={Components}
+        ui={KlarComponents}
+        nly="elements"
+      />
+    );
   }
   if (window.klarContext.pathname === '/styleguide') {
     return <Styleguide {...data} />;

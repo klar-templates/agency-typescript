@@ -84,6 +84,7 @@ export default function Components(data: any) {
     // This is going go be fixed. Only block needs to be forwarded in the future.
     const blockData: any = {
       block: { ...block, _id: blockType.name, _type: blockType.name },
+      ui: data.ui,
     };
 
     let componentName = blockType.name;
