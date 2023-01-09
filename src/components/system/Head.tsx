@@ -73,7 +73,7 @@ export default function Layout(data: any) {
   } else {
     let headElements: any = data.site.data.head.head_elements_array;
     if (headElements) {
-      headElements.push('<meta name="title" content="{{_menu_item_name}}">');
+      // headElements.push('<meta name="title" content="{{_menu_item_name}}">');
       headElements.map((headElement: any, i: any) => {
         headElementsArray.push(
           htmlStrToReactComponent(headElement, `head-element-${i}`),
