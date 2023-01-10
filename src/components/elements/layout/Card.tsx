@@ -50,7 +50,7 @@ export default function Card(data: any) {
               className="hover:text-on-surface-variant transition duration-150 ease-in-out"
               href="#0"
             >
-              Designing a functional workflow at home. åäö
+              Designing a functional workflow at home.
             </a>
           </h3>
         </header>
