@@ -33,7 +33,7 @@ export default function Card1(data: any) {
                     href="#0"
                   >
                     <h3 className="text-[22px] font-bold leading-snug">
-                      The Ultimate JavaScript Course åäö
+                      The Ultimate JavaScript Course
                     </h3>
                   </a>
                 </header>
