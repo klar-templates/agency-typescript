@@ -145,7 +145,7 @@ export default function Nunjucks(data: any) {
   const [template, setTemplate] = useState(getTemplateOnInit(data));
   const containerRef: any = useRef(null);
   // useScript(containerRef);
-  nunjucks.configure({ autoescape: false });
+  // nunjucks.configure({ autoescape: false });
   const cacheKeyTemplate = `${data.block._id}`;
   let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
 
