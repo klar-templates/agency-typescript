@@ -5,7 +5,10 @@ export default function PageTransition() {
   const routePath = useLocation();
   const goToTop = () => {
     // console.log('Go to top!');
-    window.scrollTo(0, 0);
+    if (window.klarContext.isInKlar || window.initTemplate) {
+    } else {
+      window.scrollTo(0, 0);
+    }
   };
   useEffect(() => {
     goToTop();
