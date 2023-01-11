@@ -188,7 +188,7 @@ export default function Nunjucks(data: any) {
         }
       }
     };
-  }, [template]);
+  }, [window.klarContext]);
 
   // This is when you're in this application, when in Klar get the template file from the Klar application.
   function getTemplate(templateName: string) {
