@@ -151,7 +151,6 @@ export default function Nunjucks(data: any) {
 
   useEffect(() => {
     // Get Nunjucks template
-    console.log('useeffect');
     let script: any;
     if (window.production) {
       script = renderInlineScript(containerRef);
