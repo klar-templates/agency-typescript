@@ -233,10 +233,5 @@ export default function Nunjucks(data: any) {
 
   renderedTemplate = nunjucks.renderString(template, data);
 
-  return (
-    <div
-      ref={containerRef}
-      dangerouslySetInnerHTML={{ __html: renderedTemplate }}
-    />
-  );
+  return <div ref={containerRef} />;
 }
