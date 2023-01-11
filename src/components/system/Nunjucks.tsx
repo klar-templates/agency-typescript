@@ -23,6 +23,7 @@ function renderInlineScript(ref: any) {
   let s: Node & scriptInline;
   if (ref?.current) {
     // window.nunjucksScriptHasBeenLoaded = true;
+
     const container: any = ref.current;
     const codeStr = container.querySelector('script')?.innerHTML;
     if (codeStr) {
@@ -151,6 +152,9 @@ export default function Nunjucks(data: any) {
 
   useEffect(() => {
     // Get Nunjucks template
+    containerRef.current.innerHTML = renderedTemplate;
+    console.log('new');
+    return;
     let script: any;
     if (window.production) {
       script = renderInlineScript(containerRef);
