@@ -151,6 +151,7 @@ export default function Nunjucks(data: any) {
 
   useEffect(() => {
     // Get Nunjucks template
+    console.log('useeffect');
     let script: any;
     if (window.production) {
       script = renderInlineScript(containerRef);
@@ -187,7 +188,7 @@ export default function Nunjucks(data: any) {
         }
       }
     };
-  }, []);
+  }, [template]);
 
   // This is when you're in this application, when in Klar get the template file from the Klar application.
   function getTemplate(templateName: string) {
