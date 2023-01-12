@@ -232,7 +232,7 @@ export default function Nunjucks(props: any) {
     window.nunjucksSetData = {};
   }
   props.set_data = setData;
-  window.nunjucksSetData[props._id] = setData;
+  window.nunjucksSetData[props.block._id] = setData;
   props.data = data;
   renderedTemplate = nunjucks.renderString(template, props);
 
