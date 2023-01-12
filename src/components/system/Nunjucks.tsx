@@ -141,12 +141,13 @@ function getTemplateOnInit(data: any) {
   }
 }
 
-export default function Nunjucks(data: any) {
-  const [template, setTemplate] = useState(getTemplateOnInit(data));
+export default function Nunjucks(props: any) {
+  const [data, setData] = useState(null);
+  const [template, setTemplate] = useState(getTemplateOnInit(props));
   const containerRef: any = useRef(null);
   // useScript(containerRef);
   nunjucks.configure({ autoescape: false });
-  const cacheKeyTemplate = `${data.block._id}`;
+  const cacheKeyTemplate = `${props.block._id}`;
   let renderedTemplate = localStorage.getItem(cacheKeyTemplate) as string;
 
   useEffect(() => {
@@ -157,19 +158,19 @@ export default function Nunjucks(data: any) {
     } else if (window.klarContext.isInKlar) {
       script = renderInlineScript(containerRef);
       //   let template =
-      //     parent.frames.window.klar.templates.blocks[data.block._type];
+      //     parent.frames.window.klar.templates.blocks[props.block._type];
       //   if (template) {
       //     setTemplate(template.content);
       //   } else {
-      //     console.log('No template content for this block:', data.block._type);
+      //     console.log('No template content for this block:', props.block._type);
       //   }
     } else {
       // if (
       //   parent.frames &&
       //   parent.frames.initTemplate &&
-      //   !templates[data.block._type]
+      //   !templates[props.block._type]
       // ) {
-      //   getTemplate(data.block._type);
+      //   getTemplate(props.block._type);
       // } else {
       script = renderInlineScript(containerRef);
       // }
@@ -204,21 +205,21 @@ export default function Nunjucks(data: any) {
       const response = await fetch(`/blocks/${templateName}.html`);
       return response.text();
     }
-    requestData().then((data: any) => {
-      // localStorage.setItem(cacheKey, data);
-      window[cacheKey] = data;
-      // console.log(data);
-      if (data && data.indexOf('<!DOCTYPE html>') === -1) {
-        setTemplate(data);
+    requestData().then((props: any) => {
+      // localStorage.setItem(cacheKey, props);
+      window[cacheKey] = props;
+      // console.log(props);
+      if (props && props.indexOf('<!DOCTYPE html>') === -1) {
+        setTemplate(props);
         renderInlineScript(containerRef);
       } else {
         console.log('No template content for block:', templateName);
       }
     });
     // } else {
-    //   // const data = localStorage.getItem(cacheKey) as string;
-    //   const data = window[cacheKey];
-    //   setTemplate(data);
+    //   // const props = localStorage.getItem(cacheKey) as string;
+    //   const props = window[cacheKey];
+    //   setTemplate(props);
     //   renderInlineScript(containerRef);
     // }
   }
@@ -227,7 +228,13 @@ export default function Nunjucks(data: any) {
     return null;
   }
 
-  renderedTemplate = nunjucks.renderString(template, data);
+  if (!window.nunjucksSetData) {
+    window.nunjucksSetData = {};
+  }
+  props.set_data = setData;
+  window.nunjucksSetData[props._id] = setData;
+  props.data = data;
+  renderedTemplate = nunjucks.renderString(template, props);
 
   return (
     <div
