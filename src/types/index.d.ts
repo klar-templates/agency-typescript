@@ -28,7 +28,7 @@ declare global {
     templateJs: any;
     nunjucksScriptHasBeenLoaded: any;
     PubSub: any;
-    nunjucksSetData: any;
+    nunjucksSetState: any;
     React: any;
   }
 }

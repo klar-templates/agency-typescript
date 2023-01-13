@@ -142,7 +142,7 @@ function getTemplateOnInit(data: any) {
 }
 
 export default function Nunjucks(props: any) {
-  const [data, setData] = useState(null);
+  const [state, setState] = useState(null);
   const [template, setTemplate] = useState(getTemplateOnInit(props));
   const containerRef: any = useRef(null);
   // useScript(containerRef);
@@ -228,12 +228,12 @@ export default function Nunjucks(props: any) {
     return null;
   }
 
-  if (!window.nunjucksSetData) {
-    window.nunjucksSetData = {};
+  if (!window.nunjucksSetState) {
+    window.nunjucksSetState = {};
   }
-  props.set_data = setData;
-  window.nunjucksSetData[props.block._id] = setData;
-  props.data = data;
+  props.set_data = setState;
+  window.nunjucksSetState[props.block._id] = setState;
+  props.state = state;
   renderedTemplate = nunjucks.renderString(template, props);
 
   return (
