@@ -231,7 +231,6 @@ export default function Nunjucks(props: any) {
   if (!window.nunjucksSetState) {
     window.nunjucksSetState = {};
   }
-  props.set_data = setState;
   window.nunjucksSetState[props.block._id] = setState;
   props.state = state;
   renderedTemplate = nunjucks.renderString(template, props);
