@@ -47,7 +47,7 @@ export default function Card(data: any) {
           </div>
           <h3 className="text-2xl lg:text-2xl font-bold leading-tight mb-2">
             <a
-              className="hover:text-on-surface-variant transition duration-150 ease-in-out"
+              className="text-neutral-900 hover:text-neutral-700 transition duration-150 ease-in-out"
               href="#0"
             >
               Designing a functional workflow at home.
@@ -70,7 +70,7 @@ export default function Card(data: any) {
           </a>
           <div className="">
             <a
-              className="font-medium text-on-surface hover:text-on-surface-variant transition duration-150 ease-in-out"
+              className="font-medium text-neutral-900 hover:text-neutral-700 transition duration-150 ease-in-out"
               href="#0"
             >
               Chris Solerieu
