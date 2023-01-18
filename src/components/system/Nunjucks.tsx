@@ -116,7 +116,8 @@ function getTemplateOnInit(data: any) {
     //   console.log('No template content for this block:', data.block._type);
     // }
   } else if (location.host.includes('.github.io')) {
-    template = window.nunjucksTemplates[data.block._type];
+    // template = window.nunjucksTemplates[data.block._type];
+    template = templates[data.block._type];
     // if (template) {
     //   return template;
     // } else {

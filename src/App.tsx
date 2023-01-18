@@ -281,7 +281,7 @@ function App(): any {
                 dangerouslySetInnerHTML={{
                   __html: `window.hydratedData = ${JSON.stringify({
                     ...data,
-                  })}`,
+                  }).replace(/<\/script>/gm, '<\\/script>')}`,
                 }}
               />
             </>
