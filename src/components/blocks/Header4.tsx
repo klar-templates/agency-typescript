@@ -119,7 +119,7 @@ export default function Header4(data: any) {
           </div>
           <ul className="hidden font-display md:flex md:min-w-0 md:shrink md:justify-end md:gap-x-12">
             {navigation.map((item: any, index: any) => (
-              <li key={item.link}>
+              <li key={index}>
                 <a
                   className="page-scroll font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap"
                   href={item.link}
