@@ -311,7 +311,7 @@
     {
       "title": "Header",
       "name": "header3",
-      "icon": "image",
+      "icon": "navicon",
       "hidden": false,
       "global": true,
       "type": "object",
@@ -407,7 +407,7 @@
       ]
     },
     {
-      "title": "Header - One",
+      "title": "Header 4",
       "name": "header4",
       "icon": "navicon",
       "hidden": false,

@@ -2,16 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from '../../utils/classNames';
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-];
-
 export default function Header4(data: any) {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
-  const { _id, _type, logo_text, style } = data.block;
+  const { _id, _type, logo_text, navigation, style } = data.block;
 
   let backgroundImage;
 
@@ -124,8 +117,22 @@ export default function Header4(data: any) {
               </svg>
             </button>
           </div>
-          <div className="hidden font-display md:flex md:min-w-0 md:shrink md:justify-end md:gap-x-12">
-            {window.klarContext.data.pages.map((page: any, i: any) => (
+          <ul className="hidden font-display md:flex md:min-w-0 md:shrink md:justify-end md:gap-x-12">
+            {navigation.map((item: any, index: any) => (
+              <li>
+                <a
+                  className="page-scroll font-semibold list-none whitespace-nowrap text-primary dark:text-primary"
+                  href={item.link}
+                  target={`${item.open_in_new_page} ? '_blank' : '_self'`}
+                  data-field-string={`navigation[${index}].title`}
+                  data-field-string-format-uri="navigation[{{loop.index0}}].link"
+                  data-placement="bottom"
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
+            {/* {navigation.map((page: any, i: any) => (
               <li
                 key={i}
                 className={
@@ -140,7 +147,7 @@ export default function Header4(data: any) {
                   {page._menu_item_name}
                 </Link>
               </li>
-            ))}
+            ))} */}
             {/* {navigation.map((item) => (
               <a
                 key={item.name}
@@ -150,7 +157,7 @@ export default function Header4(data: any) {
                 {item.name}
               </a>
             ))} */}
-          </div>
+          </ul>
           {/* <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
             <a
               href="#"
