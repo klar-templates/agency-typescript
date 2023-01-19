@@ -119,12 +119,9 @@ export default function Header4(data: any) {
           </div>
           <ul className="hidden font-display md:flex md:min-w-0 md:shrink md:justify-end md:gap-x-12">
             {navigation.map((item: any, index: any) => (
-              <li
-                key={item.link}
-                className="font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap"
-              >
+              <li key={item.link}>
                 <a
-                  className="page-scroll"
+                  className="page-scroll font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap"
                   href={item.link}
                   target={item.open_in_new_page ? '_blank' : '_self'}
                   data-field-string={`navigation[${index}].title`}
@@ -135,31 +132,6 @@ export default function Header4(data: any) {
                 </a>
               </li>
             ))}
-            {/* {navigation.map((page: any, i: any) => (
-              <li
-                key={i}
-                className={
-                  page._id ===
-                  (window.klarContext.currentPage &&
-                    window.klarContext.currentPage._id)
-                    ? 'font-semibold list-none whitespace-nowrap text-primary dark:text-primary'
-                    : 'font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap'
-                }
-              >
-                <Link to={i === 0 ? window.siteConfig.publicPath : page._path}>
-                  {page._menu_item_name}
-                </Link>
-              </li>
-            ))} */}
-            {/* {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="font-semibold text-on-background hover:text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))} */}
           </ul>
           {/* <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
             <a
