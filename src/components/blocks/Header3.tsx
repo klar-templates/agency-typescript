@@ -2,13 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from '../../utils/classNames';
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-];
-
 export default function Header3(data: any) {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const { _id, _type, logo_text, style } = data.block;
@@ -124,19 +117,19 @@ export default function Header3(data: any) {
               </svg>
             </button>
           </div>
-          <div className="hidden font-display md:flex md:min-w-0 md:shrink md:justify-end md:gap-x-12">
+          <ul className="hidden font-display md:flex md:min-w-0 md:shrink md:justify-end md:gap-x-12">
             {window.klarContext.data.pages.map((page: any, i: any) => (
-              <li
-                key={i}
-                className={
-                  page._id ===
-                  (window.klarContext.currentPage &&
-                    window.klarContext.currentPage._id)
-                    ? 'font-semibold list-none whitespace-nowrap text-primary dark:text-primary'
-                    : 'font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap'
-                }
-              >
-                <Link to={i === 0 ? window.siteConfig.publicPath : page._path}>
+              <li key={i}>
+                <Link
+                  to={i === 0 ? window.siteConfig.publicPath : page._path}
+                  className={
+                    page._id ===
+                    (window.klarContext.currentPage &&
+                      window.klarContext.currentPage._id)
+                      ? 'font-semibold list-none whitespace-nowrap text-primary dark:text-primary'
+                      : 'font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap'
+                  }
+                >
                   {page._menu_item_name}
                 </Link>
               </li>
@@ -150,7 +143,7 @@ export default function Header3(data: any) {
                 {item.name}
               </a>
             ))} */}
-          </div>
+          </ul>
           {/* <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
             <a
               href="#"
