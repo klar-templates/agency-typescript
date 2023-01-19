@@ -134,15 +134,6 @@ export default function Header3(data: any) {
                 </Link>
               </li>
             ))}
-            {/* {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="font-semibold text-on-background hover:text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))} */}
           </ul>
           {/* <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
             <a
