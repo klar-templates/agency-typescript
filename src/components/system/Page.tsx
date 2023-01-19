@@ -6,6 +6,7 @@ import Styleguide from '../pages/Styleguide';
 import Layout from './Layout';
 import Header2 from '../blocks/Header2';
 import Header3 from '../blocks/Header3';
+import Header4 from '../blocks/Header4';
 import Hero1 from '../blocks/Hero1';
 import Hero2 from '../blocks/Hero2';
 import Hero3 from '../blocks/Hero3';
@@ -31,6 +32,7 @@ import Link from '../system/Link';
 let Components: any = {
   Header2: Header2,
   Header3: Header3,
+  Header4: Header4,
   Hero1: Hero1,
   Hero2: Hero2,
   Hero3: Hero3,

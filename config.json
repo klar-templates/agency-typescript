@@ -407,6 +407,135 @@
       ]
     },
     {
+      "title": "Header - One",
+      "name": "header4",
+      "icon": "navicon",
+      "hidden": false,
+      "type": "object",
+      "fields": [
+        { "title": "Logotext", "name": "logo_text", "type": "string" },
+        {
+          "title": "Navigation",
+          "name": "navigation",
+          "type": "array",
+          "of": [
+            {
+              "title": "Länk",
+              "type": "object",
+              "display_field": "title",
+              "fields": [
+                {
+                  "title": "Title",
+                  "name": "title",
+                  "type": "string",
+                  "default": "New link"
+                },
+                {
+                  "title": "Länk",
+                  "name": "link",
+                  "type": "string",
+                  "format": "uri",
+                  "default": "#"
+                },
+                {
+                  "title": "Open in new page",
+                  "name": "open_in_new_page",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Style",
+          "name": "style",
+          "type": "object",
+          "fields": [
+            {
+              "title": "Darkmode",
+              "name": "darkmode",
+              "type": "boolean",
+              "ui:widget": "switch"
+            },
+            {
+              "title": "Transparent",
+              "name": "transparent",
+              "type": "boolean",
+              "ui:widget": "switch"
+            },
+            {
+              "title": "Bakgrundsfärg",
+              "name": "bg_color",
+              "type": "string",
+              "format": "color"
+            },
+            {
+              "title": "Shadow",
+              "name": "shadow",
+              "type": "string",
+              "enum": [
+                "none",
+                "drop-shadow-sm",
+                "drop-shadow",
+                "drop-shadow-md",
+                "drop-shadow-lg",
+                "drop-shadow-xl",
+                "drop-shadow-2xl"
+              ]
+            },
+            {
+              "title": "border bottom width",
+              "name": "border_bottom_width",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            {
+              "title": "Border bottom color",
+              "name": "border_bottom_color",
+              "type": "string",
+              "format": "color"
+            },
+            {
+              "type": "integer",
+              "name": "margin_bottom",
+              "title": "Push up content",
+              "minimum": -100,
+              "maximum": 0
+            },
+            {
+              "title": "Gradient",
+              "name": "gradient",
+              "type": "string",
+              "enum": [
+                "none",
+                "bg-gradient-to-t",
+                "bg-gradient-to-tr",
+                "bg-gradient-to-r",
+                "bg-gradient-to-br",
+                "bg-gradient-to-b",
+                "bg-gradient-to-bl",
+                "bg-gradient-to-l",
+                "bg-gradient-to-tl"
+              ]
+            },
+            {
+              "title": "Gradient from",
+              "name": "gradient_from",
+              "type": "string",
+              "format": "color"
+            },
+            {
+              "title": "Gradient to",
+              "name": "gradient_to",
+              "type": "string",
+              "format": "color"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "Hero",
       "name": "hero",
       "icon": "image",
@@ -1420,6 +1549,79 @@
         }
       },
       "header3": {
+        "logo_text": "The Page",
+        "navigation": [
+          {
+            "title": "Services",
+            "link": "#services"
+          },
+          {
+            "title": "Portfolio",
+            "link": "#portfolio"
+          },
+          {
+            "title": "About",
+            "link": "#about"
+          },
+          {
+            "title": "Team",
+            "link": "#team"
+          },
+          {
+            "title": "Contact",
+            "link": "#contact"
+          }
+        ],
+        "style": {
+          "darkmode": false,
+          "transparent": true,
+          "shadow": "none",
+          "bg_color": "transparent",
+          "margin_bottom": 0,
+          "gradient": "none",
+          "gradient_from": "#000",
+          "gradient_to": "#fff",
+          "navbar": {
+            "transparent": true,
+            "shadow": "none",
+            "sticky": true,
+            "bg_color": "transparent",
+            "margin_bottom": 0,
+            "padding_top": 25,
+            "padding_bottom": 25,
+            "border_bottom_width": 0,
+            "border_bottom_color": "transparent",
+            "show_overlay": false,
+            "overlay_bg_color": "#000000",
+            "overlay_opacity": 20,
+            "margin_top_next_block": 0
+          },
+          "logo": {
+            "text_color": "{{theme.colors.primary_color}}",
+            "text_hover_color": "{{theme.colors.primary_color}}",
+            "text_focus_color": "{{theme.colors.primary_color}}",
+            "font_family": "Kaushan Script",
+            "image": "https://assets.brandfolder.com/8w7lv8ml/view.png",
+            "padding_top": 12,
+            "width": 125,
+            "show": false
+          },
+          "navigation": {
+            "text_color": "#fff",
+            "text_hover_color": "{{theme.colors.primary_color}}",
+            "text_active_color": "{{theme.colors.primary_color}}",
+            "text_focus_color": "{{theme.colors.primary_color}}",
+            "bg_text_color": "transparent",
+            "bg_text_hover_color": "transparent",
+            "bg_text_active_color": "{{theme.colors.primary_color}}",
+            "bg_text_focus_color": "{{theme.colors.primary_color}}",
+            "mobile_menu_button_bg_color": "{{theme.colors.primary_color}}",
+            "mobile_menu_button_hover_bg_color": "{{theme.colors.primary_color}}",
+            "mobile_menu_button_focus_bg_color": "{{theme.colors.primary_color}}"
+          }
+        }
+      },
+      "header4": {
         "logo_text": "The Page",
         "navigation": [
           {
