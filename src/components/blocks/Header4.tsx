@@ -121,7 +121,7 @@ export default function Header4(data: any) {
             {navigation.map((item: any, index: any) => (
               <li key={index}>
                 <a
-                  className="page-scroll block font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap"
+                  className="block font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap"
                   href={item.link}
                   data-field-string={`navigation[${index}].title`}
                   data-field-string-format-uri={`navigation[${index}].link`}
