@@ -125,6 +125,7 @@ export default function Header4(data: any) {
                   href={item.link}
                   target={item.open_in_new_page ? '_blank' : '_self'}
                   data-field-string={`navigation[${index}].title`}
+                  data-field-string-format-uri={`navigation[${index}].link`}
                   data-placement="bottom"
                 >
                   {item.title}
