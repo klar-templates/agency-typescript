@@ -28,7 +28,7 @@ export default function Layout(data: any) {
   const primary_shades_rgb = data.theme.colors.primary_shades_rgb.colors;
   const neutral_shades_rgb = data.theme.colors.neutral_shades_rgb.colors;
 
-  const cssVariables = `
+  let cssVariables: any = `
   :root {
     /* font family */
     --font-display: ${data.theme.typography.font_display};
@@ -66,6 +66,7 @@ export default function Layout(data: any) {
   .dark {
     --bg-color: ${data.theme.darkmode.bg_color};
   }`;
+  cssVariables = !window.releaseReactApp && <style>{cssVariables}</style>;
 
   let headElementsArray: any = [];
   if (window.head_elements_array) {
@@ -97,19 +98,23 @@ export default function Layout(data: any) {
   return (
     <>
       <Helmet>
-        <title>
-          {window.klarContext.currentPage &&
-            window.klarContext.currentPage.settings.title}
-        </title>
-        <meta
-          name="description"
-          content={
-            window.klarContext.currentPage &&
-            window.klarContext.currentPage.settings.description
-          }
-        />
+        {!window.releaseReactApp && (
+          <>
+            <title>
+              {window.klarContext.currentPage &&
+                window.klarContext.currentPage.settings.title}
+            </title>
+            <meta
+              name="description"
+              content={
+                window.klarContext.currentPage &&
+                window.klarContext.currentPage.settings.description
+              }
+            />
+          </>
+        )}
         {headElementsArray}
-        <style>{cssVariables}</style>
+        {cssVariables}
         {!window.production && (
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
