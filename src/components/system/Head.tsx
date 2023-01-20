@@ -82,6 +82,12 @@ export default function Layout(data: any) {
       window.head_elements_array = headElementsArray;
     }
   }
+  const inlineHeadScript = data.site.data.head &&
+    data.site.data.head.inline_script && (
+      <script>
+        {data.site.data.head.inline_script + '\n' + new Date().getTime()}
+      </script>
+    );
   // console.log(window.klarContext.currentPage);
   // console.log(window.head_elements_array);
   return (
@@ -143,6 +149,7 @@ export default function Layout(data: any) {
             href={`//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`}
           />
         )}
+        {inlineHeadScript}
       </Helmet>
       {/* {data.site.data.head.head_elements_array && (
         <RenderScript>{data.site.data.head.inline_script}</RenderScript>
