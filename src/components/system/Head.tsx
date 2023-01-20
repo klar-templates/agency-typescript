@@ -151,7 +151,7 @@ export default function Layout(data: any) {
             href={`//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`}
           />
         )}
-        {inlineHeadScript}
+        {/* {inlineHeadScript} */}
       </Helmet>
       {/* {data.site.data.head.head_elements_array && (
         <RenderScript>{data.site.data.head.inline_script}</RenderScript>
