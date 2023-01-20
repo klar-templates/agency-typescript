@@ -118,15 +118,17 @@ export default function Header4(data: any) {
             </button>
           </div>
           {navigation.map((item: any, index: any) => (
-            <a
-              className="block font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap"
-              href={item.link}
-              data-field-string={`navigation[${index}].title`}
-              data-field-string-format-uri={`navigation[${index}].link`}
-              data-placement="bottom"
-            >
-              {item.title}
-            </a>
+            <li key={index}>
+              <a
+                className="block font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap"
+                href={item.link}
+                data-field-string={`navigation[${index}].title`}
+                data-field-string-format-uri={`navigation[${index}].link`}
+                data-placement="bottom"
+              >
+                {item.title}
+              </a>
+            </li>
           ))}
           {/* <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
             <a
