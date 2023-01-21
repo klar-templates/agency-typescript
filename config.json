@@ -27,7 +27,7 @@
             "placeholder": "console.log('Hello Klar Site!')",
             "description": "Lägg till ett inline script i head.",
             "field": {
-              "height": "240px"
+              "height": "300px"
             }
           }
         ]
