@@ -81,8 +81,8 @@ export default function Header4(data: any) {
           aria-label="Global"
         >
           <div className="flex lg:min-w-0 lg:shrink" aria-label="Global">
-            <Link
-              to={window.siteConfig.publicPath}
+            <a
+              href={window.siteConfig.publicPath + '#page-top'}
               className="font-logo js-klar-logo text-primary dark:text-primary r-only text-2xl font-bold ext-gray-800 transition-colors duration-300 transform lg:text-3xl"
               data-field-string="logo_text"
             >
@@ -90,7 +90,7 @@ export default function Header4(data: any) {
               {/* <span className="r-only text-2xl font-bold text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">Your logo</span> */}
               {/* <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
               {/* <img className="h-8" src="https://demo.kaliumtheme.com/main/wp-content/uploads/2015/03/99c8d4a6236909e8ca6595f17d3beb42.png" alt="" /> */}
-            </Link>
+            </a>
           </div>
           <div className="flex md:hidden">
             <button
@@ -121,7 +121,7 @@ export default function Header4(data: any) {
             {navigation.map((item: any, index: any) => (
               <li key={index}>
                 <a
-                  className="page-scroll block font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap"
+                  className="block font-semibold text-neutral-900 hover:text-primary dark:text-neutral-200 dark:hover:text-primary list-none whitespace-nowrap"
                   href={item.link}
                   target={item.open_in_new_page ? '_blank' : '_self'}
                   data-field-string={`navigation[${index}].title`}
@@ -154,8 +154,8 @@ export default function Header4(data: any) {
                     alt=""
                   />
                 </a> */}
-                <Link
-                  to={window.siteConfig.publicPath}
+                <a
+                  href={window.siteConfig.publicPath + '#page-top'}
                   className="js-klar-logo text-primary-dark dark:text-primary text-2xl font-bold lg:text-3xl"
                   style={{
                     fontFamily:
@@ -167,7 +167,7 @@ export default function Header4(data: any) {
                   {/* <span className="r-only text-2xl font-bold text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">Your logo</span> */}
                   {/* <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
                   {/* <img className="h-8" src="https://demo.kaliumtheme.com/main/wp-content/uploads/2015/03/99c8d4a6236909e8ca6595f17d3beb42.png" alt="" /> */}
-                </Link>
+                </a>
               </div>
               <div className="flex">
                 <button
@@ -197,8 +197,22 @@ export default function Header4(data: any) {
             </div>
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6 font-display">
-                  {window.klarContext.data.pages.map((page: any, i: any) => (
+                <ul className="space-y-2 py-6 font-display">
+                  {navigation.map((item: any, index: any) => (
+                    <li key={index}>
+                      <a
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10 dark:text-white"
+                        href={item.link}
+                        target={item.open_in_new_page ? '_blank' : '_self'}
+                        data-field-string={`navigation[${index}].title`}
+                        data-field-string-format-uri={`navigation[${index}].link`}
+                        data-placement="bottom"
+                      >
+                        {item.title}
+                      </a>
+                    </li>
+                  ))}
+                  {/* {window.klarContext.data.pages.map((page: any, i: any) => (
                     <li key={i} className={'block'}>
                       <Link
                         to={i === 0 ? window.siteConfig.publicPath : page._path}
@@ -213,7 +227,7 @@ export default function Header4(data: any) {
                         {page._menu_item_name}
                       </Link>
                     </li>
-                  ))}
+                  ))} */}
                   {/* {navigation.map((item) => (
                     <a
                       key={item.name}
@@ -223,7 +237,7 @@ export default function Header4(data: any) {
                       {item.name}
                     </a>
                   ))} */}
-                </div>
+                </ul>
                 {/* <div className="py-6">
                   <a
                     href="#"
