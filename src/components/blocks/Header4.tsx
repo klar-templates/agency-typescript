@@ -31,7 +31,7 @@ export default function Header4(data: any) {
   }
 
   const classes: any = classNames({
-    'klar-outline relative z-10': true,
+    'one-page-header klar-outline relative z-10': true,
     'bg-background': !style.transparent && style.gradient === 'none',
     dark: style.darkmode,
     'drop-shadow-sm': style.shadow === 'drop-shadow-sm',
