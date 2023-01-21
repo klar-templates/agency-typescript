@@ -82,7 +82,7 @@ export default function Header4(data: any) {
         >
           <div className="flex lg:min-w-0 lg:shrink" aria-label="Global">
             <a
-              href={window.siteConfig.publicPath + '#page-top'}
+              href="#page-top"
               className="font-logo js-klar-logo text-primary dark:text-primary r-only text-2xl font-bold ext-gray-800 transition-colors duration-300 transform lg:text-3xl"
               data-field-string="logo_text"
             >
@@ -155,7 +155,7 @@ export default function Header4(data: any) {
                   />
                 </a> */}
                 <a
-                  href={window.siteConfig.publicPath + '#page-top'}
+                  href="#page-top"
                   className="js-klar-logo text-primary-dark dark:text-primary text-2xl font-bold lg:text-3xl"
                   style={{
                     fontFamily:
