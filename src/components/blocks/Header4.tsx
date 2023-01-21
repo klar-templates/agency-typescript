@@ -31,7 +31,7 @@ export default function Header4(data: any) {
   }
 
   const classes: any = classNames({
-    'one-page-header klar-outline relative z-10': true,
+    'one-page-header py-6 klar-outline relative z-10': true,
     'bg-background': !style.transparent && style.gradient === 'none',
     dark: style.darkmode,
     'drop-shadow-sm': style.shadow === 'drop-shadow-sm',
@@ -75,7 +75,7 @@ export default function Header4(data: any) {
 
   return (
     <header id={_id} className={classes} style={styles}>
-      <div className="py-6 container-fluid container-padding-x mx-auto">
+      <div className="container-fluid container-padding-x mx-auto">
         <nav
           className="flex h-9 items-center justify-between"
           aria-label="Global"
