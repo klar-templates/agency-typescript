@@ -91,11 +91,11 @@ export default function Layout(data: any) {
         {`
           (function () {
           ${data.site.data.head.inline_script};
-          uniqueIdentifierForHeadScript = '${new Date().getTime()}';
           })();
         `}
       </script>
     );
+  // uniqueIdentifierForHeadScript = '${new Date().getTime()}';
   // console.log(window.klarContext.currentPage);
   // console.log(window.head_elements_array);
   return (
