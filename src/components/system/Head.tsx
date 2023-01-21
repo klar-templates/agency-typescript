@@ -88,9 +88,12 @@ export default function Layout(data: any) {
     data.site.data.head &&
     data.site.data.head.inline_script && (
       <script>
-        {`${
-          data.site.data.head.inline_script
-        }; uniqueIdentifierForHeadScript = '${new Date().getTime()}';`}
+        {`
+          (function () {
+          ${data.site.data.head.inline_script};
+          uniqueIdentifierForHeadScript = '${new Date().getTime()}';
+          })();
+        `}
       </script>
     );
   // console.log(window.klarContext.currentPage);
