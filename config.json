@@ -39,7 +39,7 @@
         "fields": [
           {
             "title": "Body scripts",
-            "name": "body_scripts",
+            "name": "scripts",
             "type": "text",
             "description": "Lägg till script. En ny rad för varje script.",
             "field": {
