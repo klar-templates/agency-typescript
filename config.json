@@ -31,6 +31,32 @@
             }
           }
         ]
+      },
+      {
+        "title": "Body",
+        "name": "body",
+        "type": "object",
+        "fields": [
+          {
+            "title": "Body scripts",
+            "name": "body_scripts",
+            "type": "text",
+            "description": "Lägg till script. En ny rad för varje script.",
+            "field": {
+              "height": "120px"
+            }
+          },
+          {
+            "title": "Inline script",
+            "name": "inline_script",
+            "type": "text",
+            "placeholder": "console.log('Hello Klar Site body!')",
+            "description": "Lägg till ett inline script i body.",
+            "field": {
+              "height": "300px"
+            }
+          }
+        ]
       }
     ]
   },
@@ -1163,7 +1189,11 @@
     "site": {
       "head": {
         "head_elements": "",
-        "inline_script": "console.log('Hello Klar Site!')"
+        "inline_script": "console.log('Hello Klar Site head!')"
+      },
+      "body": {
+        "scripts": "",
+        "inline_script": "console.log('Hello Klar Site body!')"
       }
     },
     "theme": {
